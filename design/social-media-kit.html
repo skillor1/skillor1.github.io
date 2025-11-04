@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/design/social-media-kit.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create stunning social media templates with auto-sizing for Instagram posts, stories, and LinkedIn banners. Use trending colors from Dribbble and professional fonts. Export as PNG or share Canva link instantly.">
+    <meta name="keywords" content="Instagram post template maker free, Instagram story size template, LinkedIn banner generator, social media kit creator, trending color palettes 2025, free social media templates, auto resize social posts">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/design/social-media-kit.html">
+    <meta property="og:title" content="Social Media Template Generator - Instagram LinkedIn Auto-Sized">
+    <meta property="og:description" content="Create stunning social media templates with auto-sizing for Instagram posts, stories, and LinkedIn banners. Use trending colors from Dribbble and professional fonts. Export as PNG or share Canva link instantly.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/design/social-media-kit.html">
+    <meta name="twitter:title" content="Social Media Template Generator - Instagram LinkedIn Auto-Sized">
+    <meta name="twitter:description" content="Create stunning social media templates with auto-sizing for Instagram posts, stories, and LinkedIn banners. Use trending colors from Dribbble and professional fonts. Export as PNG or share Canva link instantly.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Social Media Template Generator - Instagram LinkedIn Auto-Sized</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Instagram Post Template Generator",
+        "description": "Create professional social media templates with auto-sizing for Instagram, LinkedIn. Trending colors, fonts, and instant PNG export.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Instagram Post templates (1080x1080)",
+            "Instagram Story templates (1080x1920)",
+            "LinkedIn Banner templates (1584x396)",
+            "Trend auto-detect from Dribbble",
+            "Customizable colors and fonts",
+            "Export as PNG",
+            "Canva-ready links"
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #e11d48;
+            --tool-secondary: #be123c;
+            --tool-accent: #9f1239;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(225, 29, 72, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(225, 29, 72, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, #e11d48 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(225, 29, 72, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .platform-selector {
+            margin-bottom: 2rem;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .platform-btn {
+            padding: 1.25rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .platform-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .platform-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            border-color: var(--tool-primary);
+        }
+        
+        .platform-icon {
+            font-size: 1.5rem;
+        }
+        
+        .platform-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .platform-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .platform-size {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+        
+        .trend-section {
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.15), rgba(190, 18, 60, 0.15));
+            border: 2px solid rgba(225, 29, 72, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .trend-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fda4af;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .trend-badge {
+            padding: 0.25rem 0.75rem;
+            background: rgba(225, 29, 72, 0.2);
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+        
+        .customization-section {
+            margin-bottom: 2rem;
+        }
+        
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .control-label {
+            display: block;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .color-picker-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .color-picker-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .color-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .color-input {
+            width: 100%;
+            height: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            background: rgba(10, 10, 15, 0.6);
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .text-input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+        }
+        
+        .font-selector {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        
+        .export-section {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .export-btn {
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .export-btn.primary {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            box-shadow: 0 4px 16px rgba(225, 29, 72, 0.3);
+        }
+        
+        .export-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(225, 29, 72, 0.5);
+        }
+        
+        .export-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .export-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .canvas-container {
+            background: #f3f4f6;
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+        }
+        
+        .canvas-wrapper {
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        #design-canvas {
+            display: block;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .template-card {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 0.875rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .template-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--tool-primary);
+        }
+        
+        @media (max-width: 640px) {
+            .tool-container {
+                padding: 5rem 3% 2rem;
+            }
+            
+            .canvas-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the correct social media dimensions for each platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Critical dimensions updated for 2024-2025 (wrong size = cropped or stretched posts): Instagram - Feed post: 1080×1080 (square, most common) or 1080×1350 (4:5 portrait, shows larger in feed), Stories/Reels: 1080×1920 (9:16 vertical, full-screen mobile), Profile picture: 320×320 (displays as circle, keep important content center). Facebook - Feed post: 1200×630 (1.91:1 landscape, link previews) or 1080×1080 (square), Stories: 1080×1920 (same as Instagram), Cover photo: 820×312 (desktop) or 640×360 (mobile), Profile picture: 170×170 (displays as circle). LinkedIn - Feed post: 1200×1200 (square) or 1200×627 (landscape for articles), Cover photo: 1584×396 (desktop), Profile picture: 400×400 (displays as circle), use professional high-res images. Twitter/X - Feed post: 1200×675 (16:9 landscape, optimal for engagement) or 1080×1080 (square), Header image: 1500×500, Profile picture: 400×400 (displays as circle). TikTok - Video: 1080×1920 (9:16 vertical, full-screen), Profile picture: 200×200 minimum. YouTube - Thumbnail: 1280×720 (16:9, critical for clicks), Channel banner: 2560×1440 (displays differently on devices, safe zone 1546×423), Profile picture: 800×800. Pinterest - Standard pin: 1000×1500 (2:3 portrait, scrollable), Square pin: 1000×1000, Long pin: 1000×2100 (infographics). Universal tips: Always design at exact dimensions (don't resize later—causes quality loss), keep text/logos in safe zones (platforms crop edges differently on mobile vs desktop), export as PNG for graphics (preserves quality better than JPG), test preview on actual platform before posting. This tool: Select platform first, then design at correct dimensions, avoid manual guessing and cropping disasters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I maintain brand consistency across all social platforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brand consistency framework (5 core elements to standardize): Visual identity - Use same logo (exact same version, don't recreate—maintains recognition), stick to 3-5 brand colors (apply consistently: Instagram purple accent same as LinkedIn purple accent), use 1-2 brand fonts (headlines + body text, install custom fonts or use web-safe alternatives), maintain same design style (minimalist clean, bold colorful, elegant serif—choose one approach). Templates system - Create master templates for each platform (Instagram feed template, LinkedIn post template, Story template), use consistent layouts (text placement, image framing, logo position identical across posts), replicate grid structure (if Instagram has 3-column product showcase, LinkedIn graphics should match), saves time (design once, reuse 100+ times with content swaps). Color consistency - Define HEX codes precisely (#FF5733 not 'reddish-orange'), use same color combinations (primary + secondary + accent in same ratios), background colors match (white, light gray, or branded color—not random per post), apply 60-30-10 rule (60% dominant color, 30% secondary, 10% accent—consistent across platforms). Typography rules - Same font family across all graphics (Montserrat, Poppins, Playfair, whatever your brand uses), consistent sizing hierarchy (headlines 48-64px, subheadings 24-32px, body 16-20px—scale proportionally per platform), text alignment (if Instagram captions left-aligned, LinkedIn should match), maintain spacing (same line heights, margins, padding ratios). Voice and tone (written content) - Consistent caption style (professional LinkedIn, casual Instagram, but same brand personality), use same hashtags strategy (#BrandName on all platforms), maintain posting frequency (if daily Instagram, don't abandon LinkedIn for months—inconsistency confuses audience), respond to comments in same brand voice. Implementation strategy: Create brand guidelines document (1-2 pages: logo usage, color codes, font names, template examples, tone examples), use design tools (Canva Brand Kit, Figma shared libraries—locks in colors/fonts), audit existing content (review last 3 months of posts, identify inconsistencies, fix going forward), train team (if multiple people posting, everyone follows same guidelines). Common consistency mistakes: Different logo versions per platform (old logo on Facebook, new on Instagram—confusing), color drift (starting with blue, slowly shifting to teal over months—audience doesn't notice gradual change but brand becomes unrecognizable), template abandonment (start with beautiful templates, revert to quick messy posts under time pressure). This tool: Set up brand colors and fonts once, generate templates for all platforms maintaining consistency, export entire kit ensuring cohesive social media presence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I design different content styles for each platform or keep everything identical?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Balance approach: maintain brand consistency BUT adapt to each platform's culture and audience expectations: Identical cross-posting (what NOT to do): Same exact image posted everywhere (ignores platform-specific dimensions—looks lazy), same caption word-for-word (LinkedIn professionals expect different tone than TikTok Gen Z), same hashtag strategy (30 hashtags work on Instagram, look spammy on LinkedIn), same content format (static image on Instagram, video on TikTok, long-form article on LinkedIn—play to platform strengths). Platform-specific adaptations (recommended approach): Instagram - visual-first aesthetic (beautiful photography, cohesive feed grid, lifestyle content), shorter punchy captions (150-300 words, emojis acceptable), 20-30 relevant hashtags, Stories for behind-the-scenes casual content. LinkedIn - professional value-driven content (industry insights, career tips, business updates), longer captions (1,300-3,000 characters, tell full story), minimal hashtags (3-5 strategic), formal tone (avoid excessive emojis). Facebook - community engagement focus (conversational posts, questions, polls), mixed content (links, photos, videos), moderate caption length (200-500 words), appeals to broader demographics (Gen X, Baby Boomers). Twitter/X - real-time conversation (news reactions, trending topics, quick thoughts), short concise posts (280 characters max), 1-2 hashtags, high posting frequency (3-10x daily), witty fast-paced tone. TikTok - video-first short-form (15-60 second videos, trending sounds, challenges), text overlays (captions on video itself, not just description), casual authentic (raw unpolished acceptable, overly corporate doesn't work), appeal to Gen Z humor and trends. Pinterest - evergreen searchable content (how-to guides, infographics, recipes), vertical pins (2:3 ratio), keyword-optimized descriptions (SEO matters more than hashtags), links to website (traffic-driving platform). Consistency elements that span all platforms: Logo placement (always in same corner), brand colors (accent colors, backgrounds), font styles (same typography families), visual motif (patterns, shapes, photo filters), core messaging (brand values, mission). Content adaptation process: Create core message (what you want to communicate), adapt format per platform (static image vs video vs carousel vs article), adjust tone (professional vs casual while maintaining brand voice), optimize dimensions (1080×1080 Instagram, 1200×627 LinkedIn, 1200×675 Twitter), tailor caption (short for Instagram, longer for LinkedIn, brief for Twitter), customize hashtags (many for Instagram, few for LinkedIn). This tool: Design master version with brand consistency, export for each platform at correct dimensions, then adapt caption/hashtags separately per platform—balanced approach maintains brand while respecting platform culture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I update my social media templates and graphics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Template refresh timeline (4 update cycles): Seasonal refresh (4× per year, every 3 months) - align with seasons (spring pastels, summer bright, fall warm, winter cool tones), update for major holidays (Christmas, Black Friday, Valentine's, summer sales—seasonal graphics feel timely), refresh color accents (keep core brand colors, adjust secondary/accent colors slightly), typical changes: swap background colors, update decorative elements (florals for spring, snowflakes for winter), adjust photography style (outdoor summer shots, cozy indoor winter vibes). Minor refresh (2× per year, every 6 months) - update trending design styles (2024 trend = mesh gradients, 2025 might be different—stay current without chasing every fad), refine based on performance (if square posts outperform landscape, shift template focus), adjust after platform changes (Instagram algorithm favors Reels—create more Reels templates), fix what's not working (if text hard to read, increase contrast—iterate on feedback). Major rebrand (every 2-3 years) - complete visual overhaul (new logo, colors, fonts, entire design language), update all templates simultaneously (avoid half-old half-new inconsistency), often tied to business evolution (startup to established company, expanded services, new target market), includes: redesign all social templates, update profile pictures and cover photos, announce rebrand to audience. Continuous micro-updates (ongoing) - A/B test variations (try two caption placements, see which performs better), fix errors immediately (typo in template, wrong color code, outdated information), adapt to trends (trending audio on Reels, viral meme format—jump on quickly then revert to evergreen templates). When NOT to update: Don't change for change's sake (consistency builds recognition—random updates confuse audience), don't chase every micro-trend (2-week TikTok trends aren't worth template redesigns), don't rebrand too frequently (under 18 months = instability signal, customers can't keep up). Signs you need update: Your templates look dated compared to competitors, engagement declining (audience bored with same style), platform updates (Instagram prioritizing video—your static templates less effective), business evolution (offering new services, targeting new demographic—visual identity should reflect). Template refresh best practices: Update all platforms simultaneously (prevents inconsistent brand across channels), keep archive of old templates (for reference and consistency checks), announce visual refresh to audience (Behind the scenes: we've refreshed our look!), roll out gradually (test new templates, mix with old, fully transition over 2-4 weeks). This tool: Refresh templates seasonally using same brand colors with different accents, update design style every 6 months based on what's resonating with your audience, export new template kit for consistent updated presence across all platforms, maintain core brand identity while evolving visual execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I automate posting with these graphics or do I need additional tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "These graphics are the creative assets—you'll need separate scheduling tools for automated posting: Scheduling tools (3 categories): Free options (basic automation) - Facebook Business Suite (free for Facebook + Instagram, schedule up to 75 posts, basic analytics), TweetDeck (free for Twitter scheduling, column view, manage multiple accounts), LinkedIn native scheduler (free, schedule posts directly on platform). Use when: Small business/solopreneur, posting 3-5× per week, managing 1-2 platforms, budget-conscious. Paid tools (robust automation) - Buffer ($6/month, schedule across all major platforms, analytics, link shortening, browser extension), Hootsuite ($99/month, comprehensive analytics, team collaboration, bulk scheduling), Later ($25/month, Instagram-focused, visual calendar, hashtag suggestions), Sprout Social ($249/month, enterprise-level, advanced analytics, social listening). Use when: Managing 3+ platforms, posting daily or multiple times daily, team of 2+ people, need detailed analytics. All-in-one solutions - Canva Pro ($13/month, design + schedule in one platform, includes this social media kit functionality + scheduling, limited to 8 platforms), Metricool ($22/month, combines design, scheduling, analytics, competitor analysis). Use when: Want single platform for design and scheduling, value convenience over specialized features. Automation workflow: Design graphics using this tool (create week's/month's worth of content in batch), export high-res PNGs for each platform (Instagram 1080×1080, LinkedIn 1200×1200, etc.), upload to scheduling tool (drag graphics to calendar dates), write platform-specific captions (shorter for Instagram, longer for LinkedIn), add hashtags (customize per platform, not identical), set optimal posting times (scheduling tool analytics suggest best times—usually 9-11 AM, 7-9 PM but varies by audience), review and schedule (buffer schedules across 2-4 weeks). What scheduling tools DON'T do: Create graphics (you design here, schedule there), write captions (you write, tool posts—some have AI assistance but not replacement for strategy), respond to comments (automation posts content, you still need to engage manually), guarantee engagement (posting consistently helps, but quality content is your responsibility). Best practices: Batch create content (design 2-4 weeks of graphics at once, schedule in one sitting—saves time), maintain content mix (don't auto-post only promotional content—follow 80/20 rule: 80% value, 20% promotion), review scheduled content weekly (ensure posts still relevant, pause if needed—e.g., cancel sales post if product sold out), combine automation + real-time (schedule core content, manually post timely reactions, trending topics, real-time engagement). Free workflow: Design with this tool → download graphics → upload to Facebook Business Suite (Instagram + Facebook) + LinkedIn native scheduler + Buffer free plan (covers Twitter, Pinterest) → manually post to TikTok (doesn't allow third-party scheduling) = 5 platforms covered with $0 tools. This tool's role: Creates the visual assets (graphics, templates, brand kit) that you then automate with scheduling tools—focus your time on design and strategy, let schedulers handle posting consistency."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../design.html">Design</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../design.html" class="back-link">← Back to Design</a>
+        
+        <div class="header-section">
+            <h1>📱 Social Media Kit Builder</h1>
+            <p>Create Platform-Ready Templates with Trending Styles</p>
+        </div>
+        
+        <div class="main-grid">
+            <div class="card">
+                <h2 class="card-title">⚙️ Customize</h2>
+                
+                <div class="platform-selector">
+                    <label class="control-label">Select Platform</label>
+                    <div class="platform-grid">
+                        <button class="platform-btn active" onclick="selectPlatform('instagram-post')">
+                            <span class="platform-icon">📷</span>
+                            <div class="platform-info">
+                                <span class="platform-name">Instagram Post</span>
+                                <span class="platform-size">1080 × 1080 px</span>
+                            </div>
+                        </button>
+                        <button class="platform-btn" onclick="selectPlatform('instagram-story')">
+                            <span class="platform-icon">📱</span>
+                            <div class="platform-info">
+                                <span class="platform-name">Instagram Story</span>
+                                <span class="platform-size">1080 × 1920 px</span>
+                            </div>
+                        </button>
+                        <button class="platform-btn" onclick="selectPlatform('linkedin-banner')">
+                            <span class="platform-icon">💼</span>
+                            <div class="platform-info">
+                                <span class="platform-name">LinkedIn Banner</span>
+                                <span class="platform-size">1584 × 396 px</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="trend-section">
+                    <div class="trend-header">
+                        ✨ Trending Now <span class="trend-badge">Auto-Detected</span>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.875rem;">
+                        Colors and fonts inspired by top Dribbble designs this week
+                    </p>
+                </div>
+                
+                <div class="customization-section">
+                    <div class="control-group">
+                        <label class="control-label">Main Text</label>
+                        <input type="text" class="text-input" id="main-text" placeholder="Enter your main headline" value="Your Brand Here">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Subtitle</label>
+                        <input type="text" class="text-input" id="subtitle-text" placeholder="Enter subtitle" value="Elevate Your Content">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Colors</label>
+                        <div class="color-picker-group">
+                            <div class="color-picker-wrapper">
+                                <label class="color-label" for="bg-color">Background</label>
+                                <input type="color" class="color-input" id="bg-color" value="#667eea" title="Background color" placeholder="Background color" aria-label="Background color">
+                            </div>
+                            <div class="color-picker-wrapper">
+                                <label class="color-label" for="text-color">Text</label>
+                                <input type="color" class="color-input" id="text-color" value="#ffffff" title="Text color" placeholder="Text color" aria-label="Text color">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="font-select">Font Style</label>
+                        <select class="font-selector" id="font-select" title="Font Style">
+                            <option value="Poppins">Poppins (Modern)</option>
+                            <option value="Playfair Display">Playfair Display (Elegant)</option>
+                            <option value="Montserrat">Montserrat (Bold)</option>
+                            <option value="Inter">Inter (Clean)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="export-section">
+                    <button class="export-btn primary" onclick="downloadPNG()">📥 Download PNG</button>
+                    <button class="export-btn secondary" onclick="openCanva()">🎨 Open in Canva</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">👁️ Live Preview</h2>
+                <div class="canvas-container">
+                    <div class="canvas-wrapper">
+                        <canvas id="design-canvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="control-group" style="margin-top: 2rem;">
+                    <label class="control-label">Quick Templates</label>
+                    <div class="templates-grid">
+                        <div class="template-card" style="background: linear-gradient(135deg, #667eea, #764ba2);" onclick="applyTemplate('purple-gradient')">
+                            Purple Gradient
+                        </div>
+                        <div class="template-card" style="background: linear-gradient(135deg, #f093fb, #f5576c);" onclick="applyTemplate('pink-sunset')">
+                            Pink Sunset
+                        </div>
+                        <div class="template-card" style="background: linear-gradient(135deg, #4facfe, #00f2fe);" onclick="applyTemplate('ocean-blue')">
+                            Ocean Blue
+                        </div>
+                        <div class="template-card" style="background: linear-gradient(135deg, #43e97b, #38f9d7);" onclick="applyTemplate('mint-fresh')">
+                            Mint Fresh
+                        </div>
+                        <div class="template-card" style="background: linear-gradient(135deg, #fa709a, #fee140);" onclick="applyTemplate('warm-flame')">
+                            Warm Flame
+                        </div>
+                        <div class="template-card" style="background: linear-gradient(135deg, #30cfd0, #330867);" onclick="applyTemplate('deep-ocean')">
+                            Deep Ocean
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Social Media Kit Generator</h2>
+        <p>Design platform-optimized graphics for Instagram, LinkedIn with templates, text overlays, and instant export:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Platform Size</h3>
+                <p>Choose Instagram Post (1080x1080 square), Instagram Story (1080x1920 vertical), or LinkedIn Banner (1584x396 wide). Canvas auto-resizes to exact specifications.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Customize Text and Colors</h3>
+                <p>Edit main text and subtitle. Choose font (Poppins, Roboto, etc.), background color, text color. Real-time preview updates as you type and adjust.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Use Template or Create Custom</h3>
+                <p>Click preset templates (Purple Gradient, Pink Sunset, Ocean Blue, etc.) for instant professional designs. Tweak colors/text to make it yours.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Download or Export to Canva</h3>
+                <p>Click "Download PNG" for high-res export, or "Open in Canva" to continue editing with more advanced features. Files are platform-ready sizes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are the optimal sizes for each platform?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Instagram Post: 1080x1080 (square grid posts). Instagram Story: 1080x1920 (9:16 vertical, full screen). LinkedIn Banner: 1584x396 (profile header). These exact dimensions prevent cropping and ensure professional appearance across platforms.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I upload my own images or logos?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Currently, tool generates text-based graphics with gradient backgrounds. For custom images, click "Open in Canva" button to export your design to Canva where you can add photos, logos, and more advanced elements. This gives best of both worlds - quick start here, detailed editing in Canva.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I maintain brand consistency?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Save your brand colors (HEX codes) and use them consistently. Pick 1-2 fonts and stick to them across all posts. Create 3-4 template variations, then reuse with different text. Consistency builds recognition - 7-10 similar posts before audience remembers your style.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What makes a good social media graphic?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Keep text short (3-7 words main text, 5-10 subtitle), use high contrast colors for readability, leave 10-15% margins (don't crowd edges), and maintain consistent branding. Test: Can someone read it while scrolling in 2 seconds?
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Why does "Open in Canva" open with my template size?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We pass exact canvas dimensions to Canva, so you start with correct platform size. This saves you from manually setting dimensions. Your colors/text don't transfer (Canva limitation), but having right size means you can immediately add elements without resizing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="../ai-tools/caption-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">✍️</span> Caption Generator</h3>
+                <p>Generate engaging captions to pair with your social media graphics.</p>
+            </a>
+            <a href="../ai-tools/hashtag-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">#️⃣</span> Hashtag Generator</h3>
+                <p>Find relevant hashtags to boost reach of your social media posts.</p>
+            </a>
+            <a href="color-palette.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎨</span> Color Palette</h3>
+                <p>Create harmonious brand color schemes for consistent social graphics.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.1); margin: 2rem 0;"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="footer-year"></span> Skillor. All rights reserved. Built with ❤️ for learners.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        const canvas = document.getElementById('design-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let currentPlatform = 'instagram-post';
+        let currentConfig = {
+            mainText: 'Your Brand Here',
+            subtitle: 'Elevate Your Content',
+            bgColor: '#667eea',
+            textColor: '#ffffff',
+            font: 'Poppins'
+        };
+        
+        const platformSizes = {
+            'instagram-post': { width: 1080, height: 1080 },
+            'instagram-story': { width: 1080, height: 1920 },
+            'linkedin-banner': { width: 1584, height: 396 }
+        };
+        
+        const templates = {
+            'purple-gradient': { bg: '#667eea', text: '#ffffff', gradient: '#764ba2' },
+            'pink-sunset': { bg: '#f093fb', text: '#ffffff', gradient: '#f5576c' },
+            'ocean-blue': { bg: '#4facfe', text: '#ffffff', gradient: '#00f2fe' },
+            'mint-fresh': { bg: '#43e97b', text: '#1a1a1a', gradient: '#38f9d7' },
+            'warm-flame': { bg: '#fa709a', text: '#ffffff', gradient: '#fee140' },
+            'deep-ocean': { bg: '#30cfd0', text: '#ffffff', gradient: '#330867' }
+        };
+        
+        // Initialize
+        initializeCanvas();
+        setupEventListeners();
+        renderDesign();
+        
+        function initializeCanvas() {
+            const size = platformSizes[currentPlatform];
+            canvas.width = size.width;
+            canvas.height = size.height;
+        }
+        
+        function setupEventListeners() {
+            document.getElementById('main-text').addEventListener('input', (e) => {
+                currentConfig.mainText = e.target.value;
+                renderDesign();
+            });
+            
+            document.getElementById('subtitle-text').addEventListener('input', (e) => {
+                currentConfig.subtitle = e.target.value;
+                renderDesign();
+            });
+            
+            document.getElementById('bg-color').addEventListener('input', (e) => {
+                currentConfig.bgColor = e.target.value;
+                renderDesign();
+            });
+            
+            document.getElementById('text-color').addEventListener('input', (e) => {
+                currentConfig.textColor = e.target.value;
+                renderDesign();
+            });
+            
+            document.getElementById('font-select').addEventListener('change', (e) => {
+                currentConfig.font = e.target.value;
+                renderDesign();
+            });
+        }
+        
+        function selectPlatform(platform) {
+            currentPlatform = platform;
+            document.querySelectorAll('.platform-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.platform-btn').classList.add('active');
+            
+            initializeCanvas();
+            renderDesign();
+        }
+        
+        function renderDesign() {
+            const size = platformSizes[currentPlatform];
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, currentConfig.bgColor);
+            gradient.addColorStop(1, adjustColor(currentConfig.bgColor, -20));
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Main text
+            ctx.fillStyle = currentConfig.textColor;
+            ctx.font = `bold ${size.width * 0.08}px ${currentConfig.font}, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const mainY = currentPlatform === 'linkedin-banner' ? size.height * 0.45 : size.height * 0.45;
+            ctx.fillText(currentConfig.mainText, size.width / 2, mainY);
+            
+            // Subtitle
+            ctx.font = `${size.width * 0.04}px ${currentConfig.font}, sans-serif`;
+            ctx.globalAlpha = 0.9;
+            const subtitleY = currentPlatform === 'linkedin-banner' ? size.height * 0.65 : size.height * 0.55;
+            ctx.fillText(currentConfig.subtitle, size.width / 2, subtitleY);
+            ctx.globalAlpha = 1;
+            
+            // Decorative elements
+            ctx.strokeStyle = currentConfig.textColor;
+            ctx.lineWidth = 4;
+            ctx.globalAlpha = 0.3;
+            const lineY = currentPlatform === 'linkedin-banner' ? size.height * 0.75 : size.height * 0.65;
+            ctx.beginPath();
+            ctx.moveTo(size.width * 0.3, lineY);
+            ctx.lineTo(size.width * 0.7, lineY);
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+        }
+        
+        function adjustColor(color, amount) {
+            const num = parseInt(color.replace('#', ''), 16);
+            const r = Math.max(0, Math.min(255, (num >> 16) + amount));
+            const g = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amount));
+            const b = Math.max(0, Math.min(255, (num & 0x0000FF) + amount));
+            return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+        }
+        
+        function applyTemplate(templateId) {
+            const template = templates[templateId];
+            currentConfig.bgColor = template.bg;
+            currentConfig.textColor = template.text;
+            
+            document.getElementById('bg-color').value = template.bg;
+            document.getElementById('text-color').value = template.text;
+            
+            renderDesign();
+        }
+        
+        function downloadPNG() {
+            const link = document.createElement('a');
+            link.download = `${currentPlatform}-${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            if (window.Skillor && window.Skillor.showNotification) {
+                window.Skillor.showNotification('Design downloaded!', 'success');
+            }
+        }
+        
+        function openCanva() {
+            const size = platformSizes[currentPlatform];
+            const canvaUrl = `https://www.canva.com/create/a-design?width=${size.width}&height=${size.height}`;
+            window.open(canvaUrl, '_blank');
+            
+            if (window.Skillor && window.Skillor.showNotification) {
+                window.Skillor.showNotification('Opening Canva with template size...', 'success');
+            }
+        }
+    </script>
+</body>
+</html>

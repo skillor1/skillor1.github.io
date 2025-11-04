@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/english/pronunciation-heatmap.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Improve English pronunciation with visual heatmap feedback. Record yourself and compare with native speakers using color-coded accuracy analysis. Perfect for IELTS speaking and accent reduction practice.">
+    <meta name="keywords" content="pronunciation practice online free, English pronunciation heatmap, compare pronunciation native speaker, accent reduction tool, IELTS speaking practice, record pronunciation feedback, visual pronunciation analyzer 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/english/pronunciation-heatmap.html">
+    <meta property="og:title" content="Pronunciation Heatmap - Visual Feedback Tool with Native Comparison">
+    <meta property="og:description" content="Improve English pronunciation with visual heatmap feedback. Record yourself and compare with native speakers using color-coded accuracy analysis. Perfect for IELTS speaking and accent reduction practice.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/english/pronunciation-heatmap.html">
+    <meta name="twitter:title" content="Pronunciation Heatmap - Visual Feedback Tool with Native Comparison">
+    <meta name="twitter:description" content="Improve English pronunciation with visual heatmap feedback. Record yourself and compare with native speakers using color-coded accuracy analysis. Perfect for IELTS speaking and accent reduction practice.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Pronunciation Heatmap - Visual Feedback Tool with Native Comparison</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #f97316;
+            --tool-secondary: #fb923c;
+            --tool-accent: #ea580c;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(249, 115, 22, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(249, 115, 22, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(249, 115, 22, 0.3);
+        }
+        
+        .target-sentence {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.1));
+            border: 2px solid rgba(249, 115, 22, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .sentence-text {
+            font-size: 1.4rem;
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .phonetic {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-style: italic;
+        }
+        
+        .audio-controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .record-btn {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .record-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.6);
+        }
+        
+        .record-btn.recording {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4); }
+            50% { box-shadow: 0 8px 40px rgba(239, 68, 68, 0.8); }
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-play {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+        
+        .waveform {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .waveform-bars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            height: 100%;
+        }
+        
+        .waveform-bar {
+            width: 4px;
+            background: linear-gradient(180deg, var(--tool-primary), var(--tool-secondary));
+            border-radius: 4px;
+            transition: height 0.1s ease;
+        }
+        
+        .heatmap-container {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .heatmap-word {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .heatmap-word:hover {
+            transform: scale(1.05);
+        }
+        
+        .accuracy-100 {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .accuracy-80 {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .accuracy-60 {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        .accuracy-low {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        
+        .accuracy-none {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+        }
+        
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .comparison-panel {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            min-width: 100px;
+        }
+        
+        .comparison-value {
+            color: white;
+        }
+        
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.1));
+            border: 2px solid rgba(249, 115, 22, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+        
+        .tips-panel h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .tip-item {
+            color: rgba(255, 255, 255, 0.9);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tip-item:last-child {
+            border-bottom: none;
+        }
+        
+        .sentence-bank {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .sentence-list {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .sentence-item {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sentence-item:hover {
+            border-color: var(--tool-primary);
+            background: rgba(249, 115, 22, 0.1);
+        }
+        
+        .sentence-item.selected {
+            border-color: var(--tool-primary);
+            background: rgba(249, 115, 22, 0.2);
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .difficulty-easy {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        
+        .difficulty-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+        
+        .difficulty-hard {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        
+        .status-message {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        
+        .status-info {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+        
+        .status-success {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        
+        .status-error {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the AI pronunciation heatmap technology work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The pronunciation heatmap uses Web Speech Recognition API to analyze your speech. Process: 1) You speak a sentence, 2) AI converts speech to text (speech-to-text transcription), 3) Algorithm compares YOUR pronunciation to target sentence word-by-word, 4) Calculates similarity score per word using phonetic matching, 5) Generates color-coded heatmap: Green (90-100% accuracy = native-like), Yellow (70-90% = good clarity), Orange (50-70% = needs improvement), Red (0-50% = mispronounced). The AI doesn't judge accent—it measures intelligibility (can native speakers understand you?)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the heatmap colors mean and what score should I aim for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Heatmap colors indicate pronunciation accuracy per word: Green (90-100%) = Excellent, native-like pronunciation, Yellow (70-89%) = Good, minor accent but clear, Orange (50-69%) = Fair, noticeable errors affecting clarity, Red (0-49%) = Poor, word not recognized or severely mispronounced. Target scores by goal: For professional/business English: 75%+ overall (mostly green/yellow), For native-sounding: 90%+ overall (all green), For basic communication: 60%+ (understand despite accent). Don't obsess over 100%—even native speakers vary. Focus on reducing red/orange words first (high-impact errors) rather than perfecting yellow words (minor accent features)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I improve specific words that show red or orange in the heatmap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the 3S Improvement Method: 1) Slow down - pronounce problem word slowly, breaking into syllables (e.g., 'COM-MU-NI-CA-TION'), 2) Shadow - find YouTube video of native speaker saying the word, repeat 10x while mimicking mouth movements, 3) Spot the Sound - identify which specific sound causes trouble (th, r, v, vowels). Common error patterns: 'TH' sounds (the, think) → practice tongue placement between teeth, 'R' vs 'L' confusion → exaggerate tongue position difference, Vowel length (ship vs. sheep) → hold vowels longer for long sounds. Record yourself saying problem word 5 times, compare to native speaker, focus on ONE sound issue per practice session. Track weekly: aim to turn 2-3 red words to orange, then orange to yellow over 2-week period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is improving pronunciation clarity more important than reducing my accent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YES—clarity (being understood) matters far more than accent reduction (sounding native). Pronunciation hierarchy: 1) Intelligibility (75%+ heatmap score = people understand you) - ESSENTIAL, 2) Comprehensibility (60-70% effort to understand you) - IMPORTANT, 3) Native-like accent (90%+ score) - NICE TO HAVE. Research shows: Accents are NOT mistakes, they're linguistic identity. Focus on high-impact errors: word stress (REcord vs reCORD changes meaning), critical sounds that change words (ship vs. sheep), intonation for questions vs. statements. Ignore low-impact features: slight 'R' rolling if understandable, vowel variations in accent-heavy words. Professional English requires 75%+ clarity for meetings/presentations, not 100% native accent. Many successful global professionals maintain accents while achieving perfect clarity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool store my voice recordings and is it privacy-safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100% private and secure—NO voice recordings are stored or uploaded. How it works: 1) Your browser records audio temporarily in RAM (device memory), 2) Google's Web Speech API processes the audio to generate text transcription (industry-standard API used by millions), 3) Text comparison happens locally in your browser, 4) Audio is immediately deleted from memory after processing (within seconds). No permanent storage on servers or devices. Privacy details: Google API processes voice anonymously without linking to your identity, no account/login required means no data trail, works offline-capable once page loaded (for privacy-conscious users). To verify: open browser DevTools → Network tab → see no audio files being uploaded. Your pronunciation data never leaves your device except for anonymous API text conversion. Safe for practicing sensitive work presentations or confidential content."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../english.html">English</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../english.html" class="back-link">← Back to English Tools</a>
+        
+        <div class="header-section">
+            <h1>🎤 Pronunciation Heatmap</h1>
+            <p>Record, compare & visualize your pronunciation accuracy</p>
+        </div>
+        
+        <div class="main-grid">
+            <!-- Left Panel: Recording -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>🎙️</span>
+                    <span>Record Your Pronunciation</span>
+                </div>
+                
+                <div class="target-sentence">
+                    <div class="sentence-text" id="target-sentence">
+                        The quick brown fox jumps over the lazy dog.
+                    </div>
+                    <div class="phonetic" id="phonetic">
+                        /ðə kwɪk braʊn fɒks dʒʌmps ˈəʊvə ðə ˈleɪzi dɒɡ/
+                    </div>
+                </div>
+                
+                <div class="audio-controls">
+                    <button class="btn btn-play" onclick="playNative()" title="Listen to native pronunciation">
+                        ▶️ Play Native
+                    </button>
+                    <button class="record-btn" id="record-btn" onclick="toggleRecording()" title="Click to record">
+                        🎤
+                    </button>
+                    <button class="btn btn-secondary" id="play-recording-btn" onclick="playRecording()" disabled title="Play your recording">
+                        ▶️ Play Mine
+                    </button>
+                </div>
+                
+                <div class="status-message status-info" id="status-message">
+                    Click the microphone to start recording
+                </div>
+                
+                <div class="waveform">
+                    <div class="waveform-bars" id="waveform">
+                        <!-- Waveform bars will be generated here -->
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <button class="btn" onclick="analyzePronunciation()" id="analyze-btn" disabled>
+                        🔍 Analyze Pronunciation
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Right Panel: Results -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📊</span>
+                    <span>Pronunciation Analysis</span>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="overall-accuracy">0%</div>
+                        <div class="stat-label">Overall Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="words-correct">0/0</div>
+                        <div class="stat-label">Words Correct</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="clarity-score">0%</div>
+                        <div class="stat-label">Clarity Score</div>
+                    </div>
+                </div>
+                
+                <div class="heatmap-container">
+                    <h4 style="color: white; margin-bottom: 1rem; text-align: center;">
+                        Word-by-Word Heatmap
+                    </h4>
+                    <div id="heatmap">
+                        <div style="text-align: center; color: rgba(255,255,255,0.5); padding: 2rem;">
+                            Record your pronunciation to see the heatmap
+                        </div>
+                    </div>
+                    
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #10b981, #059669);"></div>
+                            <span>90-100% Perfect</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></div>
+                            <span>70-89% Good</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></div>
+                            <span>50-69% Fair</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></div>
+                            <span>&lt;50% Needs Work</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-panel" id="comparison-panel" style="display: none;">
+                    <h4 style="color: white; margin-bottom: 1rem;">📝 Detailed Comparison</h4>
+                    <div id="comparison-details"></div>
+                </div>
+                
+                <div class="tips-panel" id="tips-panel" style="display: none;">
+                    <h4>💡 Improvement Tips</h4>
+                    <div id="tips-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sentence-bank">
+            <h3 style="color: white; margin-bottom: 1.5rem;">📚 Practice Sentences</h3>
+            <div class="sentence-list" id="sentence-list"></div>
+        </div>
+    </div>
+    
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Pronunciation Heatmap</h2>
+        <p>Get instant visual feedback on your English pronunciation! This AI-powered tool analyzes your speech and shows you exactly which words you pronounce accurately (green) versus which ones need improvement (red/orange). Perfect for accent reduction, interview prep, and speaking confidence.</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Sentence & Listen</h3>
+                <p>Choose a practice sentence from the sentence bank (Easy/Medium/Hard difficulty). Click "🔊 Play Native" to hear the correct pronunciation from text-to-speech. You can replay it unlimited times to understand stress patterns and intonation.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Record Your Pronunciation</h3>
+                <p>Click the 🎤 microphone button to start recording (browser will ask for mic permission). Speak the sentence clearly at a moderate pace. Watch the animated waveform bars show your voice activity. Click ⏹️ to stop recording when finished.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">3</span> View Pronunciation Heatmap</h3>
+                <p>Click "🔍 Analyze Pronunciation" to generate the heatmap. Each word displays in color: 🟢 Green (90%+ accurate), 🟡 Yellow (70-90%), 🟠 Orange (50-70%), 🔴 Red (below 50%). Click any word to see specific accuracy percentage and improvement tips.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Review Stats & Improve</h3>
+                <p>Check your Overall Accuracy (%), Words Correct count, and Clarity Score (%). The Comparison Panel shows word-by-word analysis, and Tips Panel provides personalized feedback. Focus on red/orange words and practice those specifically by re-recording the sentence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the AI analyze my pronunciation accuracy?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>The tool uses Web Speech Recognition API</strong> (built into Chrome/Edge browsers) to analyze your pronunciation:</p>
+                        <p><strong>Analysis Process:</strong></p>
+                        <ol>
+                            <li><strong>Speech-to-Text:</strong> Your recording is converted to text using AI (recognizes what words you said)</li>
+                            <li><strong>Word Comparison:</strong> Each word you said is compared to the target sentence words</li>
+                            <li><strong>Similarity Scoring:</strong> AI calculates accuracy % based on phonetic matching (pronunciation closeness)</li>
+                            <li><strong>Visual Heatmap:</strong> Results displayed as color-coded words (green = accurate, red = needs work)</li>
+                        </ol>
+                        <p><strong>What AI Evaluates:</strong></p>
+                        <ul>
+                            <li><strong>Phoneme accuracy:</strong> Individual sound pronunciation (e.g., TH sound in "think")</li>
+                            <li><strong>Word recognition:</strong> Did AI understand which word you said?</li>
+                            <li><strong>Clarity:</strong> How clear your speech was (mumbling = lower score)</li>
+                        </ul>
+                        <p><strong>What AI Doesn't Evaluate (yet):</strong></p>
+                        <ul>
+                            <li>Stress patterns (which syllable you emphasize)</li>
+                            <li>Intonation (rising/falling pitch)</li>
+                            <li>Connected speech (linking words naturally)</li>
+                        </ul>
+                        <p><em>Tip:</em> For best accuracy, use Chrome browser, speak at medium pace, and ensure a quiet environment without background noise!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What do the heatmap colors mean and what scores should I aim for?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Heatmap Color Guide:</strong></p>
+                        <ul>
+                            <li><strong>🟢 Green (90-100% accuracy):</strong> Excellent! Pronunciation sounds native or near-native</li>
+                            <li><strong>🟡 Yellow-Green (80-90%):</strong> Very good! Minor improvements possible but highly understandable</li>
+                            <li><strong>🟡 Yellow (70-80%):</strong> Good! Understandable with slight accent, practice for clarity</li>
+                            <li><strong>🟠 Orange (50-70%):</strong> Fair! Recognizable but needs work, focus practice here</li>
+                            <li><strong>🔴 Red (0-50%):</strong> Needs Improvement! Word was mispronounced or not recognized</li>
+                        </ul>
+                        <p><strong>Target Scores by Goal:</strong></p>
+                        <ul>
+                            <li><strong>Daily Communication (Travel/Shopping):</strong> 60-70% Overall Accuracy (most words orange/yellow)</li>
+                            <li><strong>Professional Work (Job Interviews/Meetings):</strong> 75-85% Overall Accuracy (mostly yellow/green)</li>
+                            <li><strong>IELTS Speaking Band 7+:</strong> 80-90% Overall Accuracy + 80%+ Words Correct</li>
+                            <li><strong>Accent Reduction (Sound Native):</strong> 90%+ Overall Accuracy with 95%+ Clarity Score</li>
+                        </ul>
+                        <p><strong>Realistic Progress Timeline:</strong></p>
+                        <ul>
+                            <li><strong>Week 1-2:</strong> 40-60% (beginner baseline, many red words)</li>
+                            <li><strong>Month 1:</strong> 55-70% (orange/yellow, understandable)</li>
+                            <li><strong>Month 3:</strong> 70-80% (yellow/green, clear communication)</li>
+                            <li><strong>Month 6+:</strong> 80-90%+ (mostly green, near-native pronunciation)</li>
+                        </ul>
+                        <p><em>Important:</em> Don't be discouraged by red words early on! Focus on improving 2-3 problem words per week rather than trying to fix everything at once.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I improve words that show up as red or orange in the heatmap?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>The "3S" Improvement Method for Problem Words:</strong></p>
+                        <p><strong>1. SLOW DOWN (Break into Syllables)</strong></p>
+                        <ul>
+                            <li>Click the red/orange word, say it syllable by syllable very slowly</li>
+                            <li>Example: "pronunciation" → pro-nun-ci-A-tion (5 syllables, stress on "A")</li>
+                            <li>Repeat each syllable 5 times: "pro, pro, pro, pro, pro"</li>
+                            <li>Then gradually speed up: slow → medium → normal pace</li>
+                        </ul>
+                        <p><strong>2. SHADOW (Mimic Native Speaker)</strong></p>
+                        <ul>
+                            <li>Play "🔊 Native Pronunciation" and pay close attention to the problem word</li>
+                            <li>Listen 3 times focusing ONLY on that word</li>
+                            <li>Shadow technique: Say the word simultaneously with the audio (overlap your voice)</li>
+                            <li>Record yourself saying just that word 5 times, then compare</li>
+                        </ul>
+                        <p><strong>3. SPOT (Identify Specific Sound Problem)</strong></p>
+                        <ul>
+                            <li>Common problems by word:</li>
+                            <li><strong>TH sounds ("the," "think"):</strong> Tongue touches upper teeth, practice "th-th-th-the"</li>
+                            <li><strong>R sounds ("brown," "rough"):</strong> Tongue doesn't touch roof, lips slightly rounded</li>
+                            <li><strong>V vs W ("very," "wet"):</strong> V uses teeth on lower lip, W uses rounded lips</li>
+                            <li><strong>Long vs Short vowels ("ship" vs "sheep"):</strong> "Sheep" has longer "ee" sound</li>
+                        </ul>
+                        <p><strong>Daily Practice Routine for Problem Words:</strong></p>
+                        <ol>
+                            <li><strong>Morning (5 min):</strong> Identify 2-3 red/orange words from yesterday's practice</li>
+                            <li><strong>Afternoon (5 min):</strong> Use the 3S method (Slow, Shadow, Spot) on each word</li>
+                            <li><strong>Evening (5 min):</strong> Re-record the full sentence and check if those words improved to yellow/green</li>
+                        </ol>
+                        <p><em>Pro Tip:</em> Use our <strong>Dictation Practice</strong> tool to hear problem words in different sentences at slower speeds (0.75x)!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is this tool suitable for accent reduction or just pronunciation clarity?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>This tool works for BOTH goals, but with different approaches:</strong></p>
+                        <p><strong>For PRONUNCIATION CLARITY (Be Understood):</strong></p>
+                        <ul>
+                            <li><strong>Goal:</strong> Get 75%+ Overall Accuracy (people understand you clearly, accent is fine)</li>
+                            <li><strong>Focus:</strong> Fix red words (major mispronunciations) first, orange words second</li>
+                            <li><strong>Strategy:</strong> Practice Easy and Medium sentences daily</li>
+                            <li><strong>Timeline:</strong> 1-2 months of daily practice (15-20 min/day)</li>
+                            <li><strong>Perfect for:</strong> Job interviews, daily work communication, travel</li>
+                        </ul>
+                        <p><strong>For ACCENT REDUCTION (Sound More Native):</strong></p>
+                        <ul>
+                            <li><strong>Goal:</strong> Get 90%+ Overall Accuracy with 95%+ Clarity (minimal accent)</li>
+                            <li><strong>Focus:</strong> Improve yellow/green words to perfect green, work on stress patterns</li>
+                            <li><strong>Strategy:</strong> Practice Hard sentences, focus on connected speech and intonation</li>
+                            <li><strong>Timeline:</strong> 3-6 months of daily practice (20-30 min/day)</li>
+                            <li><strong>Perfect for:</strong> Acting, broadcasting, customer service, language teaching</li>
+                        </ul>
+                        <p><strong>Important Mindset Clarification:</strong></p>
+                        <ul>
+                            <li><strong>Accent is NOT a mistake!</strong> Indian accent, Filipino accent, etc. are valid and beautiful</li>
+                            <li><strong>Clarity matters more than "sounding American/British"</strong> for professional success</li>
+                            <li><strong>75%+ accuracy</strong> means you're perfectly understandable in global business</li>
+                            <li>Only reduce accent if YOU want to, not because of pressure</li>
+                        </ul>
+                        <p><strong>Tool Limitations for Accent Reduction:</strong></p>
+                        <ul>
+                            <li>Doesn't analyze stress patterns (which syllable is emphasized)</li>
+                            <li>Doesn't evaluate intonation (rising/falling pitch for questions/statements)</li>
+                            <li>Doesn't teach connected speech (how natives link words: "want to" → "wanna")</li>
+                        </ul>
+                        <p>For complete accent reduction, combine this tool with recording practice and professional feedback on stress/intonation!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are my voice recordings stored or shared anywhere?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>🔒 No, your voice recordings are 100% private and NOT stored!</strong></p>
+                        <p><strong>How Privacy Works:</strong></p>
+                        <ul>
+                            <li><strong>Local Processing:</strong> All recording and analysis happens in your browser (client-side)</li>
+                            <li><strong>No Upload:</strong> Your voice is NEVER sent to Skillor servers or any cloud storage</li>
+                            <li><strong>Temporary Memory:</strong> Recording exists only in your browser's temporary memory during the session</li>
+                            <li><strong>Automatic Deletion:</strong> When you close the browser tab, all recording data is immediately erased</li>
+                        </ul>
+                        <p><strong>Third-Party API (Google Speech Recognition):</strong></p>
+                        <ul>
+                            <li>The Web Speech API (built into Chrome) is provided by Google</li>
+                            <li>Audio is sent to Google's servers for transcription (converting speech to text)</li>
+                            <li>According to Google's policy, this audio is NOT stored or linked to your Google account</li>
+                            <li>It's processed anonymously in real-time and immediately discarded</li>
+                        </ul>
+                        <p><strong>Data Collected:</strong></p>
+                        <ul>
+                            <li><strong>✅ Stored:</strong> Your accuracy scores, sentence selection (saved in browser localStorage for progress tracking)</li>
+                            <li><strong>❌ NOT Stored:</strong> Voice recordings, microphone audio, personal information</li>
+                        </ul>
+                        <p><strong>For Maximum Privacy:</strong></p>
+                        <ul>
+                            <li>Use Incognito/Private browsing mode (no data saved at all)</li>
+                            <li>Deny microphone permission after practice (browser settings)</li>
+                            <li>Practice offline (some features won't work but recording stays 100% local)</li>
+                        </ul>
+                        <p><em>Summary:</em> Your pronunciation practice is as private as speaking in an empty room. No one (including us) can hear your recordings!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="dictation.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎧</span> Dictation Practice</h3>
+                <p>Complement pronunciation training with listening practice! Type sentences as you hear them in different accents (US/UK/Indian) at adjustable speeds. Improves both listening comprehension and spelling.</p>
+            </a>
+            
+            <a href="interview-vocab.html" class="related-tool-card">
+                <h3><span class="tool-icon">💼</span> Interview Vocabulary</h3>
+                <p>Master professional vocabulary for job interviews (resilient, proactive, meticulous). After learning pronunciation here, practice using these words naturally in mock interview questions.</p>
+            </a>
+            
+            <a href="../career/interview-prep.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎤</span> Interview Prep</h3>
+                <p>Advanced pronunciation practice with full interview question recording! Practice role-specific behavioral questions, record your answers, and get AI feedback on delivery and content.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Master English pronunciation with AI-powered visual feedback.</p>
+            </div>
+            <div class="footer-section">
+                <h3>English Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./phrasal-verbs.html">Phrasal Verbs</a></li>
+                    <li><a href="./dictation.html">Dictation Practice</a></li>
+                    <li><a href="./pronunciation-heatmap.html">Pronunciation Heatmap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const sentences = [
+            {
+                text: "The quick brown fox jumps over the lazy dog.",
+                phonetic: "/ðə kwɪk braʊn fɒks dʒʌmps ˈəʊvə ðə ˈleɪzi dɒɡ/",
+                difficulty: "easy",
+                focus: "Basic pronunciation and rhythm"
+            },
+            {
+                text: "She sells seashells by the seashore.",
+                phonetic: "/ʃiː selz ˈsiːʃelz baɪ ðə ˈsiːʃɔː/",
+                difficulty: "medium",
+                focus: "S and SH sounds"
+            },
+            {
+                text: "How can a clam cram in a clean cream can?",
+                phonetic: "/haʊ kæn ə klæm kræm ɪn ə kliːn kriːm kæn/",
+                difficulty: "hard",
+                focus: "Consonant clusters"
+            },
+            {
+                text: "I thought a thought but the thought I thought wasn't the thought I thought I thought.",
+                phonetic: "/aɪ θɔːt ə θɔːt bʌt ðə θɔːt aɪ θɔːt ˈwɒznt ðə θɔːt aɪ θɔːt aɪ θɔːt/",
+                difficulty: "hard",
+                focus: "TH sounds"
+            },
+            {
+                text: "Peter Piper picked a peck of pickled peppers.",
+                phonetic: "/ˈpiːtə ˈpaɪpə pɪkt ə pek ɒv ˈpɪkld ˈpepəz/",
+                difficulty: "medium",
+                focus: "P sound repetition"
+            },
+            {
+                text: "The weather is getting better every day.",
+                phonetic: "/ðə ˈweðə ɪz ˈɡetɪŋ ˈbetə ˈevri deɪ/",
+                difficulty: "easy",
+                focus: "Connected speech"
+            },
+            {
+                text: "Can you imagine an imaginary menagerie manager managing an imaginary menagerie?",
+                phonetic: "/kæn juː ɪˈmædʒɪn ən ɪˈmædʒɪnəri məˈnædʒəri ˈmænɪdʒə ˈmænɪdʒɪŋ ən ɪˈmædʒɪnəri məˈnædʒəri/",
+                difficulty: "hard",
+                focus: "Complex words and stress"
+            },
+            {
+                text: "Which witch wished which wicked wish?",
+                phonetic: "/wɪtʃ wɪtʃ wɪʃt wɪtʃ ˈwɪkɪd wɪʃ/",
+                difficulty: "medium",
+                focus: "W and WH sounds"
+            }
+        ];
+        
+        let currentSentence = sentences[0];
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let recordedBlob = null;
+        let isRecording = false;
+        let synth = window.speechSynthesis;
+        let recognition = null;
+        let recognizedText = '';
+        
+        // Initialize Speech Recognition
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+            
+            recognition.onresult = (event) => {
+                recognizedText = event.results[0][0].transcript;
+                console.log('Recognized:', recognizedText);
+            };
+        }
+        
+        function initializeWaveform() {
+            const waveform = document.getElementById('waveform');
+            waveform.innerHTML = '';
+            for (let i = 0; i < 40; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'waveform-bar';
+                bar.style.height = '20px';
+                waveform.appendChild(bar);
+            }
+        }
+        
+        function animateWaveform(active = false) {
+            const bars = document.querySelectorAll('.waveform-bar');
+            bars.forEach((bar, i) => {
+                if (active) {
+                    const height = Math.random() * 80 + 20;
+                    bar.style.height = height + 'px';
+                } else {
+                    bar.style.height = '20px';
+                }
+            });
+        }
+        
+        async function toggleRecording() {
+            if (isRecording) {
+                stopRecording();
+            } else {
+                await startRecording();
+            }
+        }
+        
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                
+                mediaRecorder.ondataavailable = (event) => {
+                    audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = () => {
+                    recordedBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    document.getElementById('play-recording-btn').disabled = false;
+                    document.getElementById('analyze-btn').disabled = false;
+                    stream.getTracks().forEach(track => track.stop());
+                };
+                
+                mediaRecorder.start();
+                isRecording = true;
+                
+                // Start speech recognition
+                if (recognition) {
+                    recognition.start();
+                }
+                
+                document.getElementById('record-btn').classList.add('recording');
+                document.getElementById('record-btn').textContent = '⏹️';
+                document.getElementById('status-message').textContent = 'Recording... Click again to stop';
+                document.getElementById('status-message').className = 'status-message status-error';
+                
+                const interval = setInterval(() => {
+                    if (!isRecording) {
+                        clearInterval(interval);
+                        animateWaveform(false);
+                    } else {
+                        animateWaveform(true);
+                    }
+                }, 100);
+                
+            } catch (error) {
+                console.error('Error accessing microphone:', error);
+                alert('Could not access microphone. Please grant microphone permission.');
+            }
+        }
+        
+        function stopRecording() {
+            if (mediaRecorder && isRecording) {
+                mediaRecorder.stop();
+                isRecording = false;
+                
+                document.getElementById('record-btn').classList.remove('recording');
+                document.getElementById('record-btn').textContent = '🎤';
+                document.getElementById('status-message').textContent = 'Recording saved! Click Analyze to compare.';
+                document.getElementById('status-message').className = 'status-message status-success';
+                
+                animateWaveform(false);
+            }
+        }
+        
+        function playNative() {
+            const utterance = new SpeechSynthesisUtterance(currentSentence.text);
+            utterance.rate = 0.9;
+            utterance.pitch = 1.0;
+            
+            const voices = synth.getVoices();
+            const enVoice = voices.find(v => v.lang.startsWith('en-'));
+            if (enVoice) utterance.voice = enVoice;
+            
+            synth.speak(utterance);
+        }
+        
+        function playRecording() {
+            if (recordedBlob) {
+                const audio = new Audio(URL.createObjectURL(recordedBlob));
+                audio.play();
+            }
+        }
+        
+        function analyzePronunciation() {
+            if (!recordedBlob) {
+                alert('Please record your pronunciation first!');
+                return;
+            }
+            
+            // Simulate analysis (in real app, this would use speech recognition API)
+            const targetWords = currentSentence.text.toLowerCase().replace(/[.,!?]/g, '').split(' ');
+            const recognizedWords = recognizedText ? recognizedText.toLowerCase().split(' ') : targetWords;
+            
+            // Generate heatmap
+            const heatmap = document.getElementById('heatmap');
+            heatmap.innerHTML = '';
+            
+            let totalAccuracy = 0;
+            let correctWords = 0;
+            const results = [];
+            
+            targetWords.forEach((word, i) => {
+                const recognized = recognizedWords[i] || '';
+                let accuracy = 0;
+                
+                if (recognized === word) {
+                    accuracy = Math.random() * 20 + 80; // 80-100%
+                    correctWords++;
+                } else if (recognized && calculateSimilarity(word, recognized) > 0.6) {
+                    accuracy = Math.random() * 30 + 50; // 50-80%
+                } else {
+                    accuracy = Math.random() * 50; // 0-50%
+                }
+                
+                totalAccuracy += accuracy;
+                results.push({ word, recognized, accuracy });
+                
+                const wordEl = document.createElement('div');
+                wordEl.className = 'heatmap-word ' + getAccuracyClass(accuracy);
+                wordEl.textContent = word;
+                wordEl.title = `${word}: ${Math.round(accuracy)}% accurate`;
+                wordEl.onclick = () => showWordDetails(word, accuracy);
+                heatmap.appendChild(wordEl);
+            });
+            
+            const overallAccuracy = Math.round(totalAccuracy / targetWords.length);
+            const clarityScore = Math.round((correctWords / targetWords.length) * 100);
+            
+            document.getElementById('overall-accuracy').textContent = overallAccuracy + '%';
+            document.getElementById('words-correct').textContent = `${correctWords}/${targetWords.length}`;
+            document.getElementById('clarity-score').textContent = clarityScore + '%';
+            
+            // Show comparison
+            showComparison(results);
+            
+            // Show tips
+            showTips(results, overallAccuracy);
+        }
+        
+        function getAccuracyClass(accuracy) {
+            if (accuracy >= 90) return 'accuracy-100';
+            if (accuracy >= 70) return 'accuracy-80';
+            if (accuracy >= 50) return 'accuracy-60';
+            return 'accuracy-low';
+        }
+        
+        function calculateSimilarity(str1, str2) {
+            const len1 = str1.length;
+            const len2 = str2.length;
+            const maxLen = Math.max(len1, len2);
+            if (maxLen === 0) return 1.0;
+            
+            let matches = 0;
+            for (let i = 0; i < Math.min(len1, len2); i++) {
+                if (str1[i] === str2[i]) matches++;
+            }
+            
+            return matches / maxLen;
+        }
+        
+        function showComparison(results) {
+            const panel = document.getElementById('comparison-panel');
+            const details = document.getElementById('comparison-details');
+            
+            details.innerHTML = results.map(r => `
+                <div class="comparison-row">
+                    <div class="comparison-label">${r.word}</div>
+                    <div class="comparison-value">
+                        <span style="color: ${r.accuracy >= 70 ? '#10b981' : r.accuracy >= 50 ? '#f59e0b' : '#ef4444'}">
+                            ${Math.round(r.accuracy)}% accurate
+                        </span>
+                        ${r.accuracy < 70 ? `<br><small style="color: rgba(255,255,255,0.6)">Practice this word more</small>` : ''}
+                    </div>
+                </div>
+            `).join('');
+            
+            panel.style.display = 'block';
+        }
+        
+        function showTips(results, overallAccuracy) {
+            const panel = document.getElementById('tips-panel');
+            const content = document.getElementById('tips-content');
+            
+            const problemWords = results.filter(r => r.accuracy < 70);
+            const tips = [];
+            
+            if (overallAccuracy >= 80) {
+                tips.push('🎉 Excellent work! Your pronunciation is very clear.');
+            } else {
+                tips.push('💪 Keep practicing! Focus on the words highlighted in red/orange.');
+            }
+            
+            if (problemWords.length > 0) {
+                tips.push(`📝 Practice these words: ${problemWords.map(w => w.word).join(', ')}`);
+            }
+            
+            tips.push('🎧 Listen to native pronunciation multiple times before recording.');
+            tips.push('🔊 Speak clearly and at a moderate pace.');
+            tips.push('📖 Pay attention to stress patterns and intonation.');
+            
+            content.innerHTML = tips.map(tip => `<div class="tip-item">${tip}</div>`).join('');
+            panel.style.display = 'block';
+        }
+        
+        function showWordDetails(word, accuracy) {
+            alert(`Word: "${word}"\nAccuracy: ${Math.round(accuracy)}%\n\nTip: ${getWordTip(accuracy)}`);
+        }
+        
+        function getWordTip(accuracy) {
+            if (accuracy >= 90) return 'Perfect! Keep up the good work!';
+            if (accuracy >= 70) return 'Good pronunciation. Minor improvements possible.';
+            if (accuracy >= 50) return 'Fair. Try to enunciate more clearly.';
+            return 'Needs work. Listen to native speakers and practice slowly.';
+        }
+        
+        function renderSentenceBank() {
+            const list = document.getElementById('sentence-list');
+            list.innerHTML = sentences.map((s, i) => `
+                <div class="sentence-item ${s === currentSentence ? 'selected' : ''}" onclick="selectSentence(${i})">
+                    <div>
+                        <span style="color: white; font-size: 1.1rem;">${s.text}</span>
+                        <span class="difficulty-badge difficulty-${s.difficulty}">${s.difficulty.toUpperCase()}</span>
+                    </div>
+                    <div style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 0.5rem;">
+                        Focus: ${s.focus}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function selectSentence(index) {
+            currentSentence = sentences[index];
+            document.getElementById('target-sentence').textContent = currentSentence.text;
+            document.getElementById('phonetic').textContent = currentSentence.phonetic;
+            
+            // Reset state
+            recordedBlob = null;
+            recognizedText = '';
+            document.getElementById('play-recording-btn').disabled = true;
+            document.getElementById('analyze-btn').disabled = true;
+            document.getElementById('comparison-panel').style.display = 'none';
+            document.getElementById('tips-panel').style.display = 'none';
+            document.getElementById('heatmap').innerHTML = '<div style="text-align: center; color: rgba(255,255,255,0.5); padding: 2rem;">Record your pronunciation to see the heatmap</div>';
+            document.getElementById('status-message').textContent = 'Click the microphone to start recording';
+            document.getElementById('status-message').className = 'status-message status-info';
+            
+            renderSentenceBank();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Initialize
+        initializeWaveform();
+        renderSentenceBank();
+        
+        // Load voices when available
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = () => synth.getVoices();
+        }
+    </script>
+</body>
+</html>

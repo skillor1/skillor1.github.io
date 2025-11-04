@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/typing/battle-arena.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Challenge friends in real-time multiplayer typing races with live WPM tracking and winner animations. Share instant battle links on WhatsApp or Discord, perfect for classrooms and competitive typing practice.">
+    <meta name="keywords" content="typing race online multiplayer free, typing battle with friends, real time typing competition, classroom typing race game, WPM challenge online 2025, typing speed battle">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/typing/battle-arena.html">
+    <meta property="og:title" content="Typing Battle Arena - Multiplayer Race with Live WPM Tracking">
+    <meta property="og:description" content="Challenge friends in real-time multiplayer typing races with live WPM tracking and winner animations. Share instant battle links on WhatsApp or Discord, perfect for classrooms and competitive typing practice.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/typing/battle-arena.html">
+    <meta name="twitter:title" content="Typing Battle Arena - Multiplayer Race with Live WPM Tracking">
+    <meta name="twitter:description" content="Challenge friends in real-time multiplayer typing races with live WPM tracking and winner animations. Share instant battle links on WhatsApp or Discord, perfect for classrooms and competitive typing practice.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Typing Battle Arena - Multiplayer Race with Live WPM Tracking</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #ec4899;
+            --tool-secondary: #f472b6;
+            --tool-accent: #db2777;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mode-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mode-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .setup-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-group input {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+        
+        .share-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .share-link {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            color: var(--tool-secondary);
+            font-family: 'JetBrains Mono', monospace;
+            word-break: break-all;
+            margin: 1rem 0;
+        }
+        
+        .share-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .share-btn {
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .player-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .player-card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .player-card.winner {
+            border-color: #fbbf24;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+            animation: winner-pulse 1s infinite;
+        }
+        
+        @keyframes winner-pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(251, 191, 36, 0.5); }
+            50% { box-shadow: 0 0 50px rgba(251, 191, 36, 0.8); }
+        }
+        
+        .player-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .player-name {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .player-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .stat {
+            text-align: center;
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--tool-primary), var(--tool-secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .race-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .countdown {
+            font-size: 5rem;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(135deg, var(--tool-primary), #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 2rem 0;
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .text-display {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+        }
+        
+        .text-display .char {
+            transition: color 0.1s;
+        }
+        
+        .text-display .char.correct {
+            color: #10b981;
+        }
+        
+        .text-display .char.incorrect {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.2);
+        }
+        
+        .text-display .char.current {
+            border-bottom: 3px solid var(--tool-primary);
+        }
+        
+        .typing-input {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid var(--tool-primary);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+        }
+        
+        .typing-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.5);
+        }
+        
+        .winner-banner {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.3));
+            border: 2px solid #fbbf24;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: winner-pulse 1s infinite;
+        }
+        
+        .trophy {
+            font-size: 5rem;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @media (max-width: 768px) {
+            .player-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-selector {
+                flex-direction: column;
+            }
+        }
+
+        /* Moved inline styles for the battle type select into CSS to avoid inline style usage */
+        #battle-type {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Typing Battle Arena - Multiplayer Typing Race",
+      "description": "Challenge friends to real-time typing races via shareable links. Live WPM tracking and winner animations.",
+      "applicationCategory": "Game"
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../typing.html">Typing</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../typing.html" class="back-link">← Back to Typing Tools</a>
+        
+        <div class="header-section">
+            <h1>⚔️ Typing Battle Arena</h1>
+            <p>Challenge friends • Real-time races • Share link anywhere</p>
+        </div>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="switchMode('setup')">🎮 Quick Battle</button>
+            <button class="mode-btn" onclick="switchMode('classroom')">🏫 Classroom Mode</button>
+            <button class="mode-btn" onclick="switchMode('join')">🔗 Join Battle</button>
+        </div>
+        
+                <div class="input-group">
+                    <label for="battle-type">Battle Type</label>
+                    <select id="battle-type" title="Battle Type" aria-label="Battle Type">
+                        <option value="1v1">1v1 Quick Match</option>
+                        <option value="solo">Solo Practice</option>
+                    </select>
+                </div>
+                    <input type="text" id="player1-name" placeholder="Enter your name" value="Player 1">
+                </div>
+                
+                <div class="input-group">
+                    <label>Battle Type</label>
+                    <select id="battle-type" style="width: 100%; background: rgba(10,10,15,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 1rem; color: white;">
+                        <option value="1v1">1v1 Quick Match</option>
+                        <option value="solo">Solo Practice</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="createBattle()">🚀 Create Battle & Get Link</button>
+                
+                <div id="share-section" style="display:none;">
+                    <div class="share-box">
+                        <h4 style="color: white; margin-bottom: 1rem;">✅ Battle Created!</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Share this link with your opponent:</p>
+                        <div class="share-link" id="battle-link">Loading...</div>
+                        
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareWhatsApp()">💬 WhatsApp</button>
+                            <button class="share-btn" onclick="shareDiscord()">🎮 Discord</button>
+                            <button class="share-btn" onclick="copyLink()">📋 Copy Link</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn" onclick="startBattle()">⚔️ Start Battle</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Classroom Mode -->
+        <div id="classroom-mode" style="display:none;">
+            <div class="setup-panel">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🏫 Classroom Mode</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                    Track up to 30 students live! Perfect for typing competitions.
+                </p>
+                
+                <div class="input-group">
+                    <label>Teacher Name</label>
+                    <input type="text" id="teacher-name" placeholder="Enter teacher name">
+                </div>
+                
+                <div class="input-group">
+                    <label>Class Size</label>
+                    <input type="number" id="class-size" placeholder="Number of students" min="2" max="30" value="10">
+                </div>
+                
+                <button class="btn" onclick="createClassroom()">📊 Create Classroom & Get Link</button>
+                
+                <div id="classroom-share" style="display:none;">
+                    <div class="share-box">
+                        <h4 style="color: white; margin-bottom: 1rem;">✅ Classroom Created!</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Students can join using this link:</p>
+                        <div class="share-link" id="classroom-link">Loading...</div>
+                        
+                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(59,130,246,0.1); border-radius: 8px;">
+                            <strong style="color: #60a5fa;">Joined Students:</strong> <span id="joined-count" style="color: white;">0</span>/<span id="total-students">10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Join Mode -->
+        <div id="join-mode" style="display:none;">
+            <div class="setup-panel">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🔗 Join Battle</h3>
+                
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="player2-name" placeholder="Enter your name" value="Player 2">
+                </div>
+                
+                <div class="input-group">
+                    <label>Battle Code</label>
+                    <input type="text" id="battle-code" placeholder="Enter 6-digit code">
+                </div>
+                
+                <button class="btn" onclick="joinBattle()">🎯 Join Battle</button>
+            </div>
+        </div>
+        
+        <!-- Battle Screen -->
+        <div id="battle-screen" style="display:none;">
+            <div id="countdown-screen" style="display:none;">
+                <div class="countdown" id="countdown">3</div>
+                <p style="text-align: center; color: white; font-size: 1.5rem;">Get Ready!</p>
+            </div>
+            
+            <div id="race-screen" style="display:none;">
+                <div class="player-cards">
+                    <div class="player-card" id="player1-card">
+                        <div class="player-avatar">🎮</div>
+                        <div class="player-name" id="p1-name">Player 1</div>
+                        <div class="player-stats">
+                            <div class="stat">
+                                <div class="stat-value" id="p1-wpm">0</div>
+                                <div class="stat-label">WPM</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" id="p1-accuracy">100%</div>
+                                <div class="stat-label">Accuracy</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="p1-progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="player-card" id="player2-card">
+                        <div class="player-avatar">🎯</div>
+                        <div class="player-name" id="p2-name">Player 2</div>
+                        <div class="player-stats">
+                            <div class="stat">
+                                <div class="stat-value" id="p2-wpm">0</div>
+                                <div class="stat-label">WPM</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value" id="p2-accuracy">100%</div>
+                                <div class="stat-label">Accuracy</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="p2-progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="race-panel">
+                    <div class="text-display" id="race-text"></div>
+                    <input type="text" class="typing-input" id="race-input" placeholder="Start typing..." disabled>
+                </div>
+            </div>
+            
+            <div id="winner-screen" style="display:none;">
+                <div class="winner-banner">
+                    <div class="trophy">🏆</div>
+                    <h2 style="color: white; font-size: 2.5rem; margin: 1rem 0;">
+                        <span id="winner-name">Player 1</span> Wins!
+                    </h2>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">
+                        <span id="winner-wpm">0</span> WPM • <span id="winner-accuracy">100%</span> Accuracy
+                    </p>
+                </div>
+                
+                <button class="btn" onclick="location.reload()">🔄 New Battle</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const raceTexts = [
+            "The quick brown fox jumps over the lazy dog while racing against time to win the typing championship.",
+            "Practice makes perfect and daily dedication leads to mastery of any skill you wish to develop.",
+            "Technology evolves rapidly and staying updated with new trends is essential for modern professionals.",
+            "Challenge yourself every day to become better than you were yesterday and achieve your goals."
+        ];
+        
+        let battleCode = '';
+        let player1Name = '';
+        let player2Name = '';
+        let raceText = '';
+        let raceActive = false;
+        let startTime = 0; 
+        let player1Progress = 0;
+        let player2Progress = 0;
+        let isHost = true; // Track if this user is the host or joined player
+        let myPlayerNumber = 1; // Which player am I? 1 or 2
+        
+        function switchMode(mode) {
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('setup-mode').style.display = mode === 'setup' ? 'block' : 'none';
+            document.getElementById('classroom-mode').style.display = mode === 'classroom' ? 'block' : 'none';
+            document.getElementById('join-mode').style.display = mode === 'join' ? 'block' : 'none';
+        }
+        
+        function createBattle() {
+            player1Name = document.getElementById('player1-name').value || 'Player 1';
+            battleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+            
+            const battleUrl = `${window.location.href.split('?')[0]}?code=${battleCode}`;
+            document.getElementById('battle-link').textContent = battleUrl;
+            document.getElementById('share-section').style.display = 'block';
+        }
+        
+        function shareWhatsApp() {
+            const link = document.getElementById('battle-link').textContent;
+            const text = `🎮 Join my typing battle! Can you beat me?\n\nBattle Link: ${link}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function shareDiscord() {
+            const link = document.getElementById('battle-link').textContent;
+            alert(`Share this link on Discord:\n\n${link}`);
+            copyLink();
+        }
+        
+        function copyLink() {
+            const link = document.getElementById('battle-link').textContent;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('✅ Link copied to clipboard!');
+            });
+        }
+        
+        function createClassroom() {
+            const teacherName = document.getElementById('teacher-name').value || 'Teacher';
+            const classSize = document.getElementById('class-size').value || 10;
+            battleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+            
+            const classroomUrl = `${window.location.href.split('?')[0]}?classroom=${battleCode}`;
+            document.getElementById('classroom-link').textContent = classroomUrl;
+            document.getElementById('total-students').textContent = classSize;
+            document.getElementById('classroom-share').style.display = 'block';
+            
+            // Simulate students joining
+            let joined = 0;
+            const interval = setInterval(() => {
+                if (joined < classSize) {
+                    joined++;
+                    document.getElementById('joined-count').textContent = joined;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 2000);
+        }
+        
+        function joinBattle() {
+            const code = document.getElementById('battle-code').value;
+            
+            if (!code) {
+                alert('Please enter a battle code!');
+                return;
+            }
+            
+            // Get player 2 name from input
+            const joinedPlayerName = document.getElementById('player2-name').value || 'Player 2';
+            
+            // Mark that this user joined (not host)
+            isHost = false;
+            myPlayerNumber = 1; // You are player 1 on your screen
+            
+            // Show message
+            alert(`✅ ${joinedPlayerName} joined the battle!
+
+Battle Code: ${code}
+
+Click OK to start the race...`);
+            
+            // Set names from joined player perspective
+            player1Name = joinedPlayerName;  // You
+            player2Name = 'Host';  // Opponent
+            
+            // Hide all modes and show battle screen
+            document.getElementById('join-mode').style.display = 'none';
+            document.getElementById('battle-screen').style.display = 'block';
+            
+            // Update player names in UI
+            document.getElementById('p1-name').textContent = player1Name;
+            document.getElementById('p2-name').textContent = player2Name;
+            
+            // Start countdown
+            showCountdown();
+        }
+        
+        function startBattle() {
+            // Get host name from input
+            player1Name = document.getElementById('player1-name').value || 'Player 1';
+            
+            // Mark that this user is the host
+            isHost = true;
+            myPlayerNumber = 1; // You are player 1 on your screen
+            
+            // Opponent will have different name when they join
+            player2Name = 'Waiting for opponent...';
+            
+            // Hide setup and show battle screen
+            document.getElementById('setup-mode').style.display = 'none';
+            document.getElementById('battle-screen').style.display = 'block';
+            
+            // Update player names
+            document.getElementById('p1-name').textContent = player1Name;
+            document.getElementById('p2-name').textContent = player2Name;
+            
+            // Simulate opponent joining after 2 seconds
+            setTimeout(() => {
+                player2Name = 'Challenger';
+                document.getElementById('p2-name').textContent = player2Name;
+                
+                // Show countdown after opponent joins
+                setTimeout(() => {
+                    showCountdown();
+                }, 1000);
+            }, 2000);
+        }
+        
+        function showCountdown() {
+            document.getElementById('countdown-screen').style.display = 'block';
+            let count = 3;
+            
+            const countdownEl = document.getElementById('countdown');
+            const interval = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    countdownEl.textContent = count;
+                } else if (count === 0) {
+                    countdownEl.textContent = 'GO!';
+                } else {
+                    clearInterval(interval);
+                    document.getElementById('countdown-screen').style.display = 'none';
+                    startRace();
+                }
+            }, 1000);
+        }
+        
+        function startRace() {
+            document.getElementById('race-screen').style.display = 'block';
+            
+            raceText = raceTexts[Math.floor(Math.random() * raceTexts.length)];
+            const textDisplay = document.getElementById('race-text');
+            textDisplay.innerHTML = '';
+            
+            raceText.split('').forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char;
+                if (i === 0) span.classList.add('current');
+                textDisplay.appendChild(span);
+            });
+            
+            const input = document.getElementById('race-input');
+            input.disabled = false;
+            input.focus();
+            
+            raceActive = true;
+            startTime = Date.now();
+            player1Progress = 0;
+            player2Progress = 0;
+            
+            // Simulate opponent typing
+            simulateOpponent();
+        }
+        
+        function simulateOpponent() {
+            if (!raceActive) return;
+            
+            // Different speed based on difficulty
+            const baseSpeed = 45;
+            const variation = Math.random() * 15; // 45-60 WPM
+            const opponentSpeed = baseSpeed + variation;
+            
+            // Calculate progress
+            const elapsed = (Date.now() - startTime) / 1000;
+            const charsPerSecond = (opponentSpeed * 5) / 60; // Convert WPM to chars/sec
+            player2Progress = Math.min(elapsed * charsPerSecond, raceText.length);
+            
+            // Update opponent progress bar
+            const progress = Math.min((player2Progress / raceText.length) * 100, 100);
+            document.getElementById('p2-progress').style.width = progress + '%';
+            
+            // Update opponent WPM (show their speed)
+            const opponentWpm = Math.round((player2Progress / 5) / (elapsed / 60));
+            document.getElementById('p2-wpm').textContent = isNaN(opponentWpm) || !isFinite(opponentWpm) ? 0 : Math.min(opponentWpm, Math.round(opponentSpeed));
+            
+            // Opponent accuracy (simulate 95-98%)
+            const opponentAccuracy = 95 + Math.floor(Math.random() * 4);
+            document.getElementById('p2-accuracy').textContent = opponentAccuracy + '%';
+            
+            if (player2Progress >= raceText.length) {
+                endRace(player2Name);
+            } else {
+                setTimeout(simulateOpponent, 100);
+            }
+        }
+        
+        document.getElementById('race-input').addEventListener('input', function(e) {
+            if (!raceActive) return;
+            
+            const input = e.target.value;
+            const chars = document.querySelectorAll('#race-text .char');
+            
+            let correct = 0;
+            chars.forEach((char, i) => {
+                char.classList.remove('correct', 'incorrect', 'current');
+                
+                if (i < input.length) {
+                    if (input[i] === raceText[i]) {
+                        char.classList.add('correct');
+                        correct++;
+                    } else {
+                        char.classList.add('incorrect');
+                    }
+                } else if (i === input.length) {
+                    char.classList.add('current');
+                }
+            });
+            
+            player1Progress = input.length;
+            const progress = (correct / raceText.length) * 100;
+            document.getElementById('p1-progress').style.width = progress + '%';
+            
+            const elapsed = (Date.now() - startTime) / 1000;
+            const wpm = Math.round((correct / 5) / (elapsed / 60));
+            const accuracy = input.length > 0 ? Math.round((correct / input.length) * 100) : 100;
+            
+            document.getElementById('p1-wpm').textContent = isNaN(wpm) || !isFinite(wpm) ? 0 : wpm;
+            document.getElementById('p1-accuracy').textContent = accuracy + '%';
+            
+            if (input.length >= raceText.length) {
+                endRace(player1Name);
+            }
+        });
+        
+        function endRace(winner) {
+            raceActive = false;
+            document.getElementById('race-input').disabled = true;
+            
+            document.getElementById('race-screen').style.display = 'none';
+            document.getElementById('winner-screen').style.display = 'block';
+            
+            const winnerCard = winner === player1Name ? 'player1-card' : 'player2-card';
+            document.getElementById(winnerCard).classList.add('winner');
+            
+            const wpm = winner === player1Name 
+                ? document.getElementById('p1-wpm').textContent 
+                : document.getElementById('p2-wpm').textContent;
+            const accuracy = winner === player1Name 
+                ? document.getElementById('p1-accuracy').textContent 
+                : document.getElementById('p2-accuracy').textContent;
+            
+            document.getElementById('winner-name').textContent = winner;
+            document.getElementById('winner-wpm').textContent = wpm;
+            document.getElementById('winner-accuracy').textContent = accuracy;
+        }
+        
+        // Auto-join if URL has code
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const classroom = urlParams.get('classroom');
+            
+            if (code) {
+                document.querySelectorAll('.mode-btn')[2].click();
+                document.getElementById('battle-code').value = code;
+            } else if (classroom) {
+                document.querySelectorAll('.mode-btn')[1].click();
+            }
+        });
+    </script>
+</body>
+</html>

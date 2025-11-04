@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/career/resume-builder.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Build professional resumes with instant ATS score checking and optimization suggestions. Create ATS-friendly resumes that pass applicant tracking systems and land more interviews. Download as PDF instantly.">
+    <meta name="keywords" content="free resume builder ATS friendly, ATS resume checker online, resume optimizer for applicant tracking, professional CV maker free, resume score checker, ATS compliant resume builder, download resume PDF free">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/career/resume-builder.html">
+    <meta property="og:title" content="Resume Builder with ATS Score Checker - Optimize & Download Free">
+    <meta property="og:description" content="Build professional resumes with instant ATS score checking and optimization suggestions. Create ATS-friendly resumes that pass applicant tracking systems and land more interviews. Download as PDF instantly.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/career/resume-builder.html">
+    <meta name="twitter:title" content="Resume Builder with ATS Score Checker - Optimize & Download Free">
+    <meta name="twitter:description" content="Build professional resumes with instant ATS score checking and optimization suggestions. Create ATS-friendly resumes that pass applicant tracking systems and land more interviews. Download as PDF instantly.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Resume Builder with ATS Score Checker - Optimize & Download Free</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Free Resume Builder - ATS Score Checker & Optimizer",
+      "description": "Create professional resumes with ATS Score Checker. Auto-optimize for Applicant Tracking Systems.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #0ea5e9;
+            --tool-secondary: #38bdf8;
+            --tool-accent: #0284c7;
+            --ats-high: #10b981;
+            --ats-medium: #f59e0b;
+            --ats-low: #ef4444;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(14, 165, 233, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+        }
+        
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.5);
+        }
+        
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+        
+        .experience-item, .education-item, .skill-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .remove-btn {
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-left: 1rem;
+        }
+        
+        .ats-score {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .ats-value {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        
+        .ats-high { color: var(--ats-high); }
+        .ats-medium { color: var(--ats-medium); }
+        .ats-low { color: var(--ats-low); }
+        
+        .resume-preview {
+            background: white;
+            color: #1a1a1a;
+            padding: 3rem;
+            border-radius: 0;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 850px;
+        }
+        
+        .resume-header {
+            text-align: center;
+            border-bottom: 3px solid #0ea5e9;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .resume-name {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .resume-contact {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .resume-contact span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .resume-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .experience-item-resume, .education-item-resume {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+        
+        .experience-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            color: #1a1a1a;
+        }
+        
+        .experience-company, .education-school {
+            font-weight: 600;
+            color: #0ea5e9;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .experience-date, .education-date {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        
+        .experience-desc, .education-desc {
+            margin-top: 0.75rem;
+            line-height: 1.8;
+            color: #2d3748;
+            font-size: 1rem;
+            text-align: justify;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+        }
+        
+        .resume-summary {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #2d3748;
+            text-align: justify;
+            padding: 1rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long should my resume be: 1 page or 2 pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Length rules by experience level: 0-5 years experience = 1 page STRICTLY (recruiters expect brevity, shows you can prioritize). 5-10 years = 1 page ideal, 2 pages acceptable if you have extensive relevant achievements (patents, publications, major projects). 10+ years = 2 pages standard, 3 pages for academic/research roles only. Exception: CV for academic/medical roles can be 3-5+ pages (includes publications, conferences, grants). Why 1 page matters for early career: Recruiters spend 6-7 seconds initially scanning resume, every extra page halves attention span, forces you to highlight only MOST impressive achievements. How to fit 7 years into 1 page: Use 0.5-inch margins, 10-11pt font (Calibri, Arial), condense education section (just degree, school, year), include only last 3 relevant roles, use bullet points not paragraphs (max 4-5 bullets per role), cut objective statement (waste of space), eliminate soft skills section (show don't tell), use action verbs to reduce word count ('Led 5-person team' vs 'Was responsible for leading a team consisting of 5 members'). Red flags of bad 1-page resume: 8pt font (unreadable), 0.25-inch margins (cramped), cutting important achievements to fit fluff. If struggling to fit, remove older/less relevant roles entirely rather than cramming everything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include a resume objective or summary statement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skip objective statements (outdated, wastes space). Use summary only if: Career changer (need to explain transition), senior leader (C-suite roles expect it), unique value prop (rare combination like 'Engineer + MBA + 10 years healthcare'). Summary formula (3-4 lines max): Line 1: Current title + years experience + industry. Example: 'Senior Software Engineer with 8 years building scalable fintech platforms.' Line 2: Top 2-3 achievements with numbers. Example: 'Led team that processed $10M daily transactions, reduced latency by 40%, launched 3 mobile apps with 500K+ downloads.' Line 3: Key skills relevant to target job. Example: 'Expert in Python, AWS, microservices architecture, agile leadership.' Line 4 (optional): What you're seeking. Example: 'Seeking engineering leadership role at fast-growing startup.' Bad summary examples: 'Hardworking professional seeking to leverage my skills in a challenging role' (generic, says nothing), 'Passionate team player looking for growth opportunities' (vague, focuses on what YOU want not value you bring), listing soft skills without proof ('excellent communicator, strong leader, detail-oriented'). Alternative to summary: Jump straight into experience section with strongest achievements first. For early-career: skip summary entirely, use that space for projects, internships, or additional skills. Test: if your summary could apply to 50% of candidates, delete it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I quantify achievements when I don't have access to exact numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use estimation strategies and alternative metrics: Time saved: 'Reduced report generation time from 4 hours to 30 minutes' (even without knowing company-wide impact). Team size: 'Managed team of 5 developers' or 'Collaborated with 12 cross-functional stakeholders.' Scope: 'Supported 200+ daily active users' or 'Processed 500+ customer requests monthly.' Before/After: 'Decreased bug count from ~50 to ~15 per sprint' (approximations acceptable). Percentages: If you improved something but don't know exact numbers, use conservative %: 'Increased efficiency by approximately 30%' (better than no number). Frequency: 'Led weekly team meetings' or 'Delivered 10+ client presentations per quarter.' Rankings: 'Top 3 sales performer on 20-person team' or 'Ranked #2 in quarterly performance reviews.' Industry benchmarks: 'Maintained 98% uptime (above industry standard 95%).' Alternative metrics when zero numbers available: Complexity: 'Architected complex API integrating 5 third-party services.' Recognition: 'Received Employee of the Quarter award for outstanding contribution.' First/Only: 'First person to implement automated testing in organization.' Skills demonstration: 'Built full-stack e-commerce platform using React, Node.js, PostgreSQL.' How to estimate: Ask former colleagues, check email archives for project reports, review old performance reviews, LinkedIn endorsements/recommendations may mention impact. Format: Be honest—use 'approximately,' '~' symbol, or ranges ('50-75 users') when estimating. Never fabricate specific numbers you can't defend in interviews."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the biggest resume mistakes that get applications rejected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top 10 resume killers: 1) Typos/Grammar (automatic rejection—shows carelessness, use Grammarly, have 3 people proofread), 2) Generic resume (same resume for all jobs—customize for each application, mirror job description keywords), 3) No quantified achievements (just listed duties—'managed projects' vs 'delivered 5 projects under budget, ahead of schedule'), 4) Poor formatting (inconsistent fonts, colors, graphics—use simple professional template, ATS-friendly), 5) Irrelevant information (high school achievements when you have degree, hobbies like 'watching movies'), 6) Employment gaps not addressed (unexplained 6+ month gaps—add brief explanation: 'Career break for family care' or 'Freelance work 2020-2021'), 7) Outdated contact info (old email, phone number that's disconnected—update and test before sending), 8) Objective statement (see previous FAQ—wastes space, focuses on what you want), 9) Lies or exaggerations (inflating job titles, claiming skills you don't have—easily caught in interviews, grounds for termination if hired), 10) No LinkedIn match (resume says Senior Developer, LinkedIn says Junior—inconsistency raises red flags). How to test your resume: Run through ATS scanner (free tools: Jobscan, Resume Worded), ask industry professional to review, apply 6-second test (can someone understand your value in 6 seconds?), verify all dates/facts can be proven in interview. Red flags checklist before sending: Multiple fonts? More than 2 pages for <10 years experience? Personal pronouns (I, me, my)? More than 3 jobs in 2 years (job-hopper)? No achievements, only duties? Fix before applying."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I list skills: separate skills section or integrated into experience?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use both approaches strategically: Skills Section (required for ATS): Place after experience section or in sidebar, list 15-25 relevant hard skills, organize by category (Programming: Python, Java, React | Tools: Git, Docker, AWS | Methodologies: Agile, TDD), prioritize skills matching job description (ATS scans for keyword matches), avoid soft skills list ('communication, teamwork'—prove these in experience section instead). Integrated Skills (for human readers): Weave skills into achievement bullets: 'Used Python and Pandas to analyze 10K+ customer records, identified 3 revenue opportunities', 'Led Agile sprint planning for 8-person team, delivered 95% of committed features', 'Designed responsive UI with React and TypeScript, improved load time 40%'. This approach: Shows you can DO something with skills (not just list them), provides context for proficiency level, makes achievements more impressive. Skills section format: Bad: 'Microsoft Office, Email, Internet, Problem Solving, Quick Learner' (generic, outdated, obvious). Good: Technical: Python, SQL, Tableau, Excel (VBA macros, pivot tables) | Platforms: AWS (EC2, S3, Lambda), Azure DevOps | Certifications: Google Analytics, AWS Solutions Architect. Skill levels (use sparingly): Advanced: 5+ years daily use | Intermediate: 2-4 years regular use | Familiar: <2 years or learning. Avoid: Rating bars (2/5 stars in Python = why hire you?), listing 50+ skills (shows lack of focus), including skills from 10 years ago you haven't used since. Update skills quarterly: Remove outdated tech, add newly acquired skills, reorder based on job market demand. Check job descriptions in your field—which skills appear in 70%+ of postings? Prioritize those."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../career.html">Career</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../career.html" class="back-link">← Back to Career</a>
+        
+        <div class="header-section">
+            <h1>📄 Resume Builder</h1>
+            <p>Create professional resumes with ATS Score Checker</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="resumes-created">0</div>
+                <div class="stat-label">Resumes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avg-ats">0</div>
+                <div class="stat-label">Avg ATS Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="downloads">0</div>
+                <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <div class="panel">
+                <h3>📝 Resume Details</h3>
+                
+                <div class="input-group">
+                    <label class="input-label" for="job-description">Job Description (for ATS optimization)</label>
+                    <textarea class="input-field" id="job-description" placeholder="Paste the job description to optimize your resume for ATS..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="full-name">Full Name</label>
+                    <input type="text" class="input-field" id="full-name" placeholder="John Doe">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="email">Email</label>
+                    <input type="email" class="input-field" id="email" placeholder="john.doe@example.com">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="phone">Phone</label>
+                    <input type="tel" class="input-field" id="phone" placeholder="(123) 456-7890">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="location">Location</label>
+                    <input type="text" class="input-field" id="location" placeholder="City, State">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="summary">Professional Summary</label>
+                    <textarea class="input-field" id="summary" placeholder="Brief professional summary highlighting your key strengths..."></textarea>
+                </div>
+                
+                <div class="section-header">
+                    <h3 style="color: white; margin: 0;">💼 Work Experience</h3>
+                    <button class="btn btn-small" onclick="addExperience()">+ Add Experience</button>
+                </div>
+                <div id="experience-container">
+                    <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No experience added yet</p>
+                </div>
+                
+                <div class="section-header">
+                    <h3 style="color: white; margin: 0;">🎓 Education</h3>
+                    <button class="btn btn-small" onclick="addEducation()">+ Add Education</button>
+                </div>
+                <div id="education-container">
+                    <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No education added yet</p>
+                </div>
+                
+                <div class="section-header">
+                    <h3 style="color: white; margin: 0;">🔧 Skills</h3>
+                    <button class="btn btn-small" onclick="addSkill()">+ Add Skill</button>
+                </div>
+                <div id="skills-container">
+                    <p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No skills added yet</p>
+                </div>
+                
+                <button class="btn" style="margin-top: 1.5rem; width: 100%;" onclick="generateResume()">✨ Generate Resume & Check ATS Score</button>
+            </div>
+            
+            <div class="panel">
+                <h3>📊 ATS Score Checker</h3>
+                <div class="ats-score">
+                    <div style="color: rgba(255,255,255,0.7);">Your Resume ATS Score</div>
+                    <div class="ats-value ats-low" id="ats-score">--</div>
+                    <div style="color: rgba(255,255,255,0.7);" id="ats-message">Complete your resume to get a score</div>
+                </div>
+                
+                <div id="ats-recommendations" style="display: none;">
+                    <h3 style="color: white; margin-bottom: 1rem;">💡 ATS Optimization Tips</h3>
+                    <div id="recommendations-list"></div>
+                </div>
+                
+                <h3>📄 Resume Preview</h3>
+                <div class="resume-preview" id="resume-preview">
+                    <div style="text-align: center; color: #94a3b8; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📄</div>
+                        <p>Your resume preview will appear here after you generate it</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn" style="flex: 1;" onclick="downloadHTML()">📥 Download HTML</button>
+                    <button class="btn" style="flex: 1;" onclick="downloadPDF()">📄 Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Resume Builder</h2>
+        <p>Create professional, ATS-optimized resumes with real-time scoring and keyword recommendations from job descriptions:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Add Your Information</h3>
+                <p>Fill personal details, summary, and add sections for experience, education, and skills. Click "+" buttons to add multiple entries. Remove items with "Remove" buttons.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Paste Job Description (Optional)</h3>
+                <p>Paste target job description in the field provided. The ATS scorer will match your skills against job requirements and suggest keywords to add.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Check ATS Score</h3>
+                <p>Click "Generate Resume" to see live preview and ATS score (0-100). Aim for 80+ score. Follow recommendations to improve keyword matching and formatting.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Download Resume</h3>
+                <p>Download as HTML (opens in any browser, easy to convert) or PDF (ready to send). ATS-friendly formatting ensures your resume passes automated screening.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is an ATS score and why does it matter?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        ATS (Applicant Tracking System) is software companies use to screen resumes. A good ATS score (80+) means your resume has proper formatting, relevant keywords, and clear sections - increasing chances it reaches human recruiters.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I create different resumes for different jobs?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Customize your resume for each application. Paste the job description to get keyword suggestions. Adjust your summary and skill emphasis to match what that specific company values.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>HTML or PDF - which format should I use?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Download PDF for final submission to companies. HTML is useful for making quick edits in a text editor or converting to other formats. Both are ATS-compatible with clean formatting.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What makes a good professional summary?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Write 2-3 sentences: Who you are (role + experience), what you're good at (key skills + achievements), what you're looking for (target role/company type). Use keywords from job description naturally.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is my resume data saved or shared?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Statistics (resumes created, downloads, avg score) are saved locally. Your actual resume content is NOT saved - you must download it each time. No data is shared with us or any third party.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="job-tracker.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Job Tracker</h3>
+                <p>Track where you sent your resume and follow up on applications systematically.</p>
+            </a>
+            <a href="interview-prep.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎤</span> Interview Prep</h3>
+                <p>Practice answering common interview questions to convert resume calls into offers.</p>
+            </a>
+            <a href="../programming/api-mock.html" class="related-tool-card">
+                <h3><span class="tool-icon">🔧</span> API Mock</h3>
+                <p>Generate realistic project data to add impressive details to your resume projects.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Create professional resumes optimized for Applicant Tracking Systems.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Career Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./resume-builder.html">Resume Builder</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../english.html">English</a></li>
+                    <li><a href="../career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="year"></span> Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        let experienceItems = [];
+        let educationItems = [];
+        let skillItems = [];
+        let stats = JSON.parse(localStorage.getItem('resumeStats') || '{"created": 0, "downloads": 0, "totalScore": 0, "count": 0}');
+        
+        function addExperience() {
+            const id = Date.now();
+            experienceItems.push({
+                id: id,
+                title: '',
+                company: '',
+                startDate: '',
+                endDate: '',
+                description: ''
+            });
+            renderExperience();
+        }
+        
+        function removeExperience(id) {
+            experienceItems = experienceItems.filter(item => item.id !== id);
+            renderExperience();
+        }
+        
+        function renderExperience() {
+            const container = document.getElementById('experience-container');
+            if (experienceItems.length === 0) {
+                container.innerHTML = '<p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No experience added yet</p>';
+                return;
+            }
+            
+            container.innerHTML = experienceItems.map(item => `
+                <div class="experience-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h4 style="color: white; margin: 0;">Experience #${experienceItems.indexOf(item) + 1}</h4>
+                        <button class="remove-btn" onclick="removeExperience(${item.id})">Remove</button>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Job Title</label>
+                        <input type="text" class="input-field" placeholder="Software Engineer" value="${item.title}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Company</label>
+                        <input type="text" class="input-field" placeholder="Company Name" value="${item.company}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Start Date</label>
+                        <input type="text" class="input-field" placeholder="MM/YYYY" value="${item.startDate}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">End Date</label>
+                        <input type="text" class="input-field" placeholder="MM/YYYY or Present" value="${item.endDate}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Description</label>
+                        <textarea class="input-field" placeholder="Key responsibilities and achievements...">${item.description}</textarea>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function addEducation() {
+            const id = Date.now();
+            educationItems.push({
+                id: id,
+                degree: '',
+                school: '',
+                startDate: '',
+                endDate: '',
+                description: ''
+            });
+            renderEducation();
+        }
+        
+        function removeEducation(id) {
+            educationItems = educationItems.filter(item => item.id !== id);
+            renderEducation();
+        }
+        
+        function renderEducation() {
+            const container = document.getElementById('education-container');
+            if (educationItems.length === 0) {
+                container.innerHTML = '<p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No education added yet</p>';
+                return;
+            }
+            
+            container.innerHTML = educationItems.map(item => `
+                <div class="education-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h4 style="color: white; margin: 0;">Education #${educationItems.indexOf(item) + 1}</h4>
+                        <button class="remove-btn" onclick="removeEducation(${item.id})">Remove</button>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Degree</label>
+                        <input type="text" class="input-field" placeholder="Bachelor of Science in Computer Science" value="${item.degree}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">School</label>
+                        <input type="text" class="input-field" placeholder="University Name" value="${item.school}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Start Date</label>
+                        <input type="text" class="input-field" placeholder="MM/YYYY" value="${item.startDate}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">End Date</label>
+                        <input type="text" class="input-field" placeholder="MM/YYYY or Present" value="${item.endDate}">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Description</label>
+                        <textarea class="input-field" placeholder="Relevant coursework, honors, activities...">${item.description}</textarea>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function addSkill() {
+            const skill = prompt('Enter a skill:');
+            if (skill && skill.trim()) {
+                skillItems.push(skill.trim());
+                renderSkills();
+            }
+        }
+        
+        function removeSkill(index) {
+            skillItems.splice(index, 1);
+            renderSkills();
+        }
+        
+        function renderSkills() {
+            const container = document.getElementById('skills-container');
+            if (skillItems.length === 0) {
+                container.innerHTML = '<p style="color: rgba(255,255,255,0.5); text-align: center; padding: 1rem;">No skills added yet</p>';
+                return;
+            }
+            
+            container.innerHTML = `
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    ${skillItems.map((skill, index) => `
+                        <div style="background: rgba(14, 165, 233, 0.2); color: white; padding: 0.5rem 1rem; border-radius: 20px; display: flex; align-items: center;">
+                            ${skill}
+                            <button class="remove-btn" style="margin-left: 0.5rem; padding: 0.1rem 0.5rem;" onclick="removeSkill(${index})">×</button>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+        
+        function generateResume() {
+            const name = document.getElementById('full-name').value || 'Your Name';
+            const email = document.getElementById('email').value || 'your.email@example.com';
+            const phone = document.getElementById('phone').value || '(123) 456-7890';
+            const location = document.getElementById('location').value || 'City, State';
+            const summary = document.getElementById('summary').value || 'Professional summary will appear here...';
+            
+            // Generate ATS score
+            const atsScore = calculateATSScore();
+            document.getElementById('ats-score').textContent = atsScore;
+            document.getElementById('ats-score').className = 'ats-value ' + 
+                (atsScore >= 80 ? 'ats-high' : atsScore >= 60 ? 'ats-medium' : 'ats-low');
+            
+            document.getElementById('ats-message').textContent = 
+                atsScore >= 80 ? 'Excellent! Your resume is well-optimized for ATS' :
+                atsScore >= 60 ? 'Good, but could be improved for better ATS compatibility' :
+                'Needs improvement for ATS optimization';
+            
+            // Show recommendations
+            showRecommendations(atsScore);
+            
+            // Generate resume preview
+            const preview = document.getElementById('resume-preview');
+            preview.innerHTML = `
+                <div class="resume-header">
+                    <div class="resume-name">${name}</div>
+                    <div class="resume-contact">
+                        <span>📧 ${email}</span>
+                        <span>📱 ${phone}</span>
+                        <span>📍 ${location}</span>
+                    </div>
+                </div>
+                
+                ${summary ? `<div class="resume-section">
+                    <div class="resume-section-title">Professional Summary</div>
+                    <div class="resume-summary">${summary}</div>
+                </div>` : ''}
+                
+                ${experienceItems.length > 0 ? `<div class="resume-section">
+                    <div class="resume-section-title">Work Experience</div>
+                    ${experienceItems.map(exp => `
+                        <div class="experience-item-resume">
+                            <div class="experience-title">${exp.title || 'Job Title'}</div>
+                            <div class="experience-company">${exp.company || 'Company Name'}</div>
+                            <div class="experience-date">${exp.startDate || 'MM/YYYY'} – ${exp.endDate || 'MM/YYYY'}</div>
+                            <div class="experience-desc">${exp.description || 'Job responsibilities and achievements...'}</div>
+                        </div>
+                    `).join('')}
+                </div>` : ''}
+                
+                ${educationItems.length > 0 ? `<div class="resume-section">
+                    <div class="resume-section-title">Education</div>
+                    ${educationItems.map(edu => `
+                        <div class="education-item-resume">
+                            <div class="experience-title">${edu.degree || 'Degree'}</div>
+                            <div class="education-school">${edu.school || 'School Name'}</div>
+                            <div class="education-date">${edu.startDate || 'MM/YYYY'} – ${edu.endDate || 'MM/YYYY'}</div>
+                            ${edu.description ? `<div class="education-desc">${edu.description}</div>` : ''}
+                        </div>
+                    `).join('')}
+                </div>` : ''}
+                
+                ${skillItems.length > 0 ? `<div class="resume-section">
+                    <div class="resume-section-title">Professional Skills</div>
+                    <div class="skills-container">
+                        ${skillItems.map(skill => `<div class="skill-badge">${skill}</div>`).join('')}
+                    </div>
+                </div>` : ''}
+            `;
+            
+            stats.created++;
+            stats.totalScore += atsScore;
+            stats.count++;
+            updateStats();
+        }
+        
+        function calculateATSScore() {
+            let score = 0;
+            const jobDesc = document.getElementById('job-description').value;
+            
+            // Check for required fields
+            if (document.getElementById('full-name').value) score += 10;
+            if (document.getElementById('email').value) score += 10;
+            if (document.getElementById('phone').value) score += 10;
+            if (document.getElementById('summary').value) score += 10;
+            if (experienceItems.length > 0) score += 15;
+            if (educationItems.length > 0) score += 15;
+            if (skillItems.length > 0) score += 10;
+            
+            // Check for keywords from job description
+            if (jobDesc && skillItems.length > 0) {
+                const keywords = jobDesc.match(/\b(\w+)\b/g) || [];
+                const uniqueKeywords = [...new Set(keywords.filter(w => w.length > 4))];
+                const matchedKeywords = uniqueKeywords.filter(keyword => 
+                    skillItems.some(skill => skill.toLowerCase().includes(keyword.toLowerCase()))
+                );
+                score += Math.min(20, (matchedKeywords.length / uniqueKeywords.length) * 20);
+            }
+            
+            return Math.min(100, Math.round(score));
+        }
+        
+        function showRecommendations(score) {
+            const recommendations = document.getElementById('ats-recommendations');
+            const list = document.getElementById('recommendations-list');
+            
+            if (score >= 80) {
+                recommendations.style.display = 'none';
+                return;
+            }
+            
+            recommendations.style.display = 'block';
+            let tips = [];
+            
+            if (!document.getElementById('full-name').value) tips.push('Add your full name');
+            if (!document.getElementById('email').value) tips.push('Include your email address');
+            if (!document.getElementById('phone').value) tips.push('Add your phone number');
+            if (!document.getElementById('summary').value) tips.push('Write a professional summary');
+            if (experienceItems.length === 0) tips.push('Add your work experience');
+            if (educationItems.length === 0) tips.push('Include your education');
+            if (skillItems.length === 0) tips.push('List your key skills');
+            
+            if (tips.length === 0) {
+                tips.push('Use more keywords from the job description in your skills section');
+                tips.push('Ensure consistent formatting throughout your resume');
+                tips.push('Use standard section headings (Experience, Education, Skills)');
+            }
+            
+            list.innerHTML = tips.map(tip => `
+                <div style="background: rgba(14, 165, 233, 0.1); border-left: 4px solid #0ea5e9; padding: 1rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="font-size: 1.5rem; margin-right: 1rem;">💡</div>
+                        <div>${tip}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function downloadHTML() {
+            const name = document.getElementById('full-name').value || 'Resume';
+            const resumeContent = document.getElementById('resume-preview').innerHTML;
+            
+            const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${name} - Resume</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 3rem;
+        }
+        .resume-header {
+            text-align: center;
+            border-bottom: 3px solid #0ea5e9;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .resume-name {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .resume-contact {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        .resume-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .experience-item-resume, .education-item-resume {
+            margin-bottom: 2rem;
+        }
+        .experience-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        .experience-company, .education-school {
+            font-weight: 600;
+            color: #0ea5e9;
+            font-size: 1.1rem;
+        }
+        .experience-date, .education-date {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        .experience-desc, .education-desc {
+            margin-top: 0.75rem;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+        }
+        .skill-badge {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .resume-summary {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #2d3748;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    ${resumeContent}
+</body>
+</html>
+            `;
+            
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${name.replace(/\s+/g, '_')}_Resume.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            stats.downloads++;
+            updateStats();
+            alert('Resume downloaded as HTML! ✓');
+        }
+        
+        function downloadPDF() {
+            const name = document.getElementById('full-name').value || 'Resume';
+            const element = document.getElementById('resume-preview');
+            
+            if (!element.querySelector('.resume-header')) {
+                alert('Please generate your resume first!');
+                return;
+            }
+            
+            const opt = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: `${name.replace(/\s+/g, '_')}_Resume.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true,
+                    scrollY: 0,
+                    scrollX: 0
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'letter', 
+                    orientation: 'portrait',
+                    compress: true
+                },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                stats.downloads++;
+                updateStats();
+                alert('Resume downloaded as PDF! ✓');
+            }).catch((error) => {
+                console.error('PDF generation error:', error);
+                alert('Error generating PDF. Please try again.');
+            });
+        }
+        
+        function updateStats() {
+            localStorage.setItem('resumeStats', JSON.stringify(stats));
+            document.getElementById('resumes-created').textContent = stats.created;
+            document.getElementById('downloads').textContent = stats.downloads;
+            
+            const avgScore = stats.count > 0 ? Math.round(stats.totalScore / stats.count) : 0;
+            document.getElementById('avg-ats').textContent = avgScore;
+            
+            const totalActions = stats.created + stats.downloads;
+            const completionRate = totalActions > 0 ? Math.min(Math.floor((totalActions / 10) * 100), 100) : 0;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+        }
+        
+        updateStats();
+    </script>
+</body>
+</html>

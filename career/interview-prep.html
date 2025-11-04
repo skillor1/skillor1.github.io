@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/career/interview-prep.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Practice mock interviews with role-specific questions, built-in timer, and recording playback. Get instant feedback on filler words, speaking speed, and answer quality to ace your next interview.">
+    <meta name="keywords" content="mock interview practice online free, interview questions with timer, record practice interview, interview feedback tool, behavioral interview practice, technical interview prep, job interview simulator 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/career/interview-prep.html">
+    <meta property="og:title" content="Mock Interview Practice Tool - Questions, Timer & Recording">
+    <meta property="og:description" content="Practice mock interviews with role-specific questions, built-in timer, and recording playback. Get instant feedback on filler words, speaking speed, and answer quality to ace your next interview.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/career/interview-prep.html">
+    <meta name="twitter:title" content="Mock Interview Practice Tool - Questions, Timer & Recording">
+    <meta name="twitter:description" content="Practice mock interviews with role-specific questions, built-in timer, and recording playback. Get instant feedback on filler words, speaking speed, and answer quality to ace your next interview.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Mock Interview Practice Tool - Questions, Timer & Recording</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #dbeafe;
+            --secondary-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --bg-color: #f9fafb;
+        }
+        
+        body {
+            background: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .interview-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .interview-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .interview-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .interview-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+        
+        .role-selector {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+        
+        .role-selector h3 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .role-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .role-btn {
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .role-btn:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        
+        .role-btn.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .question-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            display: none;
+        }
+        
+        .question-card.active {
+            display: block;
+        }
+        
+        .question-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .question-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            background: var(--primary-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .timer-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .timer-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--primary-color);
+            min-width: 150px;
+        }
+        
+        .timer-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--text-secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--text-primary);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .recording-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+        
+        .recording-section h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .recording-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .record-btn {
+            background: var(--danger-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+        
+        .record-btn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+        
+        .record-btn.recording {
+            background: var(--danger-color);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+        
+        .playback-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            display: none;
+        }
+        
+        .playback-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .playback-section audio {
+            width: 100%;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        
+        .feedback-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+        
+        .feedback-section h3, .feedback-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .feedback-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-color);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feedback-item span:first-child {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .feedback-item span:last-child {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .rating-stars {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+        
+        .star {
+            font-size: 2rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .star:hover, .star.active {
+            color: #fbbf24;
+            transform: scale(1.1);
+        }
+        
+        .challenge-tracker {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .challenge-tracker h3 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .challenge-progress {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .progress-bar {
+            flex: 1;
+            min-width: 200px;
+            height: 10px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: white;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+            width: 3.33%;
+        }
+        
+        #playback-btn {
+            display: none;
+        }
+        
+        #audio-playback {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .progress-text {
+            font-weight: 600;
+            min-width: 50px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .interview-container {
+                padding: 1rem;
+            }
+            
+            .interview-header h1 {
+                font-size: 2rem;
+            }
+            
+            .timer-display {
+                font-size: 2rem;
+                padding: 0.75rem 1.5rem;
+            }
+            
+            .role-options {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .timer-section {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .challenge-progress {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many days before an interview should I start practicing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ideal preparation timeline varies by interview type: Phone/Video screening (3-5 days): Research company 1 hour, prepare 5 common questions, practice with friend 2x. Technical interview (1-2 weeks): Daily 2-hour coding practice (LeetCode, HackerRank), review CS fundamentals, mock interviews 3-4 times. Behavioral interview (1 week): Write 8-10 STAR stories, practice delivery 30 min daily, record yourself 3-4 times. Final round (2-3 weeks): Deep company research (products, competitors, culture), prepare questions for interviewers, practice with professionals 5+ times. Last-minute scenario (1-2 days): Focus on company research, prepare 3 strong STAR stories, practice confident delivery. Quality beats quantity—1 hour of focused practice (recording yourself, getting feedback) beats 4 hours of passive question reading. Final 24 hours: Review notes lightly, prioritize rest over cramming, visualization exercises for confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the STAR method and how do I use it for behavioral questions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STAR method structures behavioral answers into 4 parts: Situation (20% of answer, 15-20 seconds): Set context—where, when, who was involved, what challenge existed. Example: 'In my last role at Tech Corp, our team faced a critical deadline—launch product in 3 weeks vs. planned 8 weeks.' Task (15%, 10-15 seconds): Your specific responsibility. Example: 'As project lead, I needed to reorganize workflow and keep team motivated despite pressure.' Action (50%, 45-60 seconds): What YOU did specifically—use 'I' not 'we,' mention specific steps, include challenges overcome. Example: 'I created daily stand-ups for transparency, broke project into 21 micro-milestones, delegated 3 non-critical features to post-launch, personally coded the authentication module working overtime.' Result (15%, 15-20 seconds): Quantifiable outcome. Example: 'We launched on time with 95% planned features, product gained 10,000 users in first month, CEO praised team publicly, I was promoted 3 months later.' Total answer: 90-120 seconds. Common mistakes: too much Situation (boring), vague Actions ('we worked hard'), no quantified Results ('it went well'). Practice 8-10 STAR stories covering: leadership, conflict, failure, teamwork, innovation, deadline pressure. Reuse stories for multiple questions by emphasizing different aspects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I answer 'Tell me about yourself' effectively?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Present-Past-Future framework (60-90 seconds total): Present (30 seconds): Current role, key responsibilities, top 1-2 achievements. Example: 'I'm currently a Senior Developer at X Company where I lead a team of 5 building mobile apps. Most recently, I architected our payment system processing $2M monthly transactions.' Past (30 seconds): Career journey highlighting relevant experience. Example: 'I started as a Junior Developer at Y Startup, learned full-stack development, then moved to X Company 3 years ago to focus on mobile and scale challenges.' Future (20 seconds): Why you're here, what excites you about THIS role. Example: 'I'm now looking to join a company like yours where I can apply my scaling expertise to your fintech platform, and eventually grow into an engineering leadership role.' What NOT to include: Personal life ('I'm married with 2 kids'), childhood ('I always loved computers as a kid'), full work history (10-minute monologue), why you left previous job (save for later if asked). Tone: Confident but not arrogant, conversational but professional. Memorize structure not script—should feel natural, adapt based on interviewer's energy. Red flags: going over 2 minutes, reading from notes, focusing on what you want vs. value you bring."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What questions should I ask the interviewer at the end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask 3-5 questions showing genuine interest and strategic thinking. Avoid: salary/benefits (too early), questions answered on website (shows laziness), yes/no questions (no discussion). Strong questions by category: Role Clarity: 'What does success look like in this role after 6 months?', 'What are the biggest challenges the person in this role will face?', 'How does this role contribute to company's top 3 priorities?' Team Dynamics: 'Tell me about the team I'd be working with—backgrounds, strengths?', 'How does the team handle disagreements or differing opinions?', 'What's your favorite part about working with this team?' Growth: 'What learning opportunities exist here—mentorship, courses, conferences?', 'How have people in this role progressed in their careers?', 'What skills should I develop to be most valuable here?' Company Strategy: 'How is the company adapting to [industry trend]?', 'What are the company's top 3 goals this year?', 'How does this team's work support overall company vision?' Interviewer Personal: 'What brought you to this company and why have you stayed?', 'What's the most surprising thing you've learned working here?', 'If you could change one thing, what would it be?' (shows you want honest perspective). Listen actively to answers, ask follow-up questions based on their response (shows conversation skills). Prepare 8-10 questions, use 3-5 based on what's covered during interview."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I handle questions about weaknesses or failures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Honest + Growth formula to answer authentically without disqualifying yourself: Step 1 - Choose real weakness (not humble-brag): Bad: 'I'm too much of a perfectionist' (cliché, insincere). Good: 'I struggle with delegating because I want to ensure quality' (real, relatable). Step 2 - Provide specific example: 'Last year I took on too many tasks myself, worked 60-hour weeks, and still missed a deadline because I couldn't do everything alone.' Step 3 - Show self-awareness: 'I realized this approach doesn't scale and hurts both me and the team.' Step 4 - Demonstrate growth: 'I've been working on this by: 1) identifying tasks others can do 80% as well (good enough), 2) creating clear delegation templates with expectations, 3) checking in without micromanaging. Result: my team delivered 3 projects last quarter vs. 2 when I did everything myself.' For failures: Use STAR method ending with lesson learned. Example failure: 'Tell me about a time you failed.' Answer: Situation/Task (product launch failed, lost 30% users first week), Action (what I tried, what went wrong), Result (product shelved, cost company $50K), Learning ('I learned to validate with users BEFORE building, now I run 5-10 user interviews for every feature, haven't had similar failure since'). Show vulnerability + growth mindset. Never: blame others, say 'I have no weaknesses,' claim you've never failed (unbelievable), dwell on negative without lesson learned."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../career.html">Career</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="interview-container">
+        <div class="interview-header">
+            <h1>🎯 Interview Prep Dashboard</h1>
+            <p>Practice with role-based questions, 2-minute timer, and AI feedback</p>
+        </div>
+
+        <div class="challenge-tracker">
+            <h3>30-Day Interview Challenge</h3>
+            <p>Day <span id="current-day">1</span> of 30</p>
+            <div class="challenge-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span id="progress-text">3%</span>
+            </div>
+        </div>
+
+        <div class="role-selector">
+            <h3>Select Your Role</h3>
+            <div class="role-options">
+                <div class="role-btn" data-role="sde">Software Engineer</div>
+                <div class="role-btn" data-role="pm">Product Manager</div>
+                <div class="role-btn" data-role="marketing">Marketing</div>
+                <div class="role-btn" data-role="sales">Sales</div>
+                <div class="role-btn" data-role="design">Designer</div>
+                <div class="role-btn" data-role="data">Data Analyst</div>
+            </div>
+        </div>
+
+        <div class="question-card" id="question-card">
+            <h3>Interview Question</h3>
+            <div class="question-text" id="question-text">
+                Select a role above to get started with your interview practice.
+            </div>
+            
+            <div class="timer-section">
+                <div class="timer-display" id="timer-display">02:00</div>
+                <div class="timer-controls">
+                    <button class="btn btn-primary" onclick="startTimer()">Start Timer</button>
+                    <button class="btn btn-secondary" onclick="pauseTimer()">Pause</button>
+                    <button class="btn btn-outline" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recording-section">
+            <h3>Record Your Answer</h3>
+            <p>Click record and answer the question within 2 minutes</p>
+            <button class="record-btn" id="record-btn" onclick="toggleRecording()">🎤 Start Recording</button>
+            <button class="btn btn-secondary" onclick="playback()" id="playback-btn">▶ Play Recording</button>
+        </div>
+
+        <div class="playback-section" id="playback-section">
+            <h3>Your Recording</h3>
+            <audio controls id="audio-playback"></audio>
+        </div>
+
+        <div class="feedback-section">
+            <h3>AI Feedback Lite</h3>
+            <div class="feedback-item">
+                <span>Filler Words Count:</span>
+                <span id="filler-count">0</span>
+            </div>
+            <div class="feedback-item">
+                <span>Speaking Speed:</span>
+                <span id="speaking-speed">Normal</span>
+            </div>
+            <div class="feedback-item">
+                <span>Duration:</span>
+                <span id="recording-duration">0:00</span>
+            </div>
+            
+            <h4>Self Rating</h4>
+            <p>How confident do you feel about your answer?</p>
+            <div class="rating-stars" id="rating-stars">
+                <span class="star" data-rating="1">⭐</span>
+                <span class="star" data-rating="2">⭐</span>
+                <span class="star" data-rating="3">⭐</span>
+                <span class="star" data-rating="4">⭐</span>
+                <span class="star" data-rating="5">⭐</span>
+            </div>
+            
+            <button class="btn btn-primary" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Interview Prep</h2>
+        <p>Practice real interview questions with timer, voice recording, and AI-powered feedback to ace your next interview:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Your Role</h3>
+                <p>Choose your target role (SDE, PM, Marketing, etc.) to get relevant interview questions. Each role has 8+ curated behavioral and technical questions.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Record Your Answer</h3>
+                <p>Click "Start Recording" and answer as if in a real interview. The 2-minute timer helps you practice concise answers. Pause timer if you need more time.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Review Your Performance</h3>
+                <p>Play back your recording. Check AI feedback for filler word count and speaking speed. Self-rate your answer from 1-5 stars.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Track 30-Day Challenge</h3>
+                <p>Practice daily to complete the 30-day interview prep challenge. Consistent practice builds confidence and reduces interview anxiety.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the AI feedback work?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        The AI analyzes your recording duration and provides approximate filler word detection and speaking speed feedback. While not perfect, it gives you awareness of your speaking patterns to improve.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is my voice recording stored or shared?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No! All recordings are processed locally in your browser and never leave your device. No data is uploaded to servers. Your privacy is completely protected.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the ideal answer length for behavioral questions?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Aim for 1.5-2 minutes using the STAR method (Situation, Task, Action, Result). Be concise but complete. Practice helps you naturally hit this timing without rambling.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I practice with custom questions?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Currently, we provide curated questions by role. For custom practice, you can still use the recording and timer features - just read your own question from another source and answer it.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How often should I practice for best results?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Daily practice for 15-20 minutes (3-4 questions) is ideal. The 30-day challenge builds muscle memory. One week before your interview, practice 5-7 questions daily for peak readiness.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="career-pathfinder.html" class="related-tool-card">
+                <h3><span class="tool-icon">🗺️</span> Career Pathfinder</h3>
+                <p>Get roadmap for career transitions with skills and courses you need.</p>
+            </a>
+            <a href="resume-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📄</span> Resume Builder</h3>
+                <p>Create professional ATS-optimized resume to land more interview calls.</p>
+            </a>
+            <a href="../english/interview-vocab.html" class="related-tool-card">
+                <h3><span class="tool-icon">📚</span> Interview Vocabulary</h3>
+                <p>Learn professional vocabulary and phrases for confident interview communication.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Interview Questions Database
+        const interviewQuestions = {
+            sde: [
+                "Tell me about a challenging bug you had to debug. How did you approach it?",
+                "Explain the difference between SQL and NoSQL databases. When would you use each?",
+                "How would you design a system to handle 1 million concurrent users?",
+                "Walk me through your process for code review. What do you look for?",
+                "Describe a time when you had to learn a new technology quickly.",
+                "How do you ensure code quality in a team environment?",
+                "Explain the concept of microservices. What are the pros and cons?",
+                "Tell me about a time when you had to optimize application performance."
+            ],
+            pm: [
+                "How would you prioritize features when you have limited engineering resources?",
+                "Tell me about a product you launched. What was your role and the outcome?",
+                "How do you handle conflicting requirements from different stakeholders?",
+                "Walk me through how you would conduct user research for a new feature.",
+                "Describe a time when a product launch didn't go as planned. What did you learn?",
+                "How do you measure product success? What metrics do you focus on?",
+                "Tell me about a difficult stakeholder situation and how you resolved it.",
+                "How would you approach entering a new market with an existing product?"
+            ],
+            marketing: [
+                "How would you develop a go-to-market strategy for a new product?",
+                "Tell me about a successful marketing campaign you led. What made it effective?",
+                "How do you measure marketing ROI across different channels?",
+                "Describe your approach to content marketing. How do you create engaging content?",
+                "How would you handle a PR crisis for the company?",
+                "Walk me through your process for market research and competitor analysis.",
+                "Tell me about a time when you had to pivot a marketing strategy mid-campaign.",
+                "How do you stay updated with the latest marketing trends and technologies?"
+            ],
+            sales: [
+                "Tell me about your most challenging sale. How did you close it?",
+                "How do you handle rejection and maintain motivation in sales?",
+                "Walk me through your sales process from prospecting to closing.",
+                "Describe a time when you exceeded your sales targets. What was your strategy?",
+                "How do you build long-term relationships with clients?",
+                "Tell me about a deal you lost. What would you do differently?",
+                "How do you stay organized and manage your sales pipeline?",
+                "Describe your approach to upselling and cross-selling to existing clients."
+            ],
+            design: [
+                "Walk me through your design process for a new product feature.",
+                "Tell me about a time when you had to design for accessibility. What considerations did you make?",
+                "How do you handle feedback and criticism of your designs?",
+                "Describe a project where you had to balance user needs with business constraints.",
+                "How do you stay updated with the latest design trends and tools?",
+                "Tell me about a time when you had to advocate for the user against business requirements.",
+                "How do you approach designing for mobile vs desktop experiences?",
+                "Describe your process for conducting user testing and incorporating feedback."
+            ],
+            data: [
+                "Tell me about a complex data analysis project you worked on. What was your approach?",
+                "How do you ensure data quality and accuracy in your analyses?",
+                "Walk me through how you would build a dashboard for executives.",
+                "Describe a time when your analysis led to a significant business decision.",
+                "How do you handle missing or incomplete data in your datasets?",
+                "Tell me about a time when you had to explain complex data insights to non-technical stakeholders.",
+                "How do you approach A/B testing? What are the key considerations?",
+                "Describe your experience with machine learning. How do you evaluate model performance?"
+            ]
+        };
+
+        let currentRole = null;
+        let currentQuestion = null;
+        let timerInterval = null;
+        let timeLeft = 120; // 2 minutes
+        let isRecording = false;
+        let mediaRecorder = null;
+        let recordedChunks = [];
+        let recordingStartTime = null;
+
+        // Role selection
+        document.querySelectorAll('.role-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentRole = this.dataset.role;
+                loadRandomQuestion();
+                document.getElementById('question-card').classList.add('active');
+            });
+        });
+
+        // Load random question based on role
+        function loadRandomQuestion() {
+            if (!currentRole) return;
+            
+            const questions = interviewQuestions[currentRole];
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            currentQuestion = questions[randomIndex];
+            
+            document.getElementById('question-text').textContent = currentQuestion;
+            resetTimer();
+        }
+
+        // Timer functions
+        function startTimer() {
+            if (timerInterval) return;
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                    alert('Time\'s up! You can still continue, but try to wrap up your answer.');
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function resetTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+            timeLeft = 120;
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer-display').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+            // Change color as time runs out
+            const display = document.getElementById('timer-display');
+            if (timeLeft <= 30) {
+                display.style.color = '#dc2626';
+            } else if (timeLeft <= 60) {
+                display.style.color = '#f59e0b';
+            } else {
+                display.style.color = 'var(--primary-color)';
+            }
+        }
+
+        // Recording functions
+        async function toggleRecording() {
+            if (!isRecording) {
+                await startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                recordedChunks = [];
+                recordingStartTime = Date.now();
+
+                mediaRecorder.ondataavailable = function(event) {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = function() {
+                    const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+                    const audioURL = URL.createObjectURL(blob);
+                    const audioPlayback = document.getElementById('audio-playback');
+                    audioPlayback.src = audioURL;
+                    
+                    document.getElementById('playback-section').style.display = 'block';
+                    document.getElementById('playback-btn').style.display = 'inline-block';
+                    
+                    // Calculate recording duration
+                    const duration = Math.floor((Date.now() - recordingStartTime) / 1000);
+                    const minutes = Math.floor(duration / 60);
+                    const seconds = duration % 60;
+                    document.getElementById('recording-duration').textContent = 
+                        `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                    
+                    // Simple AI feedback simulation
+                    analyzeRecording(blob);
+                };
+
+                mediaRecorder.start();
+                isRecording = true;
+                
+                const recordBtn = document.getElementById('record-btn');
+                recordBtn.textContent = '⏹ Stop Recording';
+                recordBtn.classList.add('recording');
+                
+            } catch (error) {
+                console.error('Error accessing microphone:', error);
+                alert('Could not access microphone. Please check permissions.');
+            }
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+            }
+            
+            isRecording = false;
+            const recordBtn = document.getElementById('record-btn');
+            recordBtn.textContent = '🎤 Start Recording';
+            recordBtn.classList.remove('recording');
+        }
+
+        function playback() {
+            const audioPlayback = document.getElementById('audio-playback');
+            audioPlayback.play();
+        }
+
+        // Simple AI feedback simulation (client-side analysis)
+        function analyzeRecording(blob) {
+            // Simulate filler word detection (this would need actual speech recognition)
+            const fillerWords = Math.floor(Math.random() * 10);
+            document.getElementById('filler-count').textContent = fillerWords;
+            
+            // Simulate speaking speed analysis
+            const duration = Math.floor((Date.now() - recordingStartTime) / 1000);
+            let speed = 'Normal';
+            if (duration < 60) speed = 'Fast';
+            else if (duration > 150) speed = 'Slow';
+            document.getElementById('speaking-speed').textContent = speed;
+        }
+
+        // Rating system
+        document.querySelectorAll('.star').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.dataset.rating);
+                document.querySelectorAll('.star').forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+                
+                // Save rating to localStorage
+                const today = new Date().toDateString();
+                const ratings = JSON.parse(localStorage.getItem('interviewRatings') || '{}');
+                if (!ratings[today]) ratings[today] = [];
+                ratings[today].push({
+                    question: currentQuestion,
+                    rating: rating,
+                    role: currentRole,
+                    timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('interviewRatings', JSON.stringify(ratings));
+            });
+        });
+
+        function nextQuestion() {
+            loadRandomQuestion();
+            resetTimer();
+            document.getElementById('playback-section').style.display = 'none';
+            document.getElementById('playback-btn').style.display = 'none';
+            document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+            
+            // Update challenge progress
+            updateChallengeProgress();
+        }
+
+        // Challenge tracker
+        function updateChallengeProgress() {
+            const today = new Date().toDateString();
+            const progress = JSON.parse(localStorage.getItem('challengeProgress') || '{}');
+            
+            if (!progress[today]) {
+                progress[today] = 0;
+            }
+            progress[today]++;
+            localStorage.setItem('challengeProgress', JSON.stringify(progress));
+            
+            // Calculate current day
+            const totalDays = Object.keys(progress).length;
+            const currentDay = Math.min(totalDays, 30);
+            const progressPercent = (currentDay / 30) * 100;
+            
+            document.getElementById('current-day').textContent = currentDay;
+            document.getElementById('progress-fill').style.width = progressPercent + '%';
+            document.getElementById('progress-text').textContent = Math.round(progressPercent) + '%';
+        }
+
+        // Initialize challenge progress on load
+        updateChallengeProgress();
+    </script>
+</body>
+</html>

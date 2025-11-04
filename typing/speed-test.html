@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/typing/speed-test.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Test your typing speed in 60 seconds and compete on global leaderboards with country-specific rankings. See how your WPM compares to typists worldwide, in India, US, and more.">
+    <meta name="keywords" content="typing speed test online free, WPM test 60 seconds, typing test global leaderboard, typing speed country rankings India, check typing speed 2025, WPM calculator test">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/typing/speed-test.html">
+    <meta property="og:title" content="Typing Speed Test - 60 Seconds WPM with Global Leaderboards">
+    <meta property="og:description" content="Test your typing speed in 60 seconds and compete on global leaderboards with country-specific rankings. See how your WPM compares to typists worldwide, in India, US, and more.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/typing/speed-test.html">
+    <meta name="twitter:title" content="Typing Speed Test - 60 Seconds WPM with Global Leaderboards">
+    <meta name="twitter:description" content="Test your typing speed in 60 seconds and compete on global leaderboards with country-specific rankings. See how your WPM compares to typists worldwide, in India, US, and more.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Typing Speed Test - 60 Seconds WPM with Global Leaderboards</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #3b82f6;
+            --tool-secondary: #60a5fa;
+            --tool-accent: #2563eb;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stats-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .typing-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timer-display {
+            font-size: 4rem;
+            font-weight: 800;
+            text-align: center;
+            color: var(--tool-primary);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 2rem;
+        }
+        
+        .text-display {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+        }
+        
+        .text-display .char {
+            transition: color 0.1s;
+        }
+        
+        .text-display .char.correct {
+            color: #10b981;
+        }
+        
+        .text-display .char.incorrect {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.2);
+        }
+        
+        .text-display .char.current {
+            border-bottom: 3px solid var(--tool-primary);
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: var(--tool-primary); }
+            51%, 100% { border-color: transparent; }
+        }
+        
+        .typing-input {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid var(--tool-primary);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+        }
+        
+        .typing-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+        
+        .typing-input:disabled {
+            opacity: 0.5;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+        }
+        
+        .leaderboard-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .leaderboard-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .leaderboard-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .leaderboard-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .rank-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .rank-badge.gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        }
+        
+        .rank-badge.silver {
+            background: linear-gradient(135deg, #94a3b8, #64748b);
+        }
+        
+        .rank-badge.bronze {
+            background: linear-gradient(135deg, #fb923c, #ea580c);
+        }
+        
+        .player-info {
+            flex: 1;
+            margin: 0 1rem;
+        }
+        
+        .player-name {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .player-country {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+        
+        .player-wpm {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tool-secondary);
+        }
+        
+        .share-result {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .share-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* moved inline styles from #country-select to CSS */
+        #country-select {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            color: white;
+            margin-left: 0.5rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        @media (max-width: 968px) {
+            .leaderboard-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["WebApplication", "Quiz"],
+      "name": "Typing Speed Test - 60 Seconds",
+      "description": "Free typing speed test with global leaderboard and country rankings",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good typing speed and what WPM should I target?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typing speed targets vary significantly by context and profession: **Beginner Level (20-30 WPM)**: If you're hunt-and-peck typing (looking at keyboard), this is your starting point. At this speed, typing a 500-word email takes 16-25 minutes. Focus on learning proper finger placement before worrying about speed. **Intermediate Level (40-60 WPM)**: This is the average adult typing speed and meets minimum requirements for most office jobs. Data entry clerks typically need 40+ WPM, administrative assistants 50+ WPM. At 50 WPM, you can type a 500-word document in 10 minutes with good accuracy. This is the baseline professional competency. **Advanced Level (70-90 WPM)**: Professionals who type extensively - programmers, writers, journalists, customer support agents - typically operate in this range. At 80 WPM with 95%+ accuracy, you can transcribe thoughts almost as fast as you think them, making typing feel effortless. Most job postings requiring 'strong typing skills' expect 70+ WPM. **Expert Level (90-120 WPM)**: Court reporters, professional transcriptionists, and top 5% of typists reach this level. Requires years of daily practice and touch typing mastery. At 100 WPM, you can type 5,000 words per hour, making even long reports manageable in 1-2 hours. **World-Class (120+ WPM)**: Competitive typists and the top 1%. Barbara Blackburn holds the Guinness World Record at 212 WPM sustained. Most people will never reach this level, nor do they need to. **Target Setting Strategy**: Assess current speed, then set incremental goals: 20→30 WPM (1-2 months), 30→40 WPM (2-3 months), 40→60 WPM (3-4 months), 60→80 WPM (4-6 months), 80+ WPM (6-12 months of consistent practice). Speed improvements slow down as you advance - jumping from 30 to 40 WPM is easier than 70 to 80 WPM. The critical insight: **Accuracy matters more than speed**. 60 WPM at 98% accuracy is far more valuable than 90 WPM at 85% accuracy because you'll spend more time correcting errors than the speed gains. Professional standards typically require 95%+ accuracy minimum. Focus on accuracy first, speed follows naturally with practice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is WPM calculated and what counts as a 'word'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WPM (Words Per Minute) calculation uses a standardized formula across all typing tests to ensure fair comparison: **Standard Formula**: WPM = (Total Characters Typed ÷ 5) ÷ Time in Minutes. The division by 5 is the key - typing tests define one 'word' as 5 characters (including spaces and punctuation) regardless of actual word length. This standardization means 'hello' (5 characters + space = 6 characters) counts as 1.2 words, while 'I' (1 character + space = 2 characters) counts as 0.4 words. **Why 5 Characters?**: This standard emerged in the 1940s-50s with typewriters when the average English word length was 4.5-5 characters. It provides language-neutral measurement - works for English, Spanish, German, etc. It also simplifies calculation: type 250 characters in 1 minute = 50 WPM, type 500 characters in 1 minute = 100 WPM. **Gross WPM vs Net WPM**: Most tests calculate two scores: (1) **Gross WPM**: All characters typed divided by 5, regardless of errors. If you type 300 characters in 1 minute with 50 errors, Gross WPM = 300/5 = 60 WPM. (2) **Net WPM (Adjusted WPM)**: Gross WPM minus penalty for errors. Common formula: Net WPM = Gross WPM - (Errors ÷ Time in Minutes). With 50 errors in 1 minute: Net WPM = 60 - 50 = 10 WPM. This heavily penalizes inaccuracy, which is why speed without accuracy is meaningless. **What This Means Practically**: (1) Spaces count as characters - missing spaces reduces your WPM even if words are correct. (2) Punctuation counts - typing 'hello' vs 'hello,' makes a difference. (3) Case matters on case-sensitive tests - 'Hello' typed as 'hello' counts as errors. (4) Backspace strategy affects scoring: Some tests count deleted characters in Gross WPM (every keypress counts), others don't count backspaced characters (only final submitted text counts). Ask which method your test uses. **Test Variations**: (1) Some tests use actual word count: 'The quick brown fox' = 4 words regardless of character count. Less common but used in some professional assessments. (2) Corrected WPM: Only counts characters that match the target text, ignoring extras or missed characters. (3) Raw WPM: Every keystroke including backspaces, used in advanced typing analytics to measure total finger speed. **Practical Example**: You type for 60 seconds and produce: 'The quick brown fox jumps over the lazy dog' = 44 characters including spaces. Your WPM = (44 ÷ 5) ÷ 1 = 8.8 WPM. But if you made 5 errors, Net WPM = 8.8 - 5 = 3.8 WPM. This example shows why even a few errors drastically reduce effective speed - it's better to slow down and type accurately than rush with mistakes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I focus on accuracy or speed first when learning to type?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The unanimous consensus among typing instructors, ergonomics experts, and competitive typists: **Always prioritize accuracy first, speed develops naturally afterward**. This isn't just advice, it's cognitive science. Here's why and how: **The Neuroscience**: When you practice typing at high speed with low accuracy, you're training your muscle memory to make mistakes. Your brain encodes the error patterns into motor programs, making bad habits harder to break later. Studies show it takes 3× longer to unlearn incorrect typing patterns than to learn correct ones from the start. If you practice typing 'teh' instead of 'the' at 80 WPM for 3 months, you'll type 'teh' automatically even when you try to slow down - fixing this requires 9 months of deliberate retraining. **The Accuracy-First Protocol**: (1) **Weeks 1-4: 95%+ Accuracy at ANY Speed**: Even if you type just 15-20 WPM, maintain 95% accuracy or higher. Use online typing tutors (TypingClub, Keybr.com, Typing.com) that don't let you proceed until accuracy threshold is met. This phase feels frustratingly slow but builds correct motor patterns. Your brain learns 'this finger presses this key' with zero ambiguity. (2) **Weeks 5-8: 90%+ Accuracy with Gradual Speed Increase**: Once 95% accuracy feels natural, allow your speed to increase organically but never below 90% accuracy. If you dip below 90%, slow down immediately. Most learners naturally increase from 20 WPM to 35-40 WPM during this phase without forcing speed. The focus is still 'type it correctly' not 'type it fast'. (3) **Months 3-6: 85%+ Accuracy with Speed Focus**: Now you can deliberately practice speed. Take timed tests, challenge yourself with faster passages, but maintain minimum 85% accuracy. This is when most typists jump from 40 WPM to 60-70 WPM. The accurate foundation allows speed to compound quickly. (4) **Months 6+: Maintain 95%+ Accuracy While Optimizing Speed**: Advanced stage where you focus on difficult key combinations (like 'qw', 'zx', 'pl'), common words, and context-specific vocabulary (programming languages have different patterns than prose). At this point, speed increases in 5-10 WPM increments every 2-3 months. **Why Speed-First Fails**: Students who practice speed-first hit a ceiling around 50-60 WPM with 80-85% accuracy, then can't improve further because their muscle memory contains error patterns. Breaking through requires going back to 25-30 WPM with 98% accuracy and rebuilding - essentially starting over. It's like building a house on a weak foundation - you can build quickly at first, but it collapses before completion. **Practical Accuracy Benchmarks**: (1) If accuracy is below 85%, stop speed practice entirely and return to slow, deliberate typing. (2) If accuracy is 85-90%, maintain current speed, don't push faster. (3) If accuracy is 90-95%, gradually increase speed by 5% every 2 weeks. (4) If accuracy is 95%+, actively practice speed increases through timed challenges. **Professional Standards**: Most professional typing jobs require 95%+ accuracy regardless of speed. Court reporters need 98%+ accuracy at 225 WPM (yes, stenotype is different, but accuracy is paramount). Medical transcriptionists need 98%+ accuracy because errors can be life-threatening. Programmers need 98%+ accuracy because typos create bugs. Only speed typing competitions prioritize WPM over accuracy, but even they have minimum accuracy thresholds. **The Counter-Intuitive Reality**: Slowing down to ensure accuracy actually makes you faster in the long run. A typist who maintains 98% accuracy at 60 WPM produces more usable output than someone at 80 WPM with 88% accuracy, because the latter spends time correcting errors. Effective WPM (accounting for correction time) often makes the slower-but-accurate typist 20-30% more productive. The right mindset: 'I am training my fingers to press the correct keys automatically, speed is a byproduct of accurate muscle memory, not a goal in itself.'"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I practice typing to see improvement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typing improvement follows the consistency principle: **15-20 minutes of daily practice beats 2-hour weekend sessions**. Here's the research-backed practice schedule: **Minimum Effective Dose: 15 Minutes Daily**: This is the minimum to maintain motor learning momentum. Your brain consolidates motor patterns during sleep, so daily practice before sleep is optimal. After 15 minutes, you've done enough reps (200-300 words typically) for neural pathway strengthening without fatigue-induced errors. Studies show this schedule yields 5-10 WPM improvement per month for beginners, 3-5 WPM for intermediate typists. **Optimal Schedule: 20-30 Minutes Daily (Split Sessions)**: Even better than one 30-minute session is two 15-minute sessions (morning and evening). Why? Motor learning consolidates between practice sessions. Morning practice activates the neural pathways, evening practice reinforces them, sleep solidifies them. This split approach can accelerate improvement by 30-40% compared to single daily sessions. Schedule: 15 minutes before breakfast (when mind is fresh), 15 minutes before dinner (reinforcement). **Advanced: 45-60 Minutes Daily (3× 15-20 minute sessions)**: For those seriously pursuing high speed (70+ WPM) or professional typing careers. Break into: (1) Morning: Speed drills and timed tests (15-20 min), (2) Afternoon: Accuracy focus on weak keys (15-20 min), (3) Evening: Real-world typing (emails, documents, coding) applying learned skills (15-20 min). This schedule can improve intermediate typists by 10-15 WPM per month, reaching 80-90 WPM in 4-6 months. **What DOESN'T Work**: (1) Weekend warriors (2 hours Saturday, nothing weekdays): You lose 60-70% of motor learning improvements over 5-day gaps. Progress resets partially each week. (2) Inconsistent marathon sessions (3 hours Monday, none until Thursday, 2 hours Friday): Creates fatigue-induced error patterns, slows overall progress. (3) Passive daily typing (work emails, chatting) without focused practice: You reinforce existing patterns, both good and bad, without pushing improvement. **Practice Structure Within Sessions**: Don't just 'type randomly' for 15 minutes. Use this structure: (1) Warm-up (2-3 minutes): Type easy, familiar text slowly with 100% accuracy to activate motor patterns. Think of this as stretching before running. (2) Focused Drill (8-10 minutes): Use typing tutors focusing on specific weaknesses - difficult keys (Q, P, Z, X), common bigrams ('th', 'he', 'in', 'er'), or problem words you mistype frequently. This is high-intensity, deliberate practice where you're slightly uncomfortable - the growth zone. (3) Speed Test (3-5 minutes): Take a timed test on random text to measure progress and practice under pressure. Compare against last week, not yesterday (daily fluctuations are normal, weekly trends matter). (4) Cool-down (2 minutes): Type something fun - favorite quotes, song lyrics, or chat with friends - to end on a positive note. This prevents practice from feeling like a chore. **Timeline Expectations with Daily Practice**: Week 1-2: Minimal visible improvement (frustrating phase, trust the process). Week 3-4: Noticeable 5-10% speed increase as motor patterns begin automating. Month 2: 10-15 WPM improvement from baseline. Month 3: Acceleration phase - improvements feel faster as foundation solidifies. Month 4-6: Steady 3-5 WPM monthly gains, accuracy stabilizes above 95%. Month 6+: Diminishing returns - improvements slow to 2-3 WPM per month, but compounding effect makes you significantly faster than starting point. **Rest and Recovery**: Take 1 full day off per week (not 2 consecutive days). Muscles and neural pathways need recovery to consolidate learning. If fingers feel strained or you notice accuracy dropping below your baseline, take 2-3 days off - overtraining causes regression. **Tracking Progress**: Keep a weekly log: Date, WPM, Accuracy, Session notes. Graph your WPM weekly (not daily to avoid discouragement from normal fluctuations). Seeing upward trend over 8-12 weeks provides motivation to maintain consistency. Most people who quit do so in weeks 2-4 when improvement isn't visible yet - logging helps push through this plateau. The brutal truth: There are no shortcuts. Typing improvement is 100% about motor learning through repetitive practice. Apps, tricks, and 'hacks' can optimize your practice structure, but nothing replaces the daily neural pathway strengthening that comes from fingers hitting keys correctly, repeatedly, consistently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is proper ergonomic posture and finger placement for typing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ergonomic typing posture prevents repetitive strain injuries (RSI) and carpal tunnel syndrome while maximizing speed and comfort. Professional typists, programmers, and writers who type 6-8 hours daily follow these evidence-based ergonomic principles: **Body Posture (The Foundation)**: (1) **Feet**: Flat on floor or footrest, knees at 90° angle. Dangling feet cause lower back strain after 30+ minutes. If your chair is high, use a footrest or stack books. (2) **Back**: Straight with lumbar support contacting lower back. Slouching compresses lungs reducing oxygen to brain, decreasing focus by 15-20% per ergonomic studies. Use a small pillow if your chair lacks lumbar support. (3) **Shoulders**: Relaxed, not hunched forward. Hunched shoulders cause neck pain and trap muscle tension. Imagine a string pulling the top of your head toward ceiling - this naturally aligns shoulders. (4) **Elbows**: 90° angle (or slightly more, 90-110°), hanging naturally at sides, not extended forward. Forearms should be parallel to floor or angled slightly downward. Armrests should support elbows lightly, not force them upward. **Keyboard and Screen Position**: (1) **Keyboard**: Directly in front of you (not angled to side), top row of keys (number row) at elbow height when arms hang naturally. Keyboard should be 4-6 inches from desk edge so wrists have support. (2) **Screen**: Top of screen at or slightly below eye level, 20-30 inches away (arm's length). Too close strains eyes, too far strains neck. Center of screen should align with your nose when facing forward. (3) **Mouse**: Same height as keyboard, close enough to reach without extending arm. Consider vertical mouse or trackpad to reduce wrist rotation. **Wrist Position (Critical for RSI Prevention)**: (1) **Neutral Position**: Wrists should be straight, not bent upward (extension), downward (flexion), or sideways (deviation). Imagine a straight line from elbow through wrist to middle finger. (2) **Floating vs Resting**: Ideally, wrists float above keyboard while typing, touching only during pauses. If you rest wrists continuously, use padded wrist rest but let wrists float during active typing. Constant pressure on wrist can compress median nerve causing carpal tunnel. (3) **Keyboard Tilt**: Flat keyboard (0° angle) or slightly negative tilt (back edge lower than front) is best. The common positive tilt (back edge raised with kickstand) forces wrist extension - ergonomically worst position. Remove keyboard feet if present. **Finger Placement (Touch Typing Foundation)**: (1) **Home Row**: Left hand: Pinky on A, ring on S, middle on D, index on F. Right hand: Index on J, middle on K, ring on L, pinky on semicolon. Both thumbs rest on spacebar. F and J keys have small bumps/ridges - find these without looking to position fingers correctly. (2) **Finger Assignments**: Each finger has designated keys: *Left Pinky*: Q, A, Z, Tab, Caps Lock, Shift *Left Ring*: W, S, X *Left Middle*: E, D, C *Left Index*: R, F, V, T, G, B (index covers 6 keys) *Right Index*: Y, H, N, U, J, M (6 keys) *Right Middle*: I, K, comma *Right Ring*: O, L, period *Right Pinky*: P, semicolon, slash, Enter, Shift, Backspace (most work) *Thumbs*: Spacebar (either thumb, though typically right thumb) (3) **Return to Home**: After every key press, fingers return to home row immediately. This is what 'touch typing' means - home row is the anchor, you always know where your fingers are without looking. **Common Ergonomic Mistakes**: (1) Keyboard too high: Causes wrist extension and shoulder elevation. Solution: Lower keyboard or raise chair. (2) Looking down at keyboard: Strains neck and prevents touch typing development. Solution: Cover hands with cloth while practicing to force you not to look. (3) Reaching for mouse with extended arm: Causes shoulder strain. Solution: Keep mouse immediately adjacent to keyboard, consider keyboard shortcuts to reduce mouse usage. (4) Static posture for hours: Even perfect posture causes fatigue if maintained without movement. Solution: Follow 20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds, stand and stretch. (5) Cold hands: Reduces blood flow and finger flexibility. Solution: Warm up hands before typing, keep room temperature comfortable. **Advanced Ergonomics**: (1) **Ergonomic keyboards**: Split keyboards (Microsoft Sculpt, Kinesis Freestyle) reduce ulnar deviation by angling key columns to match natural hand position. Ortholinear keyboards (Planck, Preonic) have straight columns (not staggered rows) reducing finger travel distance. Mechanical keyboards with optimal switch weights reduce finger fatigue. (2) **Monitor arms**: Adjustable monitor arms allow perfect screen positioning, critical if you're tall/short or using laptop. (3) **Standing desk**: Alternating sitting and standing every 60-90 minutes reduces lower back compression. (4) **Keyboard trays**: If desk is too high, a keyboard tray drops keyboard below desk surface to correct arm angle. **The 5-Minute Hourly Routine**: Every hour of typing, take 5 minutes for: (1) Hand stretches: Extend fingers wide, make fists, rotate wrists 10× each direction. (2) Shoulder rolls: 10 forward, 10 backward. (3) Neck stretches: Look left/right, up/down, ear to shoulder each side. (4) Stand and walk: Even 2-minute walks improve circulation and reset posture. Professional typists who implement these ergonomic principles report 60-80% reduction in wrist pain, neck pain, and fatigue. Speed often increases 5-10% simply from comfortable posture allowing relaxed, fluid finger movement. Ergonomics isn't optional for serious typists - it's the difference between a sustainable 10-year typing career and chronic RSI requiring medical intervention."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../typing.html">Typing</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../typing.html" class="back-link">← Back to Typing Tools</a>
+        
+        <div class="header-section">
+            <h1>⌨️ Typing Speed Test</h1>
+            <p>Test your typing speed in 60 seconds • Global leaderboard + Country rankings</p>
+        </div>
+        
+        <div class="stats-banner">
+            <div class="stat-card">
+                <div class="stat-value" id="your-wpm">0</div>
+                <div class="stat-label">Your WPM</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="your-accuracy">100%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="global-rank">-</div>
+                <div class="stat-label">Global Rank</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="country-rank">-</div>
+                <div class="stat-label">Country Rank</div>
+            </div>
+        </div>
+        
+        <div class="typing-panel">
+            <div class="timer-display" id="timer">60</div>
+            
+            <div class="text-display" id="text-display">
+                Click "Start Test" to begin
+            </div>
+            
+            <input type="text" class="typing-input" id="typing-input" placeholder="Start typing here..." disabled>
+            
+            <button class="btn" onclick="startTest()" id="start-btn">🚀 Start Test</button>
+            
+            <div id="result-section" style="display: none;">
+                <div class="share-result">
+                    <h3 style="color: white; margin-bottom: 1rem;">🎉 Test Complete!</h3>
+                    <div style="font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">
+                        I typed <span id="share-wpm" style="color: #10b981; font-weight: 700; font-size: 1.5rem;">0</span> WPM with <span id="share-accuracy" style="color: #10b981; font-weight: 700;">100%</span> accuracy!<br>
+                        I'm <span id="share-rank" style="color: #3b82f6; font-weight: 700;">#0</span> in <span id="share-country">India</span>! 🏆
+                    </div>
+                    <div class="share-buttons">
+                        <button class="share-btn" onclick="shareTwitter()">🐦 Share on Twitter</button>
+                        <button class="share-btn" onclick="shareWhatsApp()">💬 Share on WhatsApp</button>
+                <div class="leaderboard-title">🏳️ <select id="country-select" title="Select country for leaderboard">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select> Top 10</div>
+            <div class="leaderboard-panel">
+                <div class="leaderboard-title">🌍 Global Top 10</div>
+                <div id="global-leaderboard"></div>
+            </div>
+            
+            <div class="leaderboard-panel">
+                <div class="leaderboard-title">🏳️ <select id="country-select" style="background: rgba(10,10,15,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.5rem; color: white; margin-left: 0.5rem;">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select> Top 10</div>
+                <div id="country-leaderboard"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Typing Speed Test</h2>
+        <p>Test your typing speed with 60-second challenges, real-time WPM tracking, global/country leaderboards, and social sharing:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Start Typing Test</h3>
+                <p>Click "Start Test" button. A random paragraph appears. Timer starts when you type first character. Type accurately - mistakes reduce your score.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Watch Live Stats</h3>
+                <p>See real-time WPM (words per minute) and accuracy percentage as you type. Green highlights = correct, red = incorrect. Aim for 90%+ accuracy.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Check Your Rank</h3>
+                <p>After 60 seconds or completing paragraph, see your global rank and country rank. Compare with leaderboard top 10. Gold/silver/bronze badges for top 3.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Share Results</h3>
+                <p>Click Twitter/WhatsApp buttons to share your score and challenge friends. Copy link to share on other platforms. Retry test to beat your score.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is a good typing speed?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Average: 40 WPM. Good: 50-60 WPM. Excellent: 70-80 WPM. Professional typists: 80-100 WPM. World record: 170+ WPM. Most jobs require 40+ WPM. Focus on accuracy first - speed comes naturally with practice.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How is WPM calculated?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        WPM = (characters typed / 5) / minutes elapsed. Standard word = 5 characters. So 250 characters in 1 minute = 50 WPM. We count only correctly typed characters to reflect true typing skill.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are leaderboards real or simulated?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Simulated for demo purposes - your score is added to generated leaderboard. For competitive typing, try TypeRacer, Monkeytype, or 10FastFingers which have real global leaderboards with thousands of players.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I look at keyboard while typing?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No! Touch typing (not looking at keyboard) is faster and more accurate. Learn proper finger placement: ASDF JKL; home row. Use online typing tutors to build muscle memory. Takes 2-3 weeks of daily practice to master.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I improve my typing speed?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        1) Practice 15-20 min daily, 2) Learn touch typing properly, 3) Focus on accuracy over speed initially, 4) Practice common words and bigrams, 5) Use proper posture and finger placement. Improvement is gradual - expect 5-10 WPM gains per month.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="custom-text.html" class="related-tool-card">
+                <h3><span class="tool-icon">📝</span> Custom Text Practice</h3>
+                <p>Practice typing with your own text or specific topics you need to master.</p>
+            </a>
+            <a href="ai-coach.html" class="related-tool-card">
+                <h3><span class="tool-icon">🤖</span> AI Typing Coach</h3>
+                <p>Get personalized feedback on weak keys and improvement recommendations.</p>
+            </a>
+            <a href="streak-tracker.html" class="related-tool-card">
+                <h3><span class="tool-icon">🔥</span> Streak Tracker</h3>
+                <p>Build consistent daily typing practice habit with streak motivation.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p style="margin-top: 1.5rem;">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const paragraphs = [
+            "The quick brown fox jumps over the lazy dog while the sun sets behind the mountains creating a beautiful orange glow across the sky.",
+            "Technology has revolutionized the way we communicate with each other making it easier than ever to stay connected with friends and family.",
+            "Learning to type faster improves productivity and efficiency in both personal and professional settings helping you accomplish more in less time.",
+            "Practice makes perfect and consistent daily typing exercises will significantly improve your speed and accuracy over time with dedication.",
+            "The art of programming requires not only logical thinking but also the ability to type code quickly and accurately to bring ideas to life."
+        ];
+        
+        let currentText = '';
+        let currentIndex = 0;
+        let startTime = 0;
+        let timerInterval = null;
+        let timeLeft = 60;
+        let correctChars = 0;
+        let incorrectChars = 0;
+        let totalChars = 0;
+        let testActive = false;
+        
+        // Simulate leaderboard data
+        const generateLeaderboard = () => {
+            const names = ['Alice', 'Bob', 'Charlie', 'David', 'Emma', 'Frank', 'Grace', 'Henry', 'Ivy', 'Jack'];
+            const countries = ['India', 'USA', 'UK', 'Canada', 'Australia'];
+            
+            return names.map((name, i) => ({
+                name: name,
+                country: countries[Math.floor(Math.random() * countries.length)],
+                wpm: 120 - (i * 8) - Math.floor(Math.random() * 5),
+                accuracy: 98 - Math.floor(Math.random() * 3)
+            }));
+        };
+        
+        let globalLeaderboard = generateLeaderboard();
+        
+        function displayLeaderboard(data, containerId, limit = 10) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            data.slice(0, limit).forEach((player, index) => {
+                const item = document.createElement('div');
+                item.className = 'leaderboard-item';
+                
+                let badgeClass = '';
+                if (index === 0) badgeClass = 'gold';
+                else if (index === 1) badgeClass = 'silver';
+                else if (index === 2) badgeClass = 'bronze';
+                
+                item.innerHTML = `
+                    <div class="rank-badge ${badgeClass}">${index + 1}</div>
+                    <div class="player-info">
+                        <div class="player-name">${player.name}</div>
+                        <div class="player-country">${player.country}</div>
+                    </div>
+                    <div class="player-wpm">${player.wpm}</div>
+                `;
+                
+                container.appendChild(item);
+            });
+        }
+        
+        function updateLeaderboards() {
+            displayLeaderboard(globalLeaderboard, 'global-leaderboard');
+            
+            const country = document.getElementById('country-select').value;
+            const countryData = globalLeaderboard.filter(p => p.country === country);
+            displayLeaderboard(countryData, 'country-leaderboard');
+        }
+        
+        document.getElementById('country-select').addEventListener('change', updateLeaderboards);
+        
+        function startTest() {
+            // Reset everything
+            currentText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+            currentIndex = 0;
+            correctChars = 0;
+            incorrectChars = 0;
+            totalChars = 0;
+            timeLeft = 60;
+            testActive = true;
+            
+            // Display text with spans
+            const textDisplay = document.getElementById('text-display');
+            textDisplay.innerHTML = '';
+            currentText.split('').forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char;
+                if (i === 0) span.classList.add('current');
+                textDisplay.appendChild(span);
+            });
+            
+            // Enable input
+            const input = document.getElementById('typing-input');
+            input.disabled = false;
+            input.value = '';
+            input.focus();
+            
+            // Hide start button
+            document.getElementById('start-btn').style.display = 'none';
+            document.getElementById('result-section').style.display = 'none';
+            
+            // Start timer
+            startTime = Date.now();
+            timerInterval = setInterval(updateTimer, 100);
+        }
+        
+        function updateTimer() {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            timeLeft = 60 - elapsed;
+            
+            document.getElementById('timer').textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                endTest();
+            }
+        }
+        
+        document.getElementById('typing-input').addEventListener('input', function(e) {
+            if (!testActive) return;
+            
+            const input = e.target.value;
+            const chars = document.querySelectorAll('.char');
+            
+            // Update characters
+            chars.forEach((char, i) => {
+                char.classList.remove('correct', 'incorrect', 'current');
+                
+                if (i < input.length) {
+                    if (input[i] === currentText[i]) {
+                        char.classList.add('correct');
+                    } else {
+                        char.classList.add('incorrect');
+                    }
+                } else if (i === input.length) {
+                    char.classList.add('current');
+                }
+            });
+            
+            // Calculate stats
+            correctChars = 0;
+            incorrectChars = 0;
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] === currentText[i]) correctChars++;
+                else incorrectChars++;
+            }
+            totalChars = input.length;
+            
+            // Update live stats
+            const wpm = Math.round((correctChars / 5) / ((60 - timeLeft) / 60));
+            const accuracy = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 100;
+            
+            document.getElementById('your-wpm').textContent = isNaN(wpm) || !isFinite(wpm) ? 0 : wpm;
+            document.getElementById('your-accuracy').textContent = accuracy + '%';
+            
+            // Check if completed
+            if (input.length >= currentText.length) {
+                endTest();
+            }
+        });
+        
+        function endTest() {
+            testActive = false;
+            clearInterval(timerInterval);
+            
+            const input = document.getElementById('typing-input');
+            input.disabled = true;
+            
+            // Calculate final stats
+            const timeTaken = (60 - timeLeft) || 1;
+            const wpm = Math.round((correctChars / 5) / (timeTaken / 60));
+            const accuracy = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 100;
+            
+            document.getElementById('your-wpm').textContent = wpm;
+            document.getElementById('your-accuracy').textContent = accuracy + '%';
+            
+            // Add to leaderboard
+            const userCountry = document.getElementById('country-select').value;
+            globalLeaderboard.push({
+                name: 'You',
+                country: userCountry,
+                wpm: wpm,
+                accuracy: accuracy
+            });
+            
+            globalLeaderboard.sort((a, b) => b.wpm - a.wpm);
+            
+            // Calculate ranks
+            const globalRank = globalLeaderboard.findIndex(p => p.name === 'You') + 1;
+            const countryData = globalLeaderboard.filter(p => p.country === userCountry);
+            const countryRank = countryData.findIndex(p => p.name === 'You') + 1;
+            
+            document.getElementById('global-rank').textContent = '#' + globalRank;
+            document.getElementById('country-rank').textContent = '#' + countryRank;
+            
+            // Update share section
+            document.getElementById('share-wpm').textContent = wpm;
+            document.getElementById('share-accuracy').textContent = accuracy + '%';
+            document.getElementById('share-rank').textContent = '#' + countryRank;
+            document.getElementById('share-country').textContent = userCountry;
+            
+            // Show results
+            document.getElementById('result-section').style.display = 'block';
+            document.getElementById('start-btn').style.display = 'block';
+            document.getElementById('start-btn').textContent = '🔄 Retry Test';
+            
+            updateLeaderboards();
+        }
+        
+        function shareTwitter() {
+            const wpm = document.getElementById('share-wpm').textContent;
+            const rank = document.getElementById('share-rank').textContent;
+            const country = document.getElementById('share-country').textContent;
+            const text = `I just typed ${wpm} WPM! I'm ${rank} in ${country}! Can you beat me? 🏆`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+        
+        function shareWhatsApp() {
+            const wpm = document.getElementById('share-wpm').textContent;
+            const rank = document.getElementById('share-rank').textContent;
+            const country = document.getElementById('share-country').textContent;
+            const text = `I just typed ${wpm} WPM! I'm ${rank} in ${country}! Beat me → ${window.location.href}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+        
+        // Initialize leaderboards
+        updateLeaderboards();
+    </script>
+</body>
+</html>

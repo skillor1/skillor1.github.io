@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/ai-tools/meme-creator.html">
+    <meta name="description" content="Create funny memes instantly with trending templates. Add custom text, preview, and download memes ready to share on social media. Quick meme maker for any occasion.">
+    <meta name="keywords" content="meme maker online free, create memes quickly, funny meme generator, custom meme creator, meme template maker, download memes free, viral meme builder, easy meme editor 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/ai-tools/meme-creator.html">
+    <meta property="og:title" content="Quick Meme Maker - Create & Download Funny Memes">
+    <meta property="og:description" content="Create funny memes instantly with trending templates. Add custom text, preview, and download memes ready to share.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quick Meme Maker - Create & Download Funny Memes">
+    <meta name="twitter:description" content="Create funny memes with custom text and trending templates.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Quick Meme Maker - Create Custom Memes Online Free</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Quick Meme Maker",
+      "description": "Create and download custom memes with trending templates and custom text",
+      "applicationCategory": "EntertainmentApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "AI Tools", "item": "https://skillor.me/ai-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Meme Creator", "item": "https://skillor.me/ai-tools/meme-creator.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #f59e0b;
+            --tool-secondary: #fbbf24;
+            --tool-accent: #d97706;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* utility classes */
+        .text-center-mt { text-align: center; margin-top: 1rem; }
+        .btn-export { width: auto; padding: 0.75rem 1.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+        }
+        
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .template-btn {
+            padding: 0.75rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .template-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .template-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.2));
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+        }
+        
+        .meme-canvas {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem auto;
+            display: block;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .caption-output {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .caption-text {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .trend-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(219, 39, 119, 0.1));
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            color: #f472b6;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .saved-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the AI meme text generator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI meme generator analyzes your topic input and selected meme template to create contextually funny text. Process: 1) Identifies meme format structure (e.g., Drake meme = rejection vs. preference, Distracted Boyfriend = temptation/choice), 2) Understands your topic theme and finds humorous angles, 3) Generates text that follows meme-specific comedy patterns (setup/punchline, comparison, exaggeration, relatability), 4) Ensures text length fits template's text boxes naturally. The AI is trained on popular meme formats understanding their comedic structures—it doesn't just place random text, it crafts jokes that work within each template's established format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which meme template should I choose for different joke types?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Match template to your comedy intent: Drake meme for: preference comparisons (rejecting old way, approving new way), before/after contrasts, unpopular vs. popular opinions. Distracted Boyfriend for: temptation scenarios, choosing between two options, relatable struggles with procrastination/distractions. Expanding Brain for: escalating ideas from simple to galaxy brain, showing progression of thoughts, satirizing overthinking. Two Buttons for: impossible choices, decision paralysis, ethical dilemmas, contradictory desires. Is This A Pigeon for: misidentification jokes, confusing similar things, pointing out absurd logic. Success Kid for: small victories, unexpected wins, triumphant moments. Strategy: browse templates first, pick one that structurally fits your joke concept, then let AI help with wording."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use AI-generated meme text directly or edit it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Review and refine AI text for maximum comedic impact—AI provides structure, you add punchline perfection. Quick editing checklist: 1) Ensure text fits template perfectly (not too long for text box), 2) Verify humor lands with YOUR audience (inside jokes, niche references), 3) Check timing/wordplay works (some jokes need setup pacing), 4) Add cultural context AI might miss (current events, trending topics), 5) Test readability (can you understand joke in 2 seconds?). Meme golden rule: simpler is funnier—if AI generates complex text, simplify to core joke. Best practice: generate 3-5 versions, pick funniest base, spend 30 seconds perfecting the punchline. Remember: memes spread when immediately relatable—optimize for instant comprehension over clever complexity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use these memes for business marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, meme marketing is highly effective for brand engagement when done appropriately. Business usage guidelines: 1) Know your brand voice (casual brands = more meme freedom, corporate brands = conservative choices), 2) Use memes that align with brand values (avoid controversial templates), 3) Make product/service reference subtle (hard-sell kills meme humor), 4) Test with internal team first (does this land with target demographic?), 5) Monitor comments closely (memes can backfire if misinterpreted). Platforms: Instagram/Twitter = meme-friendly, LinkedIn = use sparingly for relatable work humor, Facebook = depends on audience age. Success examples: Wendy's, Netflix, Duolingo use memes effectively by staying relevant and self-aware. Avoid: forcing memes into serious topics, using outdated templates (cringe factor), over-explaining the joke in caption. Meme lifespan is short—use trending templates for maximum relatability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I make my memes go viral on social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Viral memes share common traits—maximize these factors: 1) Relatability (does your target audience think 'OMG that's SO me'?), 2) Timing (jump on trending topics within 24-48 hours while relevant), 3) Simplicity (joke should be understood in 2-3 seconds max), 4) Shareability (would someone tag a friend or repost to their story?), 5) Format quality (clear readable text, recognizable template, proper image resolution). Posting strategy: Share during peak engagement times (Instagram 11 AM-1 PM weekdays), use 3-5 relevant hashtags (not 30), engage with comments immediately (algorithm boost), cross-post to multiple platforms with platform-specific captions. Viral formula: Trending Template + Current Topic + Relatable Twist = Shareability. Example: Drake meme + work-from-home + funny comparison = viral potential. Reality check: virality has luck factor—focus on consistent quality over chasing viral hits. 10 solid memes beat 1 forced viral attempt."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ai-tools.html">AI Tools</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../ai-tools.html" class="back-link">← Back to AI Tools</a>
+        
+        <div class="header-section">
+            <h1>😂 Meme Idea Creator</h1>
+            <p>Generate viral meme ideas with Trend Tie-In</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-created">0</div>
+                <div class="stat-label">Created</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-exported">0</div>
+                <div class="stat-label">Exported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="trend-count">0</div>
+                <div class="stat-label">Trend Memes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <div class="panel">
+                <h3>⚙️ Meme Settings</h3>
+                
+                <div class="input-group">
+                    <label class="input-label" for="keyword-input">Keywords / Topic</label>
+                    <input type="text" class="input-field" id="keyword-input" placeholder="E.g., Monday vibes, Coding life, Coffee addiction...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Select Template</label>
+                    <div class="template-grid">
+                        <button class="template-btn active" data-template="drake" onclick="selectTemplate('drake')">Drake</button>
+                        <button class="template-btn" data-template="distracted" onclick="selectTemplate('distracted')">Distracted BF</button>
+                        <button class="template-btn" data-template="expanding" onclick="selectTemplate('expanding')">Expanding Brain</button>
+                        <button class="template-btn" data-template="two-buttons" onclick="selectTemplate('two-buttons')">Two Buttons</button>
+                        <button class="template-btn" data-template="stonks" onclick="selectTemplate('stonks')">Stonks</button>
+                        <button class="template-btn" data-template="woman-cat" onclick="selectTemplate('woman-cat')">Woman Cat</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="top-text">Top Text</label>
+                    <input type="text" class="input-field" id="top-text" placeholder="Top caption...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="bottom-text">Bottom Text</label>
+                    <input type="text" class="input-field" id="bottom-text" placeholder="Bottom caption...">
+                </div>
+                
+                <button class="btn" onclick="generateMeme()">✨ Generate Meme</button>
+            </div>
+            
+            <div class="panel">
+                <h3>🎨 Meme Preview</h3>
+                
+                <div id="trend-display"></div>
+                
+                <canvas id="meme-canvas" class="meme-canvas" width="800" height="800"></canvas>
+                
+                <div class="text-center-mt">
+                    <button class="btn btn-export" onclick="downloadMeme()">📥 Export Image</button>
+                </div>
+                
+                <div id="caption-container" class="mt-6"></div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h3>💾 Saved Memes (<span id="saved-count">0</span>)</h3>
+            <div id="saved-container">
+                <div class="empty-state">
+                    <p>No saved memes yet. Export your creations to save them!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Meme Creator</h2>
+        <p>Create viral-worthy memes in minutes with our easy-to-use meme generator. Perfect for social media, presentations, or just having fun:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Choose Template or Upload Image</h3>
+                <p>Select from popular meme templates like Drake, Distracted Boyfriend, or Woman Yelling at Cat. Or upload your own custom image for unique memes.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Add Your Text</h3>
+                <p>Type your caption in the top and bottom text fields. Use AI Caption Suggest for trending phrases, or write your own hilarious content.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Customize Style</h3>
+                <p>Adjust text size, font style, color, and position. Add outlines or shadows to make text pop against any background.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Export and Share</h3>
+                <p>Download your meme as PNG or JPEG in high quality. Share directly to social media or save to your collection for later use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I upload my own images for memes?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Click "Upload Custom Image" to use your own photos or graphics. Supports JPG, PNG, and GIF formats. Make sure you have the right to use the image, especially for public sharing.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What does the AI Caption Suggest feature do?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        AI Caption Suggest analyzes your chosen template and generates trending, contextually relevant caption ideas. It helps you create viral-worthy text that fits the meme format and current internet humor trends.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I make text readable on any background?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use the text outline feature (black or white) to create contrast. Increase font size for better visibility. Position text in areas with consistent color. The shadow option also helps text stand out on busy backgrounds.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I save memes and edit them later?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Saved memes are stored as images in your browser's local storage. However, once exported, they cannot be re-edited. If you want to make changes, recreate the meme using the same template and settings.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What file formats can I download?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Export memes as PNG (recommended for quality and transparency) or JPEG (smaller file size). PNG is best for sharing on social media as it maintains text clarity and colors accurately.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="caption-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">✍️</span> Caption Generator</h3>
+                <p>Generate engaging social media captions with AI for your meme posts.</p>
+            </a>
+            <a href="hashtag-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">#️⃣</span> Hashtag Generator</h3>
+                <p>Find trending hashtags to boost your meme's visibility on social platforms.</p>
+            </a>
+            <a href="../design/mockup-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">📱</span> Mockup Generator</h3>
+                <p>Showcase your memes in realistic device mockups for portfolio or presentations.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="mt-6">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        let selectedTemplate = 'drake';
+        let savedMemes = JSON.parse(localStorage.getItem('savedMemes') || '[]');
+        let stats = JSON.parse(localStorage.getItem('memeStats') || '{"created": 0, "exported": 0, "trends": 0}');
+        
+        const trendingMemes = [
+            {keyword: 'monday', trend: 'Monday Mood Memes trending on X'},
+            {keyword: 'coffee', trend: 'Coffee Addiction Memes viral on TikTok'},
+            {keyword: 'coding', trend: 'Developer Memes trending on X'},
+            {keyword: 'ai', trend: 'AI Takeover Memes viral everywhere'},
+            {keyword: 'meeting', trend: 'Zoom Fatigue Memes trending on LinkedIn'},
+            {keyword: 'sleep', trend: 'Sleep Deprivation Memes viral on TikTok'}
+        ];
+        
+        function selectTemplate(template) {
+            selectedTemplate = template;
+            document.querySelectorAll('.template-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.template === template);
+            });
+        }
+        
+        function generateMeme() {
+            const keyword = document.getElementById('keyword-input').value.trim().toLowerCase();
+            const topText = document.getElementById('top-text').value.trim() || 'TOP TEXT';
+            const bottomText = document.getElementById('bottom-text').value.trim() || 'BOTTOM TEXT';
+            
+            checkTrending(keyword);
+            drawMeme(topText, bottomText);
+            generateCaptions(keyword, topText, bottomText);
+            
+            stats.created++;
+            updateStats();
+        }
+        
+        function checkTrending(keyword) {
+            const trend = trendingMemes.find(t => keyword.includes(t.keyword));
+            const display = document.getElementById('trend-display');
+            
+            if (trend) {
+                display.innerHTML = '<div class="trend-badge">🔥 Trend Tie-In: ' + trend.trend + '</div>';
+                stats.trends++;
+            } else {
+                display.innerHTML = '';
+            }
+        }
+        
+        function drawMeme(topText, bottomText) {
+            const canvas = document.getElementById('meme-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#f59e0b');
+            gradient.addColorStop(1, '#d97706');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, 200);
+            ctx.fillRect(0, canvas.height - 200, canvas.width, 200);
+            
+            ctx.fillStyle = '#f3f4f6';
+            ctx.fillRect(0, 200, canvas.width, canvas.height - 400);
+            
+            ctx.fillStyle = '#1f2937';
+            ctx.font = 'bold 60px Impact';
+            ctx.textAlign = 'center';
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 4;
+            
+            wrapText(ctx, topText.toUpperCase(), canvas.width / 2, 120, canvas.width - 40, 70, true);
+            wrapText(ctx, bottomText.toUpperCase(), canvas.width / 2, canvas.height - 100, canvas.width - 40, 70, true);
+            
+            ctx.font = '40px Impact';
+            ctx.fillStyle = '#6b7280';
+            ctx.fillText('TEMPLATE: ' + selectedTemplate.toUpperCase(), canvas.width / 2, canvas.height / 2);
+        }
+        
+        function wrapText(ctx, text, x, y, maxWidth, lineHeight, stroke) {
+            const words = text.split(' ');
+            let line = '';
+            let yPos = y;
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = ctx.measureText(testLine);
+                
+                if (metrics.width > maxWidth && n > 0) {
+                    if (stroke) {
+                        ctx.strokeText(line, x, yPos);
+                    }
+                    ctx.fillText(line, x, yPos);
+                    line = words[n] + ' ';
+                    yPos += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            if (stroke) {
+                ctx.strokeText(line, x, yPos);
+            }
+            ctx.fillText(line, x, yPos);
+        }
+        
+        function generateCaptions(keyword, topText, bottomText) {
+            const captions = [
+                'When ' + keyword + ' hits different 😂',
+                'Me: ' + topText + '\\nAlso me: ' + bottomText,
+                'POV: You just realized ' + keyword,
+                topText + ' vs ' + bottomText + ' energy'
+            ];
+            
+            const container = document.getElementById('caption-container');
+            container.innerHTML = '<div class="caption-output"><div class="caption-text">💬 Suggested Captions:</div>' + captions.map(c => '<div class="caption-text" style="font-size: 1rem; padding: 0.5rem; background: rgba(245, 158, 11, 0.1); border-radius: 8px; margin-bottom: 0.5rem;">' + c + '</div>').join('') + '</div>';
+        }
+        
+        function downloadMeme() {
+            const canvas = document.getElementById('meme-canvas');
+            const link = document.createElement('a');
+            const timestamp = Date.now();
+            link.download = 'meme-' + timestamp + '.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            
+            savedMemes.unshift({
+                template: selectedTemplate,
+                timestamp: timestamp,
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('savedMemes', JSON.stringify(savedMemes));
+            stats.exported++;
+            updateStats();
+            renderSaved();
+            alert('Meme exported! 🎉');
+        }
+        
+        function renderSaved() {
+            const container = document.getElementById('saved-container');
+            document.getElementById('saved-count').textContent = savedMemes.length;
+            
+            if (savedMemes.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No saved memes yet.</p></div>';
+                return;
+            }
+            
+            container.innerHTML = savedMemes.slice(0, 10).map((item, index) => '<div class="saved-item"><button class="delete-btn" onclick="deleteSaved(' + index + ')">🗑️</button><div style="color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem;">Template: ' + item.template + '</div><div style="color: rgba(255, 255, 255, 0.5); font-size: 0.85rem;">' + new Date(item.date).toLocaleDateString() + '</div></div>').join('');
+        }
+        
+        function deleteSaved(index) {
+            if (confirm('Delete this meme?')) {
+                savedMemes.splice(index, 1);
+                localStorage.setItem('savedMemes', JSON.stringify(savedMemes));
+                renderSaved();
+            }
+        }
+        
+        function updateStats() {
+            localStorage.setItem('memeStats', JSON.stringify(stats));
+            document.getElementById('total-created').textContent = stats.created;
+            document.getElementById('total-exported').textContent = stats.exported;
+            document.getElementById('trend-count').textContent = stats.trends;
+            
+            const totalActions = stats.created + stats.exported;
+            const completionRate = totalActions > 0 ? Math.min(Math.floor((totalActions / 20) * 100), 100) : 0;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+        }
+        
+        updateStats();
+        renderSaved();
+        drawMeme('YOUR TEXT HERE', 'BOTTOM TEXT');
+    </script>
+</body>
+</html>

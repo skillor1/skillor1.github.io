@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/aptitude/data-interpretation.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Master data interpretation with our smart chart generator. Paste tables to create bar and pie charts instantly, then solve DI questions with step-by-step solutions for competitive exams.">
+    <meta name="keywords" content="data interpretation practice online, table to chart converter free, DI questions with solutions, CAT data interpretation prep, bar chart pie chart generator, SSC CGL DI practice, banking exam data interpretation, graph analysis questions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/aptitude/data-interpretation.html">
+    <meta property="og:title" content="Data Interpretation Practice - Smart Chart Generator Tool">
+    <meta property="og:description" content="Master data interpretation with our smart chart generator. Paste tables to create bar and pie charts instantly, then solve DI questions with step-by-step solutions for competitive exams.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/aptitude/data-interpretation.html">
+    <meta name="twitter:title" content="Data Interpretation Practice - Smart Chart Generator Tool">
+    <meta name="twitter:description" content="Master data interpretation with our smart chart generator. Paste tables to create bar and pie charts instantly, then solve DI questions with step-by-step solutions for competitive exams.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Data Interpretation Practice - Smart Chart Generator Tool</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Data Interpretation Practice Tool",
+      "description": "Master data interpretation with our smart chart generator. Paste tables to create bar and pie charts instantly, then solve DI questions with step-by-step solutions for competitive exams.",
+      "url": "https://skillor.me/aptitude/data-interpretation.html",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://skillor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aptitude",
+          "item": "https://skillor.me/aptitude.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Data Interpretation",
+          "item": "https://skillor.me/aptitude/data-interpretation.html"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #10b981;
+            --tool-secondary: #34d399;
+            --tool-accent: #06b6d4;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .hidden { display: none; }
+        
+        .chart-placeholder {
+            text-align: center;
+            padding: 4rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .chart-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .result-complete {
+            color: white;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-area {
+            width: 100%;
+            min-height: 200px;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            resize: vertical;
+        }
+        
+        .input-area:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), #059669);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .chart-type-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .chart-type-btn {
+            flex: 1;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-type-btn.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--tool-primary);
+        }
+        
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quiz-section {
+            grid-column: 1 / -1;
+            display: none;
+        }
+        
+        .question-card {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .question-text {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .option-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option-btn:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--tool-primary);
+            transform: translateX(5px);
+        }
+        
+        .option-btn.selected {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--tool-primary);
+        }
+        
+        .option-btn.correct {
+            background: rgba(16, 185, 129, 0.3);
+            border-color: var(--tool-primary);
+        }
+        
+        .option-btn.wrong {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+        }
+        
+        .results-panel {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .score-display {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1rem 0;
+        }
+        
+        .sample-tables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sample-btn {
+            padding: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .sample-btn:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quiz-section {
+                grid-column: 1;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["WebApplication", "LearningResource"],
+      "name": "Data Interpretation Quiz with Auto Chart Generator",
+      "description": "Interactive DI tool for CAT, Banking, SSC exams. Paste tables, generate charts, solve interpretation questions.",
+      "applicationCategory": "EducationalApplication",
+      "educationalLevel": "Intermediate to Advanced",
+      "learningResourceType": "Interactive Tool"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the key techniques for reading charts and tables quickly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effective chart reading starts with a systematic 30-second scan: (1) Read the title to understand what data is shown, (2) Check axis labels and units (thousands/lakhs/millions, percentages vs absolute values), (3) Read the legend to identify what each color/line/bar represents, (4) Note the scale increments to estimate values accurately, (5) Identify highest/lowest values and obvious trends. For tables, scan the first row (headers) and first column to understand structure. Common mistakes include misreading scales (thinking 50K is 5K), confusing rows with columns, or missing footnotes that explain calculation methods. Practice this scan on 10 charts daily for 2 weeks to develop automatic pattern recognition. In exams, spend 30 seconds reading the chart, 90 seconds on calculations, and 30 seconds verifying your answer - this 2:30 minute rhythm per DI set optimizes accuracy and speed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I perform quick calculations without a calculator in DI questions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mental math shortcuts are essential for DI speed: (1) Percentage approximation: 10% = divide by 10, 20% = divide by 5, 25% = divide by 4, 50% = divide by 2, 33% ≈ divide by 3, 15% = 10% + 5%. For complex percentages like 17%, calculate 10% + 5% + 2%. (2) Ratio shortcuts: If values are 45,000 and 60,000, divide both by 15,000 to get 3:4 ratio quickly. (3) Fraction to percentage: 3/8 = 37.5% (memorize common fractions: 1/8=12.5%, 2/8=25%, 3/8=37.5%, 5/8=62.5%, 7/8=87.5%). (4) Difference percentage: If A=80 and B=100, difference = (100-80)/80 × 100 = 25% increase. (5) Compound approximation: For small percentages, add them (10% + 12% ≈ 22% not exactly due to compounding, but close enough for MCQs). (6) Cross-multiplication: For x/45 = 12/15, do 15x = 45×12 = 540, so x = 36. Practice these on 15-20 DI questions daily focusing only on calculation techniques, not full problem-solving. Most competitive exams allow basic calculators, but mental math saves 30-45 seconds per question, giving you 5-7 extra minutes in a 20-question DI section."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ideal time management strategy for DI sections in competitive exams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Professional DI time management follows the 2-3 minute per set rule: In a 20-minute section with 4 sets (5 questions each), allocate 5 minutes per set maximum. Break it down: 30 seconds for passage/chart reading (understand all elements, scales, units), 90 seconds per question on average (some take 60 seconds, harder ones take 2 minutes), 30 seconds for final verification of marked answers. Use the Two-Pass Strategy: First Pass (12 minutes): Solve 3 easier sets completely (15 questions). Mark the hardest-looking set to skip initially. This guarantees 12-15 correct answers. Second Pass (8 minutes): Attempt the difficult set with remaining time. Even 2-3 correct answers here push your score to 15-18/20. Difficulty identification takes practice: Easy sets have round numbers (100, 500, 1000), simple percentages (10%, 25%, 50%), and direct questions ('What is the maximum value?'). Hard sets have irregular numbers (4,847, 6,923), require multiple calculations, or ask for complex comparisons ('What is the percentage difference between the ratio of A to B and the ratio of C to D?'). If stuck on a question for 2+ minutes, mark your best guess and move on - attempting all questions matters more than perfecting difficult ones. Practice this strategy on 20 full DI sets over 4 weeks to internalize the rhythm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common calculation traps in DI questions and how do I avoid them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DI questions have systematic traps designed to catch rushed test-takers: (1) Unit confusion: Chart shows values in 'thousands' but question asks for actual value. Always verify: if chart shows 45 and unit is 'in thousands', answer is 45,000 not 45. Write 'K' or 'L' next to values while solving. (2) Percentage base confusion: '20% more than X' means X + 20% of X = 1.2X, but '20% less than Y' means Y - 20% of Y = 0.8Y. The base is different. If A is 20% more than B, then B is NOT 20% less than A (it's 16.67% less). (3) Ratio vs actual value: Question asks for ratio but options show actual values, or vice versa. Read the question twice. (4) Time period confusion: 'In 2020-2021' might mean financial year April 2020 to March 2021, not calendar year. Check footnotes. (5) Cumulative vs individual: 'Total production over 5 years' needs sum of all years, not just final year value. (6) Increase vs increased by: '10% increase' means multiply by 1.10, but 'increased by 10 units' means add 10. (7) Scale misreading: If y-axis starts at 100 not 0, a bar at 150 represents 50 units of difference, not 150. Mark the zero point clearly. (8) Average confusion: Average of 5 years is sum divided by 5, not just the middle year value. Prevention strategy: Underline key words (ratio, percentage, increase, total, average) and verify units before calculation. Double-check your answer against the original question, not just your intermediate calculations. These traps account for 30-40% of DI errors among test-takers - awareness alone improves accuracy by 15-20%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best practice resources and study plan for mastering Data Interpretation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comprehensive DI mastery requires structured practice over 8-12 weeks: **Free Resources**: (1) Arun Sharma's 'How to Prepare for Data Interpretation' book (₹450, gold standard with 500+ problems), (2) IndiaBix DI section (1,000+ free questions categorized by chart type with detailed solutions), (3) Previous year papers from CAT/XAT/SNAP/IIFT/NMAT (available free on exam websites, shows exact difficulty level), (4) GFG (GeeksforGeeks) DI practice sets (300+ questions with video solutions), (5) MBA Crystal Ball DI blog (strategy articles and shortcut techniques). **Paid Resources**: (1) IMS DI module (₹5,000, part of CAT coaching with adaptive practice), (2) Career Launcher SimCATs (₹3,000 for 15 mocks, excellent DI difficulty matching real CAT), (3) Byju's DI masterclass (₹8,000, video-based learning), (4) Oliveboard DI prep (₹2,500, 5,000+ questions with performance analytics). **Study Schedule**: Week 1-2: Master one chart type daily (Day 1: Bar charts, Day 2: Line graphs, Day 3: Pie charts, Day 4: Tables, Day 5: Mixed, Day 6-7: Review and practice), solve 10 problems per type, focus on reading techniques not speed. Week 3-4: Learn calculation shortcuts, practice mental math 30 min daily, solve 15 DI questions focusing on speed (reduce time from 3 min to 2 min per question). Week 5-6: Mixed practice sets of 4-5 questions, time yourself strictly (10-12 minutes per set), maintain error log noting trap types. Week 7-8: Full sectional tests (20 questions in 20 minutes), attempt 2 tests per week, analyze mistakes for pattern recognition. Week 9-12: Full-length mocks including DI (2 per week), review not just wrong answers but all questions to learn faster methods. Consistency is critical: 30-45 minutes of focused DI practice daily beats 4-hour weekend marathons. Target accuracy progression: 60% in Week 1, 70% by Week 4, 80% by Week 8, 85%+ by Week 12. Speed naturally increases with accuracy - don't sacrifice accuracy for speed before Week 5."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aptitude.html">Aptitude</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../aptitude.html" class="back-link">← Back to Aptitude Tools</a>
+        
+        <div class="header-section">
+            <h1>📊 Data Interpretation Quiz</h1>
+            <p>Paste tables → Auto-generate charts → Solve interactive questions</p>
+        </div>
+        
+        <div class="main-grid">
+            <div class="panel">
+                <h3>📝 Input Data</h3>
+                
+                <div class="sample-tables">
+                    <button class="sample-btn" onclick="loadSample('sales')">📈 Sales Data</button>
+                    <button class="sample-btn" onclick="loadSample('students')">🎓 Students Score</button>
+                    <button class="sample-btn" onclick="loadSample('expenses')">💰 Expenses</button>
+                </div>
+                
+                <textarea class="input-area" id="data-input" placeholder="Paste your table data here (CSV format):
+Example:
+Month,Sales
+Jan,45000
+Feb,52000
+Mar,48000
+Apr,61000
+May,58000"></textarea>
+                
+                <button class="btn" onclick="generateChart()">🎨 Generate Chart</button>
+            </div>
+            
+            <div class="panel">
+                <h3>📉 Visualization</h3>
+                
+                <div class="chart-type-selector">
+                    <button class="chart-type-btn active" data-type="bar" onclick="selectChartType('bar')">📊 Bar</button>
+                    <button class="chart-type-btn" data-type="line" onclick="selectChartType('line')">📈 Line</button>
+                    <button class="chart-type-btn" data-type="pie" onclick="selectChartType('pie')">🥧 Pie</button>
+                </div>
+                
+                <div class="chart-container hidden" id="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+                
+                <div id="placeholder" class="chart-placeholder">
+                    <div class="chart-icon">📊</div>
+                    <p>Paste data and click "Generate Chart"</p>
+                </div>
+                
+                <button class="btn btn-secondary hidden" onclick="generateQuestions()" id="quiz-btn">
+                    ❓ Generate Quiz Questions
+                </button>
+            </div>
+            
+            <div class="panel quiz-section" id="quiz-section">
+                <h3>🎯 Interactive Questions</h3>
+                <div id="questions-container"></div>
+                
+                <div id="results-section" class="results-panel hidden">
+                    <h2 class="result-complete">Quiz Complete! 🎉</h2>
+                    <div class="score-display"><span id="final-score">0</span>/5</div>
+                    <button class="btn" onclick="location.reload()">🔄 Try New Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Data Interpretation Tool</h2>
+        <p>Master the art of analyzing charts, graphs, and tables with AI-generated practice questions. Essential for aptitude tests and data analysis roles:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Choose Chart Type</h3>
+                <p>Select from Bar Chart, Line Graph, Pie Chart, or Table. Each type tests different data reading skills commonly found in placement exams.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Generate Data Set</h3>
+                <p>Click to generate realistic data with random values. Charts display with proper labels, scales, and legends to simulate exam conditions.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Answer Questions</h3>
+                <p>Solve 5 questions based on the chart. Questions test percentage calculations, comparisons, averages, and trend analysis. Use on-screen calculator if needed.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Review Solutions</h3>
+                <p>See step-by-step solutions explaining how to extract data from charts and perform calculations. Learn shortcuts for faster problem-solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which chart type should I practice first?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Start with bar charts for basic comparisons, then move to tables for detailed data, line graphs for trends, and pie charts for proportions. Most tests include all types, so practice each regularly.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How is this different from regular aptitude practice?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        This tool generates fresh charts each time with unique data, so you can't memorize answers. It focuses specifically on data interpretation skills - reading charts accurately, comparing values, calculating percentages, and identifying trends quickly.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use a calculator during practice?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Click the calculator icon to use our built-in calculator. However, practice mental math and estimation for simple calculations since many tests restrict calculator usage or have time constraints.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What types of questions will I encounter?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Expect percentage change calculations, ratio comparisons, maximum/minimum value identification, average calculations, sum/difference problems, and trend predictions. These mirror real exam questions from TCS, Infosys, and other companies.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I improve my speed?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Practice reading charts quickly - identify key values, scales, and units first. Learn mental math shortcuts for common calculations (10%, 25%, 50%). Time yourself and gradually reduce time per question. Consistent practice builds speed naturally.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="daily-quiz.html" class="related-tool-card">
+                <h3><span class="tool-icon">📅</span> Daily Quiz</h3>
+                <p>Practice 5 mixed aptitude questions every day to build consistent skills.</p>
+            </a>
+            <a href="wtd-calculator.html" class="related-tool-card">
+                <h3><span class="tool-icon">🧮</span> WTD Calculator</h3>
+                <p>Solve work-time-distance problems with interactive visualization and steps.</p>
+            </a>
+            <a href="../programming/sorting-visualizer.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Sorting Visualizer</h3>
+                <p>Visualize data sorting algorithms to understand data organization patterns.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Master aptitude skills with interactive tools for CAT, Banking, SSC, and competitive exams.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Aptitude Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./daily-quiz.html">Daily 5 Questions Quiz</a></li>
+                    <li><a href="./data-interpretation.html">Data Interpretation</a></li>
+                    <li><a href="./wtd-calculator.html">Work Time Distance</a></li>
+                    <li><a href="./mock-test.html">Mock Test Simulator</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let chartInstance = null;
+        let currentChartType = 'bar';
+        let parsedData = null;
+        let quizQuestions = [];
+        let currentScore = 0;
+        
+        const sampleData = {
+            sales: `Month,Sales
+Jan,45000
+Feb,52000
+Mar,48000
+Apr,61000
+May,58000
+Jun,65000`,
+            students: `Subject,Marks
+Math,85
+Science,92
+English,78
+History,88
+Geography,81`,
+            expenses: `Category,Amount
+Rent,15000
+Food,8000
+Transport,5000
+Entertainment,3000
+Utilities,4000
+Savings,10000`
+        };
+        
+        function loadSample(type) {
+            document.getElementById('data-input').value = sampleData[type];
+        }
+        
+        function selectChartType(type) {
+            currentChartType = type;
+            document.querySelectorAll('.chart-type-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.type === type);
+            });
+            if (parsedData) generateChart();
+        }
+        
+        function parseCSV(csv) {
+            const lines = csv.trim().split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',');
+                data.push({
+                    label: values[0].trim(),
+                    value: parseFloat(values[1].trim())
+                });
+            }
+            
+            return { headers, data };
+        }
+        
+        function generateChart() {
+            const input = document.getElementById('data-input').value;
+            if (!input.trim()) {
+                alert('Please enter data first');
+                return;
+            }
+            
+            try {
+                parsedData = parseCSV(input);
+                
+                document.getElementById('placeholder').classList.add('hidden');
+                document.getElementById('chart-container').classList.remove('hidden');
+                document.getElementById('quiz-btn').classList.remove('hidden');
+                
+                const ctx = document.getElementById('myChart').getContext('2d');
+                
+                if (chartInstance) {
+                    chartInstance.destroy();
+                }
+                
+                const labels = parsedData.data.map(d => d.label);
+                const values = parsedData.data.map(d => d.value);
+                
+                const config = {
+                    type: currentChartType,
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: parsedData.headers[1],
+                            data: values,
+                            backgroundColor: [
+                                'rgba(16, 185, 129, 0.7)',
+                                'rgba(6, 182, 212, 0.7)',
+                                'rgba(99, 102, 241, 0.7)',
+                                'rgba(245, 158, 11, 0.7)',
+                                'rgba(239, 68, 68, 0.7)',
+                                'rgba(168, 85, 247, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgb(16, 185, 129)',
+                                'rgb(6, 182, 212)',
+                                'rgb(99, 102, 241)',
+                                'rgb(245, 158, 11)',
+                                'rgb(239, 68, 68)',
+                                'rgb(168, 85, 247)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                display: currentChartType === 'pie'
+                            }
+                        }
+                    }
+                };
+                
+                chartInstance = new Chart(ctx, config);
+                
+            } catch (error) {
+                alert('Error parsing data. Please check format.');
+                console.error(error);
+            }
+        }
+        
+        function generateQuestions() {
+            if (!parsedData) return;
+            
+            const values = parsedData.data.map(d => d.value);
+            const labels = parsedData.data.map(d => d.label);
+            const total = values.reduce((a, b) => a + b, 0);
+            const max = Math.max(...values);
+            const min = Math.min(...values);
+            const avg = total / values.length;
+            
+            const maxIndex = values.indexOf(max);
+            const minIndex = values.indexOf(min);
+            
+            quizQuestions = [
+                {
+                    question: `What is the total ${parsedData.headers[1].toLowerCase()} across all ${parsedData.headers[0].toLowerCase()}s?`,
+                    options: [total, total + 1000, total - 1000, total * 1.1].map(Math.round),
+                    correct: 0
+                },
+                {
+                    question: `Which ${parsedData.headers[0].toLowerCase()} has the highest ${parsedData.headers[1].toLowerCase()}?`,
+                    options: [labels[maxIndex], labels[minIndex], labels[0], labels[labels.length - 1]],
+                    correct: 0
+                },
+                {
+                    question: `What is the difference between highest and lowest ${parsedData.headers[1].toLowerCase()}?`,
+                    options: [max - min, max + min, max, min].map(Math.round),
+                    correct: 0
+                },
+                {
+                    question: `What is the average ${parsedData.headers[1].toLowerCase()}?`,
+                    options: [avg, avg + 500, avg - 500, total].map(Math.round),
+                    correct: 0
+                },
+                {
+                    question: `What percentage of total is ${labels[maxIndex]}'s ${parsedData.headers[1].toLowerCase()}?`,
+                    options: [(max/total * 100), (min/total * 100), 50, 25].map(v => Math.round(v) + '%'),
+                    correct: 0
+                }
+            ];
+            
+            // Shuffle options
+            quizQuestions.forEach(q => {
+                const correctAnswer = q.options[0];
+                q.options.sort(() => Math.random() - 0.5);
+                q.correct = q.options.indexOf(correctAnswer);
+            });
+            
+            renderQuestions();
+            document.getElementById('quiz-section').classList.remove('hidden');
+            document.getElementById('quiz-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function renderQuestions() {
+            const container = document.getElementById('questions-container');
+            container.innerHTML = '';
+            
+            quizQuestions.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.innerHTML = `
+                    <div style="color: var(--tool-primary); font-weight: 600; margin-bottom: 1rem;">Question ${index + 1}</div>
+                    <div class="question-text">${q.question}</div>
+                    <div class="options-grid">
+                        ${q.options.map((opt, i) => `
+                            <button class="option-btn" onclick="selectAnswer(${index}, ${i})">
+                                ${String.fromCharCode(65 + i)}. ${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            const submitBtn = document.createElement('button');
+            submitBtn.className = 'btn';
+            submitBtn.textContent = '✅ Submit Answers';
+            submitBtn.onclick = checkAnswers;
+            container.appendChild(submitBtn);
+        }
+        
+        const userAnswers = [];
+        
+        function selectAnswer(qIndex, optIndex) {
+            userAnswers[qIndex] = optIndex;
+            
+            const questionCard = document.querySelectorAll('.question-card')[qIndex];
+            questionCard.querySelectorAll('.option-btn').forEach((btn, i) => {
+                btn.classList.toggle('selected', i === optIndex);
+            });
+        }
+        
+        function checkAnswers() {
+            let score = 0;
+            
+            quizQuestions.forEach((q, index) => {
+                const questionCard = document.querySelectorAll('.question-card')[index];
+                const buttons = questionCard.querySelectorAll('.option-btn');
+                
+                buttons.forEach((btn, i) => {
+                    btn.disabled = true;
+                    if (i === q.correct) {
+                        btn.classList.add('correct');
+                    }
+                    if (userAnswers[index] === i && i !== q.correct) {
+                        btn.classList.add('wrong');
+                    }
+                });
+                
+                if (userAnswers[index] === q.correct) score++;
+            });
+            
+            currentScore = score;
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('results-section').classList.remove('hidden');
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

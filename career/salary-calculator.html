@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/career/salary-calculator.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Calculate accurate salaries for software engineers, product managers, and marketing roles in India. Compare multiple job offers side-by-side with detailed CTC breakdown, in-hand salary, and tax deductions.">
+    <meta name="keywords" content="salary calculator India online, SDE salary calculator Bangalore, software engineer salary India, product manager salary breakdown, CTC calculator with tax, job offer comparison tool, take home salary calculator India 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/career/salary-calculator.html">
+    <meta property="og:title" content="Salary Calculator India - Compare Offers & CTC Breakdown">
+    <meta property="og:description" content="Calculate accurate salaries for software engineers, product managers, and marketing roles in India. Compare multiple job offers side-by-side with detailed CTC breakdown, in-hand salary, and tax deductions.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/career/salary-calculator.html">
+    <meta name="twitter:title" content="Salary Calculator India - Compare Offers & CTC Breakdown">
+    <meta name="twitter:description" content="Calculate accurate salaries for software engineers, product managers, and marketing roles in India. Compare multiple job offers side-by-side with detailed CTC breakdown, in-hand salary, and tax deductions.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Salary Calculator India - Compare Offers & CTC Breakdown</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #dbeafe;
+            --secondary-color: #10b981;
+            --accent-color: #8b5cf6;
+            --success-color: #059669;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --bg-color: #f9fafb;
+            --gradient-primary: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --gradient-secondary: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        body {
+            /* Use global site background and text colors from main.css */
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .calculator-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Top padding accounts for fixed navbar; side padding aligns with site */
+            padding: 6rem 4% 3rem;
+        }
+        
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .calculator-header h1 {
+            font-size: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .calculator-header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .mode-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .mode-btn {
+            padding: 1rem 2rem;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--text-primary);
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .mode-btn:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        
+        .mode-btn.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .calculator-section {
+            display: none;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            /* Ensure readable text on light card */
+            color: #1f2937;
+        }
+        
+        .calculator-section.active {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .calculate-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 2rem auto 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        .result-card {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+        }
+        
+        .result-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+        
+        .salary-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .salary-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .breakdown-item {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            color: var(--text-primary);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .breakdown-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .breakdown-item h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .breakdown-amount {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .offer-comparison {
+            display: none;
+        }
+        
+        .offer-comparison.active {
+            display: block;
+        }
+        
+        .offer-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .offer-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .offer-card.winner {
+            border-color: var(--success-color);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05));
+        }
+        
+        .winner-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--success-color);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .offer-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .company-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .offer-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0.75rem 0;
+            color: var(--text-primary);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .comparison-table th {
+            background: var(--primary-light);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison-table td {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .market-insights {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .market-insights h3 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+        
+        .market-insights p {
+            opacity: 0.9;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        #salary-result, #comparison-results {
+            display: none;
+        }
+        
+        #salary-result.show, #comparison-results.show {
+            display: block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .calculator-container {
+                padding: 5rem 5% 2rem;
+            }
+            
+            .calculator-header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .salary-breakdown {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .salary-amount {
+                font-size: 2.5rem;
+            }
+            
+            .mode-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .offer-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .calculator-section {
+                padding: 1.5rem;
+            }
+            
+            .result-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .breakdown-item {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+    <style>
+        /* Supplemental styles specific to this tool */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .insight-item {
+            text-align: center;
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--card-bg);
+            color: #1f2937; /* dark text on light card */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .insight-item h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .insight-item p {
+            margin: 0.125rem 0;
+            color: #374151; /* gray-700 */
+            font-weight: 600;
+        }
+
+        .insight-item small {
+            display: block;
+            margin-top: 0.25rem;
+            color: #6b7280; /* gray-500 */
+            font-weight: 500;
+        }
+        
+        .city-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .city-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .city-btn:hover, .city-btn.active {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+        }
+        
+        /* Company name input style inside offer card header */
+        .company-name-input {
+            border: none;
+            background: transparent;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What salary should I ask for as an entry-level professional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research-based approach: Start with market data: Use Glassdoor, Levels.fyi, Payscale, LinkedIn Salary for your role + location + experience level. Entry-level range finder: Look at 25th percentile (conservative), 50th percentile (median), 75th percentile (optimistic). Example: Software Engineer in Austin, TX: $65K-$95K range, median $78K. Adjust for factors: Tier 1 city (SF, NYC, Seattle) = +20-40% above national average, Tier 2 (Austin, Boston, Denver) = +10-20%, Tier 3/Remote = national average or -10%. Company size: Big Tech (Google, Amazon) = top of range or above, Mid-size established = median range, Startups = below median but with equity. Your qualifications: Top school/internships = aim for 60th-75th percentile, average background = aim for 50th percentile, career changer = start at 40th percentile. Negotiation strategy: Always give range not single number: 'Based on my research and skills, I'm targeting $75K-$85K.' Set your minimum at market median (you can live with this), set your maximum at +15-20% (ideal but flexible). When asked 'what are your salary expectations': 'I'm looking for competitive compensation based on market rates for this role. Can you share the budgeted range?' (flip the question first). If pressed: provide your researched range. Never: Lowball yourself to seem humble ($50K when market is $75K = signals inexperience), demand top range without justification ($95K with no internships = unrealistic), accept first offer without negotiating (90% of employers expect negotiation and have 5-15% buffer)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I negotiate salary without losing the job offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Negotiation is expected and respected when done professionally—employers rescind offers only for unreasonable demands or poor attitude. 5-Step negotiation framework: Step 1 - Express enthusiasm: 'Thank you for the offer! I'm very excited about joining the team and contributing to [specific project].' (shows you're interested, not just money-focused). Step 2 - Ask for time: 'I'd like to review the full package carefully. Can I have until [2-3 days later] to respond?' (never negotiate same day, shows impulsiveness). Step 3 - Research and calculate: Compare offer to market data, calculate total compensation (base + bonus + equity + benefits), identify your target number (realistic increase: 10-20% above initial offer). Step 4 - Make your case: 'Based on my research of market rates for [role] in [location] and my [specific skills/experience], I was hoping we could discuss a base salary of [$X]. I have [concrete justification: competing offer, specialized skill, track record].' Use data not emotions: 'Market data shows...' not 'I really need...' Step 5 - Negotiate beyond salary: If they can't budge on base salary: ask for signing bonus (one-time payment), extra vacation days (often easier to approve than ongoing salary), professional development budget ($3K-5K annually), remote work flexibility, early performance review (salary adjustment after 6 months). What NOT to do: Threaten ('If you don't increase, I'm walking' = bad faith), lie about competing offers (easily verified), negotiate multiple times (accept or decline after 1-2 rounds), focus only on personal needs ('I have student loans' = not employer's problem). Employer perspective: they expect 10-15% negotiation, already budgeted for it, respect candidates who negotiate professionally. If offer is truly non-negotiable: they'll say so clearly and you decide accept/decline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I prioritize base salary or total compensation (equity, bonus)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prioritize based on life stage and company type: Life Stage Priority: Early career (<30, single, no dependents) = Can take risks, prioritize long-term total comp (equity at startups), lower base OK if high equity upside. Mid-career (30-45, family, mortgage) = Prioritize stable base salary + predictable bonus, equity is bonus not necessity. Late career (45+, established) = Base salary + retirement matching + benefits (healthcare), equity less important unless executive level. Company Type Strategy: Public company (Google, Microsoft): Equity = near-cash (liquid, predictable), total comp (base + equity + bonus) matters equally, negotiate equity refresh (additional grants after year 1). Late-stage startup (Series C+): Equity = 50/50 chance of value (could IPO, could stagnate), prioritize 70% base, 30% equity. Early startup (Seed, Series A): Equity = lottery ticket (90% worthless, 10% life-changing), only accept if base salary covers bills + 20% savings, understand equity: strike price, vesting schedule (4 years standard), dilution risk. Traditional company (non-tech): No equity, focus 100% on base salary + 401k match + bonus structure (performance-based or guaranteed?). Calculation framework: Minimum acceptable = base salary that covers: living expenses + 20% savings + 10% fun money. Total comp evaluation: Base salary (guaranteed) × 1.0 weight + Annual bonus (70% likely) × 0.7 weight + Equity 4-year value (30% likely for startup, 70% for public company) × vesting % × success probability. Example: Startup offer = $100K base + $40K equity/year. Real value = $100K + ($40K × 0.3 probability) = $112K. Public company offer = $100K base + $30K RSU/year. Real value = $100K + ($30K × 0.7 liquidity) = $121K. Choose public company despite lower total comp on paper."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I expect salary increases and how much?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard salary progression expectations: Annual merit increase: 3-5% (keeps pace with inflation, standard performance), 5-8% (high performer, exceeds expectations), 8-12% (top 5% performer, promoted to next level), 0-2% (underperformance or company financial issues). Promotion increase: 10-20% for same level promotion (Senior Dev → Lead Dev), 20-30% for level jump (IC → Manager, Manager → Director). Market adjustment: 5-10% if you're underpaid vs market (requires data + negotiation), 15-25% if you have competing offer (riskier—might need to leave if declined). Industry benchmarks: Tech: expect 10-15% total growth annually (merit + equity appreciation), Finance: 5-10% base + performance bonus swings, Corporate: 3-5% standard, Education/Nonprofit: 2-3% limited budgets. How to maximize increases: Annual review preparation: document achievements quarterly, quantify impact with metrics, research market rates before review, practice negotiation talking points. Ask for interim review: if significantly exceeded expectations or took on new responsibilities, request 'off-cycle' adjustment after 6 months. Leverage competing offers: easiest way to 20%+ increase, but only if willing to leave (employers call bluff 50% of time). Switch companies: average 15-25% increase when changing jobs (often faster than internal promotions), job-hopping every 2-3 years can accelerate salary growth (but looks unstable if too frequent). When to push harder: You're underpaid vs market by 15%+ (show data), company is profitable/growing (timing matters), you have strong leverage (specialized skills, hard to replace, multiple offers). When to accept modest increase: Company financial struggles, you're already above market rate, you value non-salary benefits (flexibility, learning, great team), your performance was truly average. Rule: if not getting 3%+ annual increases, your salary is decreasing in real terms due to inflation—consider moving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I compare salary offers in different cities with different costs of living?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use Total Purchasing Power formula to compare apples-to-apples: Step 1 - Identify offers: Offer A: $120K in San Francisco, Offer B: $90K in Austin, Offer C: $85K remote in smaller city. Step 2 - Calculate Cost of Living Index (use Numbeo, Expatistan, NerdWallet): SF COL Index = 100 (baseline), Austin = 62 (38% cheaper), Smaller city = 52 (48% cheaper). Step 3 - Adjust salary to equivalent purchasing power: SF: $120K ÷ 1.00 = $120K purchasing power, Austin: $90K ÷ 0.62 = $145K equivalent purchasing power (best), Smaller city: $85K ÷ 0.52 = $163K equivalent (strongest buying power). Step 4 - Factor in lifestyle quality: SF: Highest career growth + networking (future earnings +20%), higher taxes (state + city = -12%), amazing culture + food. Austin: Fast-growing tech scene (future earnings +10%), lower taxes (no state income tax), good work-life balance. Smaller city: Limited career growth (future earnings -10%), lowest taxes, more space, better for family. Step 5 - Long-term projection (5 years): SF path: $120K → $150K → $190K (rapid promotions) = $750K total, Austin path: $90K → $110K → $135K (steady growth) = $550K total, Remote path: $85K → $95K → $105K (slower growth) = $475K total. Decision framework: Early career (20s): Choose SF despite CoL hit (invest in career growth, network effects compound), Mid-career (30s-40s): Choose Austin (balance of income, growth, CoL, family), Late career (45+): Choose remote/smaller city (maximize purchasing power, quality of life, housing). Other factors: Remote work: can have SF salary in Austin CoL (best of both, increasingly rare post-2023), State taxes: CA 10%, TX 0%, FL 0% (affects take-home significantly), Savings rate: if you can save 30% in Austin but only 10% in SF, Austin wins long-term despite lower absolute salary. Use online calculators: NerdWallet 'Cost of Living Calculator', SmartAsset 'Paycheck Calculator' (compares after-tax take-home), Blind 'TC Comparison Tool' (tech-specific)."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../career.html">Career</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>💰 Salary Calculator India</h1>
+            <p>Calculate accurate salaries and compare job offers with detailed CTC breakdown</p>
+        </div>
+
+        <div class="mode-selector">
+            <div class="mode-btn active" data-mode="single">Single Salary Calculation</div>
+            <div class="mode-btn" data-mode="comparison">Offer Comparison Mode</div>
+        </div>
+
+        <!-- Single Salary Calculator -->
+        <div class="calculator-section active" id="single-calculator">
+            <h3>Calculate Your Expected Salary</h3>
+            
+            <div class="form-grid">
+                <div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role">
+                            <option value="">Select Role</option>
+                            <option value="sde1">Software Engineer (SDE 1)</option>
+                            <option value="sde2">Software Engineer (SDE 2)</option>
+                            <option value="sde3">Software Engineer (SDE 3)</option>
+                            <option value="senior-sde">Senior Software Engineer</option>
+                            <option value="pm">Product Manager</option>
+                            <option value="senior-pm">Senior Product Manager</option>
+                            <option value="marketing-exec">Marketing Executive</option>
+                            <option value="marketing-manager">Marketing Manager</option>
+                            <option value="data-analyst">Data Analyst</option>
+                            <option value="data-scientist">Data Scientist</option>
+                            <option value="designer">UI/UX Designer</option>
+                            <option value="senior-designer">Senior Designer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience">
+                            <option value="">Select Experience</option>
+                            <option value="0-1">0-1 years (Fresher)</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-7">5-7 years</option>
+                            <option value="7-10">7-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <div class="city-selector">
+                            <div class="city-btn active" data-city="bangalore">Bangalore</div>
+                            <div class="city-btn" data-city="mumbai">Mumbai</div>
+                            <div class="city-btn" data-city="delhi">Delhi/NCR</div>
+                            <div class="city-btn" data-city="hyderabad">Hyderabad</div>
+                            <div class="city-btn" data-city="pune">Pune</div>
+                            <div class="city-btn" data-city="chennai">Chennai</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company-size">Company Size</label>
+                        <select id="company-size">
+                            <option value="">Select Company Size</option>
+                            <option value="startup">Startup (< 100 employees)</option>
+                            <option value="mid-size">Mid-size (100-1000 employees)</option>
+                            <option value="large">Large (1000+ employees)</option>
+                            <option value="big-tech">Big Tech (FAANG/MAANG)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="calculateSalary()">Calculate Salary</button>
+            
+            <div id="salary-result">
+                <div class="result-card">
+                    <h3>Estimated Salary Range</h3>
+                    <div class="salary-amount" id="salary-range">₹0 - ₹0 LPA</div>
+                    <p>Based on current market data for <span id="result-role"></span> in <span id="result-city"></span></p>
+                </div>
+                
+                <div class="salary-breakdown" id="salary-breakdown">
+                    <!-- Breakdown items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Offer Comparison Mode -->
+        <div class="calculator-section offer-comparison" id="offer-comparison">
+            <h3>Compare Multiple Job Offers</h3>
+            <p>Add 2-5 job offers to compare them side-by-side</p>
+            
+            <button class="btn btn-primary" onclick="addOffer()">+ Add Offer</button>
+            
+            <div class="offer-cards" id="offer-cards">
+                <!-- Offer cards will be populated by JavaScript -->
+            </div>
+            
+            <div id="comparison-results">
+                <h3>Detailed Comparison</h3>
+                <table class="comparison-table" id="comparison-table">
+                    <!-- Comparison table will be populated by JavaScript -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Market Insights -->
+        <div class="market-insights">
+            <h3>💡 Market Insights</h3>
+            <div class="insights-grid">
+                <div class="insight-item">
+                    <h4>₹18.5 LPA</h4>
+                    <p>Average SDE 2 Salary</p>
+                    <small>Bangalore</small>
+                </div>
+                <div class="insight-item">
+                    <h4>₹35 LPA</h4>
+                    <p>Average PM Salary</p>
+                    <small>5+ years exp</small>
+                </div>
+                <div class="insight-item">
+                    <h4>25%</h4>
+                    <p>Avg Salary Hike</p>
+                    <small>Job Switch</small>
+                </div>
+                <div class="insight-item">
+                    <h4>₹45 LPA</h4>
+                    <p>Big Tech Average</p>
+                    <small>Senior roles</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Salary Calculator</h2>
+        <p>Get accurate Indian market salary ranges by role, city, and company type, plus compare multiple job offers side-by-side:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Choose Calculation Mode</h3>
+                <p>Select "Single Salary" to check market rates for your role, or "Offer Comparison" to compare 2+ job offers with CTC breakdown and location adjustment.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Enter Job Details</h3>
+                <p>For single mode: select role, experience, company size, and city. For comparison: add multiple offers with CTC, fixed/variable split, stocks, and location.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> View Salary Breakdown</h3>
+                <p>See expected salary range, monthly take-home, PF contributions, and tax estimates. For comparisons, winner is marked based on adjusted value (accounting for cost of living).</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Make Informed Decisions</h3>
+                <p>Use insights for salary negotiations or job offer decisions. Remember: highest CTC doesn't always mean highest take-home after location costs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How accurate are the salary estimates?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Data is based on 2024-2025 Indian market trends from multiple sources. Actual salaries vary by company, negotiation skills, and specific expertise. Use these as guidelines, not exact figures.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between CTC and take-home?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        CTC (Cost to Company) includes your gross salary, PF, bonuses, and benefits. Take-home is what you receive monthly after PF, taxes, and deductions - typically 70-80% of gross monthly salary.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does location affect my real salary?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        ₹20 LPA in Bangalore ≠ ₹20 LPA in Chennai. Cost of living varies significantly. Our comparison tool adjusts for this - a lower CTC in a cheaper city might give you better quality of life.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I value fixed or variable component more?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Fixed is guaranteed; variable depends on performance/company results. Our tool counts 80% of variable in take-home estimates. Prefer offers with 70%+ fixed component for financial stability.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How should I evaluate stock options in offers?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Stocks/ESOPs have value only if company goes public or gets acquired. For early-stage startups, consider them a bonus, not guaranteed income. Public company stocks are more reliable but check vesting schedules.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="career-pathfinder.html" class="related-tool-card">
+                <h3><span class="tool-icon">🗺️</span> Career Pathfinder</h3>
+                <p>Explore career transitions and expected salary growth in new roles.</p>
+            </a>
+            <a href="job-tracker.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Job Tracker</h3>
+                <p>Organize applications and track which companies offer competitive salaries.</p>
+            </a>
+            <a href="../aptitude/data-interpretation.html" class="related-tool-card">
+                <h3><span class="tool-icon">📈</span> Data Interpretation</h3>
+                <p>Practice analyzing salary charts and compensation data for better negotiations.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Salary data based on Indian market (2024-2025)
+        const salaryData = {
+            'sde1': {
+                'bangalore': { 'startup': [8, 15], 'mid-size': [12, 20], 'large': [15, 25], 'big-tech': [20, 35] },
+                'mumbai': { 'startup': [7, 14], 'mid-size': [11, 18], 'large': [14, 22], 'big-tech': [18, 32] },
+                'delhi': { 'startup': [7, 13], 'mid-size': [10, 17], 'large': [13, 21], 'big-tech': [17, 30] },
+                'hyderabad': { 'startup': [6, 12], 'mid-size': [9, 16], 'large': [12, 20], 'big-tech': [16, 28] },
+                'pune': { 'startup': [6, 11], 'mid-size': [9, 15], 'large': [11, 18], 'big-tech': [15, 26] },
+                'chennai': { 'startup': [5, 10], 'mid-size': [8, 14], 'large': [10, 17], 'big-tech': [14, 25] }
+            },
+            'sde2': {
+                'bangalore': { 'startup': [15, 25], 'mid-size': [18, 30], 'large': [22, 35], 'big-tech': [30, 50] },
+                'mumbai': { 'startup': [14, 23], 'mid-size': [17, 28], 'large': [20, 32], 'big-tech': [28, 45] },
+                'delhi': { 'startup': [13, 22], 'mid-size': [16, 26], 'large': [19, 30], 'big-tech': [26, 42] },
+                'hyderabad': { 'startup': [12, 20], 'mid-size': [15, 24], 'large': [18, 28], 'big-tech': [24, 38] },
+                'pune': { 'startup': [11, 19], 'mid-size': [14, 23], 'large': [17, 26], 'big-tech': [23, 36] },
+                'chennai': { 'startup': [10, 18], 'mid-size': [13, 21], 'large': [16, 24], 'big-tech': [21, 34] }
+            },
+            'pm': {
+                'bangalore': { 'startup': [20, 35], 'mid-size': [25, 45], 'large': [35, 55], 'big-tech': [45, 75] },
+                'mumbai': { 'startup': [18, 32], 'mid-size': [23, 42], 'large': [32, 50], 'big-tech': [42, 70] },
+                'delhi': { 'startup': [17, 30], 'mid-size': [22, 40], 'large': [30, 48], 'big-tech': [40, 65] },
+                'hyderabad': { 'startup': [16, 28], 'mid-size': [20, 36], 'large': [28, 44], 'big-tech': [36, 60] },
+                'pune': { 'startup': [15, 26], 'mid-size': [19, 34], 'large': [26, 42], 'big-tech': [34, 56] },
+                'chennai': { 'startup': [14, 24], 'mid-size': [18, 32], 'large': [24, 38], 'big-tech': [32, 52] }
+            }
+            // Add more roles as needed
+        };
+
+        let currentCity = 'bangalore';
+        let offers = [];
+        let offerCounter = 0;
+
+        // Mode selector
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const mode = this.dataset.mode;
+                document.querySelectorAll('.calculator-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                if (mode === 'single') {
+                    document.getElementById('single-calculator').classList.add('active');
+                } else {
+                    document.getElementById('offer-comparison').classList.add('active');
+                }
+            });
+        });
+
+        // City selector
+        document.querySelectorAll('.city-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.city-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentCity = this.dataset.city;
+            });
+        });
+
+        // Calculate single salary
+        function calculateSalary() {
+            const role = document.getElementById('role').value;
+            const experience = document.getElementById('experience').value;
+            const companySize = document.getElementById('company-size').value;
+
+            if (!role || !experience || !companySize) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            // Get salary range based on role, city, and company size
+            let salaryRange = [0, 0];
+            if (salaryData[role] && salaryData[role][currentCity] && salaryData[role][currentCity][companySize]) {
+                salaryRange = salaryData[role][currentCity][companySize];
+                
+                // Adjust for experience
+                const expMultiplier = getExperienceMultiplier(experience);
+                salaryRange = [
+                    Math.round(salaryRange[0] * expMultiplier),
+                    Math.round(salaryRange[1] * expMultiplier)
+                ];
+            } else {
+                // Fallback calculation
+                salaryRange = calculateFallbackSalary(role, experience, companySize);
+            }
+
+            displaySalaryResult(salaryRange, role, currentCity);
+        }
+
+        function getExperienceMultiplier(experience) {
+            const multipliers = {
+                '0-1': 0.8,
+                '1-3': 1.0,
+                '3-5': 1.3,
+                '5-7': 1.6,
+                '7-10': 2.0,
+                '10+': 2.5
+            };
+            return multipliers[experience] || 1.0;
+        }
+
+        function calculateFallbackSalary(role, experience, companySize) {
+            // Basic fallback calculation
+            let base = 10; // Base salary in LPA
+            
+            if (role.includes('senior') || role.includes('pm')) base = 20;
+            if (role.includes('lead') || role.includes('manager')) base = 30;
+            
+            const expMultiplier = getExperienceMultiplier(experience);
+            const companyMultipliers = {
+                'startup': 0.8,
+                'mid-size': 1.0,
+                'large': 1.3,
+                'big-tech': 1.8
+            };
+            
+            const companyMultiplier = companyMultipliers[companySize] || 1.0;
+            const adjustedBase = base * expMultiplier * companyMultiplier;
+            
+            return [Math.round(adjustedBase * 0.8), Math.round(adjustedBase * 1.3)];
+        }
+
+        function displaySalaryResult(salaryRange, role, city) {
+            document.getElementById('salary-range').textContent = `₹${salaryRange[0]} - ₹${salaryRange[1]} LPA`;
+            document.getElementById('result-role').textContent = document.getElementById('role').selectedOptions[0].text;
+            document.getElementById('result-city').textContent = city.charAt(0).toUpperCase() + city.slice(1);
+            
+            // Calculate breakdown
+            const avgSalary = (salaryRange[0] + salaryRange[1]) / 2;
+            const breakdown = calculateSalaryBreakdown(avgSalary);
+            
+            const breakdownContainer = document.getElementById('salary-breakdown');
+            breakdownContainer.innerHTML = '';
+            
+            Object.entries(breakdown).forEach(([key, value]) => {
+                const item = document.createElement('div');
+                item.className = 'breakdown-item';
+                item.innerHTML = `
+                    <h4>${key}</h4>
+                    <div class="breakdown-amount">₹${value.toLocaleString()}</div>
+                    <small>per month</small>
+                `;
+                breakdownContainer.appendChild(item);
+            });
+            
+            document.getElementById('salary-result').style.display = 'block';
+        }
+
+        function calculateSalaryBreakdown(annualSalary) {
+            const monthlyCTC = annualSalary * 100000 / 12; // Convert LPA to monthly
+            
+            return {
+                'Gross Salary': Math.round(monthlyCTC),
+                'Take Home': Math.round(monthlyCTC * 0.75), // Approximate after taxes and deductions
+                'PF Contribution': Math.round(monthlyCTC * 0.12),
+                'Income Tax': Math.round(monthlyCTC * 0.13)
+            };
+        }
+
+        // Offer comparison functions
+        function addOffer() {
+            offerCounter++;
+            const offerCard = document.createElement('div');
+            offerCard.className = 'offer-card';
+            offerCard.innerHTML = `
+                <div class="offer-header">
+                    <input type="text" placeholder="Company Name" id="company-${offerCounter}" class="company-name company-name-input">
+                </div>
+                <div class="form-group">
+                    <label>CTC (LPA)</label>
+                    <input type="number" id="ctc-${offerCounter}" placeholder="e.g., 25">
+                </div>
+                <div class="form-group">
+                    <label>Fixed Component (%)</label>
+                    <input type="number" id="fixed-${offerCounter}" placeholder="e.g., 80" value="80">
+                </div>
+                <div class="form-group">
+                    <label>Variable Component (%)</label>
+                    <input type="number" id="variable-${offerCounter}" placeholder="e.g., 15" value="15">
+                </div>
+                <div class="form-group">
+                    <label>Stock Options (%)</label>
+                    <input type="number" id="stocks-${offerCounter}" placeholder="e.g., 5" value="5">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <select id="location-${offerCounter}">
+                        <option value="bangalore">Bangalore</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi/NCR</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="pune">Pune</option>
+                        <option value="chennai">Chennai</option>
+                    </select>
+                </div>
+                <button class="btn btn-danger" onclick="removeOffer(this)">Remove Offer</button>
+            `;
+            
+            document.getElementById('offer-cards').appendChild(offerCard);
+            
+            if (document.querySelectorAll('.offer-card').length >= 2) {
+                const compareBtn = document.createElement('button');
+                compareBtn.className = 'btn btn-primary';
+                compareBtn.textContent = 'Compare Offers';
+                compareBtn.onclick = compareOffers;
+                compareBtn.id = 'compare-btn';
+                
+                if (!document.getElementById('compare-btn')) {
+                    document.getElementById('offer-cards').parentNode.insertBefore(compareBtn, document.getElementById('comparison-results'));
+                }
+            }
+        }
+
+        function removeOffer(button) {
+            button.closest('.offer-card').remove();
+            
+            if (document.querySelectorAll('.offer-card').length < 2) {
+                const compareBtn = document.getElementById('compare-btn');
+                if (compareBtn) compareBtn.remove();
+                document.getElementById('comparison-results').style.display = 'none';
+            }
+        }
+
+        function compareOffers() {
+            const offerCards = document.querySelectorAll('.offer-card');
+            const offers = [];
+            
+            offerCards.forEach((card, index) => {
+                const companyInput = card.querySelector('input[id^="company-"]');
+                const ctcInput = card.querySelector('input[id^="ctc-"]');
+                const fixedInput = card.querySelector('input[id^="fixed-"]');
+                const variableInput = card.querySelector('input[id^="variable-"]');
+                const stocksInput = card.querySelector('input[id^="stocks-"]');
+                const locationSelect = card.querySelector('select[id^="location-"]');
+                
+                if (companyInput.value && ctcInput.value) {
+                    const ctc = parseFloat(ctcInput.value);
+                    const fixed = parseFloat(fixedInput.value) || 80;
+                    const variable = parseFloat(variableInput.value) || 15;
+                    const stocks = parseFloat(stocksInput.value) || 5;
+                    
+                    offers.push({
+                        company: companyInput.value,
+                        ctc: ctc,
+                        fixed: (ctc * fixed / 100),
+                        variable: (ctc * variable / 100),
+                        stocks: (ctc * stocks / 100),
+                        location: locationSelect.value,
+                        card: card
+                    });
+                }
+            });
+            
+            if (offers.length < 2) {
+                alert('Please add at least 2 complete offers to compare');
+                return;
+            }
+            
+            // Determine winner (highest take-home after cost of living adjustment)
+            const costOfLivingMultipliers = {
+                'bangalore': 1.0,
+                'mumbai': 1.2,
+                'delhi': 1.1,
+                'hyderabad': 0.9,
+                'pune': 0.85,
+                'chennai': 0.8
+            };
+            
+            offers.forEach(offer => {
+                const costMultiplier = costOfLivingMultipliers[offer.location] || 1.0;
+                offer.adjustedValue = (offer.fixed + offer.variable * 0.8) / costMultiplier;
+            });
+            
+            const winner = offers.reduce((prev, current) => 
+                prev.adjustedValue > current.adjustedValue ? prev : current
+            );
+            
+            // Mark winner
+            offerCards.forEach(card => card.classList.remove('winner'));
+            winner.card.classList.add('winner');
+            
+            const winnerBadge = document.createElement('div');
+            winnerBadge.className = 'winner-badge';
+            winnerBadge.textContent = '👑';
+            winner.card.appendChild(winnerBadge);
+            
+            // Create comparison table
+            displayComparisonTable(offers);
+        }
+
+        function displayComparisonTable(offers) {
+            const table = document.getElementById('comparison-table');
+            table.innerHTML = '';
+            
+            // Header row
+            const headerRow = document.createElement('tr');
+            headerRow.innerHTML = '<th>Component</th>' + offers.map(offer => `<th>${offer.company}</th>`).join('');
+            table.appendChild(headerRow);
+            
+            // Data rows
+            const rows = [
+                { label: 'Total CTC', getValue: offer => `₹${offer.ctc} LPA` },
+                { label: 'Fixed Component', getValue: offer => `₹${offer.fixed.toFixed(1)} LPA` },
+                { label: 'Variable Component', getValue: offer => `₹${offer.variable.toFixed(1)} LPA` },
+                { label: 'Stock Options', getValue: offer => `₹${offer.stocks.toFixed(1)} LPA` },
+                { label: 'Location', getValue: offer => offer.location.charAt(0).toUpperCase() + offer.location.slice(1) },
+                { label: 'Monthly Take-home*', getValue: offer => `₹${((offer.fixed + offer.variable * 0.8) * 100000 / 12 * 0.75).toLocaleString()}` }
+            ];
+            
+            rows.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td><strong>${row.label}</strong></td>` + 
+                    offers.map(offer => `<td>${row.getValue(offer)}</td>`).join('');
+                table.appendChild(tr);
+            });
+            
+            document.getElementById('comparison-results').style.display = 'block';
+        }
+
+        // Initialize with one offer card
+        addOffer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/design/design-system.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Generate complete design systems instantly with color palettes, typography scales, and component libraries. Export HTML and Tailwind CSS code ready for production. Perfect for developers and designers starting new projects.">
+    <meta name="keywords" content="design system generator online free, UI kit generator tool, Tailwind component library, design tokens generator, typography scale calculator, color system generator, free design system builder 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/design/design-system.html">
+    <meta property="og:title" content="Design System Generator - Complete UI Kit with Code Export">
+    <meta property="og:description" content="Generate complete design systems instantly with color palettes, typography scales, and component libraries. Export HTML and Tailwind CSS code ready for production. Perfect for developers and designers starting new projects.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/design/design-system.html">
+    <meta name="twitter:title" content="Design System Generator - Complete UI Kit with Code Export">
+    <meta name="twitter:description" content="Generate complete design systems instantly with color palettes, typography scales, and component libraries. Export HTML and Tailwind CSS code ready for production. Perfect for developers and designers starting new projects.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Design System Generator - Complete UI Kit with Code Export</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Design System Generator – UI Kit Code",
+        "description": "Generate complete design systems with color palettes, typography, and component code. Export HTML and Tailwind CSS instantly.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Auto-generate design systems",
+            "Color palette creation",
+            "Font pairing recommendations",
+            "Component styles (buttons, cards)",
+            "HTML and Tailwind code export",
+            "One-click dark mode toggle",
+            "Downloadable starter code"
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #8b5cf6;
+            --tool-secondary: #7c3aed;
+            --tool-accent: #6d28d9;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .generator-section {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(124, 58, 237, 0.15));
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .system-input {
+            width: 100%;
+            padding: 1.25rem;
+            background: rgba(10, 10, 15, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .system-input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            background: rgba(10, 10, 15, 0.9);
+        }
+        
+        .system-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .theme-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .theme-btn {
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .theme-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            border-color: var(--tool-primary);
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.5);
+        }
+        
+        .preview-container {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .preview-container.dark-mode {
+            background: #1a1a2e;
+            color: white;
+        }
+        
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .preview-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .dark-mode-toggle {
+            padding: 0.75rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            color: var(--tool-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-mode-toggle:hover {
+            background: rgba(139, 92, 246, 0.2);
+        }
+        
+        .color-palette-display {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            flex: 1;
+            min-width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-swatch:hover {
+            transform: translateY(-4px);
+        }
+        
+        .color-code {
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+        }
+        
+        .typography-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(139, 92, 246, 0.05);
+            border-radius: 12px;
+        }
+        
+        .font-display {
+            margin-bottom: 1.5rem;
+        }
+        
+        .font-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .font-sample {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .components-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .component-demo {
+            padding: 1.5rem;
+            border: 2px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+        }
+        
+        .demo-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin-bottom: 0.75rem;
+            width: 100%;
+        }
+        
+        .demo-button.primary {
+            background: var(--ds-primary, #8b5cf6);
+            color: white;
+        }
+        
+        .demo-button.secondary {
+            background: transparent;
+            color: var(--ds-primary, #8b5cf6);
+            border: 2px solid var(--ds-primary, #8b5cf6);
+        }
+        
+        .demo-card {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--ds-surface, #f9fafb);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .code-section {
+            background: #1f2937;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .code-label {
+            color: white;
+            font-weight: 700;
+        }
+        
+        .copy-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 8px;
+            color: #c4b5fd;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(139, 92, 246, 0.3);
+        }
+        
+        .code-output {
+            color: #10b981;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .download-btn {
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
+        
+        @media (max-width: 640px) {
+            .tool-container {
+                padding: 5rem 3% 2rem;
+            }
+            
+            .preview-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .components-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a design system and why do I need one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A design system is a comprehensive library of reusable components, styles, and guidelines ensuring visual and functional consistency across all products. Core components: Typography system (font families, sizes, weights, line heights for headings, body, captions), Color palette (primary, secondary, accent, neutral colors with semantic meanings), Spacing scale (consistent margins/padding: 4px, 8px, 16px, 32px, 64px), Components library (buttons, inputs, cards, modals with all states: default, hover, active, disabled), Design tokens (CSS variables storing design decisions for easy updates). Why essential: Speeds up design/development (no reinventing buttons each time, copy-paste components), ensures consistency (prevents '15 button styles across website' chaos), scales efficiently (add new pages using existing system vs starting from scratch), improves collaboration (designers and developers speak same language with shared documentation). When to create: Starting new product/brand (set foundation before building), redesigning existing product (document current state then evolve systematically), team of 3+ designers/devs (consistency becomes critical), building multi-platform (web + mobile need shared design language). Small projects can skip formal system but maintain basic consistency (choose 2 fonts, 5 colors, 1 button style and stick to them)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I organize typography hierarchy in my design system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use systematic type scale approach (6-8 text styles maximum): H1 Heading (48-64px) - Page hero titles, main landing page headline, used 1x per page max. H2 Heading (36-48px) - Section titles, major content dividers, 2-3x per page. H3 Heading (24-32px) - Subsection titles, card headers, 3-5x per page. H4-H6 (18-24px) - Minor headings, use sparingly if needed. Body Large (18-20px) - Intro paragraphs, prominent copy, pulls attention to key content. Body (16px) - Default text size, main content, readable at any distance—WCAG standard minimum. Body Small (14px) - Supporting text, image captions, metadata. Caption/Helper (12px) - Form hints, fine print, timestamps—don't go smaller (accessibility issues). Type scale formula: Choose base size (16px), multiply by ratio (1.25 = minor third, 1.333 = perfect fourth, 1.5 = perfect fifth, 1.618 = golden ratio) for each level. Example with 1.333 ratio: 16px × 1.333 = 21px, 21px × 1.333 = 28px, 28px × 1.333 = 37px, 37px × 1.333 = 49px. Rounding for cleaner values: 49→48px, 37→36px, 28→28px, 21→20px. Font pairing: Use 1-2 font families max (more creates chaos), pair serif heading + sans-serif body (classic) or bold sans heading + regular sans body (modern), vary weight instead of font family (Poppins Regular, Poppins SemiBold, Poppins Bold). Line height: Headings = 1.2-1.3× font size (tight), body text = 1.5-1.6× (readable), small text = 1.4× (balanced). Implement: Save as CSS variables, create Figma/Sketch text styles, document when to use each level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What spacing system should I use (4px, 8px grid)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most popular: 8px grid system (used by Google Material Design, Apple Human Interface Guidelines): Base unit = 8px, all measurements in multiples: 8px, 16px, 24px, 32px, 40px, 48px, 56px, 64px, 72px, 80px. Why 8: divisible by 2 and 4 (creates consistent half/quarter values), scales cleanly to higher-density displays (2x, 3x retina), large enough for touch targets (44-48px iOS, 48px Android), small enough for fine-tuned spacing. Usage guidelines: XS spacing (4-8px) - tight elements like icon-to-text, inline badges, compact lists. SM spacing (12-16px) - default element padding, list item gaps, form field spacing. MD spacing (24-32px) - section padding, card spacing, content block margins. LG spacing (48-64px) - major section dividers, generous whitespace, hero padding. XL spacing (80-120px) - page-level sections, dramatic whitespace for emphasis. Alternative: 4px base (more granular, used by Atlassian, Shopify) allows 4px, 8px, 12px, 16px, 20px, 24px. Choose 4px if: need tight spacing options (dense interfaces, data tables), designing for text-heavy content. How to implement: CSS variables: --spacing-xs: 4px, --spacing-sm: 8px, --spacing-md: 16px, --spacing-lg: 32px, --spacing-xl: 64px. Grid overlay: design tools like Figma have 8px grid overlay to align elements. Consistency rule: avoid arbitrary values (never use 15px, 23px, 37px—stick to system multiples), creates predictable layouts, easier to maintain, developers can memorize system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many button variations should my design system include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimal but complete button library (12-15 total variants): By priority (3 types): Primary button (highest emphasis) - main CTA, one per screen max (e.g., 'Buy Now', 'Sign Up', 'Submit'), uses brand primary color, solid fill. Secondary button (medium emphasis) - secondary actions, 2-3 per screen (e.g., 'Learn More', 'Cancel'), uses outline or subtle fill. Tertiary/Text button (low emphasis) - minor actions, navigation (e.g., 'Skip', 'View Details'), text-only or minimal styling. By size (3 sizes): Large (48-56px height) - hero CTAs, mobile-first designs, touch-friendly, desktop landing pages. Medium (40-44px height) - default size, most common use case, forms and content areas. Small (32-36px height) - compact interfaces, tables, toolbars, secondary actions. By state (4 states per button): Default - resting state, how button appears initially. Hover - mouse over feedback (desktop only), usually darker shade or subtle animation. Active/Pressed - click feedback, brief state during tap/click, even darker or scale down slightly. Disabled - greyed out, shows unavailable action, usually 40% opacity with no interaction. Total combinations: 3 types × 3 sizes × 4 states = 36 total design specs, but only need to document 12-15 unique designs (states follow consistent rules). Special buttons (optional): Icon-only (32×32px square, for toolbars/mobile), Icon + text (icon on left, commonly used), Loading state (spinner replaces text during submission), Destructive (red for 'Delete', 'Cancel Account' actions). What NOT to include: 10+ color variations (confuses hierarchy), rounded + square + pill in same system (pick one corner radius and stick to it), drastically different styles by section (inconsistent user experience)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I create my design system in Figma, code, or both?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ideal: maintain design system in BOTH design tool (Figma/Sketch) and code (CSS/React) with single source of truth: Figma/Design tool version: Used by designers for prototyping, contains all visual components (buttons, cards, inputs), includes color styles, text styles, component variants, shared across team via library, updated weekly as designs evolve. Code version (CSS/React components): Used by developers for building, contains same visual specs as design file, includes interactive states (hover, focus, disabled), includes accessibility attributes (ARIA labels, keyboard navigation), version-controlled in Git, updated as features ship. Why both: Designers work faster in visual tools (Figma) than writing code, developers can't use Figma components directly in production (need actual HTML/CSS/React), maintaining both ensures design-dev consistency (no 'designers created X but devs built Y' disconnect). Sync strategies: Design tokens approach (define colors, spacing, typography in JSON file, auto-generate CSS variables AND Figma styles from same source using tools like Style Dictionary), regular audits (quarterly compare Figma library to production code, document differences, prioritize fixes), component library tools (use Storybook for code components, link to Figma files in documentation). Single source of truth decision: Design-led teams (startups, agencies) = Figma is source of truth, devs implement designs precisely. Engineering-led teams (B2B SaaS, internal tools) = code is source of truth, designers use code component specs. Balanced teams = design tokens JSON is source of truth, both Figma and code sync to it. Small teams (<5 people): Figma only is OK if devs directly translate designs, minimal abstraction. Large teams (10+ people): must maintain both with formal documentation (Storybook, Zeroheight, Notion) explaining each component's usage, behavior, and accessibility requirements."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../design.html">Design</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../design.html" class="back-link">← Back to Design</a>
+        
+        <div class="header-section">
+            <h1>🎨 Design System Generator</h1>
+            <p>Generate Complete UI Kits with Code in Seconds</p>
+        </div>
+        
+        <div class="card">
+            <div class="generator-section">
+                <div class="input-group">
+                    <label class="input-label">Design System Name</label>
+                    <input type="text" class="system-input" id="system-name" placeholder='e.g., "Neon Dashboard", "Minimal SaaS", "Dark Gaming"'>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Select Theme Style</label>
+                    <div class="theme-selector">
+                        <button class="theme-btn active" onclick="selectTheme('modern')">Modern</button>
+                        <button class="theme-btn" onclick="selectTheme('minimal')">Minimal</button>
+                        <button class="theme-btn" onclick="selectTheme('neon')">Neon</button>
+                        <button class="theme-btn" onclick="selectTheme('corporate')">Corporate</button>
+                        <button class="theme-btn" onclick="selectTheme('playful')">Playful</button>
+                    </div>
+                </div>
+                
+                <button class="generate-btn" onclick="generateDesignSystem()">🚀 Generate Design System</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">👁️ Live Preview</h2>
+            
+            <div class="preview-container" id="preview-container">
+                <div class="preview-header">
+                    <div class="preview-title" id="preview-title">Your Design System</div>
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+                </div>
+                
+                <div id="preview-content">
+                    <p style="text-align: center; color: #9ca3af; padding: 3rem;">Generate a design system to see the preview</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" id="code-card" style="display: none;">
+            <h2 class="card-title">📦 Export Code</h2>
+            
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-label">CSS Variables</span>
+                    <button class="copy-btn" onclick="copyCode('css')">📋 Copy</button>
+                </div>
+                <div class="code-output" id="css-code">/* CSS Variables */</div>
+            </div>
+            
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-label">Tailwind Config</span>
+                    <button class="copy-btn" onclick="copyCode('tailwind')">📋 Copy</button>
+                </div>
+                <div class="code-output" id="tailwind-code">// Tailwind Config</div>
+            </div>
+            
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-label">Component HTML</span>
+                    <button class="copy-btn" onclick="copyCode('html')">📋 Copy</button>
+                </div>
+                <div class="code-output" id="html-code">&lt;!-- HTML Components --&gt;</div>
+            </div>
+            
+            <div class="download-section">
+                <button class="download-btn" onclick="downloadCode()">📥 Download All Code</button>
+                <button class="download-btn" onclick="downloadJSON()">📄 Download JSON</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Design System Generator</h2>
+        <p>Create complete, production-ready design systems with colors, typography, spacing, and component code in minutes:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Name and Select Theme</h3>
+                <p>Enter your project name and choose theme preset: Modern (purple gradients), Minimal (black/white), Neon (vibrant), Corporate (blue professional), or Playful (colorful).</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Generate and Preview</h3>
+                <p>Click "Generate Design System" to see live preview with color palette, typography samples, and component demos. Toggle dark mode to test both themes.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Review Generated Code</h3>
+                <p>Check CSS Variables tab for colors/spacing, Tailwind Config for Tailwind projects, and HTML Components for ready-to-use button/card code. All code is copy-paste ready.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Download or Export</h3>
+                <p>Download all code as .txt file, or export JSON for programmatic use. Copy individual sections as needed. Use these as starting point for your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's included in a design system?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Complete design systems include: color palette (primary, secondary, accent, neutrals), typography (fonts for headings and body), spacing scale (consistent padding/margins), border radius values, and component styles. This ensures visual consistency across your entire project.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I customize the generated system?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Generated code is fully editable. Copy it to your project and tweak colors, fonts, spacing values as needed. Think of this as a professional starting point, not a rigid template. Most teams customize 30-50% after generation.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I use CSS Variables or Tailwind config?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use CSS Variables for vanilla CSS/Sass projects - easy to update, works everywhere. Use Tailwind config if you're using Tailwind CSS framework. Both achieve same goal: consistent, maintainable design tokens.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I ensure my team follows the design system?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        1) Document usage in README, 2) Create component library (Storybook/similar), 3) Use CSS variables so manual colors are harder, 4) Code review for consistency. Well-documented systems get 80%+ adoption vs undocumented 20%.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between themes?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Modern (purple/cyan, tech startups), Minimal (black/white/blue, clean elegance), Neon (bright colors, gaming/entertainment), Corporate (blues, professional businesses), Playful (pinks/yellows, creative/youth). Choose based on brand personality and target audience.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="color-palette.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎨</span> Color Palette</h3>
+                <p>Fine-tune individual colors before building your complete design system.</p>
+            </a>
+            <a href="gradient-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">🌈</span> Gradient Generator</h3>
+                <p>Create custom gradients to add to your design system components.</p>
+            </a>
+            <a href="../career/resume-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📄</span> Resume Builder</h3>
+                <p>Showcase your design system projects on your professional resume.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.1); margin: 2rem 0;"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="footer-year"></span> Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        let currentTheme = 'modern';
+        let currentSystem = null;
+        let isDarkMode = false;
+        
+        const themePresets = {
+            modern: {
+                colors: { primary: '#8b5cf6', secondary: '#06b6d4', accent: '#f59e0b', neutral: '#64748b', surface: '#f9fafb' },
+                fonts: { heading: 'Inter', body: 'Inter' }
+            },
+            minimal: {
+                colors: { primary: '#000000', secondary: '#ffffff', accent: '#3b82f6', neutral: '#9ca3af', surface: '#f3f4f6' },
+                fonts: { heading: 'Helvetica', body: 'Arial' }
+            },
+            neon: {
+                colors: { primary: '#ff10f0', secondary: '#00f0ff', accent: '#39ff14', neutral: '#1a1a2e', surface: '#16213e' },
+                fonts: { heading: 'Orbitron', body: 'Roboto' }
+            },
+            corporate: {
+                colors: { primary: '#2563eb', secondary: '#1e40af', accent: '#0ea5e9', neutral: '#475569', surface: '#f1f5f9' },
+                fonts: { heading: 'Georgia', body: 'Times New Roman' }
+            },
+            playful: {
+                colors: { primary: '#ec4899', secondary: '#f59e0b', accent: '#8b5cf6', neutral: '#94a3b8', surface: '#fef3c7' },
+                fonts: { heading: 'Comic Sans MS', body: 'Verdana' }
+            }
+        };
+        
+        function selectTheme(theme) {
+            currentTheme = theme;
+            document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        
+        function generateDesignSystem() {
+            const name = document.getElementById('system-name').value || 'My Design System';
+            const preset = themePresets[currentTheme];
+            
+            currentSystem = {
+                name,
+                theme: currentTheme,
+                colors: preset.colors,
+                fonts: preset.fonts,
+                spacing: { xs: '0.25rem', sm: '0.5rem', md: '1rem', lg: '1.5rem', xl: '2rem' },
+                borderRadius: { sm: '0.25rem', md: '0.5rem', lg: '1rem' }
+            };
+            
+            renderPreview();
+            generateCode();
+            document.getElementById('code-card').style.display = 'block';
+        }
+        
+        function renderPreview() {
+            const { name, colors, fonts } = currentSystem;
+            
+            document.getElementById('preview-title').textContent = name;
+            
+            const previewHTML = `
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">🎨 Color Palette</h3>
+                <div class="color-palette-display">
+                    <div class="color-swatch" style="background: ${colors.primary};" onclick="copyColor('${colors.primary}')">
+                        <span class="color-code">Primary</span>
+                    </div>
+                    <div class="color-swatch" style="background: ${colors.secondary};" onclick="copyColor('${colors.secondary}')">
+                        <span class="color-code">Secondary</span>
+                    </div>
+                    <div class="color-swatch" style="background: ${colors.accent};" onclick="copyColor('${colors.accent}')">
+                        <span class="color-code">Accent</span>
+                    </div>
+                    <div class="color-swatch" style="background: ${colors.neutral};" onclick="copyColor('${colors.neutral}')">
+                        <span class="color-code">Neutral</span>
+                    </div>
+                </div>
+                
+                <div class="typography-section">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">✍️ Typography</h3>
+                    <div class="font-display">
+                        <div class="font-label">Heading Font</div>
+                        <div class="font-sample" style="font-family: ${fonts.heading}, sans-serif;">The quick brown fox</div>
+                    </div>
+                    <div class="font-display">
+                        <div class="font-label">Body Font</div>
+                        <div style="font-family: ${fonts.body}, sans-serif; font-size: 1rem;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">🧩 Components</h3>
+                <div class="components-section">
+                    <div class="component-demo">
+                        <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Buttons</h4>
+                        <button class="demo-button primary">Primary Button</button>
+                        <button class="demo-button secondary">Secondary Button</button>
+                    </div>
+                    <div class="component-demo">
+                        <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Card</h4>
+                        <div class="demo-card">
+                            <h5 style="font-weight: 600; margin-bottom: 0.5rem;">Card Title</h5>
+                            <p style="color: #6b7280; font-size: 0.875rem;">This is a card component with your design system styles.</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('preview-content').innerHTML = previewHTML;
+            
+            // Apply colors to CSS variables
+            const container = document.getElementById('preview-container');
+            container.style.setProperty('--ds-primary', colors.primary);
+            container.style.setProperty('--ds-surface', colors.surface);
+        }
+        
+        function toggleDarkMode() {
+            isDarkMode = !isDarkMode;
+            const container = document.getElementById('preview-container');
+            container.classList.toggle('dark-mode');
+        }
+        
+        function generateCode() {
+            const { colors, fonts, spacing, borderRadius } = currentSystem;
+            
+            // CSS Variables
+            const cssCode = `:root {
+  /* Colors */
+  --color-primary: ${colors.primary};
+  --color-secondary: ${colors.secondary};
+  --color-accent: ${colors.accent};
+  --color-neutral: ${colors.neutral};
+  --color-surface: ${colors.surface};
+  
+  /* Typography */
+  --font-heading: ${fonts.heading}, sans-serif;
+  --font-body: ${fonts.body}, sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: ${spacing.xs};
+  --spacing-sm: ${spacing.sm};
+  --spacing-md: ${spacing.md};
+  --spacing-lg: ${spacing.lg};
+  --spacing-xl: ${spacing.xl};
+  
+  /* Border Radius */
+  --radius-sm: ${borderRadius.sm};
+  --radius-md: ${borderRadius.md};
+  --radius-lg: ${borderRadius.lg};
+}`;
+            
+            document.getElementById('css-code').textContent = cssCode;
+            
+            // Tailwind Config
+            const tailwindCode = `module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '${colors.primary}',
+        secondary: '${colors.secondary}',
+        accent: '${colors.accent}',
+        neutral: '${colors.neutral}',
+      },
+      fontFamily: {
+        heading: ['${fonts.heading}', 'sans-serif'],
+        body: ['${fonts.body}', 'sans-serif'],
+      },
+    },
+  },
+}`;
+            
+            document.getElementById('tailwind-code').textContent = tailwindCode;
+            
+            // HTML Components
+            const htmlCode = `<!-- Primary Button -->
+<button class="bg-[${colors.primary}] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+  Primary Button
+</button>
+
+<!-- Secondary Button -->
+<button class="bg-transparent text-[${colors.primary}] border-2 border-[${colors.primary}] px-6 py-3 rounded-lg font-semibold hover:bg-[${colors.primary}] hover:text-white transition">
+  Secondary Button
+</button>
+
+<!-- Card Component -->
+<div class="bg-[${colors.surface}] p-6 rounded-xl shadow-md">
+  <h3 class="font-heading text-xl font-semibold mb-2">Card Title</h3>
+  <p class="font-body text-gray-600">Card description goes here.</p>
+</div>`;
+            
+            document.getElementById('html-code').textContent = htmlCode;
+        }
+        
+        function copyColor(color) {
+            navigator.clipboard.writeText(color).then(() => {
+                if (window.Skillor && window.Skillor.showNotification) {
+                    window.Skillor.showNotification(`Copied ${color}!`, 'success');
+                }
+            });
+        }
+        
+        function copyCode(type) {
+            let text = '';
+            
+            switch(type) {
+                case 'css':
+                    text = document.getElementById('css-code').textContent;
+                    break;
+                case 'tailwind':
+                    text = document.getElementById('tailwind-code').textContent;
+                    break;
+                case 'html':
+                    text = document.getElementById('html-code').textContent;
+                    break;
+            }
+            
+            navigator.clipboard.writeText(text).then(() => {
+                if (window.Skillor && window.Skillor.showNotification) {
+                    window.Skillor.showNotification(`${type.toUpperCase()} code copied!`, 'success');
+                }
+            });
+        }
+        
+        function downloadCode() {
+            if (!currentSystem) return;
+            
+            const cssCode = document.getElementById('css-code').textContent;
+            const tailwindCode = document.getElementById('tailwind-code').textContent;
+            const htmlCode = document.getElementById('html-code').textContent;
+            
+            const content = `# ${currentSystem.name}
+
+## CSS Variables
+\`\`\`css
+${cssCode}
+\`\`\`
+
+## Tailwind Config
+\`\`\`js
+${tailwindCode}
+\`\`\`
+
+## HTML Components
+\`\`\`html
+${htmlCode}
+\`\`\``;
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentSystem.name.toLowerCase().replace(/\s+/g, '-')}-design-system.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        function downloadJSON() {
+            if (!currentSystem) return;
+            
+            const json = JSON.stringify(currentSystem, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentSystem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

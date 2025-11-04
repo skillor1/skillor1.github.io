@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productivity tools: pomodoro timer, habit tracker, focus dashboard, reflection journal, and weekly review. Free and effective.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/productivity.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/productivity.html">
+    <meta property="og:title" content="Productivity Tools – Pomodoro, Habits, Focus & Review | Skillor">
+    <meta property="og:description" content="Plan better, focus deeper, and reflect smarter with our free productivity tools. Mobile-friendly and fast.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Productivity Tools – Pomodoro, Habits, Focus & Review | Skillor">
+    <meta name="twitter:description" content="Free tools: pomodoro, habit tracker, focus dashboard, reflection journal, weekly review.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Productivity Tools – Pomodoro, Habits & Focus | Skillor</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+        <!-- Structured Data: Breadcrumbs -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+                {"@type": "ListItem", "position": 2, "name": "Productivity", "item": "https://skillor.me/productivity.html"}
+            ]
+        }
+        </script>
+    
+        <!-- Structured Data: CollectionPage -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Productivity Tools",
+            "url": "https://skillor.me/productivity.html",
+            "about": "Free tools for focus, habits, and weekly planning.",
+            "hasPart": [
+                {"@type": "SoftwareApplication", "name": "Pomodoro Timer", "url": "https://skillor.me/productivity/pomodoro-timer.html", "applicationCategory": "ProductivityApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Habit Tracker", "url": "https://skillor.me/productivity/habit-tracker.html", "applicationCategory": "ProductivityApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Focus Dashboard", "url": "https://skillor.me/productivity/focus-dashboard.html", "applicationCategory": "ProductivityApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Reflection Journal", "url": "https://skillor.me/productivity/reflection-journal.html", "applicationCategory": "ProductivityApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Weekly Review", "url": "https://skillor.me/productivity/weekly-review.html", "applicationCategory": "ProductivityApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
+            ]
+        }
+        </script>
+    
+    <style>
+        :root {
+            --category-primary: #06b6d4;
+            --category-secondary: #22d3ee;
+            --category-gradient: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+        
+        .category-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 6% 4rem;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(8, 145, 178, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 2;
+        }
+        
+        .category-icon-large {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .category-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--category-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .category-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--category-secondary);
+        }
+        
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .breadcrumb .current { color: #fff; font-weight: 600; }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 6%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(6, 182, 212, 0.3);
+            border-color: var(--category-primary);
+        }
+        
+        .topic-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .topic-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .topic-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .topic-meta span {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .btn-start {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--category-gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
+        }
+        
+        /* Section styles (avoid inline) */
+        .section-wrap { max-width: 1400px; margin: 0 auto; }
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--category-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        .tool-emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .footer-social-text { margin-top: 1.5rem; }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='./index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#learn">Learn</a></li>
+            <li><a href="./index.html#practice">Practice</a></li>
+            <li><a href="./index.html#categories">Categories</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='./index.html'">Start Learning</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a>
+                <span>›</span>
+                <a href="./index.html#categories">Categories</a>
+                <span>›</span>
+                <span class="current">Productivity</span>
+            </div>
+            <span class="category-icon-large">⚡</span>
+            <h1>Productivity</h1>
+            <p>Optimize your workflow with proven techniques</p>
+        </div>
+    </section>
+    
+    <!-- Interactive Tools Section -->
+    <section>
+        <div class="section-wrap">
+            <h2 class="section-title">🧰 Interactive Productivity Tools</h2>
+            <p class="section-subtitle">Plan better, focus deeper, and reflect smarter with these tools</p>
+            
+            <div class="topics-grid">
+                <div class="topic-card" onclick="window.location.href='./productivity/pomodoro-timer.html'">
+                    <div class="tool-emoji">⏳</div>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Deep work timer with focus/short/long breaks, sound, and session tracking.</p>
+                    <a href="./productivity/pomodoro-timer.html" class="btn-start">Try Now</a>
+                    <div class="topic-meta">
+                        <span>25/5/15</span>
+                        <span>🔔 Alerts</span>
+                        <span>📊 Sessions</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./productivity/habit-tracker.html'">
+                    <div class="tool-emoji">📅</div>
+                    <h3>Habit Tracker</h3>
+                    <p>Build consistent habits with streaks, calendar view, and habit scoring.</p>
+                    <a href="./productivity/habit-tracker.html" class="btn-start">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🔥 Streaks</span>
+                        <span>📈 Stats</span>
+                        <span>✅ Routines</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./productivity/focus-dashboard.html'">
+                    <div class="tool-emoji">🎯</div>
+                    <h3>Focus Dashboard</h3>
+                    <p>Minimal dashboard for tasks, priorities, and time-boxed daily goals.</p>
+                    <a href="./productivity/focus-dashboard.html" class="btn-start">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🗂️ Tasks</span>
+                        <span>⭐ Priorities</span>
+                        <span>⏱️ Timebox</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./productivity/reflection-journal.html'">
+                    <div class="tool-emoji">📝</div>
+                    <h3>Reflection Journal</h3>
+                    <p>Guided prompts to review your day, track wins, and plan improvements.</p>
+                    <a href="./productivity/reflection-journal.html" class="btn-start">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🌅 Daily</span>
+                        <span>💡 Prompts</span>
+                        <span>📓 Notes</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./productivity/weekly-review.html'">
+                    <div class="tool-emoji">🗓️</div>
+                    <h3>Weekly Review</h3>
+                    <p>Close the week strong: what worked, what didn’t, and next week’s plan.</p>
+                    <a href="./productivity/weekly-review.html" class="btn-start">Try Now</a>
+                    <div class="topic-meta">
+                        <span>📊 Summary</span>
+                        <span>🎛️ Systems</span>
+                        <span>🚀 Plan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for interactive learning and skill development. We believe in learning by doing, providing tools that make practice engaging and effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact US</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./disclaimer.html">Disclaimer</a></li>
+                    <li><a href="./terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="./programming.html">Programming</a></li>
+                    <li><a href="./aptitude.html">Aptitude</a></li>
+                    <li><a href="./typing.html">Typing</a></li>
+                    <li><a href="./english.html">English</a></li>
+                    <li><a href="./ai-tools.html">AI Tools</a></li>
+                    <li><a href="./productivity.html">Productivity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

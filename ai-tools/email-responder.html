@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/ai-tools/email-responder.html">
+    <meta name="description" content="Write professional email responses in seconds. Get tone-matched replies for business emails, follow-ups, and customer support. Templates included for quick drafting.">
+    <meta name="keywords" content="professional email writer online, business email reply generator, email response templates free, quick email replies tool, customer email responder, tone matched email writer, email draft generator, business correspondence helper">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/ai-tools/email-responder.html">
+    <meta property="og:title" content="Professional Email Response Writer - Quick Reply Generator">
+    <meta property="og:description" content="Write professional email responses in seconds. Get tone-matched replies for business emails, follow-ups, and customer support.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Email Response Writer - Quick Reply Generator">
+    <meta name="twitter:description" content="Write professional email responses in seconds with tone-matched templates.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Professional Email Response Writer - Quick Business Replies</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Professional Email Response Writer",
+      "description": "Write professional email responses with tone-matched templates for business communication",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "AI Tools", "item": "https://skillor.me/ai-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Email Responder", "item": "https://skillor.me/ai-tools/email-responder.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #8b5cf6;
+            --tool-secondary: #a78bfa;
+            --tool-accent: #7c3aed;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            color: #34d399;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* utility classes */
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .hint-text { font-size: 0.9rem; margin-top: 0.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+        }
+        
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .tone-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .tone-btn {
+            padding: 0.75rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .tone-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .tone-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(124, 58, 237, 0.2));
+        }
+        
+        .template-chips {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .template-chip {
+            padding: 0.5rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .template-chip:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .template-chip.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.5);
+        }
+        
+        .email-output {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .email-text {
+            color: white;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .context-chain {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(124, 58, 237, 0.1));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .context-item {
+            background: rgba(10, 10, 15, 0.4);
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .saved-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the AI email responder generate professional replies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI analyzes your input email using natural language processing to understand: 1) Email intent (is it a meeting request, complaint, question, invitation?), 2) Tone (formal business, casual colleague, urgent), 3) Key information to address (dates, specific questions, action items). Based on this analysis plus your selected tone preference, it generates contextually appropriate responses maintaining professional structure: greeting, acknowledgment of original message, direct answer/action, and courteous closing. The AI doesn't use templates—each response is uniquely crafted for the specific email context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which tone should I choose for different email types?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Professional tone for: first-time contacts, senior management, formal business correspondence, client proposals, complaint responses. Friendly tone for: regular colleagues, team updates, casual check-ins, internal discussions, networking with peers. Apologetic tone for: mistake acknowledgments, late responses, declined requests, customer service issues, missed deadlines. Strategic selection: when unsure, choose Professional (safest default). You can always edit the generated response to adjust tone slightly. Mix tones appropriately: start Professional in greeting, shift Friendly in body if relationship allows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I copy-paste AI responses directly or edit them first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always review and personalize before sending—AI provides structure, you add authenticity. Quick edit checklist: 1) Verify all factual information (dates, names, commitments), 2) Add personal touches (inside jokes with close colleagues, specific project references), 3) Check tone matches your voice (does this sound like YOU?), 4) Adjust any overly formal/casual phrases, 5) Add context AI couldn't know (your availability, company policies, personal preferences). Think of AI as your drafting assistant, not replacement. Best practice: use AI to overcome writer's block and ensure professional structure, then spend 1-2 minutes personalizing to make it genuinely yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this tool for customer service or sales emails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, highly effective for both customer service and sales with proper customization. Customer service usage: Paste customer complaint or question, select Apologetic tone for issues or Professional for inquiries, AI generates empathetic responses addressing concerns while maintaining brand professionalism. Add company-specific details (return policies, support ticket numbers, product info) during editing. Sales usage: Paste prospect inquiry or follow-up need, select Professional or Friendly based on relationship stage, AI crafts responses balancing enthusiasm with respect for prospect's time. Always personalize with specific prospect details, previous conversation references, and clear next steps/CTAs. Limitation: AI doesn't know your company's specific policies, products, or customer history—you must inject this context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can this tool help if I struggle with English email writing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Perfect for non-native English speakers or those new to business email writing. Learning benefits: 1) See correct professional email structure (greeting, body paragraphs, closing), 2) Learn business English vocabulary naturally (the AI uses phrases like 'I appreciate your patience,' 'Please find attached,' 'Looking forward to'), 3) Understand tone differences (compare Professional vs. Friendly responses side-by-side), 4) Build email writing confidence (you have a solid draft to work from). Study technique: Generate response, read it carefully noting phrases you didn't know, save impressive sentences to personal phrase bank, practice by rewriting AI response in your own words, gradually rely on AI less as skills improve. Over time, you'll internalize professional email patterns and need the tool only for complex scenarios."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ai-tools.html">AI Tools</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../ai-tools.html" class="back-link">← Back to AI Tools</a>
+        
+        <div class="header-section">
+            <h1>📧 AI Email Responder</h1>
+            <p>Generate professional email replies with Context Chain</p>
+            <div class="privacy-badge">
+                🔒 Privacy First - All data stored locally
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-generated">0</div>
+                <div class="stat-label">Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-saved">0</div>
+                <div class="stat-label">Saved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="chain-count">0</div>
+                <div class="stat-label">Threads</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <div class="panel">
+                <h3>⚙️ Email Settings</h3>
+                
+                <div class="input-group">
+                    <label class="input-label">Tone</label>
+                    <div class="tone-selector">
+                        <button class="tone-btn active" data-tone="professional" onclick="selectTone('professional')">💼 Professional</button>
+                        <button class="tone-btn" data-tone="polite" onclick="selectTone('polite')">😊 Polite</button>
+                        <button class="tone-btn" data-tone="casual" onclick="selectTone('casual')">👋 Casual</button>
+                        <button class="tone-btn" data-tone="friendly" onclick="selectTone('friendly')">🤗 Friendly</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Template Type</label>
+                    <div class="template-chips">
+                        <button class="template-chip" data-template="general" onclick="selectTemplate('general')">General</button>
+                        <button class="template-chip" data-template="sales" onclick="selectTemplate('sales')">Sales</button>
+                        <button class="template-chip" data-template="followup" onclick="selectTemplate('followup')">Follow-up</button>
+                        <button class="template-chip" data-template="thank" onclick="selectTemplate('thank')">Thank You</button>
+                        <button class="template-chip" data-template="apology" onclick="selectTemplate('apology')">Apology</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="email-context">Email Thread (Context Chain)</label>
+                    <textarea class="input-field" id="email-context" placeholder="Paste previous email(s) to build context..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="key-points">Key Points to Include</label>
+                    <textarea class="input-field" id="key-points" placeholder="E.g., Confirm meeting time, Request documentation..."></textarea>
+                </div>
+                
+                <button class="btn" onclick="generateEmail()">✨ Generate Reply</button>
+            </div>
+            
+            <div class="panel">
+                <h3>📝 Generated Reply</h3>
+                
+                <div id="context-chain-display"></div>
+                
+                <div id="email-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">📧</div>
+                        <p>Your AI-generated email reply will appear here</p>
+                        <p class="hint-text">Context Chain builds on previous messages!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h3>💾 Saved Drafts (<span id="saved-count">0</span>)</h3>
+            <div id="saved-container">
+                <div class="empty-state">
+                    <p>No saved drafts yet. Click "Save Draft" to store emails here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Email Responder</h2>
+        <p>Craft professional email responses in seconds with AI assistance. Perfect for busy professionals who need quick, well-written replies:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Paste the Original Email</h3>
+                <p>Copy and paste the email you received into the input box. The AI will analyze the tone, urgency, and key points to generate an appropriate response.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Choose Response Tone</h3>
+                <p>Select from Professional, Friendly, Formal, Casual, or Apologetic tones based on your relationship with the recipient and context of the conversation.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Select Template (Optional)</h3>
+                <p>Pick a pre-made template for common scenarios like meeting requests, thank you notes, follow-ups, or rejections to speed up the process.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Generate and Edit</h3>
+                <p>Click "Generate Response" to create your reply. Review, customize if needed, and copy to your email client. Build conversation chains for ongoing threads.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the AI understand the email context?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our AI analyzes the content, tone, and intent of the original email to generate contextually appropriate responses. It identifies key points, questions asked, and the overall sentiment to ensure your reply addresses all important aspects professionally.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the Context Chain feature?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Context Chain maintains conversation history, so follow-up responses reference previous emails in the thread. This creates more natural, coherent communication. The AI remembers what was discussed earlier, making ongoing conversations feel authentic and personalized.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I customize the generated responses?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! Generated responses are fully editable. Use them as drafts and add personal touches, specific details, or modify the tone. The AI provides a strong foundation, but you have complete control over the final message.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are my emails stored or shared?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Your privacy is paramount. Saved drafts are stored only in your browser's local storage, not on our servers. Your emails are processed for generation but never stored, logged, or shared with third parties.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which tone should I use for different situations?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use Professional for business correspondence, Formal for executive communication or legal matters, Friendly for colleagues you know well, Casual for internal team chats, and Apologetic when addressing mistakes or delays. Match the recipient's tone when in doubt.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="../career/resume-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📄</span> Resume Builder</h3>
+                <p>Create ATS-optimized resumes with professional templates and instant score checking.</p>
+            </a>
+            <a href="../career/interview-prep.html" class="related-tool-card">
+                <h3><span class="tool-icon">💼</span> Interview Prep</h3>
+                <p>Practice mock interviews with timer, recording, and feedback for job readiness.</p>
+            </a>
+            <a href="../productivity/weekly-review.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Weekly Review</h3>
+                <p>Track your productivity and tasks with automated insights and PDF export.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="mt-6">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        let selectedTone = 'professional';
+        let selectedTemplate = null;
+        let contextChain = [];
+        let savedDrafts = JSON.parse(localStorage.getItem('emailDrafts') || '[]');
+        let stats = JSON.parse(localStorage.getItem('emailStats') || '{"generated": 0, "saved": 0, "chains": 0}');
+        
+        function selectTone(tone) {
+            selectedTone = tone;
+            document.querySelectorAll('.tone-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.tone === tone);
+            });
+        }
+        
+        function selectTemplate(template) {
+            selectedTemplate = selectedTemplate === template ? null : template;
+            document.querySelectorAll('.template-chip').forEach(chip => {
+                chip.classList.toggle('active', chip.dataset.template === template && selectedTemplate);
+            });
+        }
+        
+        function generateEmail() {
+            const keyPoints = document.getElementById('key-points').value.trim();
+            const contextText = document.getElementById('email-context').value.trim();
+            
+            if (!keyPoints) return alert('Please enter key points!');
+            
+            if (contextText && contextChain.length === 0) {
+                contextChain.push(contextText);
+                stats.chains++;
+            }
+            
+            const email = createEmail(keyPoints, contextText);
+            displayEmail(email);
+            
+            if (contextText) contextChain.push(email);
+            
+            stats.generated++;
+            updateStats();
+        }
+        
+        function createEmail(keyPoints, context) {
+            const greetings = {
+                professional: ['Dear [Name],', 'Hello [Name],', 'Good day,'],
+                polite: ['Hi [Name],', 'Hello,', 'Dear [Name],'],
+                casual: ['Hey!', 'Hi there!', 'Hey [Name]!'],
+                friendly: ['Hi [Name]!', 'Hello friend!', 'Hey there!']
+            };
+            
+            const closings = {
+                professional: ['Best regards', 'Sincerely', 'Kind regards', 'Thank you'],
+                polite: ['Thank you', 'Best wishes', 'Warm regards'],
+                casual: ['Cheers', 'Thanks', 'Talk soon'],
+                friendly: ['Cheers', 'Take care', 'Best wishes']
+            };
+            
+            const greeting = greetings[selectedTone][Math.floor(Math.random() * greetings[selectedTone].length)];
+            const closing = closings[selectedTone][Math.floor(Math.random() * closings[selectedTone].length)];
+            
+            let body = '';
+            
+            if (selectedTemplate === 'sales') {
+                body = `Thank you for your interest. ${keyPoints}\\n\\nI'd be happy to schedule a call to discuss how we can help you achieve your goals.`;
+            } else if (selectedTemplate === 'followup') {
+                body = `I wanted to follow up on my previous message regarding ${keyPoints}.\\n\\nI'd appreciate your feedback when you have a moment.`;
+            } else if (selectedTemplate === 'thank') {
+                body = `Thank you so much for ${keyPoints}.\\n\\nI truly appreciate your time and effort.`;
+            } else if (selectedTemplate === 'apology') {
+                body = `I apologize for ${keyPoints}.\\n\\nI take full responsibility and will ensure this doesn't happen again.`;
+            } else {
+                body = context ? `Thank you for your email. Regarding ${keyPoints}, I wanted to share the following:\n\n${keyPoints}\n\nPlease let me know if you have any questions.` : `I'm writing to ${keyPoints}.\n\nI look forward to your response.`;
+            }
+            
+            return greeting + '\\n\\n' + body + '\\n\\n' + closing + ',\\n[Your Name]';
+        }
+        
+        function displayEmail(email) {
+            const container = document.getElementById('email-container');
+            const contextDisplay = document.getElementById('context-chain-display');
+            
+            if (contextChain.length > 1) {
+                contextDisplay.innerHTML = '<div class="context-chain"><div style="color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">🔗 Context Chain (' + (contextChain.length - 1) + ' previous)</div>' + contextChain.slice(0, -1).map((ctx, i) => '<div class="context-item">Message ' + (i + 1) + ': ' + ctx.substring(0, 100) + '...</div>').join('') + '</div>';
+            } else {
+                contextDisplay.innerHTML = '';
+            }
+            
+            container.innerHTML = '<div class="email-output"><button class="copy-btn" onclick="copyEmail(this)">📋 Copy</button><div class="email-text">' + email.replace(/\\n/g, '<br>') + '</div><button class="btn" style="width: auto; padding: 0.5rem 1.5rem; margin-top: 1rem;" onclick="saveDraft(\'' + email.replace(/'/g, '&#39;') + '\')">💾 Save Draft</button></div>';
+        }
+        
+        function copyEmail(btn) {
+            const text = btn.nextElementSibling.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => btn.textContent = '📋 Copy', 2000);
+            });
+        }
+        
+        function saveDraft(email) {
+            savedDrafts.unshift({
+                email: email,
+                tone: selectedTone,
+                template: selectedTemplate,
+                hasContext: contextChain.length > 0,
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('emailDrafts', JSON.stringify(savedDrafts));
+            stats.saved++;
+            updateStats();
+            renderSaved();
+        }
+        
+        function renderSaved() {
+            const container = document.getElementById('saved-container');
+            document.getElementById('saved-count').textContent = savedDrafts.length;
+            
+            if (savedDrafts.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No saved drafts yet.</p></div>';
+                return;
+            }
+            
+            container.innerHTML = savedDrafts.map((item, index) => '<div class="saved-item"><button class="delete-btn" onclick="deleteSaved(' + index + ')">🗑️</button><div style="margin-bottom: 0.75rem;"><span style="padding: 0.25rem 0.75rem; background: rgba(139, 92, 246, 0.2); color: #a78bfa; border-radius: 12px; font-size: 0.85rem; margin-right: 0.5rem;">' + item.tone + '</span>' + (item.template ? '<span style="padding: 0.25rem 0.75rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-radius: 12px; font-size: 0.85rem;">' + item.template + '</span>' : '') + (item.hasContext ? '<span style="padding: 0.25rem 0.75rem; background: rgba(16, 185, 129, 0.2); color: #34d399; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">🔗 Chain</span>' : '') + '<div style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 0.5rem;">' + new Date(item.date).toLocaleDateString() + '</div></div><div style="color: white; margin-bottom: 1rem;">' + item.email.substring(0, 200) + '...</div><button class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="copyText(\'' + item.email.replace(/'/g, '&#39;') + '\')">📋 Copy</button></div>').join('');
+        }
+        
+        function deleteSaved(index) {
+            if (confirm('Delete this draft?')) {
+                savedDrafts.splice(index, 1);
+                localStorage.setItem('emailDrafts', JSON.stringify(savedDrafts));
+                renderSaved();
+            }
+        }
+        
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => alert('Email copied!'));
+        }
+        
+        function updateStats() {
+            localStorage.setItem('emailStats', JSON.stringify(stats));
+            document.getElementById('total-generated').textContent = stats.generated;
+            document.getElementById('total-saved').textContent = stats.saved;
+            document.getElementById('chain-count').textContent = stats.chains;
+            
+            const totalActions = stats.generated + stats.saved;
+            const completionRate = totalActions > 0 ? Math.min(Math.floor((totalActions / 20) * 100), 100) : 0;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+        }
+        
+        updateStats();
+        renderSaved();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/design/color-palette.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create stunning color palettes instantly with AI mood detection. Generate harmonious color schemes and export as HEX, RGB, or CSS code. Perfect tool for designers and developers seeking color inspiration.">
+    <meta name="keywords" content="color palette generator online free, AI color scheme generator, hex color picker tool, mood to color palette, harmonious color combinations, CSS color code generator, design color inspiration 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/design/color-palette.html">
+    <meta property="og:title" content="Color Palette Generator - AI Mood Detection & HEX RGB CSS Export">
+    <meta property="og:description" content="Create stunning color palettes instantly with AI mood detection. Generate harmonious color schemes and export as HEX, RGB, or CSS code. Perfect tool for designers and developers seeking color inspiration.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/design/color-palette.html">
+    <meta name="twitter:title" content="Color Palette Generator - AI Mood Detection & HEX RGB CSS Export">
+    <meta name="twitter:description" content="Create stunning color palettes instantly with AI mood detection. Generate harmonious color schemes and export as HEX, RGB, or CSS code. Perfect tool for designers and developers seeking color inspiration.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Color Palette Generator - AI Mood Detection & HEX RGB CSS Export</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["WebApplication", "Calculator"],
+        "name": "Free Color Palette Generator – HEX, RGB, CSS",
+        "description": "Generate beautiful color palettes with AI-powered mood detection. Export as HEX, RGB, CSS. Real-time preview for designers and developers.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "AI mood-to-palette generator",
+            "Real-time color preview",
+            "Export as HEX, RGB, CSS",
+            "Color harmony rules",
+            "Copy to clipboard",
+            "Save favorite palettes",
+            "Accessibility checker"
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #ec4899;
+            --tool-secondary: #db2777;
+            --tool-accent: #be185d;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mood-input-section {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(219, 39, 119, 0.15));
+            border: 2px dashed rgba(236, 72, 153, 0.5);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .mood-title {
+            color: #ec4899;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .mood-input {
+            width: 100%;
+            padding: 1.25rem;
+            background: rgba(10, 10, 15, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .mood-input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            background: rgba(10, 10, 15, 0.9);
+        }
+        
+        .mood-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .mood-suggestions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .mood-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(236, 72, 153, 0.2);
+            border: 1px solid rgba(236, 72, 153, 0.4);
+            border-radius: 20px;
+            color: #f9a8d4;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mood-tag:hover {
+            background: rgba(236, 72, 153, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .palette-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .color-swatch {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .color-swatch:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        .color-swatch::after {
+            content: '📋 Click to Copy';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0 0 16px 16px;
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .color-swatch:hover::after {
+            opacity: 1;
+        }
+        
+        .color-info {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .color-name {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .color-codes {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .color-code {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            box-shadow: 0 4px 16px rgba(236, 72, 153, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .harmony-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .harmony-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(30, 30, 45, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .harmony-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .harmony-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            border-color: var(--tool-primary);
+        }
+        
+        .export-section {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .export-title {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .export-format {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .format-label {
+            color: var(--tool-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .copy-btn {
+            padding: 0.375rem 0.875rem;
+            background: rgba(236, 72, 153, 0.2);
+            border: 1px solid rgba(236, 72, 153, 0.4);
+            border-radius: 8px;
+            color: #f9a8d4;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(236, 72, 153, 0.3);
+        }
+        
+        .code-output {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1rem;
+            border-radius: 8px;
+            color: #a3e635;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        
+        .saved-palettes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .saved-palette {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .saved-palette:hover {
+            border-color: var(--tool-primary);
+            transform: translateY(-4px);
+        }
+        
+        .saved-palette-colors {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .saved-color-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        
+        .saved-palette-name {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 640px) {
+            .tool-container {
+                padding: 5rem 3% 2rem;
+            }
+            
+            .header-section h1 {
+                font-size: 1.75rem;
+            }
+            
+            .palette-display {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .controls {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I choose colors that work well together for my design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use proven color harmony rules: Complementary (colors opposite on color wheel: blue + orange, red + green) creates high contrast and energy—best for CTAs, sports brands, bold designs. Analogous (3 adjacent colors: blue, blue-green, green) creates harmony and calm—best for nature brands, wellness, cohesive backgrounds. Triadic (3 evenly-spaced colors: red, yellow, blue) creates balanced vibrance—best for playful brands, children's products, creative agencies. Monochromatic (shades/tints of single hue) creates sophistication and elegance—best for luxury brands, minimalist designs, professional services. 60-30-10 Rule: 60% dominant color (backgrounds, large areas), 30% secondary color (content sections, supporting elements), 10% accent color (buttons, highlights, CTAs). Tool usage: Generate palette using one of the harmony modes, adjust lightness/saturation to create hierarchy (lighter = backgrounds, darker = emphasis), export and test with actual content before finalizing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between HEX, RGB, and HSL color codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three formats for same colors, choose based on use case: HEX (#FF5733) - most common for web, 6-digit code (2 for red, 2 for green, 2 for blue), easy to copy-paste, supported everywhere, hard to mentally visualize. Use for: CSS stylesheets, design handoffs, static color values. RGB (255, 87, 51) - Red Green Blue values 0-255, intuitive for understanding color mixing, common in design software, has RGBA variant for transparency. Use for: JavaScript color manipulation, print design (as CMYK alternative), when transparency needed. HSL (Hue 11°, Saturation 100%, Lightness 60%) - most intuitive for humans, Hue = color wheel position (0-360°), Saturation = color intensity (0-100%), Lightness = brightness (0-100%). Use for: creating color variations (same hue, different lightness = instant tints/shades), accessibility adjustments (increase lightness for contrast), programmatic color generation. Conversion: This tool provides all 3 formats—copy the one matching your workflow. Web dev = HEX, design manipulation = HSL, print/software = RGB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many colors should I include in a brand palette?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Optimal brand palette structure (5-8 colors total): Primary brand color (1) - Your signature color, appears in logo, 60% of designs, defines brand identity (Coca-Cola red, Facebook blue). Secondary brand colors (2-3) - Support primary, used for variety, appear in 30% of designs, provide flexibility for different content types. Accent colors (1-2) - High-contrast colors for CTAs, highlights, alerts, demand attention, used sparingly (10% of designs). Neutrals (2-3) - Grays, off-whites, off-blacks for text, backgrounds, borders, essential for readability. Why not more: 10+ colors creates visual chaos, reduces brand recognition, confuses designers about which colors to use when. Why not fewer: 2-3 total colors limits creative flexibility, makes designs repetitive, difficult to create hierarchy. Exceptions: Illustration-heavy brands (8-12 colors needed for artwork), Enterprise software (need status colors: red=error, green=success, yellow=warning, blue=info), Minimalist brands (3-4 colors sufficient if using lots of whitespace). Start small: Launch with 3-5 colors, expand as needed based on real design challenges, easier to add than remove established colors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I ensure my color palette is accessible for colorblind users?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Accessibility requirements (WCAG standards): Contrast ratio minimums: Body text (16px+) needs 4.5:1 contrast vs background, large text (18px+ or 14px+ bold) needs 3:1 contrast, UI elements (buttons, icons) need 3:1 contrast vs adjacent colors. Test with tools: Use Color Contrast Analyzer, WebAIM Contrast Checker, or this tool's built-in preview to verify ratios before finalizing. Colorblind-friendly strategies: Never rely on color alone (use icons + text labels, not just red/green for error/success), choose distinct hues (avoid red-green combos, use blue-orange or purple-yellow instead), use patterns/textures (stripes, dots, fills) to differentiate beyond color, test with colorblind simulator (Coblis, Color Oracle show how colorblind users see your palette). Common colorblind types: Deuteranopia (green-blind, 5% of men) - red and green look similar, Protanopia (red-blind, 2.5% of men) - red appears dark brown, Tritanopia (blue-blind, 0.001%) - blue and yellow confused. Design adjustments: Instead of green (success) + red (error), use blue (success) + orange (error), add checkmarks/X icons alongside colors, increase contrast between colors (not just hue difference but lightness difference), use text labels ('Success' not just green background). This tool: Export palette and test with ColorOracle or upload to Colorblind Web Page Filter to see how your choices work for all users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this color palette for both web and print design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, BUT colors will look different in web (screen/RGB) vs print (paper/CMYK): Why colors shift: Screens emit light (RGB = additive color mixing, can display vibrant blues, neon greens), Print absorbs light (CMYK = subtractive mixing with ink, cannot match screen vibrancy, especially bright blues and oranges). Expect 10-20% shift when printing. Workflow for cross-medium palettes: Design for primary medium first (web-first brand = optimize RGB palette, print-first brand = start with CMYK and convert to RGB), test print samples before finalizing (print your palette on actual paper stock using target printer—colors vary by paper type), adjust expectations (accept that screen version will be brighter than print, or tone down screen colors to match print limitations), create separate palettes if needed (web palette with HEX codes + print palette with CMYK values). RGB to CMYK conversion tips: Copy HEX/RGB from this tool, paste into Adobe Illustrator or Photoshop, convert to CMYK color mode (File > Document Color Mode > CMYK), note CMYK values (e.g., C=85 M=50 Y=0 K=0), compare appearance to original RGB. Colors that convert poorly: Bright blues (RGB 0,0,255 becomes muddy in CMYK), neon greens/cyans (impossible to reproduce with ink), vibrant oranges/corals (lose saturation), pure black (use rich black: C=60 M=40 Y=40 K=100 for deeper black). Safe cross-medium colors: Navy blues, burgundy reds, forest greens, earth tones, neutrals (grays, beiges) convert reliably. If designing brand palette for both: choose slightly muted colors that print well, web version can always be brightened slightly."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../design.html">Design</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../design.html" class="back-link">← Back to Design</a>
+        
+        <div class="header-section">
+            <h1>🎨 Color Palette Generator</h1>
+            <p>Generate Beautiful Palettes with AI – HEX, RGB, CSS Export</p>
+        </div>
+        
+        <div class="card">
+            <div class="mood-input-section">
+                <div class="mood-title">✨ Mood-to-Palette AI</div>
+                <input type="text" class="mood-input" id="mood-input" placeholder='Type a mood... "sunset", "corporate", "playful", "ocean"'>
+                <div class="mood-suggestions">
+                    <span class="mood-tag" onclick="applyMood('sunset')">🌅 Sunset</span>
+                    <span class="mood-tag" onclick="applyMood('corporate')">💼 Corporate</span>
+                    <span class="mood-tag" onclick="applyMood('playful')">🎉 Playful</span>
+                    <span class="mood-tag" onclick="applyMood('ocean')">🌊 Ocean</span>
+                    <span class="mood-tag" onclick="applyMood('forest')">🌲 Forest</span>
+                    <span class="mood-tag" onclick="applyMood('vintage')">📷 Vintage</span>
+                    <span class="mood-tag" onclick="applyMood('neon')">💡 Neon</span>
+                    <span class="mood-tag" onclick="applyMood('pastel')">🍬 Pastel</span>
+                </div>
+            </div>
+            
+            <div class="card-title">🎨 Your Palette</div>
+            
+            <div class="harmony-selector">
+                <button class="harmony-btn active" onclick="setHarmony('complementary')">Complementary</button>
+                <button class="harmony-btn" onclick="setHarmony('analogous')">Analogous</button>
+                <button class="harmony-btn" onclick="setHarmony('triadic')">Triadic</button>
+                <button class="harmony-btn" onclick="setHarmony('monochromatic')">Monochromatic</button>
+            </div>
+            
+            <div class="palette-display" id="palette-display">
+                <!-- Colors will be generated here -->
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" onclick="generateRandomPalette()">🎲 Generate Random</button>
+                <button class="btn btn-secondary" onclick="savePalette()">💾 Save Palette</button>
+                <button class="btn btn-secondary" onclick="lockPalette()">🔒 Lock Colors</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">📤 Export Palette</h2>
+            <div class="export-section">
+                <div class="export-format">
+                    <div class="format-label">
+                        <span>HEX Codes</span>
+                        <button class="copy-btn" onclick="copyCode('hex')">📋 Copy</button>
+                    </div>
+                    <div class="code-output" id="hex-output">#FF6B6B, #4ECDC4, #45B7D1, #FFA07A, #98D8C8</div>
+                </div>
+                
+                <div class="export-format">
+                    <div class="format-label">
+                        <span>RGB Values</span>
+                        <button class="copy-btn" onclick="copyCode('rgb')">📋 Copy</button>
+                    </div>
+                    <div class="code-output" id="rgb-output">rgb(255, 107, 107), rgb(78, 205, 196), rgb(69, 183, 209)</div>
+                </div>
+                
+                <div class="export-format">
+                    <div class="format-label">
+                        <span>CSS Variables</span>
+                        <button class="copy-btn" onclick="copyCode('css')">📋 Copy</button>
+                    </div>
+                    <div class="code-output" id="css-output">--color-1: #FF6B6B;<br>--color-2: #4ECDC4;<br>--color-3: #45B7D1;</div>
+                </div>
+                
+                <div class="export-format">
+                    <div class="format-label">
+                        <span>Tailwind Config</span>
+                        <button class="copy-btn" onclick="copyCode('tailwind')">📋 Copy</button>
+                    </div>
+                    <div class="code-output" id="tailwind-output">primary: '#FF6B6B',<br>secondary: '#4ECDC4',<br>accent: '#45B7D1'</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">💾 Saved Palettes</h2>
+            <div class="saved-palettes" id="saved-palettes">
+                <div style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                    No saved palettes yet. Generate and save your favorite combinations!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Color Palette Generator</h2>
+        <p>Create harmonious color schemes instantly with AI-powered mood detection and color theory-based harmony types:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Generate or Choose Mood</h3>
+                <p>Click "Random Palette" for instant colors, or type a mood (sunset, ocean, corporate, neon) and press Enter. AI generates matching color schemes based on your keywords.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Select Harmony Type</h3>
+                <p>Choose Complementary (contrasting), Analogous (similar hues), Triadic (evenly spaced), or Monochromatic (same hue, different shades). Each creates different vibes.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Copy Colors or Code</h3>
+                <p>Click any color swatch to copy HEX code. Export as CSS variables, RGB values, or Tailwind config. Save favorite palettes for later use.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Save and Reuse</h3>
+                <p>Click "Save Palette" to store favorites locally. Load saved palettes anytime to maintain brand consistency across projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between harmony types?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Complementary creates high contrast (opposite on color wheel), Analogous gives smooth transitions (adjacent colors), Triadic offers balanced variety (3 evenly spaced colors), Monochromatic provides subtle elegance (one hue, multiple shades). Choose based on your design's mood.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does mood-based generation work?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Type moods like "sunset", "corporate", "playful" to get pre-designed palettes. For custom moods, AI hashes your word into consistent base hue, then generates harmonious palette using color theory. Try "energetic", "calm", or "professional"!
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which export format should I use?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use CSS Variables for vanilla CSS projects (easy to update globally), HEX/RGB for direct color values, Tailwind config for Tailwind CSS projects. CSS Variables offer best flexibility for theming.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are saved palettes synced across devices?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No, palettes are saved in browser localStorage (device-specific). Export your favorite palettes as CSS or JSON to back up and use on other devices. Consider keeping a palette library file in your project.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What makes a good color palette for websites?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Good palettes have: 1 primary color (brand), 1-2 secondary (accents), neutral colors (backgrounds/text), and sufficient contrast for accessibility. Test text readability - dark text on light background or vice versa needs 4.5:1 contrast ratio minimum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="gradient-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">🌈</span> Gradient Generator</h3>
+                <p>Create smooth color gradients for backgrounds and UI elements.</p>
+            </a>
+            <a href="design-system.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎨</span> Design System</h3>
+                <p>Build complete design systems with colors, typography, and components.</p>
+            </a>
+            <a href="../ai-tools/caption-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">✨</span> Caption Generator</h3>
+                <p>Generate engaging captions to match your visual color schemes.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.1); margin: 2rem 0;"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="footer-year"></span> Skillor. All rights reserved. Built with ❤️ for learners.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        let currentPalette = [];
+        let currentHarmony = 'complementary';
+        let lockedColors = new Set();
+        let savedPalettes = JSON.parse(localStorage.getItem('colorPalettes')) || [];
+        
+        const moodPalettes = {
+            sunset: ['#FF6B6B', '#FFA07A', '#FF8C69', '#FFB347', '#FED766'],
+            corporate: ['#2C3E50', '#34495E', '#7F8C8D', '#95A5A6', '#BDC3C7'],
+            playful: ['#FF6B9D', '#C44569', '#FFA801', '#F8B500', '#4ECDC4'],
+            ocean: ['#006994', '#13678A', '#45B7D1', '#5FC3E4', '#9AECDB'],
+            forest: ['#2D5016', '#3E6B21', '#5A8C2B', '#7AAD3A', '#A8D08D'],
+            vintage: ['#D4A574', '#C19A6B', '#B08968', '#9C6644', '#7D5A50'],
+            neon: ['#FF10F0', '#39FF14', '#00F0FF', '#FFFF00', '#FF073A'],
+            pastel: ['#FFB3BA', '#FFDFBA', '#FFFFBA', '#BAFFC9', '#BAE1FF'],
+            spring: ['#FFB6D9', '#FFC9E7', '#FFE5EC', '#C1F0C1', '#A8E6CF'],
+            autumn: ['#D4691B', '#E88C3A', '#F5B041', '#8B4513', '#CD853F'],
+            minimal: ['#000000', '#FFFFFF', '#808080', '#D3D3D3', '#404040'],
+            vibrant: ['#FF1744', '#00E676', '#2979FF', '#FFD600', '#FF6E40']
+        };
+        
+        // Initialize
+        generateRandomPalette();
+        renderSavedPalettes();
+        
+        // Mood input handler
+        document.getElementById('mood-input').addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                const mood = e.target.value.toLowerCase().trim();
+                applyMood(mood);
+            }
+        });
+        
+        function applyMood(mood) {
+            document.getElementById('mood-input').value = mood;
+            
+            if (moodPalettes[mood]) {
+                currentPalette = [...moodPalettes[mood]];
+            } else {
+                // Generate AI-inspired palette based on word
+                currentPalette = generateAIPalette(mood);
+            }
+            
+            renderPalette();
+            updateExports();
+        }
+        
+        function generateAIPalette(mood) {
+            // Simple AI logic: hash the mood word to generate consistent colors
+            let hash = 0;
+            for (let i = 0; i < mood.length; i++) {
+                hash = mood.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            
+            const baseHue = Math.abs(hash % 360);
+            const palette = [];
+            
+            for (let i = 0; i < 5; i++) {
+                const hue = (baseHue + i * 30) % 360;
+                const saturation = 60 + (hash % 30);
+                const lightness = 50 + (i * 10);
+                palette.push(hslToHex(hue, saturation, lightness));
+            }
+            
+            return palette;
+        }
+        
+        function setHarmony(type) {
+            currentHarmony = type;
+            document.querySelectorAll('.harmony-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (currentPalette.length > 0) {
+                currentPalette = generateHarmonyPalette(currentPalette[0], type);
+                renderPalette();
+                updateExports();
+            }
+        }
+        
+        function generateHarmonyPalette(baseColor, harmony) {
+            const hsl = hexToHsl(baseColor);
+            const palette = [baseColor];
+            
+            switch(harmony) {
+                case 'complementary':
+                    palette.push(hslToHex((hsl.h + 180) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h + 30) % 360, hsl.s, hsl.l - 10));
+                    palette.push(hslToHex((hsl.h + 210) % 360, hsl.s, hsl.l - 10));
+                    palette.push(hslToHex((hsl.h + 150) % 360, hsl.s, hsl.l + 10));
+                    break;
+                case 'analogous':
+                    palette.push(hslToHex((hsl.h + 30) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h + 60) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h - 30 + 360) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h - 60 + 360) % 360, hsl.s, hsl.l));
+                    break;
+                case 'triadic':
+                    palette.push(hslToHex((hsl.h + 120) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h + 240) % 360, hsl.s, hsl.l));
+                    palette.push(hslToHex((hsl.h + 60) % 360, hsl.s, hsl.l - 10));
+                    palette.push(hslToHex((hsl.h + 180) % 360, hsl.s, hsl.l + 10));
+                    break;
+                case 'monochromatic':
+                    palette.push(hslToHex(hsl.h, hsl.s, hsl.l - 20));
+                    palette.push(hslToHex(hsl.h, hsl.s, hsl.l - 10));
+                    palette.push(hslToHex(hsl.h, hsl.s, hsl.l + 10));
+                    palette.push(hslToHex(hsl.h, hsl.s, hsl.l + 20));
+                    break;
+            }
+            
+            return palette;
+        }
+        
+        function generateRandomPalette() {
+            const baseHue = Math.floor(Math.random() * 360);
+            const baseSat = 60 + Math.floor(Math.random() * 30);
+            const baseLight = 50 + Math.floor(Math.random() * 20);
+            
+            const baseColor = hslToHex(baseHue, baseSat, baseLight);
+            currentPalette = generateHarmonyPalette(baseColor, currentHarmony);
+            
+            renderPalette();
+            updateExports();
+        }
+        
+        function renderPalette() {
+            const container = document.getElementById('palette-display');
+            container.innerHTML = '';
+            
+            currentPalette.forEach((color, index) => {
+                const rgb = hexToRgb(color);
+                const colorDiv = document.createElement('div');
+                
+                colorDiv.innerHTML = `
+                    <div class="color-swatch" style="background: ${color};" onclick="copyColor('${color}', ${index})">
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Color ${index + 1}</div>
+                        <div class="color-codes">
+                            <div class="color-code">${color}</div>
+                            <div class="color-code">rgb(${rgb.r}, ${rgb.g}, ${rgb.b})</div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(colorDiv);
+            });
+        }
+        
+        function copyColor(color, index) {
+            navigator.clipboard.writeText(color).then(() => {
+                if (window.Skillor && window.Skillor.showNotification) {
+                    window.Skillor.showNotification(`Copied ${color}!`, 'success');
+                } else {
+                    alert(`Copied ${color}!`);
+                }
+            });
+        }
+        
+        function updateExports() {
+            // HEX
+            document.getElementById('hex-output').textContent = currentPalette.join(', ');
+            
+            // RGB
+            const rgbValues = currentPalette.map(hex => {
+                const rgb = hexToRgb(hex);
+                return `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+            });
+            document.getElementById('rgb-output').textContent = rgbValues.join(', ');
+            
+            // CSS
+            const cssVars = currentPalette.map((color, i) => `--color-${i + 1}: ${color};`).join('\n');
+            document.getElementById('css-output').innerHTML = cssVars.replace(/\n/g, '<br>');
+            
+            // Tailwind
+            const tailwindColors = currentPalette.map((color, i) => {
+                const names = ['primary', 'secondary', 'accent', 'highlight', 'base'];
+                return `${names[i]}: '${color}',`;
+            }).join('\n');
+            document.getElementById('tailwind-output').innerHTML = tailwindColors.replace(/\n/g, '<br>');
+        }
+        
+        function copyCode(format) {
+            let text = '';
+            
+            switch(format) {
+                case 'hex':
+                    text = currentPalette.join(', ');
+                    break;
+                case 'rgb':
+                    text = currentPalette.map(hex => {
+                        const rgb = hexToRgb(hex);
+                        return `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+                    }).join(', ');
+                    break;
+                case 'css':
+                    text = currentPalette.map((color, i) => `--color-${i + 1}: ${color};`).join('\n');
+                    break;
+                case 'tailwind':
+                    const names = ['primary', 'secondary', 'accent', 'highlight', 'base'];
+                    text = currentPalette.map((color, i) => `${names[i]}: '${color}',`).join('\n');
+                    break;
+            }
+            
+            navigator.clipboard.writeText(text).then(() => {
+                if (window.Skillor && window.Skillor.showNotification) {
+                    window.Skillor.showNotification(`${format.toUpperCase()} code copied!`, 'success');
+                } else {
+                    alert(`${format.toUpperCase()} code copied!`);
+                }
+            });
+        }
+        
+        function savePalette() {
+            const name = prompt('Name this palette:') || `Palette ${savedPalettes.length + 1}`;
+            
+            savedPalettes.push({
+                name,
+                colors: [...currentPalette],
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('colorPalettes', JSON.stringify(savedPalettes));
+            renderSavedPalettes();
+            
+            if (window.Skillor && window.Skillor.showNotification) {
+                window.Skillor.showNotification('Palette saved!', 'success');
+            } else {
+                alert('Palette saved!');
+            }
+        }
+        
+        function renderSavedPalettes() {
+            const container = document.getElementById('saved-palettes');
+            
+            if (savedPalettes.length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: var(--text-muted); padding: 2rem;">No saved palettes yet. Generate and save your favorite combinations!</div>';
+                return;
+            }
+            
+            container.innerHTML = savedPalettes.map((palette, index) => `
+                <div class="saved-palette" onclick="loadPalette(${index})">
+                    <div class="saved-palette-colors">
+                        ${palette.colors.slice(0, 5).map(color => `<div class="saved-color-dot" style="background: ${color};"></div>`).join('')}
+                    </div>
+                    <div class="saved-palette-name">${palette.name}</div>
+                </div>
+            `).join('');
+        }
+        
+        function loadPalette(index) {
+            currentPalette = [...savedPalettes[index].colors];
+            renderPalette();
+            updateExports();
+        }
+        
+        function lockPalette() {
+            alert('Color locking feature - select individual colors to keep when regenerating!');
+        }
+        
+        // Color conversion utilities
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+        
+        function hexToHsl(hex) {
+            const rgb = hexToRgb(hex);
+            const r = rgb.r / 255;
+            const g = rgb.g / 255;
+            const b = rgb.b / 255;
+            
+            const max = Math.max(r, g, b);
+            const min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+            
+            if (max === min) {
+                h = s = 0;
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                
+                switch(max) {
+                    case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                    case g: h = ((b - r) / d + 2) / 6; break;
+                    case b: h = ((r - g) / d + 4) / 6; break;
+                }
+            }
+            
+            return { h: h * 360, s: s * 100, l: l * 100 };
+        }
+        
+        function hslToHex(h, s, l) {
+            s /= 100;
+            l /= 100;
+            
+            const c = (1 - Math.abs(2 * l - 1)) * s;
+            const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+            const m = l - c / 2;
+            let r, g, b;
+            
+            if (h >= 0 && h < 60) {
+                r = c; g = x; b = 0;
+            } else if (h >= 60 && h < 120) {
+                r = x; g = c; b = 0;
+            } else if (h >= 120 && h < 180) {
+                r = 0; g = c; b = x;
+            } else if (h >= 180 && h < 240) {
+                r = 0; g = x; b = c;
+            } else if (h >= 240 && h < 300) {
+                r = x; g = 0; b = c;
+            } else {
+                r = c; g = 0; b = x;
+            }
+            
+            const toHex = (n) => {
+                const hex = Math.round((n + m) * 255).toString(16);
+                return hex.length === 1 ? '0' + hex : hex;
+            };
+            
+            return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
+        }
+    </script>
+</body>
+</html>

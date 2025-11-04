@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Regex Tester supporting JavaScript, PHP/PCRE, and Python flavors. Test regular expressions with real-time matching, syntax highlighting, and built-in pattern library.">
+    <meta name="keywords" content="regex tester, regular expression tester online, regex debugger, javascript regex, php regex, python regex, pcre tester, free regex tool 2025">
+    <meta property="og:title" content="Regex Tester - Test Regular Expressions Online Free">
+    <meta property="og:description" content="Interactive regex tester with support for JS, PHP/PCRE, and Python. Real-time matching, pattern library, and detailed explanations.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/programming/regex-tester.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/programming/regex-tester.html">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regex Tester - Test Regular Expressions Online Free">
+    <meta name="twitter:description" content="Test regex patterns across JS, PHP/PCRE, and Python with real-time highlighting.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Regex Tester - JavaScript, PHP, Python | Skillor</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+        <!-- Structured Data: Breadcrumbs -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+                {"@type": "ListItem", "position": 2, "name": "Programming", "item": "https://skillor.me/programming.html"},
+                {"@type": "ListItem", "position": 3, "name": "Regex Tester", "item": "https://skillor.me/programming/regex-tester.html"}
+            ]
+        }
+        </script>
+    
+    <style>
+        :root {
+            --tool-primary: #6366f1;
+            --tool-secondary: #818cf8;
+            --tool-success: #10b981;
+            --tool-error: #ef4444;
+            --tool-warning: #f59e0b;
+            --code-bg: #1e1e2e;
+            --code-border: rgba(99, 102, 241, 0.2);
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .tool-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .tool-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tool-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+        
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .panel-header h3 {
+            font-size: 1.2rem;
+            color: white;
+            margin: 0;
+        }
+        
+        .flavor-selector {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(10, 10, 15, 0.6);
+            padding: 0.25rem;
+            border-radius: 8px;
+        }
+        
+        .flavor-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .flavor-btn.active {
+            background: var(--tool-primary);
+            color: white;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            background: var(--code-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.875rem;
+            color: white;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group textarea {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .flags-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--tool-primary);
+        }
+        
+        .results-container {
+            background: var(--code-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        
+        .match-highlight {
+            background: rgba(16, 185, 129, 0.3);
+            border-bottom: 2px solid var(--tool-success);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .no-match {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        
+        .match-info {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 3px solid var(--tool-primary);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+        
+        .match-count {
+            color: var(--tool-success);
+            font-weight: 600;
+        }
+        
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid var(--tool-error);
+            padding: 1rem;
+            border-radius: 4px;
+            color: var(--tool-error);
+        }
+        
+        .pattern-library {
+            grid-column: 1 / -1;
+        }
+        
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .pattern-card {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .pattern-card:hover {
+            border-color: var(--tool-primary);
+            transform: translateY(-2px);
+        }
+        
+        .pattern-card h4 {
+            font-size: 0.95rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pattern-card code {
+            display: block;
+            background: var(--code-bg);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--tool-success);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pattern-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+        
+        .cheat-sheet {
+            grid-column: 1 / -1;
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .cheat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .cheat-section h4 {
+            color: var(--tool-secondary);
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .cheat-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cheat-item code {
+            background: var(--code-bg);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--tool-success);
+            flex-shrink: 0;
+        }
+        
+        .cheat-item span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 968px) {
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pattern-library,
+            .cheat-sheet {
+                grid-column: 1;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Regex Tester - Skillor",
+      "description": "Free online regular expression tester supporting JavaScript, PHP/PCRE, and Python flavors with real-time matching and pattern library",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is regex and why do developers use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regex (Regular Expressions) is a pattern-matching language for finding/manipulating text. It allows complex searches impossible with simple string matching. Use cases: 1) Validation (email formats, phone numbers, passwords), 2) Extraction (pull all URLs from text, extract dates, find hashtags), 3) Replace/transform (change date formats, sanitize input, reformat data), 4) Log parsing (extract error codes, filter log levels), 5) Data cleaning (remove special characters, normalize spacing). Example: simple search finds 'cat', regex /c.t/ finds 'cat', 'cut', 'cot'. Power: \\d{3}-\\d{4} matches phone pattern 123-4567. Why essential: saves hours vs manual find-replace, handles edge cases automatically, works across programming languages (JavaScript, Python, Java use similar syntax), industry-standard for text processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I read and understand regex patterns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regex syntax breakdown: Literals: 'cat' matches exactly 'cat'. Character classes: [abc] matches a, b, or c; [0-9] matches any digit; [a-z] matches lowercase letters. Metacharacters: . (any character except newline), \\d (digit), \\w (word character: letter/digit/underscore), \\s (whitespace). Quantifiers: * (0 or more), + (1 or more), ? (0 or 1), {3} (exactly 3), {2,5} (2 to 5). Anchors: ^ (start of string), $ (end of string), \\b (word boundary). Groups: (abc) captures group, (?:abc) non-capturing group, (a|b) matches a OR b. Example: ^\\d{3}-\\d{4}$ reads as: start, 3 digits, dash, 4 digits, end = validates phone XXX-XXXX. Learning strategy: break complex regex into parts, test each part separately, build up gradually. Use regex testers (like this tool) to visualize matches in real-time. Common mistake: forgetting to escape special chars (use \\. to match literal dot)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are regex flags and when should I use them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regex flags modify pattern behavior: g (global) = find ALL matches, not just first. Without g: 'abc abc'.match(/abc/) returns ['abc'] (first only). With g: returns ['abc', 'abc'] (both). Use for: replace all occurrences, count pattern frequency, extract all matches. i (ignore case) = case-insensitive matching. /cat/i matches 'Cat', 'CAT', 'CaT'. Use for: user input validation (email should match 'EMAIL@SITE.COM'), flexible search (find words regardless of capitalization). m (multiline) = ^ and $ match line start/end, not just string start/end. Use for: processing multi-line text, log files, CSV data. s (dotall) = . matches newlines too. Use for: matching across lines, HTML/XML parsing. Combining flags: /pattern/gi = global + case-insensitive. JavaScript: /abc/gi. Python: re.compile('abc', re.I | re.M). Most common combo: /gi for flexible global search. Performance note: g flag required for replaceAll operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I test if my regex works correctly before using it in code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regex testing workflow: 1) Use interactive tester (this tool): paste sample text, enter pattern, see real-time highlights of matches. 2) Test edge cases: valid inputs (should match), invalid inputs (should NOT match), boundary cases (minimum length, maximum length, empty string). 3) Check false positives (pattern matches things it shouldn't) and false negatives (pattern misses things it should match). Example for email validation: Test with: valid@email.com ✓, invalid@.com ✗, name@domain ✗, @domain.com ✗, valid+tag@email.co.uk ✓. 4) Performance testing: test with large text (1000+ lines), watch for catastrophic backtracking (regex hangs), simplify pattern if slow. 5) Cross-language verification: test in target language (JavaScript regex slightly differs from Python/Java), use language-specific testers. Tools: this tool for real-time testing, regex101.com for detailed explanations, regexr.com for visual breakdown. Save tested patterns: document what they match, save in code comments, create regex library for reuse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common regex mistakes and how do I avoid them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top regex pitfalls: 1) Catastrophic backtracking: (a+)+b causes exponential time on 'aaaaa...' without b. Fix: avoid nested quantifiers, use possessive quantifiers, test with large inputs. 2) Greedy vs lazy quantifiers: .* matches TOO much (greedy = takes everything until last match). Solution: use .*? (lazy = stops at first match). 3) Not escaping special chars: . matches any character, \\. matches literal dot. Always escape: \\.\\*\\+\\?\\^\\$\\(\\)\\[\\]\\{\\}\\|\\\\. 4) Incorrect anchors: /\\d{3}/ matches '123' in '123456'. Use ^\\d{3}$ to match exactly 3 digits only. 5) Character class mistakes: [A-z] includes characters between Z and a (like [\\]^_\\`). Use [A-Za-z]. 6) Unicode issues: \\w doesn't match accented characters (café). Use Unicode property escapes: \\p{L} for any letter. Debugging: test one piece at a time, use regex explainer tools, check examples at regexlib.com. When regex gets too complex (nested groups, 100+ chars), consider parsing libraries instead."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../programming.html">Programming</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../programming.html" class="back-link">← Back to Programming Tools</a>
+        
+        <div class="tool-header">
+            <h1>🔍 Regex Tester</h1>
+            <p>Test regular expressions with real-time matching across JS, PHP/PCRE, and Python flavors</p>
+        </div>
+        
+        <div class="tool-grid">
+            <!-- Input Panel -->
+            <div class="tool-panel">
+                <div class="panel-header">
+                    <h3>Pattern & Flags</h3>
+                    <div class="flavor-selector">
+                        <button class="flavor-btn active" data-flavor="javascript">JS</button>
+                        <button class="flavor-btn" data-flavor="php">PHP</button>
+                        <button class="flavor-btn" data-flavor="python">Python</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="regex-pattern">Regular Expression</label>
+                    <input type="text" id="regex-pattern" placeholder="e.g., \d{3}-\d{3}-\d{4}" value="\d{3}-\d{3}-\d{4}">
+                </div>
+                
+                <div class="input-group">
+                    <label>Flags</label>
+                    <div class="flags-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="flag-g" checked>
+                            <span>g (global)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="flag-i">
+                            <span>i (case-insensitive)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="flag-m">
+                            <span>m (multiline)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="flag-s">
+                            <span>s (dotAll)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="test-string">Test String</label>
+                    <textarea id="test-string" placeholder="Enter text to test against your regex...">My phone numbers: 555-123-4567 and 555-987-6543
+Contact: 123-456-7890</textarea>
+                </div>
+            </div>
+            
+            <!-- Results Panel -->
+            <div class="tool-panel">
+                <div class="panel-header">
+                    <h3>Results</h3>
+                </div>
+                
+                <div class="results-container" id="results">
+                    <div class="no-match">Enter a pattern and test string to see matches...</div>
+                </div>
+            </div>
+            
+            <!-- Pattern Library -->
+            <div class="tool-panel pattern-library">
+                <div class="panel-header">
+                    <h3>📚 Pattern Library</h3>
+                </div>
+                
+                <div class="pattern-grid">
+                    <div class="pattern-card" data-pattern="\d{3}-\d{3}-\d{4}">
+                        <h4>Phone Number (US)</h4>
+                        <code>\d{3}-\d{3}-\d{4}</code>
+                        <p>Matches: 555-123-4567</p>
+                    </div>
+                    
+                    <div class="pattern-card" data-pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        <h4>Email Address</h4>
+                        <code>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}</code>
+                        <p>Matches: user@example.com</p>
+                    </div>
+                    
+                    <div class="pattern-card" data-pattern="https?://[^\s]+">
+                        <h4>URL</h4>
+                        <code>https?://[^\s]+</code>
+                        <p>Matches: https://example.com</p>
+                    </div>
+                    
+                    <div class="pattern-card" data-pattern="\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b">
+                        <h4>IP Address</h4>
+                        <code>\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b</code>
+                        <p>Matches: 192.168.1.1</p>
+                    </div>
+                    
+                    <div class="pattern-card" data-pattern="#[0-9A-Fa-f]{6}">
+                        <h4>Hex Color</h4>
+                        <code>#[0-9A-Fa-f]{6}</code>
+                        <p>Matches: #FF5733</p>
+                    </div>
+                    
+                    <div class="pattern-card" data-pattern="^\d{4}-\d{2}-\d{2}$">
+                        <h4>Date (YYYY-MM-DD)</h4>
+                        <code>^\d{4}-\d{2}-\d{2}$</code>
+                        <p>Matches: 2025-10-29</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cheat Sheet -->
+            <div class="cheat-sheet">
+                <h3>📖 Regex Cheat Sheet</h3>
+                <div class="cheat-grid">
+                    <div class="cheat-section">
+                        <h4>Character Classes</h4>
+                        <div class="cheat-item"><code>\d</code><span>Digit (0-9)</span></div>
+                        <div class="cheat-item"><code>\w</code><span>Word character</span></div>
+                        <div class="cheat-item"><code>\s</code><span>Whitespace</span></div>
+                        <div class="cheat-item"><code>.</code><span>Any character</span></div>
+                    </div>
+                    
+                    <div class="cheat-section">
+                        <h4>Quantifiers</h4>
+                        <div class="cheat-item"><code>*</code><span>0 or more</span></div>
+                        <div class="cheat-item"><code>+</code><span>1 or more</span></div>
+                        <div class="cheat-item"><code>?</code><span>0 or 1</span></div>
+                        <div class="cheat-item"><code>{n,m}</code><span>Between n and m</span></div>
+                    </div>
+                    
+                    <div class="cheat-section">
+                        <h4>Anchors</h4>
+                        <div class="cheat-item"><code>^</code><span>Start of string</span></div>
+                        <div class="cheat-item"><code>$</code><span>End of string</span></div>
+                        <div class="cheat-item"><code>\b</code><span>Word boundary</span></div>
+                    </div>
+                    
+                    <div class="cheat-section">
+                        <h4>Groups</h4>
+                        <div class="cheat-item"><code>()</code><span>Capture group</span></div>
+                        <div class="cheat-item"><code>(?:)</code><span>Non-capture group</span></div>
+                        <div class="cheat-item"><code>|</code><span>Alternation (OR)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Regex Tester</h2>
+        <p>Test and debug your regular expressions in real-time. Perfect for developers validating patterns for form validation, data extraction, or text processing:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Enter Your Regex Pattern</h3>
+                <p>Type your regular expression in the pattern field. Use common patterns or click Quick Patterns for email, URL, phone, and date validation templates.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Add Test Text</h3>
+                <p>Paste or type the text you want to match against your pattern. Real-time highlighting shows matches instantly as you type.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Set Flags and Options</h3>
+                <p>Enable global (g), multiline (m), case-insensitive (i), or other flags. View capture groups, match positions, and detailed explanations.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Test and Debug</h3>
+                <p>See live match count and highlighted results. Use the Regex Cheat Sheet for syntax reference. Export working patterns for your code.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What regex flags should I use?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use global (g) to find all matches instead of stopping at the first. Case-insensitive (i) ignores upper/lower case. Multiline (m) treats ^ and $ as matching line starts/ends. Combine flags like /pattern/gi for global case-insensitive matching.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I test email validation patterns?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Use Quick Patterns to insert an email regex, then test with various email formats. Remember that perfect email validation is complex - use reasonable patterns that catch common errors while allowing valid formats.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are capture groups and how do I use them?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Capture groups use parentheses ( ) to extract specific parts of a match. For example, (\d{3})-(\d{3})-(\d{4}) captures area code, prefix, and line number separately. Our tool displays all captured groups with their values.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I match special characters like dots or asterisks?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Escape special regex characters with a backslash: \. for literal dot, \* for asterisk, \+ for plus, etc. Characters like . * + ? [ ] { } ( ) ^ $ | \ have special meaning and must be escaped to match literally.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I save and reuse regex patterns?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Export your tested patterns with the Export button. Patterns are provided in JavaScript, Python, and general regex syntax so you can copy directly into your code.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="json-formatter.html" class="related-tool-card">
+                <h3><span class="tool-icon">{ }</span> JSON Formatter</h3>
+                <p>Validate, format, and beautify JSON data with syntax highlighting and error detection.</p>
+            </a>
+            <a href="api-mock.html" class="related-tool-card">
+                <h3><span class="tool-icon">🔌</span> API Mock Generator</h3>
+                <p>Create fake REST API responses with custom schemas for testing and development.</p>
+            </a>
+            <a href="../english/dictation.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎤</span> English Dictation</h3>
+                <p>Practice pattern recognition in spoken English with multiple accents and speeds.</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Professional-grade tools for developers. Test regex patterns, format JSON, visualize algorithms, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Programming Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./regex-tester.html">Regex Tester</a></li>
+                    <li><a href="./json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="./sorting-visualizer.html">Sorting Visualizer</a></li>
+                    <li><a href="./api-mock.html">API Mock Generator</a></li>
+                    <li><a href="./git-diff.html">Git Diff Highlighter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Regex Tester Logic
+        let currentFlavor = 'javascript';
+        
+        const patternInput = document.getElementById('regex-pattern');
+        const testStringInput = document.getElementById('test-string');
+        const resultsContainer = document.getElementById('results');
+        const flavorBtns = document.querySelectorAll('.flavor-btn');
+        const flagCheckboxes = {
+            g: document.getElementById('flag-g'),
+            i: document.getElementById('flag-i'),
+            m: document.getElementById('flag-m'),
+            s: document.getElementById('flag-s')
+        };
+        
+        // Flavor selection
+        flavorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                flavorBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFlavor = btn.dataset.flavor;
+                testRegex();
+            });
+        });
+        
+        // Pattern library cards
+        document.querySelectorAll('.pattern-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const pattern = card.dataset.pattern;
+                patternInput.value = pattern;
+                testRegex();
+            });
+        });
+        
+        // Real-time testing
+        patternInput.addEventListener('input', testRegex);
+        testStringInput.addEventListener('input', testRegex);
+        Object.values(flagCheckboxes).forEach(checkbox => {
+            checkbox.addEventListener('change', testRegex);
+        });
+        
+        function testRegex() {
+            const pattern = patternInput.value;
+            const testString = testStringInput.value;
+            
+            if (!pattern || !testString) {
+                resultsContainer.innerHTML = '<div class="no-match">Enter both a pattern and test string to see matches...</div>';
+                return;
+            }
+            
+            try {
+                let flags = '';
+                if (flagCheckboxes.g.checked) flags += 'g';
+                if (flagCheckboxes.i.checked) flags += 'i';
+                if (flagCheckboxes.m.checked) flags += 'm';
+                if (flagCheckboxes.s.checked) flags += 's';
+                
+                const regex = new RegExp(pattern, flags);
+                const matches = [...testString.matchAll(regex)];
+                
+                if (matches.length === 0) {
+                    resultsContainer.innerHTML = '<div class="no-match">No matches found</div>';
+                    return;
+                }
+                
+                // Highlight matches
+                let highlightedText = testString;
+                let offset = 0;
+                
+                matches.forEach(match => {
+                    const startIndex = match.index + offset;
+                    const endIndex = startIndex + match[0].length;
+                    const before = highlightedText.slice(0, startIndex);
+                    const matchText = highlightedText.slice(startIndex, endIndex);
+                    const after = highlightedText.slice(endIndex);
+                    
+                    highlightedText = before + `<span class="match-highlight">${escapeHtml(matchText)}</span>` + after;
+                    offset += '<span class="match-highlight"></span>'.length;
+                });
+                
+                let html = `<div style="white-space: pre-wrap; color: rgba(255,255,255,0.9);">${highlightedText}</div>`;
+                html += `<div class="match-info">`;
+                html += `<div><span class="match-count">${matches.length}</span> match${matches.length > 1 ? 'es' : ''} found</div>`;
+                
+                matches.forEach((match, i) => {
+                    html += `<div style="margin-top: 0.5rem; padding: 0.5rem; background: rgba(10,10,15,0.6); border-radius: 4px;">`;
+                    html += `<strong>Match ${i + 1}:</strong> "${escapeHtml(match[0])}" at index ${match.index}`;
+                    if (match.length > 1) {
+                        html += `<br><strong>Groups:</strong> ${match.slice(1).map((g, gi) => `$${gi + 1}: "${escapeHtml(g || '')}"`).join(', ')}`;
+                    }
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
+                resultsContainer.innerHTML = html;
+                
+            } catch (error) {
+                resultsContainer.innerHTML = `<div class="error-message"><strong>Error:</strong> ${escapeHtml(error.message)}</div>`;
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Initial test
+        testRegex();
+    </script>
+</body>
+</html>

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/design/mockup-generator.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Create professional device mockups in seconds. Upload your screenshots and automatically fit them into phone, laptop, or billboard templates with realistic shadows. Download high-quality images for portfolios and presentations.">
+    <meta name="keywords" content="device mockup generator free online, phone mockup maker, laptop screen mockup, screenshot mockup tool, portfolio mockup creator, presentation mockup generator, realistic device frames 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/design/mockup-generator.html">
+    <meta property="og:title" content="Device Mockup Generator - Phone Laptop Billboard Templates">
+    <meta property="og:description" content="Create professional device mockups in seconds. Upload your screenshots and automatically fit them into phone, laptop, or billboard templates with realistic shadows. Download high-quality images for portfolios and presentations.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/design/mockup-generator.html">
+    <meta name="twitter:title" content="Device Mockup Generator - Phone Laptop Billboard Templates">
+    <meta name="twitter:description" content="Create professional device mockups in seconds. Upload your screenshots and automatically fit them into phone, laptop, or billboard templates with realistic shadows. Download high-quality images for portfolios and presentations.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Device Mockup Generator - Phone Laptop Billboard Templates</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Device Mockup Generator – Upload & Download",
+        "description": "Create professional device mockups with drag & drop. Auto-resize screenshots with realistic shadows and reflections. Perfect for portfolios and presentations.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Drag & drop upload",
+            "Auto-resize and fit",
+            "Realistic shadows and reflections",
+            "Phone, laptop, tablet mockups",
+            "High-quality download",
+            "No watermarks",
+            "Instant preview"
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #3b82f6;
+            --tool-secondary: #2563eb;
+            --tool-accent: #1d4ed8;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .upload-zone {
+            border: 3px dashed rgba(59, 130, 246, 0.5);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: rgba(59, 130, 246, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .upload-zone:hover {
+            border-color: var(--tool-primary);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .upload-zone.dragover {
+            border-color: var(--tool-primary);
+            background: rgba(59, 130, 246, 0.2);
+            transform: scale(1.02);
+        }
+        
+        .upload-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .upload-text {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .upload-hint {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .device-selector {
+            margin-bottom: 2rem;
+        }
+        
+        .device-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .device-btn {
+            padding: 1.5rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .device-btn:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .device-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            color: white;
+            border-color: var(--tool-primary);
+        }
+        
+        .device-icon {
+            font-size: 2rem;
+        }
+        
+        .options-section {
+            margin-bottom: 2rem;
+        }
+        
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .option-label {
+            display: block;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: .4s;
+            border-radius: 30px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: var(--tool-primary);
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(30px);
+        }
+        
+        .color-input {
+            width: 100%;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            background: rgba(10, 10, 15, 0.6);
+        }
+        
+        .preview-section {
+            background: #f3f4f6;
+            border-radius: 20px;
+            padding: 3rem;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .mockup-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .device-frame {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* iPhone Mockup */
+        .device-frame.iphone {
+            width: 300px;
+            height: 600px;
+            background: #1f2937;
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .device-frame.iphone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #1f2937;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .device-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+        }
+        
+        .device-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Laptop Mockup */
+        .device-frame.laptop {
+            width: 600px;
+            position: relative;
+        }
+        
+        .laptop-screen {
+            background: #1f2937;
+            border-radius: 12px 12px 0 0;
+            padding: 20px 20px 0 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .laptop-display {
+            width: 100%;
+            aspect-ratio: 16/10;
+            border-radius: 4px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .laptop-base {
+            width: 110%;
+            height: 15px;
+            background: linear-gradient(to bottom, #374151, #1f2937);
+            border-radius: 0 0 8px 8px;
+            margin: 0 -5%;
+        }
+        
+        /* Tablet Mockup */
+        .device-frame.tablet {
+            width: 500px;
+            height: 700px;
+            background: #1f2937;
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Billboard Mockup */
+        .device-frame.billboard {
+            width: 700px;
+            background: #374151;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .billboard-display {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .shadow-overlay {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 30px;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3), transparent);
+            filter: blur(10px);
+        }
+        
+        .reflection-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1));
+            transform: scaleY(-1);
+            opacity: 0.3;
+            filter: blur(2px);
+        }
+        
+        .download-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+        }
+        
+        .download-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .empty-state {
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        .empty-state-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+        
+        @media (max-width: 968px) {
+            .device-frame.laptop,
+            .device-frame.billboard {
+                width: 100%;
+                max-width: 500px;
+            }
+            
+            .preview-section {
+                padding: 2rem 1rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .tool-container {
+                padding: 5rem 3% 2rem;
+            }
+            
+            .device-frame.iphone {
+                width: 250px;
+                height: 500px;
+            }
+            
+            .device-frame.tablet {
+                width: 300px;
+                height: 450px;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What device mockups should I create for my portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essential mockup collection (5-7 mockups per project): Desktop/laptop (1-2 mockups) - shows full website interface, highlight main homepage or dashboard, use MacBook Pro or generic laptop frame (most professional appearance), resolution: 1920×1080 or 2560×1440 screenshot. Mobile phone (2-3 mockups) - critical since 60-70% of web traffic is mobile, show key mobile screens (homepage, main feature, checkout/CTA), use iPhone 14/15 Pro or latest Samsung Galaxy (recognizable, modern), resolution: 390×844 (iPhone) or 360×800 (Android). Tablet (optional, 1 mockup) - bridges desktop and mobile, useful for responsive design showcase, use iPad Pro or iPad Air frame, resolution: 1024×1366 or 820×1180. Multi-device scene (1 mockup) - shows responsive design across devices, 3 devices together (desktop + tablet + phone) displaying same project, creates professional hero image for portfolio. Choose based on project type: Website redesign = desktop + mobile, Mobile app = 2-3 phone mockups showing user flow, Dashboard/SaaS = desktop primary + mobile secondary, E-commerce = mobile primary (shopping on phone) + desktop secondary. Portfolio presentation: Lead with strongest visual (usually desktop for web projects, phone for apps), show 3-5 mockups max per project (more becomes repetitive), vary angles/compositions (flat lay, isometric, angled laptop, hand-holding phone), include context (desk setup, lifestyle scene adds realism). Free mockup sources: Figma community files (thousands of free mockups), Mockup World, Mockuuups Studio (freemium), Smartmockups (free tier). This tool: Generate quick device frames without Photoshop, export high-res PNG for portfolio, combine multiple exports in Figma/Canva for multi-device scene."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make my mockups look realistic and professional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Professional mockup checklist (5 key elements): Use actual screenshots (not placeholder Lorem Ipsum) - clients/recruiters want to see real UI, include realistic content (actual product images, real text, genuine data visualizations), avoid default stock photos that scream 'template', populate interfaces completely (empty states look unfinished). Lighting and shadows - add soft drop shadows (2-4px blur, 20-30% opacity) for depth, use consistent light direction across all mockups, avoid harsh black shadows (unrealistic), subtle shadows = professional, overly dramatic = amateur. Scale and perspective - maintain proper device proportions (iPhone should look iPhone-sized relative to laptop), use subtle perspective tilt (5-10° rotation) for dynamic look, avoid extreme angles (45° makes content unreadable), isometric view (popular for multi-device) adds polish. Background context - clean desk setup (keyboard, coffee cup, notebook) adds realism, or minimal solid color background (white, soft gradient, brand color) for focus, avoid busy backgrounds that distract from UI, nature backgrounds (wood desk, marble) work for lifestyle brands. High resolution exports - minimum 1920px wide for portfolio display, 300 DPI for print (client presentations), PNG format with transparency (allows flexible backgrounds), maintain aspect ratios (don't stretch or squish mockups). What makes mockups look amateur: Pixelated screenshots (always use high-res source images), mismatched device ratios (giant phone next to tiny laptop), floating devices with no shadows (looks cut-and-paste), overly glossy reflections (2010s skeuomorphism trend), cluttered compositions (5+ devices crammed together). Pro tips: Use real brand devices (MacBook, iPhone) over generic frames—more recognizable, show different screens of user flow (not same homepage 3 times), edit screenshots to show 'best state' (full shopping cart, completed profile, active dashboard), add subtle screen glare reflection for realism (10-20% opacity white gradient diagonal across screen). This tool: Start with generated mockup, enhance in Figma/Photoshop with shadows and context, export final composition for portfolio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use these mockups for client presentations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely—mockups are essential for client presentations because they help clients visualize final product before development: Why clients love mockups (vs wireframes/prototypes): Looks real (clients struggle to imagine final product from wireframes, mockups show exactly what they're getting), sets expectations (reduces 'this isn't what I envisioned' surprises later), gets stakeholder buy-in (easier to sell design vision to CEO/board with realistic mockups), sparks productive feedback ('move that button' vs vague 'something feels off'). Client presentation best practices: Show context of use (mobile mockup with hand holding phone for app, laptop on desk for website—helps client imagine user experience), present multiple screens (show user journey: homepage → product page → checkout, not just homepage), include before/after (if redesign, show old vs new side-by-side for impact), use client's actual content (their logo, real product images, actual copy they'll use—increases buy-in). Presentation formats: PDF presentation (Keynote/PowerPoint with mockups as full-screen slides), interactive prototype (Figma/InVision with clickable mockups), live walkthrough (screenshare mockups while explaining design decisions), printed boards (high-res prints for in-person meetings—still valued by enterprise clients). What to avoid: Over-promising (don't show features you can't deliver in budget/timeline), pixel-perfection too early (rough mockups OK for initial concepts, polish for final approval), ignoring technical constraints (showing design that's impossible to build frustrates developers). Mockup iterations: Concept phase (2-3 directions with rough mockups, helps client choose direction), refinement phase (detailed mockups of chosen direction, gather specific feedback), final approval (polished mockups with all real content, client signs off before development). Legal note: If using stock mockup templates (like SmartMockups), check license—most allow commercial use for client work but not reselling mockups themselves. This tool: Free for unlimited client mockups, no watermarks, high-res export, perfect for proposals and presentations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What image resolution should I use for high-quality mockups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Resolution guidelines for different use cases: Web portfolio/presentations (most common) - 1920×1080 minimum (Full HD), 2560×1440 optimal (2K, sharp on retina displays), 3840×2160 if showing fine details (4K, but large file size 5-10MB). Modern screens are high-DPI (retina) so 2K is new standard. Export at 2× actual display size for crisp rendering. Social media sharing - Instagram: 1080×1080 square or 1080×1350 portrait (platform compresses, so start high-res), LinkedIn/Twitter: 1200×630 (optimal for link previews), Behance: 1400px wide minimum (platform recommendation for project images). Always export PNG (not JPG) to preserve quality, especially for text/UI elements. Print presentations (client meetings, posters) - 300 DPI minimum (print standard, calculate: 8×10 inch print = 2400×3000 pixels at 300 DPI), 600 DPI for large-format prints (trade show banners, billboards), use CMYK color mode in Photoshop (print uses different color space than screens), add 0.125-inch bleed (extra image beyond trim for print cutting margin). Device-specific resolutions (for accurate mockups): iPhone 15 Pro: 1179×2556 (capture at actual device resolution), MacBook Pro 16': 3456×2234 (retina), iPad Pro 12.9': 2048×2732, Samsung Galaxy S24: 1080×2340. Capture screenshots at device's native resolution for sharpest mockups. Optimization for web: Compress images with TinyPNG or ImageOptim (reduce file size 70% without visible quality loss), use WebP format (30% smaller than PNG, widely supported), lazy load mockup images (improves page load speed), responsive images with srcset (serve smaller images to mobile visitors). Common mistakes: Upscaling low-res screenshots (creates blurry pixelated mockups—always start with high-res), saving as JPG (compression artifacts ruin UI text and sharp edges), forgetting retina displays (1× resolution looks blurry on modern screens). Pro workflow: Capture screenshots at 2× device resolution OR use design file exports at 2× scale, import into mockup tool at full resolution, export final mockup at 2560px wide minimum, compress for web delivery (keep uncompressed master file). This tool: Upload highest resolution screenshot you have, tool maintains quality, export at desired resolution for your use case."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I show mockups with realistic content or placeholder text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always use realistic content whenever possible—placeholder text (Lorem Ipsum) looks unprofessional and misses opportunities: Why realistic content matters: Demonstrates understanding (shows you researched client's business, not just designed generic template), reveals design flaws (Lorem Ipsum hides problems: real headlines might be 3× longer, product names don't fit, content hierarchy breaks), sets accurate expectations (clients see exactly what their website/app will look like, not idealized placeholder version), increases credibility (portfolio viewers see real problem-solving, not just pretty mockups). What counts as realistic content: Actual text (write real headlines, body copy, button labels for the specific project), real images (client's products, stock photos matching their industry, real user profile photos), genuine data (actual sales numbers for dashboard, real product inventory for e-commerce, authentic social media posts), brand elements (client's logo, real color scheme, actual fonts they use). When placeholder is acceptable: Very early concepts (first draft before client provides content—but replace ASAP), template designs (showing reusable component systems where content varies), spec work/practice projects (you don't have real content—but create believable fake content, not Lorem Ipsum). Creating realistic content when you don't have real data: Research competitor websites (see how others in industry write headlines, describe products), use client's existing content (pull from their current website, marketing materials, social media), generate believable copy (write in client's industry language—'Book Consultation' for healthcare, 'Request Demo' for B2B software, not generic 'Click Here'), use industry-appropriate stock photos (medical images for healthcare, food photography for restaurants, not random landscape photos). Content strategy for portfolio: Personal projects - write your own realistic content showcasing your understanding of UX writing, Client work - always use client's actual content (get approval to show in portfolio), Case studies - show before/after with real content (emphasizes your content strategy skills). Partial solution: Use real headlines/CTAs but Lorem Ipsum for long body text (most important content is readable, body text just fills space visually). This tool: Shows mockup frames—you control screenshot content, so always populate designs with realistic content before generating mockup, results in professional portfolio pieces that demonstrate real-world design thinking, not just visual styling skills."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../design.html">Design</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../design.html" class="back-link">← Back to Design</a>
+        
+        <div class="header-section">
+            <h1>📱 Device Mockup Generator</h1>
+            <p>Upload Screenshots & Create Professional Mockups Instantly</p>
+        </div>
+        
+        <div class="main-grid">
+            <div class="card">
+                <h2 class="card-title">📤 Upload Image</h2>
+                
+                <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Drop image here or click to upload</div>
+                    <div class="upload-hint">PNG, JPG up to 10MB</div>
+                </div>
+                <input type="file" id="file-input" class="file-input" accept="image/*" onchange="handleFileSelect(event)">
+                
+                <div class="device-selector">
+                    <label class="option-label">Select Device</label>
+                    <div class="device-grid">
+                        <button class="device-btn active" onclick="selectDevice('iphone')">
+                            <span class="device-icon">📱</span>
+                            <span>iPhone</span>
+                        </button>
+                        <button class="device-btn" onclick="selectDevice('laptop')">
+                            <span class="device-icon">💻</span>
+                            <span>Laptop</span>
+                        </button>
+                        <button class="device-btn" onclick="selectDevice('tablet')">
+                            <span class="device-icon">📋</span>
+                            <span>Tablet</span>
+                        </button>
+                        <button class="device-btn" onclick="selectDevice('billboard')">
+                            <span class="device-icon">🖼️</span>
+                            <span>Billboard</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="options-section">
+                    <div class="option-group">
+                        <label class="option-label" for="shadow-toggle" id="shadow-label">Add Shadow</label>
+                        <label class="toggle-switch" aria-labelledby="shadow-label">
+                            <input type="checkbox" id="shadow-toggle" checked onchange="toggleShadow()" aria-labelledby="shadow-label">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label class="option-label">
+                    <div class="option-group">
+                        <label class="option-label" for="reflection-toggle" id="reflection-label">Add Reflection</label>
+                        <label class="toggle-switch" aria-labelledby="reflection-label">
+                            <input type="checkbox" id="reflection-toggle" onchange="toggleReflection()" aria-labelledby="reflection-label">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                        <label class="option-label">Background Color</label>
+                        <input type="color" id="bg-color" class="color-input" value="#f3f4f6" onchange="changeBackground(this.value)">
+                    </div>
+                </div>
+                
+                <button class="download-btn" id="download-btn" onclick="downloadMockup()" disabled>
+                    📥 Download Mockup
+                </button>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">👁️ Preview</h2>
+                <div class="preview-section" id="preview-section">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🖼️</div>
+                        <p>Upload an image to see the mockup preview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Mockup Generator</h2>
+        <p>Place your designs into realistic device mockups - iPhone, Laptop, Tablet, or Billboard - with customizable shadows and backgrounds:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Upload Your Design</h3>
+                <p>Drag and drop your screenshot/design image, or click to browse. Supports JPG, PNG, WebP. Works best with clean screenshots at high resolution (1080p+).</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Choose Device Frame</h3>
+                <p>Select iPhone (mobile apps), Laptop (web apps), Tablet (iPad designs), or Billboard (outdoor advertising). Each frame adjusts proportions automatically for realistic look.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Customize Appearance</h3>
+                <p>Toggle shadows for depth, add reflection for premium feel, change background color/gradient. Experiment to match your presentation style.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Download Mockup</h3>
+                <p>Right-click mockup and "Save Image As..." (or integrate html2canvas library for automatic download). Use in portfolios, presentations, or client proposals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What image size should I upload?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        For iPhone: 1170x2532px or similar 9:19.5 ratio. Laptop: 1920x1080px (16:9). Tablet: 2048x2732px (3:4). Billboard: any horizontal HD image. Higher resolution = better quality mockup. Tool auto-scales your image to fit the device frame.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use mockups commercially?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Generated mockups are yours to use in client presentations, portfolios, social media marketing, etc. No attribution required. However, ensure you have rights to the design/screenshot you're placing in the mockup.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Why use mockups instead of plain screenshots?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Mockups add context and professionalism. Plain screenshot = amateur. Device mockup = polished, portfolio-ready. They help clients visualize final product and increase perceived value of your work by 40-50% in client presentations.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I batch process multiple images?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Currently one image at a time. For batches, upload first design, download mockup, then upload next. This ensures each mockup gets full attention for perfect framing. Most users need 3-5 mockups per project.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What background colors work best?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Light gray/white for clean, professional look (portfolios). Dark backgrounds for dramatic, premium feel (product launches). Gradients for modern, eye-catching style (social media). Match background to where mockup will be used.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="social-media-kit.html" class="related-tool-card">
+                <h3><span class="tool-icon">📱</span> Social Media Kit</h3>
+                <p>Create social media posts to showcase your mockups online.</p>
+            </a>
+            <a href="../ai-tools/meme-creator.html" class="related-tool-card">
+                <h3><span class="tool-icon">😄</span> Meme Creator</h3>
+                <p>Add text overlays to mockups for promotional or humorous content.</p>
+            </a>
+            <a href="../career/resume-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📄</span> Resume Builder</h3>
+                <p>Add mockup images to your portfolio resume to showcase projects.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.1); margin: 2rem 0;"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="footer-year"></span> Skillor. All rights reserved. Built with ❤️ for learners.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        
+        let uploadedImage = null;
+        let currentDevice = 'iphone';
+        let hasShadow = true;
+        let hasReflection = false;
+        
+        // Drag and drop
+        const uploadZone = document.getElementById('upload-zone');
+        
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+        
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+        
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleFile(file);
+            }
+        });
+        
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+        
+        function handleFile(file) {
+            const reader = new FileReader();
+            
+            reader.onload = (e) => {
+                uploadedImage = e.target.result;
+                renderMockup();
+                document.getElementById('download-btn').disabled = false;
+                
+                if (window.Skillor && window.Skillor.showNotification) {
+                    window.Skillor.showNotification('Image uploaded successfully!', 'success');
+                }
+            };
+            
+            reader.readAsDataURL(file);
+        }
+        
+        function selectDevice(device) {
+            currentDevice = device;
+            document.querySelectorAll('.device-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.device-btn').classList.add('active');
+            
+            if (uploadedImage) {
+                renderMockup();
+            }
+        }
+        
+        function toggleShadow() {
+            hasShadow = document.getElementById('shadow-toggle').checked;
+            if (uploadedImage) renderMockup();
+        }
+        
+        function toggleReflection() {
+            hasReflection = document.getElementById('reflection-toggle').checked;
+            if (uploadedImage) renderMockup();
+        }
+        
+        function changeBackground(color) {
+            document.getElementById('preview-section').style.background = color;
+        }
+        
+        function renderMockup() {
+            const preview = document.getElementById('preview-section');
+            
+            let mockupHTML = '';
+            
+            switch(currentDevice) {
+                case 'iphone':
+                    mockupHTML = `
+                        <div class="mockup-container">
+                            <div class="device-frame iphone">
+                                <div class="device-screen">
+                                    <img src="${uploadedImage}" alt="Preview">
+                                </div>
+                            </div>
+                            ${hasShadow ? '<div class="shadow-overlay"></div>' : ''}
+                            ${hasReflection ? '<div class="reflection-overlay"></div>' : ''}
+                        </div>
+                    `;
+                    break;
+                    
+                case 'laptop':
+                    mockupHTML = `
+                        <div class="mockup-container">
+                            <div class="device-frame laptop">
+                                <div class="laptop-screen">
+                                    <div class="laptop-display">
+                                        <img src="${uploadedImage}" alt="Preview">
+                                    </div>
+                                </div>
+                                <div class="laptop-base"></div>
+                            </div>
+                            ${hasShadow ? '<div class="shadow-overlay"></div>' : ''}
+                        </div>
+                    `;
+                    break;
+                    
+                case 'tablet':
+                    mockupHTML = `
+                        <div class="mockup-container">
+                            <div class="device-frame tablet">
+                                <div class="device-screen">
+                                    <img src="${uploadedImage}" alt="Preview">
+                                </div>
+                            </div>
+                            ${hasShadow ? '<div class="shadow-overlay"></div>' : ''}
+                            ${hasReflection ? '<div class="reflection-overlay"></div>' : ''}
+                        </div>
+                    `;
+                    break;
+                    
+                case 'billboard':
+                    mockupHTML = `
+                        <div class="mockup-container">
+                            <div class="device-frame billboard">
+                                <div class="billboard-display">
+                                    <img src="${uploadedImage}" alt="Preview">
+                                </div>
+                            </div>
+                            ${hasShadow ? '<div class="shadow-overlay"></div>' : ''}
+                        </div>
+                    `;
+                    break;
+            }
+            
+            preview.innerHTML = mockupHTML;
+        }
+        
+        function downloadMockup() {
+            const mockupContainer = document.querySelector('.mockup-container');
+            
+            if (!mockupContainer) {
+                alert('Please upload an image first!');
+                return;
+            }
+            
+            // Using html2canvas would be ideal here, but for simplicity:
+            alert('To download: Right-click the mockup and select "Save Image As..." \n\nFor production, integrate html2canvas library for automatic download.');
+            
+            // Production code would use:
+            // html2canvas(mockupContainer).then(canvas => {
+            //     const link = document.createElement('a');
+            //     link.download = `mockup-${currentDevice}.png`;
+            //     link.href = canvas.toDataURL();
+            //     link.click();
+            // });
+        }
+    </script>
+</body>
+</html>

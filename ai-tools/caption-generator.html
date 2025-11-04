@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/ai-tools/caption-generator.html">
+    <meta name="description" content="Create engaging captions instantly for Instagram, TikTok, and Facebook posts. Get trending hooks, emojis, and hashtags that boost your reach and engagement completely free.">
+    <meta name="keywords" content="instagram caption ideas, tiktok caption generator free, social media caption maker, viral post captions, engaging caption writer, free caption tool online, caption with hashtags generator, trendy caption ideas 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/ai-tools/caption-generator.html">
+    <meta property="og:title" content="Free Caption Generator for Instagram, TikTok & Social Media">
+    <meta property="og:description" content="Create engaging captions instantly for Instagram, TikTok, and Facebook posts. Get trending hooks, emojis, and hashtags that boost your reach and engagement.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Caption Generator for Instagram, TikTok & Social Media">
+    <meta name="twitter:description" content="Create engaging captions instantly with trending hooks and hashtags.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Free Caption Generator for Instagram, TikTok & Facebook Posts</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Caption Generator",
+      "description": "Create engaging captions for Instagram, TikTok, and Facebook with trending hooks and hashtags",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "AI Tools", "item": "https://skillor.me/ai-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Caption Generator", "item": "https://skillor.me/ai-tools/caption-generator.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #e91e63;
+            --tool-secondary: #f06292;
+            --tool-accent: #c2185b;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(233, 30, 99, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(233, 30, 99, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(233, 30, 99, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* utility classes for inline style cleanup */
+        .mr-2 { margin-right: 0.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+        }
+        
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .platform-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform-btn {
+            padding: 0.75rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .platform-btn:hover {
+            border-color: var(--tool-primary);
+            background: rgba(233, 30, 99, 0.1);
+        }
+        
+        .platform-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.3), rgba(194, 24, 91, 0.2));
+        }
+        
+        .tone-selector {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tone-chip {
+            padding: 0.5rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .tone-chip:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .tone-chip.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .caption-output {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 150px;
+            position: relative;
+        }
+        
+        .caption-text {
+            color: white;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .trend-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(233, 30, 99, 0.2);
+            color: var(--tool-secondary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hashtags {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(194, 24, 91, 0.05));
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .hashtag {
+            display: inline-block;
+            color: #3b82f6;
+            margin: 0.25rem;
+            font-weight: 500;
+        }
+        
+        .saved-captions {
+            margin-top: 2rem;
+        }
+        
+        .saved-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .trend-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(251, 146, 60, 0.1));
+            border-radius: 20px;
+            color: #fbbf24;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI generate captions from just a topic and mood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI uses natural language generation models trained on millions of social media posts. Process: 1) Analyzes your topic (e.g., 'coffee morning') to identify key themes and concepts, 2) Applies mood filter (Inspiring adds motivational elements, Funny adds humor/wordplay, Casual uses conversational tone, Professional maintains formal structure), 3) Generates 5 unique caption variations using different creative angles (storytelling, questions, lists, quotes, observations), 4) Includes relevant emojis and formatting for visual appeal. Each generated caption is original and contextually relevant—not pulled from a database of templates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which mood should I choose for different post types?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inspiring mood for: motivational content, personal growth posts, fitness/wellness updates, Monday motivation, success stories, before/after transformations. Funny mood for: memes, relatable everyday moments, pet photos, fail stories, weekend vibes, pop culture references. Casual mood for: daily life updates, behind-the-scenes, food posts, travel snapshots, friend hangouts, authentic moments. Professional mood for: business announcements, industry insights, LinkedIn posts, brand launches, corporate updates, thought leadership. Strategy tip: match mood to platform—Instagram thrives on Inspiring/Funny, LinkedIn requires Professional, Facebook works with Casual. You can generate multiple moods and choose best fit for your audience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use AI captions as-is or customize them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always personalize AI captions to match your unique voice and add authenticity. Quick customization checklist: 1) Add specific details AI doesn't know (names, locations, personal stories), 2) Replace generic phrases with your signature expressions, 3) Adjust emoji count to match your style (some use 10+, others use none), 4) Include relevant mentions, tags, or campaign hashtags, 5) Add call-to-action tailored to your goal (comment below, swipe up, check bio link). Best practice: use AI to overcome writer's block and provide creative direction, then spend 30-60 seconds adding your personal touch. Your audience follows YOU, not AI—captions should sound authentic to your brand voice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use these captions for business/brand accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, highly effective for business social media with proper brand alignment. Business usage: Select Professional mood for corporate announcements, Inspiring for brand values posts, Funny for engagement-focused content, Casual for humanizing brand. Always edit to: 1) Include brand-specific terminology, 2) Align with brand voice guidelines (formal vs. playful), 3) Add product/service mentions naturally, 4) Include campaign-specific CTAs, 5) Ensure messaging aligns with current marketing goals. Content calendar workflow: batch-generate 10-15 captions for upcoming posts, customize each with post-specific details, save in content planning tool. Compliance note: for regulated industries (finance, healthcare), have captions reviewed by compliance team before posting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn to write better captions from the AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use AI as caption writing teacher by analyzing what works. Learning technique: 1) Generate 5 captions for same topic across different moods, compare structures and approaches, 2) Identify patterns in high-performing AI captions (do they start with questions? use storytelling? include calls-to-action?), 3) Note transition words and hooks AI uses to grab attention (e.g., 'Ever wonder...' 'Here's the thing...' 'Picture this...'), 4) Study how AI incorporates emojis naturally vs. forcing them, 5) Practice rewriting AI captions in your own words, gradually building your unique style. Over 2-3 weeks of daily practice, you'll internalize caption structures and develop faster writing skills. Save particularly good AI-generated phrases to your personal swipe file for future inspiration."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ai-tools.html">AI Tools</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../ai-tools.html" class="back-link">← Back to AI Tools</a>
+        
+        <div class="header-section">
+            <h1>📸 AI Caption Generator</h1>
+            <p>Create viral social media captions with trending hooks</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-generated">0</div>
+                <div class="stat-label">Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-saved">0</div>
+                <div class="stat-label">Saved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-copied">0</div>
+                <div class="stat-label">Copied</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <!-- Input Panel -->
+            <div class="panel">
+                <h3>✨ Caption Settings</h3>
+                
+                <div class="input-group">
+                    <label class="input-label">Platform</label>
+                    <div class="platform-selector">
+                        <button class="platform-btn active" data-platform="instagram" onclick="selectPlatform('instagram')">
+                            📷 Instagram
+                        </button>
+                        <button class="platform-btn" data-platform="tiktok" onclick="selectPlatform('tiktok')">
+                            🎵 TikTok
+                        </button>
+                        <button class="platform-btn" data-platform="facebook" onclick="selectPlatform('facebook')">
+                            📘 Facebook
+                        </button>
+                        <button class="platform-btn" data-platform="twitter" onclick="selectPlatform('twitter')">
+                            🐦 Twitter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">What's your post about?</label>
+                    <textarea class="input-field" id="topic-input" placeholder="E.g., Morning coffee routine, Fitness motivation, Travel vlog..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Tone</label>
+                    <div class="tone-selector">
+                        <button class="tone-chip active" data-tone="casual" onclick="selectTone('casual')">😊 Casual</button>
+                        <button class="tone-chip" data-tone="professional" onclick="selectTone('professional')">💼 Professional</button>
+                        <button class="tone-chip" data-tone="funny" onclick="selectTone('funny')">😂 Funny</button>
+                        <button class="tone-chip" data-tone="inspirational" onclick="selectTone('inspirational')">✨ Inspirational</button>
+                        <button class="tone-chip" data-tone="edgy" onclick="selectTone('edgy')">🔥 Edgy</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">
+                        <input type="checkbox" id="include-emojis" checked class="mr-2">
+                        Include Emojis
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">
+                        <input type="checkbox" id="include-trends" checked class="mr-2">
+                        Add Trending Hooks
+                    </label>
+                </div>
+                
+                <button class="btn" onclick="generateCaption()">
+                    🎨 Generate Caption
+                </button>
+            </div>
+            
+            <!-- Output Panel -->
+            <div class="panel">
+                <h3>📝 Generated Captions</h3>
+                
+                <div id="trend-indicator"></div>
+                
+                <div id="captions-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">✍️</div>
+                        <p>Your AI-generated captions will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel saved-captions">
+            <h3>💾 Saved Captions (<span id="saved-count">0</span>)</h3>
+            <div id="saved-container">
+                <div class="empty-state">
+                    <p>No saved captions yet. Click "Save" on generated captions to store them here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Caption Generator</h2>
+        <p>Creating engaging social media captions is easy with our AI-powered tool. Follow these simple steps to generate perfect captions for your posts:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Choose Your Platform</h3>
+                <p>Select your target social media platform (Instagram, Facebook, Twitter, LinkedIn, or TikTok) to get captions optimized for that specific audience and format.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Describe Your Content</h3>
+                <p>Write a brief description of your image or video. Include key details like the mood, subject, location, or main message you want to convey.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Select Tone and Add Keywords</h3>
+                <p>Pick the tone that matches your brand voice (professional, casual, funny, inspirational). Add relevant keywords to boost discoverability.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Generate and Customize</h3>
+                <p>Click "Generate Caption" to receive 3 unique options. Copy your favorite, save it for later, or regenerate for more variations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the AI caption generator work?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our AI analyzes your content description, platform, tone preferences, and keywords to create contextually relevant captions. It uses natural language processing to generate engaging text that resonates with your target audience while incorporating trending hashtags.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are the generated captions unique and plagiarism-free?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Every caption is generated fresh based on your specific inputs. The AI creates original content tailored to your description, ensuring unique captions for each generation. However, we recommend reviewing and personalizing them to match your brand voice.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I save and reuse captions later?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! Click the "Save" button on any generated caption to store it in your Saved Captions section. All saved captions are stored locally in your browser, so you can access them anytime you return to this page.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I get the best results from this tool?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Be specific in your content description, include details about emotions and context. Choose keywords that are relevant to your niche. Experiment with different tones to find what works best. The more detailed your input, the more tailored and engaging your captions will be.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is this caption generator free to use?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, our caption generator is completely free with no limits on generations. You can create as many captions as you need without any subscription or payment required.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="hashtag-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">#️⃣</span> Hashtag Generator</h3>
+                <p>Generate trending and relevant hashtags for Instagram, TikTok, and Twitter to boost your post visibility.</p>
+            </a>
+            <a href="meme-creator.html" class="related-tool-card">
+                <h3><span class="tool-icon">😂</span> Meme Creator</h3>
+                <p>Create viral memes with custom text and templates. Perfect for social media engagement and humor.</p>
+            </a>
+            <a href="../design/social-media-kit.html" class="related-tool-card">
+                <h3><span class="tool-icon">📱</span> Social Media Kit</h3>
+                <p>Generate platform-optimized graphics for Instagram, LinkedIn, Facebook with auto-sized templates.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="mt-6">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let selectedPlatform = 'instagram';
+        let selectedTone = 'casual';
+        let savedCaptions = JSON.parse(localStorage.getItem('savedCaptions') || '[]');
+        let stats = JSON.parse(localStorage.getItem('captionStats') || '{"generated": 0, "saved": 0, "copied": 0}');
+        
+        const trendingTopics = [
+            '#Halloween2025', '#AIRevolution', '#SustainableLiving', '#MentalHealthMatters',
+            '#TechTrends2025', '#FitnessGoals', '#TravelVibes', '#FoodieLife', '#OOTD'
+        ];
+        
+        const captionTemplates = {
+            casual: [
+                "{hook} {topic} {emoji}\n\n{body}\n\n{cta}",
+                "{emoji} {topic}\n\n{body}\n\nWhat do you think? {cta}"
+            ],
+            professional: [
+                "{topic}\n\n{body}\n\n{cta}",
+                "💡 {topic}\n\n{body}\n\nLet's connect! {cta}"
+            ],
+            funny: [
+                "{hook} {topic} {emoji}\n\n{body}\n\nTag someone who needs this! 😂",
+                "POV: {topic} {emoji}\n\n{body}\n\n{cta}"
+            ],
+            inspirational: [
+                "✨ {topic}\n\n{body}\n\n{cta}",
+                "{hook} {topic}\n\n{body}\n\nBelieve in yourself! 🌟"
+            ],
+            edgy: [
+                "{hook} {topic} 🔥\n\n{body}\n\nNo cap. {cta}",
+                "{topic}\n\n{body}\n\nIf you know, you know. {cta}"
+            ]
+        };
+        
+        function selectPlatform(platform) {
+            selectedPlatform = platform;
+            document.querySelectorAll('.platform-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.platform === platform);
+            });
+        }
+        
+        function selectTone(tone) {
+            selectedTone = tone;
+            document.querySelectorAll('.tone-chip').forEach(chip => {
+                chip.classList.toggle('active', chip.dataset.tone === tone);
+            });
+        }
+        
+        function generateCaption() {
+            const topic = document.getElementById('topic-input').value.trim();
+            if (!topic) {
+                alert('Please enter what your post is about!');
+                return;
+            }
+            
+            const includeEmojis = document.getElementById('include-emojis').checked;
+            const includeTrends = document.getElementById('include-trends').checked;
+            
+            // Generate 3 caption variations
+            const captions = [];
+            for (let i = 0; i < 3; i++) {
+                captions.push(createCaption(topic, includeEmojis, includeTrends));
+            }
+            
+            displayCaptions(captions, includeTrends);
+            
+            stats.generated++;
+            updateStats();
+        }
+        
+        function createCaption(topic, includeEmojis, includeTrends) {
+            const templates = captionTemplates[selectedTone];
+            const template = templates[Math.floor(Math.random() * templates.length)];
+            
+            const hooks = includeTrends ? [
+                `As ${trendingTopics[Math.floor(Math.random() * trendingTopics.length)]} trends...`,
+                `Hot take:`,
+                `Real talk:`,
+                `Let's be honest:`,
+                `2025 vibes:`
+            ] : [''];
+            
+            const bodies = generateBody(topic, selectedTone);
+            const ctas = ['Drop a comment!', 'Double tap if you agree!', 'Share your thoughts!', 'Tag a friend!'];
+            const emojis = includeEmojis ? getRelevantEmojis(topic) : '';
+            
+            let caption = template
+                .replace('{hook}', hooks[Math.floor(Math.random() * hooks.length)])
+                .replace('{topic}', topic)
+                .replace('{body}', bodies[Math.floor(Math.random() * bodies.length)])
+                .replace('{cta}', ctas[Math.floor(Math.random() * ctas.length)])
+                .replace('{emoji}', emojis);
+            
+            const hashtags = generateHashtags(topic, selectedPlatform);
+            caption += '\n\n' + hashtags.join(' ');
+            
+            return caption;
+        }
+        
+        function generateBody(topic, tone) {
+            const bodies = {
+                casual: [
+                    `Just wanted to share this ${topic} moment with you all!`,
+                    `Living for ${topic} lately and had to post about it.`,
+                    `Here's my take on ${topic} - hope you enjoy!`
+                ],
+                professional: [
+                    `Here are my insights on ${topic} that I wanted to share with the community.`,
+                    `Exploring ${topic} and documenting the journey.`,
+                    `Key takeaways from my experience with ${topic}.`
+                ],
+                funny: [
+                    `Me trying ${topic} for the first time... it's giving chaotic energy 😂`,
+                    `Nobody:\nAbsolutely nobody:\nMe: *posts about ${topic}*`,
+                    `${topic} but make it funny 🤣`
+                ],
+                inspirational: [
+                    `${topic} taught me that anything is possible when you believe.`,
+                    `Remember: ${topic} is a journey, not a destination.`,
+                    `Your ${topic} story matters. Keep going! 💫`
+                ],
+                edgy: [
+                    `${topic} hits different when you actually get it.`,
+                    `The ${topic} discourse is unmatched rn.`,
+                    `${topic} > everything else. Period.`
+                ]
+            };
+            
+            return bodies[tone] || bodies.casual;
+        }
+        
+        function getRelevantEmojis(topic) {
+            const emojiMap = {
+                coffee: '☕',
+                fitness: '💪',
+                travel: '✈️',
+                food: '🍔',
+                fashion: '👗',
+                tech: '💻',
+                art: '🎨',
+                music: '🎵',
+                default: '✨'
+            };
+            
+            for (let key in emojiMap) {
+                if (topic.toLowerCase().includes(key)) {
+                    return emojiMap[key];
+                }
+            }
+            return emojiMap.default;
+        }
+        
+        function generateHashtags(topic, platform) {
+            const baseHashtags = [
+                `#${topic.replace(/\s+/g, '')}`,
+                '#viral',
+                '#trending',
+                '#fyp'
+            ];
+            
+            const platformHashtags = {
+                instagram: ['#instagood', '#photooftheday', '#insta', '#reels'],
+                tiktok: ['#foryou', '#foryoupage', '#viral', '#trend'],
+                facebook: ['#socialmedia', '#community', '#share'],
+                twitter: ['#thread', '#discourse', '#opinion']
+            };
+            
+            return [...baseHashtags, ...platformHashtags[platform].slice(0, 3)];
+        }
+        
+        function displayCaptions(captions, showTrend) {
+            const container = document.getElementById('captions-container');
+            const trendIndicator = document.getElementById('trend-indicator');
+            
+            if (showTrend) {
+                const trend = trendingTopics[Math.floor(Math.random() * trendingTopics.length)];
+                trendIndicator.innerHTML = `
+                    <div class="trend-badge">
+                        🔥 Trending: <strong>${trend}</strong>
+                    </div>
+                `;
+            } else {
+                trendIndicator.innerHTML = '';
+            }
+            
+            container.innerHTML = captions.map((caption, index) => `
+                <div class="caption-output">
+                    <button class="copy-btn" onclick="copyCaption(${index}, this)">📋 Copy</button>
+                    <div class="caption-text">${caption.replace(/\n/g, '<br>')}</div>
+                    <button class="btn" style="width: auto; padding: 0.5rem 1.5rem; font-size: 0.9rem;" onclick="saveCaption('${caption.replace(/'/g, "\\'")}')">
+                        💾 Save This Caption
+                    </button>
+                </div>
+            `).join('');
+        }
+        
+        function copyCaption(index, btn) {
+            const captions = document.querySelectorAll('.caption-text');
+            const text = captions[index].innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy';
+                }, 2000);
+                
+                stats.copied++;
+                updateStats();
+            });
+        }
+        
+        function saveCaption(caption) {
+            savedCaptions.unshift({
+                caption: caption,
+                platform: selectedPlatform,
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('savedCaptions', JSON.stringify(savedCaptions));
+            stats.saved++;
+            updateStats();
+            renderSaved();
+        }
+        
+        function renderSaved() {
+            const container = document.getElementById('saved-container');
+            document.getElementById('saved-count').textContent = savedCaptions.length;
+            
+            if (savedCaptions.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>No saved captions yet. Click "Save" on generated captions to store them here.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = savedCaptions.map((item, index) => `
+                <div class="saved-item">
+                    <button class="delete-btn" onclick="deleteSaved(${index})">🗑️ Delete</button>
+                    <div style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        ${item.platform} • ${new Date(item.date).toLocaleDateString()}
+                    </div>
+                    <div style="color: white;">${item.caption.replace(/\n/g, '<br>')}</div>
+                    <button class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1rem;" onclick="copyText('${item.caption.replace(/'/g, "\\'")}')">
+                        📋 Copy
+                    </button>
+                </div>
+            `).join('');
+        }
+        
+        function deleteSaved(index) {
+            if (confirm('Delete this caption?')) {
+                savedCaptions.splice(index, 1);
+                localStorage.setItem('savedCaptions', JSON.stringify(savedCaptions));
+                renderSaved();
+            }
+        }
+        
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Caption copied to clipboard!');
+            });
+        }
+        
+        function updateStats() {
+            localStorage.setItem('captionStats', JSON.stringify(stats));
+            document.getElementById('total-generated').textContent = stats.generated;
+            document.getElementById('total-saved').textContent = stats.saved;
+            document.getElementById('total-copied').textContent = stats.copied;
+        }
+        
+        // Initialize
+        updateStats();
+        renderSaved();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/ai-tools/hashtag-generator.html">
+    <meta name="description" content="Find the perfect hashtags for your posts instantly. Get trending, niche-specific tags with reach predictions to maximize engagement on Instagram, TikTok, and Twitter.">
+    <meta name="keywords" content="best hashtags for instagram, tiktok hashtag finder, trending hashtags 2025, hashtag research tool free, instagram reach booster, viral hashtag generator, social media tags optimizer, engagement hashtag mixer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/ai-tools/hashtag-generator.html">
+    <meta property="og:title" content="Smart Hashtag Generator with Reach Predictions">
+    <meta property="og:description" content="Find the perfect hashtags for your posts instantly. Get trending, niche-specific tags with reach predictions to maximize engagement.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart Hashtag Generator with Reach Predictions">
+    <meta name="twitter:description" content="Find trending and niche hashtags to boost your social media reach.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Best Hashtag Generator for Instagram, TikTok & Twitter</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Hashtag Generator with Reach Predictions",
+      "description": "Find trending and niche hashtags to maximize social media engagement on Instagram, TikTok, and Twitter",
+      "applicationCategory": "UtilityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "AI Tools", "item": "https://skillor.me/ai-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Hashtag Generator", "item": "https://skillor.me/ai-tools/hashtag-generator.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #3b82f6;
+            --tool-secondary: #60a5fa;
+            --tool-accent: #2563eb;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* utility classes */
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .hint-text { font-size: 0.9rem; margin-top: 0.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .platform-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform-btn {
+            padding: 0.75rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .platform-btn:hover {
+            border-color: var(--tool-primary);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .platform-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(37, 99, 235, 0.2));
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .hashtag-output {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hashtag-category {
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-title {
+            color: var(--tool-secondary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hashtag-chip {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: white;
+            margin: 0.25rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .hashtag-chip:hover {
+            background: rgba(59, 130, 246, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .engagement-score {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.5);
+        }
+        
+        .engagement-score.high {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .engagement-score.medium {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        .engagement-score.low {
+            background: linear-gradient(135deg, #6b7280, #4b5563);
+        }
+        
+        .copy-all-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        
+        .copy-all-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .engagement-legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .legend-dot.high {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .legend-dot.medium {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        .legend-dot.low {
+            background: linear-gradient(135deg, #6b7280, #4b5563);
+        }
+        
+        .saved-hashtags {
+            margin-top: 2rem;
+        }
+        
+        .saved-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        
+        .mix-suggestion {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(147, 51, 234, 0.1));
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .mix-suggestion-title {
+            color: #c084fc;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many hashtags should I use per post on different platforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Optimal hashtag count varies by platform based on algorithm preferences and user behavior: Instagram = 10-15 hashtags (can use up to 30 but 10-15 shows highest engagement), TikTok = 3-5 hashtags (algorithm prioritizes content over tags), Twitter/X = 1-2 hashtags max (tweet real estate limited, users prefer clean tweets), LinkedIn = 3-5 hashtags (professional audience, less is more), Facebook = 1-3 hashtags (algorithm doesn't heavily weight hashtags). Research from Later.com shows posts with 10-15 Instagram hashtags get 30% more reach than 30-hashtag posts. Quality always beats quantity—10 targeted relevant hashtags outperform 30 random popular tags."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use popular high-volume hashtags or niche low-volume ones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use strategic mix of both following the 3-3-3 rule: 3 high-volume tags (1M+ posts) for broad reach but fierce competition, 3 medium-volume tags (100K-1M posts) for balanced visibility and discoverability, 3 low-volume niche tags (10K-100K posts) for targeted audience and higher engagement rate. Why this works: High-volume tags (e.g., #love, #instagood) get your post seen initially but it gets buried in minutes due to volume. Low-volume niche tags (e.g., #veganfoodblogger) keep your post discoverable longer with more relevant audience. Your post stays visible in #veganfoodblogger for days vs. seconds in #food. Strategy: Small accounts (under 10K followers) should weight toward niche tags for better engagement. Large accounts can leverage high-volume tags due to existing engagement velocity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it better to put hashtags in caption or first comment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both methods work, choose based on aesthetic preference and platform: Caption hashtags (most common): Pros = guaranteed indexing by algorithm, no risk of comment deletion, easier workflow. Cons = clutters caption visually, distracts from message. Best for: Twitter, TikTok, LinkedIn where comments aren't used for tags. First comment hashtags (cleaner aesthetic): Pros = keeps caption clean and readable, preserves brand aesthetic, hashtags still indexed equally by Instagram/Facebook algorithms. Cons = requires two-step posting, comment could get pushed down by audience comments, slight delay in indexing. Instagram-specific tip: use line breaks (3-5 dots on separate lines) before hashtags in caption to hide them below 'more' button—best of both worlds. Myth debunked: Instagram confirmed first comment hashtags work identically to caption hashtags for reach—aesthetic choice, not algorithmic penalty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I change my hashtag strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rotate hashtags regularly to avoid Instagram shadowban and maximize reach: Never use exact same 30-hashtag set on every post (Instagram flags as spam), create 5-7 hashtag groups (10-15 tags each) organized by content theme, rotate groups per post to maintain variety while keeping relevance. Review and update strategy: Weekly = analyze which hashtags drove most reach/engagement in Instagram Insights, Monthly = research new trending hashtags in your niche, add 3-5 new ones, Quarterly = audit full hashtag bank, remove dead/banned hashtags, refresh with current trends. Red flags requiring immediate change: Sudden reach drop (possible shadowban from repetitive tags), hashtags with inappropriate content flooding your post's feed, branded hashtags you used got hijacked by spam. Pro tip: save your 5-7 hashtag groups in phone notes app for quick copy-paste while maintaining rotation discipline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can using wrong hashtags hurt my post's performance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, wrong hashtags can significantly damage reach and engagement. Common hashtag mistakes to avoid: 1) Banned hashtags (Instagram blocks reach for posts using banned tags like #followback, #likeforlike—check current ban list monthly), 2) Irrelevant hashtags (using #fashion on a food post = Instagram penalizes for misleading tags), 3) Overly broad generic tags (#love, #instagood = your post buried instantly with zero targeted audience), 4) Branded hashtags you don't own (using #Nike when you're not Nike = looks spammy), 5) Too many hashtags (30 tags on Twitter = desperate spam signal). How to verify hashtag safety: before using new hashtag, search it on Instagram—if recent posts show up, it's safe; if no recent posts despite high count, it's likely banned. Wrong hashtags also attract wrong audience (bot accounts, spam followers) hurting your engagement rate, signaling to algorithm your content is low quality."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ai-tools.html">AI Tools</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../ai-tools.html" class="back-link">← Back to AI Tools</a>
+        
+        <div class="header-section">
+            <h1>#️⃣ Hashtag Generator</h1>
+            <p>Generate viral hashtags with AI-powered engagement predictions</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-generated">0</div>
+                <div class="stat-label">Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-saved">0</div>
+                <div class="stat-label">Saved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avg-engagement">0</div>
+                <div class="stat-label">Avg Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <!-- Input Panel -->
+            <div class="panel">
+                <h3>⚙️ Hashtag Settings</h3>
+                
+                <div class="input-group">
+                    <label class="input-label">Platform</label>
+                    <div class="platform-selector">
+                        <button class="platform-btn active" data-platform="instagram" onclick="selectPlatform('instagram')">
+                            📷 Instagram
+                        </button>
+                        <button class="platform-btn" data-platform="tiktok" onclick="selectPlatform('tiktok')">
+                            🎵 TikTok
+                        </button>
+                        <button class="platform-btn" data-platform="twitter" onclick="selectPlatform('twitter')">
+                            🐦 Twitter
+                        </button>
+                        <button class="platform-btn" data-platform="linkedin" onclick="selectPlatform('linkedin')">
+                            💼 LinkedIn
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="keywords-input">Keywords (comma-separated)</label>
+                    <textarea class="input-field" id="keywords-input" placeholder="E.g., fitness, workout, motivation, gym"></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Hashtag Mix Strategy</label>
+                    <div class="platform-selector">
+                        <button class="platform-btn active" data-mix="balanced" onclick="selectMix('balanced')">
+                            ⚖️ Balanced
+                        </button>
+                        <button class="platform-btn" data-mix="viral" onclick="selectMix('viral')">
+                            🔥 Viral Focus
+                        </button>
+                        <button class="platform-btn" data-mix="niche" onclick="selectMix('niche')">
+                            🎯 Niche Focus
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="hashtag-count">Number of Hashtags (5-30)</label>
+                    <input type="number" class="input-field" id="hashtag-count" min="5" max="30" value="20" aria-label="Number of Hashtags">
+                </div>
+                
+                <button class="btn" onclick="generateHashtags()">
+                    ✨ Generate Hashtags
+                </button>
+            </div>
+            
+            <!-- Output Panel -->
+            <div class="panel">
+                <h3>📊 Generated Hashtags</h3>
+                
+                <div class="engagement-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot high"></div>
+                        <span>High Engagement (80+)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot medium"></div>
+                        <span>Medium (50-79)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot low"></div>
+                        <span>Low (0-49)</span>
+                    </div>
+                </div>
+                
+                <div id="hashtags-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">#️⃣</div>
+                        <p>Your optimized hashtags will appear here</p>
+                        <p class="hint-text">Each hashtag includes an engagement score!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel saved-hashtags">
+            <h3>💾 Saved Hashtag Sets (<span id="saved-count">0</span>)</h3>
+            <div id="saved-container">
+                <div class="empty-state">
+                    <p>No saved hashtags yet. Click "Save Set" to store hashtag collections here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Hashtag Generator</h2>
+        <p>Maximize your social media reach with data-driven hashtags. Our tool helps you find the perfect mix of trending and niche hashtags for your content:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Your Platform</h3>
+                <p>Choose between Instagram, TikTok, Twitter, or LinkedIn. Each platform has unique hashtag trends and best practices that our tool accounts for.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Enter Your Keywords</h3>
+                <p>Type your main topics or themes separated by commas. Be specific about your niche for more targeted hashtag suggestions.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Choose Strategy</h3>
+                <p>Select "Balanced" for a mix of popular and niche tags, "Viral Focus" for maximum reach, or "Niche" for targeted audience engagement.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Review Engagement Scores</h3>
+                <p>Each hashtag shows a color-coded engagement score (High, Medium, Low). Copy the entire set or individual hashtags to use in your posts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What do the engagement scores mean?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Engagement scores indicate how competitive a hashtag is. High scores (50-100) mean popular hashtags with massive reach but more competition. Medium scores (20-49) offer balanced visibility. Low scores (0-19) are niche hashtags with less competition but targeted audiences.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How many hashtags should I use per post?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Instagram allows up to 30 hashtags, but 9-12 is optimal. TikTok works best with 3-5 focused hashtags. Twitter recommends 1-2 hashtags for better engagement. LinkedIn performs well with 3-5 professional hashtags. Our tool generates 12-15 hashtags so you can pick the best ones.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I use the same hashtags for every post?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No. Rotate your hashtags to avoid being flagged as spam by social algorithms. Keep 3-5 branded or core hashtags consistent, but vary the rest based on your specific content. Generate new sets for different topics to maintain authenticity and reach.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between viral and niche strategy?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Viral strategy focuses on high-engagement popular hashtags for maximum exposure, ideal for broad content. Niche strategy targets specific communities with lower competition hashtags, better for building engaged followers in specific topics. Balanced combines both for optimal growth.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I save hashtag sets for different content types?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Click "Save Set" to store hashtag collections locally in your browser. Create different sets for various content themes (e.g., fitness, food, travel) and reuse them whenever needed without regenerating.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="caption-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">✍️</span> Caption Generator</h3>
+                <p>Create engaging captions with AI for Instagram, Facebook, Twitter, and TikTok posts.</p>
+            </a>
+            <a href="../design/social-media-kit.html" class="related-tool-card">
+                <h3><span class="tool-icon">📱</span> Social Media Kit</h3>
+                <p>Design platform-optimized graphics with auto-sized templates for all major social networks.</p>
+            </a>
+            <a href="../productivity/weekly-review.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Weekly Review</h3>
+                <p>Track your social media posting consistency and performance with weekly insights.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="mt-6">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let selectedPlatform = 'instagram';
+        let selectedMix = 'balanced';
+        let savedHashtags = JSON.parse(localStorage.getItem('savedHashtags') || '[]');
+        let stats = JSON.parse(localStorage.getItem('hashtagStats') || '{"generated": 0, "saved": 0, "totalEngagement": 0, "count": 0}');
+        
+        const hashtagDatabase = {
+            fitness: [
+                {tag: 'fitness', popularity: 95}, {tag: 'fitnessmotivation', popularity: 88},
+                {tag: 'workout', popularity: 92}, {tag: 'gym', popularity: 90},
+                {tag: 'fitfam', popularity: 75}, {tag: 'bodybuilding', popularity: 82},
+                {tag: 'cardio', popularity: 70}, {tag: 'gains', popularity: 68},
+                {tag: 'muscles', popularity: 65}, {tag: 'healthylifestyle', popularity: 85}
+            ],
+            travel: [
+                {tag: 'travel', popularity: 96}, {tag: 'wanderlust', popularity: 89},
+                {tag: 'travelphotography', popularity: 91}, {tag: 'explore', popularity: 87},
+                {tag: 'adventure', popularity: 84}, {tag: 'travelgram', popularity: 78},
+                {tag: 'vacation', popularity: 82}, {tag: 'traveling', popularity: 75}
+            ],
+            food: [
+                {tag: 'food', popularity: 94}, {tag: 'foodie', popularity: 90},
+                {tag: 'foodporn', popularity: 88}, {tag: 'instafood', popularity: 86},
+                {tag: 'yummy', popularity: 80}, {tag: 'delicious', popularity: 77},
+                {tag: 'foodphotography', popularity: 82}, {tag: 'cooking', popularity: 79}
+            ],
+            fashion: [
+                {tag: 'fashion', popularity: 95}, {tag: 'style', popularity: 91},
+                {tag: 'ootd', popularity: 87}, {tag: 'fashionista', popularity: 83},
+                {tag: 'instafashion', popularity: 78}, {tag: 'streetstyle', popularity: 76}
+            ],
+            tech: [
+                {tag: 'tech', popularity: 88}, {tag: 'technology', popularity: 85},
+                {tag: 'innovation', popularity: 79}, {tag: 'coding', popularity: 76},
+                {tag: 'programmer', popularity: 72}, {tag: 'ai', popularity: 89}
+            ]
+        };
+        
+        const currentYear = new Date().getFullYear();
+        const trendingHashtags = [
+            {tag: 'viral', popularity: 92}, {tag: currentYear.toString(), popularity: 85},
+            {tag: 'trending', popularity: 88}, {tag: 'fyp', popularity: 94},
+            {tag: 'foryou', popularity: 91}, {tag: 'instagood', popularity: 90},
+            {tag: 'photooftheday', popularity: 87}, {tag: 'reels', popularity: 89}
+        ];
+        
+        function selectPlatform(platform) {
+            selectedPlatform = platform;
+            document.querySelectorAll('.platform-btn[data-platform]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.platform === platform);
+            });
+        }
+        
+        function selectMix(mix) {
+            selectedMix = mix;
+            document.querySelectorAll('.platform-btn[data-mix]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.mix === mix);
+            });
+        }
+        
+        function calculateEngagementScore(tag, popularity) {
+            const lengthFactor = tag.length <= 15 ? 1.1 : tag.length > 25 ? 0.85 : 1.0;
+            const popularityScore = popularity || Math.floor(Math.random() * 40) + 40;
+            const randomVariance = (Math.random() * 20) - 10;
+            const platformBonus = selectedPlatform === 'instagram' ? 5 : selectedPlatform === 'tiktok' ? 8 : 0;
+            
+            let score = (popularityScore * lengthFactor) + randomVariance + platformBonus;
+            return Math.max(0, Math.min(100, Math.floor(score)));
+        }
+        
+        function generateHashtagsFromKeywords(keywords) {
+            const hashtags = [];
+            
+            keywords.forEach(keyword => {
+                const normalized = keyword.toLowerCase().trim();
+                hashtags.push({tag: normalized, score: calculateEngagementScore(normalized)});
+                
+                if (hashtagDatabase[normalized]) {
+                    hashtagDatabase[normalized].forEach(item => {
+                        hashtags.push({tag: item.tag, score: calculateEngagementScore(item.tag, item.popularity)});
+                    });
+                }
+                
+                const variations = [
+                    normalized + 'life', normalized + 'daily', normalized + 'love',
+                    normalized + 'gram', 'insta' + normalized, normalized + currentYear,
+                    normalized + 'community', normalized + 'inspiration'
+                ];
+                
+                variations.forEach(variant => {
+                    hashtags.push({tag: variant, score: calculateEngagementScore(variant)});
+                });
+            });
+            
+            return hashtags;
+        }
+        
+        function generateHashtags() {
+            const input = document.getElementById('keywords-input').value.trim();
+            if (!input) {
+                alert('Please enter at least one keyword!');
+                return;
+            }
+            
+            const keywords = input.split(',').map(k => k.trim()).filter(k => k);
+            const count = parseInt(document.getElementById('hashtag-count').value) || 20;
+            
+            let allHashtags = generateHashtagsFromKeywords(keywords);
+            
+            if (selectedMix === 'viral' || selectedMix === 'balanced') {
+                const trendingCount = selectedMix === 'viral' ? 8 : 4;
+                trendingHashtags.slice(0, trendingCount).forEach(item => {
+                    allHashtags.push({tag: item.tag, score: calculateEngagementScore(item.tag, item.popularity)});
+                });
+            }
+            
+            const uniqueHashtags = [];
+            const seen = new Set();
+            allHashtags.forEach(item => {
+                if (!seen.has(item.tag)) {
+                    seen.add(item.tag);
+                    uniqueHashtags.push(item);
+                }
+            });
+            
+            let finalHashtags;
+            if (selectedMix === 'viral') {
+                finalHashtags = uniqueHashtags.sort((a, b) => b.score - a.score).slice(0, count);
+            } else if (selectedMix === 'niche') {
+                finalHashtags = uniqueHashtags.filter(h => h.score < 70).sort((a, b) => b.score - a.score).slice(0, count);
+            } else {
+                const high = uniqueHashtags.filter(h => h.score >= 80).slice(0, Math.floor(count * 0.3));
+                const medium = uniqueHashtags.filter(h => h.score >= 50 && h.score < 80).slice(0, Math.floor(count * 0.4));
+                const low = uniqueHashtags.filter(h => h.score < 50).slice(0, Math.floor(count * 0.3));
+                finalHashtags = [...high, ...medium, ...low].slice(0, count);
+            }
+            
+            displayHashtags(finalHashtags);
+            
+            stats.generated++;
+            stats.count++;
+            const avgScore = finalHashtags.reduce((sum, h) => sum + h.score, 0) / finalHashtags.length;
+            stats.totalEngagement += avgScore;
+            updateStats();
+        }
+        
+        function displayHashtags(hashtags) {
+            const container = document.getElementById('hashtags-container');
+            
+            const categories = {
+                high: hashtags.filter(h => h.score >= 80),
+                medium: hashtags.filter(h => h.score >= 50 && h.score < 80),
+                low: hashtags.filter(h => h.score < 50)
+            };
+            
+            let html = '';
+            
+            if (categories.high.length > 0) {
+                html += `<div class="hashtag-category"><div class="category-title"><span>🔥 High Engagement (${categories.high.length})</span></div><div>${categories.high.map(h => `<span class="hashtag-chip">#${h.tag}<span class="engagement-score high">${h.score}</span></span>`).join('')}</div></div>`;
+            }
+            
+            if (categories.medium.length > 0) {
+                html += `<div class="hashtag-category"><div class="category-title"><span>⚡ Medium Engagement (${categories.medium.length})</span></div><div>${categories.medium.map(h => `<span class="hashtag-chip">#${h.tag}<span class="engagement-score medium">${h.score}</span></span>`).join('')}</div></div>`;
+            }
+            
+            if (categories.low.length > 0) {
+                html += `<div class="hashtag-category"><div class="category-title"><span>🎯 Niche Focused (${categories.low.length})</span></div><div>${categories.low.map(h => `<span class="hashtag-chip">#${h.tag}<span class="engagement-score low">${h.score}</span></span>`).join('')}</div></div>`;
+            }
+            
+            const avgScore = Math.floor(hashtags.reduce((sum, h) => sum + h.score, 0) / hashtags.length);
+            const allHashtagsText = hashtags.map(h => '#' + h.tag).join(' ');
+            
+            html += `<div class="mix-suggestion"><div class="mix-suggestion-title">💡 Mix Suggestion</div><p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 0.5rem;">This ${selectedMix} mix has an average engagement score of <strong>${avgScore}</strong>. ${selectedMix === 'viral' ? 'Focus on high-reach hashtags for maximum visibility.' : selectedMix === 'niche' ? 'Target specific communities for better engagement.' : 'Balanced approach for optimal reach and engagement.'}</p></div><button class="copy-all-btn" onclick="copyAllHashtags('${allHashtagsText.replace(/'/g, "\\'")}')">📋 Copy All Hashtags</button><button class="btn" style="margin-top: 0.5rem;" onclick="saveHashtagSet('${allHashtagsText.replace(/'/g, "\\'")}')">💾 Save This Set</button>`;
+            
+            container.innerHTML = html;
+        }
+        
+        function copyAllHashtags(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('All hashtags copied to clipboard!');
+            });
+        }
+        
+        function saveHashtagSet(hashtags) {
+            savedHashtags.unshift({
+                hashtags: hashtags,
+                platform: selectedPlatform,
+                mix: selectedMix,
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('savedHashtags', JSON.stringify(savedHashtags));
+            stats.saved++;
+            updateStats();
+            renderSaved();
+        }
+        
+        function renderSaved() {
+            const container = document.getElementById('saved-container');
+            document.getElementById('saved-count').textContent = savedHashtags.length;
+            
+            if (savedHashtags.length === 0) {
+                container.innerHTML = `<div class="empty-state"><p>No saved hashtags yet. Click "Save Set" to store hashtag collections here.</p></div>`;
+                return;
+            }
+            
+            container.innerHTML = savedHashtags.map((item, index) => `
+                <div class="saved-item">
+                    <button class="delete-btn" onclick="deleteSaved(${index})">🗑️ Delete</button>
+                    <div style="margin-bottom: 0.75rem;">
+                        <span style="display: inline-block; padding: 0.25rem 0.75rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-radius: 12px; font-size: 0.85rem; margin-right: 0.5rem;">${item.platform}</span>
+                        <span style="display: inline-block; padding: 0.25rem 0.75rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; border-radius: 12px; font-size: 0.85rem;">${item.mix}</span>
+                        <div style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 0.5rem;">${new Date(item.date).toLocaleDateString()}</div>
+                    </div>
+                    <div style="color: white; margin-bottom: 1rem;">${item.hashtags}</div>
+                    <button class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="copyText('${item.hashtags.replace(/'/g, "\\'")})">📋 Copy</button>
+                </div>
+            `).join('');
+        }
+        
+        function deleteSaved(index) {
+            if (confirm('Delete this hashtag set?')) {
+                savedHashtags.splice(index, 1);
+                localStorage.setItem('savedHashtags', JSON.stringify(savedHashtags));
+                renderSaved();
+            }
+        }
+        
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Hashtags copied to clipboard!');
+            });
+        }
+        
+        function updateStats() {
+            localStorage.setItem('hashtagStats', JSON.stringify(stats));
+            document.getElementById('total-generated').textContent = stats.generated;
+            document.getElementById('total-saved').textContent = stats.saved;
+            
+            const avgEngagement = stats.count > 0 ? Math.floor(stats.totalEngagement / stats.count) : 0;
+            document.getElementById('avg-engagement').textContent = avgEngagement;
+            
+            const totalActions = stats.generated + stats.saved;
+            const completionRate = totalActions > 0 ? Math.min(Math.floor((totalActions / 25) * 100), 100) : 0;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+        }
+        
+        updateStats();
+        renderSaved();
+    </script>
+</body>
+</html>

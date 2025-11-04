@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/ai-tools/prompt-generator.html">
+    <meta name="description" content="Create better prompts for ChatGPT, Midjourney, and DALL-E instantly. Get detailed prompts with style combinations and visual previews to improve your results.">
+    <meta name="keywords" content="chatgpt prompt maker, midjourney prompt builder, dall-e prompt creator, ai image prompts free, better ai prompts tool, prompt ideas generator, ai art prompt helper, chatgpt question builder">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/ai-tools/prompt-generator.html">
+    <meta property="og:title" content="Smart Prompt Generator for ChatGPT, Midjourney & DALL-E">
+    <meta property="og:description" content="Create better prompts instantly with style combinations and visual previews to improve your AI results.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart Prompt Generator for ChatGPT, Midjourney & DALL-E">
+    <meta name="twitter:description" content="Create better prompts with style combinations and visual previews.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Prompt Generator for ChatGPT, Midjourney & DALL-E - Free Tool</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Prompt Generator for ChatGPT and AI Art",
+      "description": "Create better prompts for ChatGPT, Midjourney, and DALL-E with style combinations and previews",
+      "applicationCategory": "UtilityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "AI Tools", "item": "https://skillor.me/ai-tools.html"},
+        {"@type": "ListItem", "position": 3, "name": "Prompt Generator", "item": "https://skillor.me/ai-tools/prompt-generator.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #10b981;
+            --tool-secondary: #34d399;
+            --tool-accent: #059669;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* utility classes */
+        .mr-2 { margin-right: 0.5rem; }
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .hint-text { font-size: 0.9rem; margin-top: 0.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .hidden { display: none; }
+        
+        .input-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .ai-type-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-type-btn {
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .ai-type-btn:hover {
+            border-color: var(--tool-primary);
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .ai-type-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.2));
+        }
+        
+        .style-mixer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .style-chip {
+            padding: 0.75rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .style-chip:hover {
+            border-color: var(--tool-primary);
+        }
+        
+        .style-chip.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .style-chip.active::after {
+            content: '✓';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--tool-primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .selected-styles {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: none;
+        }
+        
+        .selected-styles.active {
+            display: block;
+        }
+        
+        .selected-styles-text {
+            color: var(--tool-secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .prompt-output {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 150px;
+            position: relative;
+        }
+        
+        .prompt-text {
+            color: white;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .style-preview-canvas {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .saved-prompts {
+            margin-top: 2rem;
+        }
+        
+        .saved-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: none;
+            color: #ef4444;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        
+        .tag-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--tool-secondary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .complexity-slider {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+        
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes a good AI prompt and how does this generator help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Good AI prompts have 5 key elements: 1) Clear context (who, what, when, where), 2) Specific output format (list, paragraph, code, table), 3) Desired tone/style (professional, casual, technical), 4) Constraints (length limits, specific requirements), 5) Examples when helpful (show format you want). This generator helps by: analyzing your basic idea, adding missing context automatically, structuring prompt with proper format, including relevant constraints, and optimizing phrasing for best AI response quality. Example: Basic input 'write blog post' → Generated 'Write a 500-word SEO-optimized blog post about [your topic] in conversational tone, including 3 actionable tips and a compelling call-to-action. Target audience: [specific group].' The generator transforms vague ideas into detailed instructions AI can execute perfectly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use different prompts for ChatGPT, Claude, and other AI models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, different AI models respond better to different prompt styles: ChatGPT (GPT-4) = works well with conversational prompts, appreciates step-by-step instructions, responds to role-play ('You are an expert marketer'), benefits from few-shot examples. Claude (Anthropic) = excels with structured prompts, prefers XML-style formatting, handles longer context better, appreciates explicit output formatting. Gemini (Google) = strong with multimodal prompts, good at analysis tasks, prefers clear task breakdown. This tool's 'Select AI Model' dropdown optimizes prompts for each model's strengths. Universal prompt principles still apply: clarity, specificity, context. Start with generated prompt, then tweak based on your specific AI model's responses—save variations that work best."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I adjust creativity level and when to use high vs low settings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Creativity level controls AI's output variability and originality: Low creativity (0.2-0.4) for: factual content, technical documentation, data analysis, legal/medical text, mathematical solutions, code generation, any task requiring accuracy over creativity. Medium creativity (0.5-0.7) for: blog posts, marketing copy, general writing, email drafts, social media captions, balanced content needing both accuracy and engagement. High creativity (0.8-1.0) for: brainstorming, creative stories, unique marketing angles, artistic descriptions, poetry, unconventional ideas, when you want surprising outputs. Technical explanation: creativity (temperature) affects probability distribution of AI's word choices—low = picks most likely words (predictable, accurate), high = picks from wider distribution (creative, sometimes unexpected). Start medium, adjust based on results. If output too generic, increase creativity. If output nonsensical, decrease creativity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the generated prompts for image AI like Midjourney or DALL-E?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool specializes in text AI prompts (ChatGPT, Claude, Gemini), but image AI prompt principles overlap with key differences: Text AI prompts = describe task, provide context, specify format, use examples, give constraints. Image AI prompts = describe visual elements, specify art style, mention lighting/composition, include camera angles, reference artists/aesthetics. Crossover usage: Use this tool for initial image concept, then add visual-specific details. Example: Generated 'Create a professional LinkedIn banner showcasing creativity and innovation' → You add visual specifics 'minimalist geometric shapes, blue and purple gradient, soft lighting, modern flat design style, Behance trending, 4K resolution'. For dedicated image AI prompting, use Midjourney-specific prompt generators. This tool excels at structuring your idea logically—adapt output for image AI by adding aesthetic descriptors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I save and organize my best prompts for reuse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Build a personal prompt library for efficiency: Organization system: Create categories (Writing, Coding, Analysis, Marketing, Research), save proven prompts as templates with [placeholders], document which AI model works best with each prompt, note creativity settings that worked, track success rate (did it produce desired output?). Storage solutions: Simple = Google Doc titled 'My Prompt Library' with categories, Intermediate = Notion database with tags and filters, Advanced = dedicated prompt management tools like PromptBase, Promptmetheus. Prompt template example: 'Write a [length] [content type] about [topic] in [tone] for [audience]. Include [specific elements]. Format as [structure].' Fill placeholders each use. Workflow: generate prompt with this tool → test with AI → if output great, save prompt as template → refine template over time → build 20-30 go-to templates covering common tasks. Share best prompts with team for consistency. Review library quarterly, archive outdated prompts, add new discoveries."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ai-tools.html">AI Tools</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../ai-tools.html" class="back-link">← Back to AI Tools</a>
+        
+        <div class="header-section">
+            <h1>🎨 AI Prompt Generator</h1>
+            <p>Generate optimized prompts for ChatGPT, Grok, and AI Art tools</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-generated">0</div>
+                <div class="stat-label">Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-saved">0</div>
+                <div class="stat-label">Saved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-copied">0</div>
+                <div class="stat-label">Copied</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Progress</div>
+            </div>
+        </div>
+        
+        <div class="main-grid">
+            <!-- Input Panel -->
+            <div class="panel">
+                <h3>⚙️ Prompt Settings</h3>
+                
+                <div class="input-group">
+                    <label class="input-label">AI Type</label>
+                    <div class="ai-type-selector">
+                        <button class="ai-type-btn active" data-type="chatgpt" onclick="selectAIType('chatgpt')">
+                            💬 ChatGPT/Grok
+                        </button>
+                        <button class="ai-type-btn" data-type="aiart" onclick="selectAIType('aiart')">
+                            🎨 AI Art
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">What do you want to create?</label>
+                    <textarea class="input-field" id="idea-input" placeholder="E.g., A futuristic city at sunset, A marketing plan for a startup, Code for a REST API..."></textarea>
+                </div>
+                
+                <!-- ChatGPT/Grok Options -->
+                <div id="chatgpt-options">
+                    <div class="input-group">
+                        <label class="input-label" for="complexity-slider">Complexity Level</label>
+                        <input type="range" class="complexity-slider" id="complexity-slider" min="1" max="5" value="3" aria-label="Complexity Level">
+                        <div class="slider-labels">
+                            <span>Simple</span>
+                            <span>Detailed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">
+                            <input type="checkbox" id="include-context" checked class="mr-2">
+                            Include Context & Background
+                        </label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">
+                            <input type="checkbox" id="include-format" checked class="mr-2">
+                            Specify Output Format
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- AI Art Options -->
+                <div id="aiart-options" class="hidden">
+                    <div class="input-group">
+                        <label class="input-label">Style Mixer (Select 1-3 styles)</label>
+                        <div class="selected-styles" id="selected-styles">
+                            <div class="selected-styles-text">Selected: <span id="selected-styles-list">None</span></div>
+                        </div>
+                        <div class="style-mixer">
+                            <button class="style-chip" data-style="Cyberpunk" onclick="toggleStyle('Cyberpunk')">🌃 Cyberpunk</button>
+                            <button class="style-chip" data-style="Watercolor" onclick="toggleStyle('Watercolor')">🎨 Watercolor</button>
+                            <button class="style-chip" data-style="Photorealistic" onclick="toggleStyle('Photorealistic')">📷 Photorealistic</button>
+                            <button class="style-chip" data-style="Anime" onclick="toggleStyle('Anime')">🎭 Anime</button>
+                            <button class="style-chip" data-style="Oil Painting" onclick="toggleStyle('Oil Painting')">🖼️ Oil Painting</button>
+                            <button class="style-chip" data-style="3D Render" onclick="toggleStyle('3D Render')">🎮 3D Render</button>
+                            <button class="style-chip" data-style="Minimalist" onclick="toggleStyle('Minimalist')">⚪ Minimalist</button>
+                            <button class="style-chip" data-style="Surreal" onclick="toggleStyle('Surreal')">🌀 Surreal</button>
+                            <button class="style-chip" data-style="Vintage" onclick="toggleStyle('Vintage')">📻 Vintage</button>
+                            <button class="style-chip" data-style="Neon" onclick="toggleStyle('Neon')">💡 Neon</button>
+                            <button class="style-chip" data-style="Gothic" onclick="toggleStyle('Gothic')">🏰 Gothic</button>
+                            <button class="style-chip" data-style="Pop Art" onclick="toggleStyle('Pop Art')">🎪 Pop Art</button>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">
+                            <input type="checkbox" id="include-technical" checked class="mr-2">
+                            Add Technical Details (lighting, camera angle, etc.)
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="generatePrompt()">
+                    ✨ Generate Prompt
+                </button>
+            </div>
+            
+            <!-- Output Panel -->
+            <div class="panel">
+                <h3>📝 Generated Prompts</h3>
+                
+                <div id="prompts-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">🚀</div>
+                        <p>Your AI-optimized prompts will appear here</p>
+                        <p class="hint-text">AI Art prompts include a style preview!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel saved-prompts">
+            <h3>💾 Saved Prompts (<span id="saved-count">0</span>)</h3>
+            <div id="saved-container">
+                <div class="empty-state">
+                    <p>No saved prompts yet. Click "Save" on generated prompts to store them here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Prompt Generator</h2>
+        <p>Master AI prompt engineering with our intelligent prompt builder. Create effective prompts for ChatGPT, Claude, Gemini, and other AI models:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select AI Model and Use Case</h3>
+                <p>Choose your target AI (ChatGPT, Claude, Gemini, Midjourney, Stable Diffusion) and the type of task (text generation, image creation, code writing, data analysis).</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Describe Your Goal</h3>
+                <p>Explain what you want the AI to do. Be specific about the output format, tone, length, and any special requirements or constraints.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Set Detail Level and Add Context</h3>
+                <p>Choose detail level (simple, moderate, or detailed). Add context, examples, or constraints to guide the AI toward your desired result.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Generate and Refine</h3>
+                <p>Click "Generate Prompt" to create an optimized prompt. Use the Refine feature to improve results, or save successful prompts for future use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What makes a good AI prompt?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Good prompts are clear, specific, and provide context. They include the desired output format, tone, target audience, and any constraints. Adding examples of what you want (or don't want) significantly improves results. Our tool structures prompts with these best practices automatically.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I use prompts for image generation AI?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        For Midjourney or Stable Diffusion, select "Image Generation" and describe the visual in detail: subject, style, lighting, colors, composition, and mood. Include technical terms like "8K resolution," "cinematic lighting," or "photorealistic" for better results. Our tool optimizes image prompts with effective keywords.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between detail levels?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Simple prompts are concise for straightforward tasks. Moderate adds structure and examples for complex outputs. Detailed includes comprehensive instructions, multiple examples, and step-by-step guidance for highly specific or technical tasks. Start moderate and adjust based on results.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use the same prompt for different AI models?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Generally yes, but some models respond better to specific phrasing. ChatGPT excels with conversational prompts, Claude prefers detailed context, Gemini handles multimodal tasks well. Our tool optimizes prompts for each model's strengths. Generate variations for different AIs if needed.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the Refine Prompt feature work?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Refine analyzes your prompt and enhances it with better structure, clearer instructions, relevant examples, and optimized keywords. It identifies vague language and makes it specific, adds helpful constraints, and formats the prompt for maximum AI comprehension and output quality.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="caption-generator.html" class="related-tool-card">
+                <h3><span class="tool-icon">✍️</span> Caption Generator</h3>
+                <p>Create AI-powered social media captions with optimized prompts.</p>
+            </a>
+            <a href="../english/story-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📚</span> Story Builder</h3>
+                <p>Practice English with AI-generated interactive fill-in-the-blank stories.</p>
+            </a>
+            <a href="../programming/api-mock.html" class="related-tool-card">
+                <h3><span class="tool-icon">🔌</span> API Mock</h3>
+                <p>Generate fake API data with custom schemas for testing and development.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="mt-6">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let selectedAIType = 'chatgpt';
+        let selectedStyles = [];
+        let savedPrompts = JSON.parse(localStorage.getItem('savedPrompts') || '[]');
+        let stats = JSON.parse(localStorage.getItem('promptStats') || '{"generated": 0, "saved": 0, "copied": 0}');
+        
+        const styleColors = {
+            'Cyberpunk': ['#ff006e', '#8338ec', '#00f5ff'],
+            'Watercolor': ['#a8dadc', '#457b9d', '#e63946'],
+            'Photorealistic': ['#2b2d42', '#8d99ae', '#edf2f4'],
+            'Anime': ['#ff006e', '#ffbe0b', '#3a86ff'],
+            'Oil Painting': ['#6a4c93', '#c9ada7', '#f2e9e4'],
+            '3D Render': ['#4cc9f0', '#4361ee', '#7209b7'],
+            'Minimalist': ['#ffffff', '#000000', '#cccccc'],
+            'Surreal': ['#b5179e', '#7209b7', '#560bad'],
+            'Vintage': ['#d4a373', '#8b4513', '#f4e4c1'],
+            'Neon': ['#39ff14', '#ff10f0', '#00d9ff'],
+            'Gothic': ['#2d1b00', '#5c3317', '#8b0000'],
+            'Pop Art': ['#ff006e', '#ffbe0b', '#00f5ff']
+        };
+        
+        function selectAIType(type) {
+            selectedAIType = type;
+            document.querySelectorAll('.ai-type-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.type === type);
+            });
+            
+            if (type === 'chatgpt') {
+                document.getElementById('chatgpt-options').style.display = 'block';
+                document.getElementById('aiart-options').style.display = 'none';
+            } else {
+                document.getElementById('chatgpt-options').style.display = 'none';
+                document.getElementById('aiart-options').style.display = 'block';
+            }
+        }
+        
+        function toggleStyle(style) {
+            const index = selectedStyles.indexOf(style);
+            const btn = document.querySelector(`[data-style="${style}"]`);
+            
+            if (index > -1) {
+                selectedStyles.splice(index, 1);
+                btn.classList.remove('active');
+            } else {
+                if (selectedStyles.length < 3) {
+                    selectedStyles.push(style);
+                    btn.classList.add('active');
+                } else {
+                    alert('You can select up to 3 styles maximum!');
+                    return;
+                }
+            }
+            
+            updateSelectedStyles();
+        }
+        
+        function updateSelectedStyles() {
+            const container = document.getElementById('selected-styles');
+            const list = document.getElementById('selected-styles-list');
+            
+            if (selectedStyles.length > 0) {
+                container.classList.add('active');
+                list.textContent = selectedStyles.join(' + ');
+            } else {
+                container.classList.remove('active');
+                list.textContent = 'None';
+            }
+        }
+        
+        function generatePrompt() {
+            const idea = document.getElementById('idea-input').value.trim();
+            if (!idea) {
+                alert('Please enter your idea!');
+                return;
+            }
+            
+            if (selectedAIType === 'aiart' && selectedStyles.length === 0) {
+                alert('Please select at least one style for AI art prompts!');
+                return;
+            }
+            
+            let prompts = [];
+            
+            if (selectedAIType === 'chatgpt') {
+                prompts = generateChatGPTPrompts(idea);
+            } else {
+                prompts = generateAIArtPrompts(idea);
+            }
+            
+            displayPrompts(prompts);
+            
+            stats.generated++;
+            updateStats();
+        }
+        
+        function generateChatGPTPrompts(idea) {
+            const complexity = document.getElementById('complexity-slider').value;
+            const includeContext = document.getElementById('include-context').checked;
+            const includeFormat = document.getElementById('include-format').checked;
+            
+            const prompts = [];
+            
+            let prompt1 = idea;
+            if (complexity >= 3 && includeContext) {
+                prompt1 = `I need help with the following: ${idea}. Please provide a comprehensive response that covers key aspects and considerations.`;
+            }
+            if (includeFormat) {
+                prompt1 += `\n\nPlease structure your response with clear headings and bullet points where appropriate.`;
+            }
+            prompts.push(prompt1);
+            
+            const roles = ['expert consultant', 'professional advisor', 'specialist', 'creative director', 'technical lead'];
+            const role = roles[Math.floor(Math.random() * roles.length)];
+            let prompt2 = `Act as a ${role}. ${idea}`;
+            if (complexity >= 4) {
+                prompt2 += ` Provide detailed insights with examples and best practices.`;
+            }
+            prompts.push(prompt2);
+            
+            if (complexity >= 3) {
+                let prompt3 = `Help me with: ${idea}
+
+Provide a step-by-step approach with:
+1. Initial analysis
+2. Key recommendations
+3. Implementation steps
+4. Potential challenges`;
+                prompts.push(prompt3);
+            }
+            
+            return prompts;
+        }
+        
+        function generateAIArtPrompts(idea) {
+            const includeTechnical = document.getElementById('include-technical').checked;
+            const styleString = selectedStyles.join(' mixed with ');
+            
+            const prompts = [];
+            
+            let prompt1 = `${idea}, ${styleString} style`;
+            if (includeTechnical) {
+                const lighting = ['dramatic lighting', 'soft lighting', 'volumetric lighting', 'golden hour lighting'][Math.floor(Math.random() * 4)];
+                const quality = ['highly detailed', '8k resolution', 'masterpiece', 'trending on artstation'][Math.floor(Math.random() * 4)];
+                prompt1 += `, ${lighting}, ${quality}`;
+            }
+            prompts.push(prompt1);
+            
+            let prompt2 = `${idea}, art style: ${styleString}`;
+            if (includeTechnical) {
+                prompt2 += `, professional composition, perfect lighting, sharp focus, cinematic, award-winning photography`;
+            }
+            prompts.push(prompt2);
+            
+            const mood = ['ethereal', 'moody', 'vibrant', 'atmospheric', 'dreamlike'][Math.floor(Math.random() * 5)];
+            let prompt3 = `A ${mood} scene of ${idea}, rendered in ${styleString} art style`;
+            if (includeTechnical) {
+                prompt3 += `, ultra HD, ray tracing, depth of field, professional color grading`;
+            }
+            prompts.push(prompt3);
+            
+            return prompts;
+        }
+        
+        function createStylePreview() {
+            const canvas = document.createElement('canvas');
+            canvas.className = 'style-preview-canvas';
+            canvas.width = 800;
+            canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+            
+            const colors = selectedStyles.map(style => styleColors[style] || ['#ffffff', '#000000', '#888888']);
+            
+            if (selectedStyles.length === 1) {
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                colors[0].forEach((color, i) => {
+                    gradient.addColorStop(i / (colors[0].length - 1), color);
+                });
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            } else if (selectedStyles.length === 2) {
+                const gradient1 = ctx.createLinearGradient(0, 0, canvas.width / 2, canvas.height);
+                colors[0].forEach((color, i) => {
+                    gradient1.addColorStop(i / (colors[0].length - 1), color);
+                });
+                ctx.fillStyle = gradient1;
+                ctx.fillRect(0, 0, canvas.width / 2, canvas.height);
+                
+                const gradient2 = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width, canvas.height);
+                colors[1].forEach((color, i) => {
+                    gradient2.addColorStop(i / (colors[1].length - 1), color);
+                });
+                ctx.fillStyle = gradient2;
+                ctx.fillRect(canvas.width / 2, 0, canvas.width / 2, canvas.height);
+                
+                ctx.globalAlpha = 0.5;
+                ctx.fillStyle = gradient2;
+                ctx.fillRect(0, 0, canvas.width / 2, canvas.height);
+            } else {
+                const sectionWidth = canvas.width / selectedStyles.length;
+                colors.forEach((colorSet, idx) => {
+                    const gradient = ctx.createRadialGradient(
+                        sectionWidth * idx + sectionWidth / 2, canvas.height / 2, 0,
+                        sectionWidth * idx + sectionWidth / 2, canvas.height / 2, canvas.height / 2
+                    );
+                    colorSet.forEach((color, i) => {
+                        gradient.addColorStop(i / (colorSet.length - 1), color);
+                    });
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(sectionWidth * idx, 0, sectionWidth, canvas.height);
+                });
+            }
+            
+            ctx.globalAlpha = 0.3;
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 48px Poppins';
+            ctx.textAlign = 'center';
+            ctx.fillText(selectedStyles.join(' + '), canvas.width / 2, canvas.height / 2);
+            
+            return canvas;
+        }
+        
+        function displayPrompts(prompts) {
+            const container = document.getElementById('prompts-container');
+            
+            container.innerHTML = prompts.map((prompt, index) => `
+                <div class="prompt-output">
+                    <button class="copy-btn" onclick="copyPrompt(${index}, this)">📋 Copy</button>
+                    <div class="prompt-text">${prompt.replace(/\n/g, '<br>')}</div>
+                    ${selectedAIType === 'aiart' ? '<div id="preview-' + index + '"></div>' : ''}
+                    <button class="btn" style="width: auto; padding: 0.5rem 1.5rem; font-size: 0.9rem;" onclick="savePrompt('${prompt.replace(/'/g, "\\'")}')">💾 Save Prompt</button>
+                </div>
+            `).join('');
+            
+            if (selectedAIType === 'aiart') {
+                const preview = createStylePreview();
+                document.getElementById('preview-0').appendChild(preview);
+            }
+        }
+        
+        function copyPrompt(index, btn) {
+            const prompts = document.querySelectorAll('.prompt-text');
+            const text = prompts[index].innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy';
+                }, 2000);
+                
+                stats.copied++;
+                updateStats();
+            });
+        }
+        
+        function savePrompt(prompt) {
+            savedPrompts.unshift({
+                prompt: prompt,
+                type: selectedAIType,
+                styles: selectedAIType === 'aiart' ? selectedStyles.join(', ') : null,
+                date: new Date().toISOString()
+            });
+            
+            localStorage.setItem('savedPrompts', JSON.stringify(savedPrompts));
+            stats.saved++;
+            updateStats();
+            renderSaved();
+        }
+        
+        function renderSaved() {
+            const container = document.getElementById('saved-container');
+            document.getElementById('saved-count').textContent = savedPrompts.length;
+            
+            if (savedPrompts.length === 0) {
+                container.innerHTML = `<div class="empty-state"><p>No saved prompts yet. Click "Save" on generated prompts to store them here.</p></div>`;
+                return;
+            }
+            
+            container.innerHTML = savedPrompts.map((item, index) => `
+                <div class="saved-item">
+                    <button class="delete-btn" onclick="deleteSaved(${index})">🗑️ Delete</button>
+                    <div style="margin-bottom: 0.75rem;">
+                        <span class="tag-badge">${item.type === 'chatgpt' ? '💬 ChatGPT' : '🎨 AI Art'}</span>
+                        ${item.styles ? `<span class="tag-badge">${item.styles}</span>` : ''}
+                        <div style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 0.5rem;">${new Date(item.date).toLocaleDateString()}</div>
+                    </div>
+                    <div style="color: white;">${item.prompt.replace(/\n/g, '<br>')}</div>
+                    <button class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem; margin-top: 1rem;" onclick="copyText('${item.prompt.replace(/'/g, "\\'")}')">📋 Copy</button>
+                </div>
+            `).join('');
+        }
+        
+        function deleteSaved(index) {
+            if (confirm('Delete this prompt?')) {
+                savedPrompts.splice(index, 1);
+                localStorage.setItem('savedPrompts', JSON.stringify(savedPrompts));
+                renderSaved();
+            }
+        }
+        
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Prompt copied to clipboard!');
+            });
+        }
+        
+        function updateStats() {
+            localStorage.setItem('promptStats', JSON.stringify(stats));
+            document.getElementById('total-generated').textContent = stats.generated;
+            document.getElementById('total-saved').textContent = stats.saved;
+            document.getElementById('total-copied').textContent = stats.copied;
+            
+            const totalActions = stats.generated + stats.saved + stats.copied;
+            const completionRate = totalActions > 0 ? Math.min(Math.floor((totalActions / 30) * 100), 100) : 0;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+        }
+        
+        updateStats();
+        renderSaved();
+    </script>
+</body>
+</html>

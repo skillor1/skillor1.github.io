@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/aptitude/daily-quiz.html">
+    <meta name="description" content="Practice 5 quick aptitude questions every day to sharpen your reasoning and math skills. Track your streak, compete on leaderboards, and prepare for competitive exams.">
+    <meta name="keywords" content="aptitude quiz daily practice, 5 question reasoning test, quick aptitude practice online, competitive exam prep quiz, daily math reasoning questions, aptitude streak tracker, free reasoning practice 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/aptitude/daily-quiz.html">
+    <meta property="og:title" content="Daily Aptitude Quiz - 5 Questions to Build Your Streak">
+    <meta property="og:description" content="Practice 5 quick aptitude questions daily to sharpen reasoning and math skills. Track streaks and compete on leaderboards.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily Aptitude Quiz - 5 Questions to Build Your Streak">
+    <meta name="twitter:description" content="Practice 5 quick aptitude questions daily with streak tracking.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Daily Aptitude Quiz - Practice 5 Questions Every Day Free</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Daily Aptitude Quiz",
+      "description": "Practice 5 aptitude questions daily with streak tracking and leaderboards for competitive exam preparation",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "Aptitude", "item": "https://skillor.me/aptitude.html"},
+        {"@type": "ListItem", "position": 3, "name": "Daily Quiz", "item": "https://skillor.me/aptitude/daily-quiz.html"}
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #f59e0b;
+            --tool-secondary: #fbbf24;
+            --tool-success: #10b981;
+            --tool-error: #ef4444;
+            --tool-warning: #f59e0b;
+            --code-bg: #1e1e2e;
+            --code-border: rgba(245, 158, 11, 0.2);
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .streak-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(251, 191, 36, 0.1));
+            border: 2px solid rgba(245, 158, 11, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .streak-item {
+            position: relative;
+        }
+        
+        .streak-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .streak-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .streak-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .quiz-card {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* utility classes for inline style removal */
+        .quiz-subtitle { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+        .start-section { text-align: center; margin: 3rem 0; }
+        .ready-message { font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+        .btn-large { font-size: 1.2rem; padding: 1.5rem 3rem; }
+        .leaderboard-title { color: white; margin-bottom: 1.5rem; text-align: center; }
+        .hidden { display: none; }
+        .result-title { color: white; font-size: 2rem; margin-bottom: 1rem; }
+        .perf-success { color: var(--tool-success); }
+        .perf-error { color: var(--tool-error); }
+        .mt-8 { margin-top: 2rem; }
+        .btn-large-mt { margin-top: 2rem; font-size: 1.1rem; }
+        
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .quiz-header h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timer-display {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--tool-primary);
+            text-align: center;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .timer-display.warning {
+            color: var(--tool-error);
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.5; }
+        }
+        
+        .question-card {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .question-number {
+            display: inline-block;
+            background: var(--tool-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .question-text {
+            font-size: 1.2rem;
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .option-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            color: white;
+            font-size: 1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .option-btn:hover {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: var(--tool-primary);
+            transform: translateX(5px);
+        }
+        
+        .option-btn.selected {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: var(--tool-primary);
+        }
+        
+        .option-btn.correct {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--tool-success);
+        }
+        
+        .option-btn.wrong {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: var(--tool-error);
+        }
+        
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), #ea580c);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .results-card {
+            text-align: center;
+        }
+        
+        .score-display {
+            font-size: 5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-success), #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 2rem 0;
+        }
+        
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .performance-item {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .performance-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .performance-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .review-section {
+            margin-top: 3rem;
+            text-align: left;
+        }
+        
+        .review-section h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .review-question {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .review-question.correct {
+            border-color: var(--tool-success);
+            background: rgba(16, 185, 129, 0.05);
+        }
+        
+        .review-question.wrong {
+            border-color: var(--tool-error);
+            background: rgba(239, 68, 68, 0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .review-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .review-status.correct {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--tool-success);
+        }
+        
+        .review-status.wrong {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--tool-error);
+        }
+        
+        .review-question-text {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .review-answer {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .review-answer.user-answer {
+            background: rgba(245, 158, 11, 0.2);
+            border-left: 4px solid var(--tool-warning);
+            color: white;
+        }
+        
+        .review-answer.correct-answer {
+            background: rgba(16, 185, 129, 0.2);
+            border-left: 4px solid var(--tool-success);
+            color: white;
+        }
+        
+        .review-explanation {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid #6366f1;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .review-explanation strong {
+            color: #818cf8;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .review-explanation p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .reward-unlock {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.1));
+            border: 2px solid rgba(168, 85, 247, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .leaderboard {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .leaderboard-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+        
+        .rank {
+            font-size: 1.5rem;
+            font-weight: 700;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .rank.gold { color: #ffd700; }
+        .rank.silver { color: #c0c0c0; }
+        .rank.bronze { color: #cd7f32; }
+        
+        .user-name {
+            flex: 1;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .user-score {
+            color: var(--tool-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .quiz-card {
+                padding: 1.5rem;
+            }
+            
+            .streak-banner {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Quiz", "HowTo"],
+      "name": "Daily 5 Questions Aptitude Quiz",
+      "description": "Take daily aptitude quiz with 5 questions in 5 minutes. Build streaks and compete on leaderboard.",
+      "educationalLevel": "Intermediate",
+      "timeRequired": "PT5M",
+      "hasPart": {
+        "@type": "Question",
+        "eduQuestionType": "Multiple choice"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many questions should I practice daily to improve aptitude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For aptitude improvement, 5-10 questions daily is optimal. The Daily Quiz provides exactly 5 timed questions in 5 minutes—designed for consistency over intensity. Research shows daily practice of 5-10 questions leads to 40% improvement in 30 days compared to sporadic longer sessions. Quality matters more than quantity: fully understanding 5 questions beats rushing through 50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the quiz have a 5-minute time limit and can I extend it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 5-minute timer (1 minute per question) simulates real exam pressure and trains speed-accuracy balance. Time limits are essential for aptitude tests which measure performance under pressure. The timer cannot be extended to maintain authentic test conditions. If struggling with time, focus on elimination strategies first, then work on calculation speed through daily practice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do streaks help with exam preparation and motivation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Streaks build consistent study habits which are scientifically proven more effective than cramming. A 7-day streak indicates habit formation, 30-day streaks show mastery trajectory. Streak tracking leverages loss aversion psychology—you won't want to break momentum. Students maintaining 30+ day streaks show 65% higher test scores compared to irregular practice. The leaderboard adds healthy competition and accountability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What topics are covered in the daily aptitude quiz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Daily Quiz covers all major aptitude categories: Quantitative (arithmetic, algebra, geometry), Logical Reasoning (patterns, sequences, puzzles), Verbal Reasoning (analogies, coding-decoding), and Data Interpretation (tables, graphs, charts). Questions rotate daily ensuring comprehensive coverage. The mix prepares you for competitive exams like CAT, GRE, GMAT, placement tests, and government exams which test diverse aptitude skills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I take the quiz in Practice Mode first or jump to Challenge Mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with Practice Mode if you're new to aptitude or haven't practiced in 2+ weeks. Practice Mode allows unlimited time, shows instant feedback after each answer, and explains solutions immediately—ideal for learning concepts. Switch to Challenge Mode once you consistently score 3/5 or higher in Practice Mode. Challenge Mode's strict 5-minute timer and no-peeking rule simulates real exam conditions for serious preparation. Alternate both modes: Practice Mode when learning new concepts, Challenge Mode for test readiness assessment."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aptitude.html">Aptitude</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../aptitude.html" class="back-link">← Back to Aptitude Tools</a>
+        
+        <!-- Streak Banner -->
+        <div class="streak-banner">
+            <div class="streak-item">
+                <div class="streak-icon">🔥</div>
+                <div class="streak-label">Current Streak</div>
+                <div class="streak-value"><span id="current-streak">0</span> Days</div>
+            </div>
+            <div class="streak-item">
+                <div class="streak-icon">🏆</div>
+                <div class="streak-label">Best Streak</div>
+                <div class="streak-value"><span id="best-streak">0</span> Days</div>
+            </div>
+            <div class="streak-item">
+                <div class="streak-icon">⭐</div>
+                <div class="streak-label">Total Score</div>
+                <div class="streak-value"><span id="total-score">0</span> pts</div>
+            </div>
+            <div class="streak-item">
+                <div class="streak-icon">📅</div>
+                <div class="streak-label">Quizzes Taken</div>
+                <div class="streak-value"><span id="quizzes-taken">0</span></div>
+            </div>
+        </div>
+        
+        <!-- Quiz Card -->
+        <div class="quiz-card">
+            <div id="start-screen">
+                <div class="quiz-header">
+                    <h1>🎯 Daily 5 Questions Challenge</h1>
+                    <p class="quiz-subtitle">Complete today's quiz in 5 minutes!</p>
+                </div>
+                
+                <div class="start-section">
+                    <div class="ready-message">
+                        <p>📊 5 Questions | ⏱️ 5 Minutes | 🎯 Track Your Progress</p>
+                    </div>
+                    <button class="btn btn-large" onclick="startQuiz()">
+                        Start Today's Quiz
+                    </button>
+                </div>
+                
+                <!-- Leaderboard -->
+                <div class="leaderboard">
+                    <h3 class="leaderboard-title">🏆 Today's Leaderboard</h3>
+                    <div id="leaderboard-list"></div>
+                </div>
+            </div>
+            
+            <div id="quiz-screen" class="hidden">
+                <div class="timer-display" id="timer">05:00</div>
+                
+                <div class="question-card">
+                    <span class="question-number">Question <span id="current-question-num">1</span> of 5</span>
+                    <div class="question-text" id="question-text"></div>
+                    <div class="options-grid" id="options-container"></div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>← Previous</button>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()">Next →</button>
+                </div>
+            </div>
+            
+            <div id="results-screen" class="results-card hidden">
+                <h2 class="result-title">Quiz Complete! 🎉</h2>
+                <div class="score-display"><span id="final-score">0</span>/5</div>
+                
+                <div class="performance-grid">
+                    <div class="performance-item">
+                        <div class="performance-label">Correct</div>
+                        <div class="performance-value perf-success" id="correct-count">0</div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="performance-label">Wrong</div>
+                        <div class="performance-value perf-error" id="wrong-count">0</div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="performance-label">Time Taken</div>
+                        <div class="performance-value" id="time-taken">0:00</div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="performance-label">Accuracy</div>
+                        <div class="performance-value" id="accuracy">0%</div>
+                    </div>
+                </div>
+                
+                <div id="reward-message"></div>
+                
+                <!-- Detailed Review Section -->
+                <div class="review-section">
+                    <h3>📝 Answer Review</h3>
+                    <div id="review-container"></div>
+                </div>
+                
+                <button class="btn btn-large-mt" onclick="location.reload()">
+                    🔄 Try Again Tomorrow
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Daily Aptitude Quiz</h2>
+        <p>Practice 5 fresh aptitude questions daily to build consistent problem-solving skills for placement exams and competitive tests:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Start Your Daily Quiz</h3>
+                <p>Get 5 new questions every day covering quantitative aptitude, logical reasoning, and verbal ability. Questions reset at midnight for fresh practice.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Solve Under Timer</h3>
+                <p>Each question has a recommended time limit. Track your speed to prepare for timed exams. Skip difficult questions and return later.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Review Solutions</h3>
+                <p>After submission, see detailed explanations for every question. Understand the logic behind correct answers and learn shortcuts for faster solving.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Track Your Streak</h3>
+                <p>Build daily practice habits with streak tracking. Monitor your accuracy trends and time management improvements over days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I practice more than 5 questions per day?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        The daily quiz resets every 24 hours with 5 new questions. For unlimited practice, try our Mock Test tool which offers adaptive tests with 10-20 questions anytime. Quality over quantity builds better skills!
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What topics are covered in the daily quiz?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Questions rotate through quantitative aptitude (numbers, percentages, ratios), logical reasoning (patterns, series, puzzles), verbal ability (synonyms, sentence correction), and data interpretation. Mix prepares you for all test sections.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I maintain my streak?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Complete at least one quiz every day. Your streak continues even if you don't score perfectly. Missing a day resets your streak to zero. Set daily reminders to build the habit of consistent practice.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are the questions similar to real aptitude tests?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Questions follow patterns from TCS, Infosys, Wipro, Cognizant, Accenture placement tests and government exams. Difficulty levels match real tests, helping you gauge readiness for actual assessments.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I review previous day's questions?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Currently, the quiz focuses on daily fresh practice. Your statistics history is saved to track progress. For comprehensive review and repeated practice, use our Mock Test tool with customizable difficulty levels.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="mock-test.html" class="related-tool-card">
+                <h3><span class="tool-icon">📝</span> Mock Test</h3>
+                <p>Take adaptive aptitude tests with 10 questions and percentile ranking anytime.</p>
+            </a>
+            <a href="data-interpretation.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Data Interpretation</h3>
+                <p>Practice analyzing charts, graphs, and tables with smart question generation.</p>
+            </a>
+            <a href="../productivity/habit-tracker.html" class="related-tool-card">
+                <h3><span class="tool-icon">✅</span> Habit Tracker</h3>
+                <p>Build consistent study habits with streak tracking and visual progress calendars.</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Master aptitude skills with daily practice quizzes, mock tests, and interactive tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Aptitude Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./daily-quiz.html">Daily 5 Questions Quiz</a></li>
+                    <li><a href="./data-interpretation.html">Data Interpretation</a></li>
+                    <li><a href="./wtd-calculator.html">Work Time Distance</a></li>
+                    <li><a href="./mock-test.html">Mock Test Simulator</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Auto-Generate Question Functions
+        const questionGenerators = {
+            speedDistanceTime: () => {
+                const distance = [60, 80, 100, 120, 150, 180, 200, 240, 300, 360][Math.floor(Math.random() * 10)];
+                const time = [2, 3, 4, 5, 6][Math.floor(Math.random() * 5)];
+                const speed = distance / time;
+                const wrong = [speed - 10, speed + 10, speed - 20, speed + 15].filter(x => x > 0);
+                const options = [speed, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `If a train travels ${distance} km in ${time} hours, what is its average speed?`,
+                    options: options.map(x => `${x} km/h`),
+                    correct: options.indexOf(speed),
+                    explanation: `Speed = Distance/Time = ${distance}/${time} = ${speed} km/h`
+                };
+            },
+            
+            percentageProblem: () => {
+                const percent = [10, 15, 20, 25, 30, 40][Math.floor(Math.random() * 6)];
+                const result = [25, 30, 40, 50, 60, 75, 80, 100][Math.floor(Math.random() * 8)];
+                const number = (result * 100) / percent;
+                const wrong = [number + 50, number - 50, number * 1.5, number / 2].map(x => Math.round(x));
+                const options = [number, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `If ${percent}% of a number is ${result}, what is the number?`,
+                    options: options.map(x => x.toString()),
+                    correct: options.indexOf(number),
+                    explanation: `Let x be the number. ${percent/100}x = ${result}, so x = ${number}`
+                };
+            },
+            
+            profitLoss: () => {
+                const markup = [20, 30, 40, 50, 60][Math.floor(Math.random() * 5)];
+                const discount = [10, 15, 20, 25][Math.floor(Math.random() * 4)];
+                const cp = 100;
+                const mp = cp + (cp * markup / 100);
+                const sp = mp - (mp * discount / 100);
+                const profit = sp - cp;
+                const wrong = [profit - 2, profit + 2, profit - 4, profit + 4].filter(x => x !== profit);
+                const options = [profit, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `A shopkeeper marks goods ${markup}% above cost price and gives a discount of ${discount}%. What is the profit percentage?`,
+                    options: options.map(x => `${x}%`),
+                    correct: options.indexOf(profit),
+                    explanation: `CP=100, MP=${mp}, SP=${sp}, Profit=${profit}%`
+                };
+            },
+            
+            workTime: () => {
+                const daysA = [6, 8, 10, 12, 15, 18, 20][Math.floor(Math.random() * 7)];
+                const daysB = [8, 10, 12, 15, 18, 20, 24][Math.floor(Math.random() * 7)];
+                const combined = (daysA * daysB) / (daysA + daysB);
+                const wrong = [combined + 1, combined - 1, combined + 2, combined - 2].filter(x => x > 0);
+                const options = [combined, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `If A can complete work in ${daysA} days and B in ${daysB} days, in how many days can they complete it together?`,
+                    options: options.map(x => `${x.toFixed(1)} days`),
+                    correct: options.indexOf(combined),
+                    explanation: `Combined rate = 1/${daysA} + 1/${daysB} = ${(1/daysA + 1/daysB).toFixed(3)}. Time = ${combined.toFixed(1)} days`
+                };
+            },
+            
+            simpleInterest: () => {
+                const principal = [1000, 2000, 3000, 4000, 5000][Math.floor(Math.random() * 5)];
+                const rate = [5, 8, 10, 12, 15][Math.floor(Math.random() * 5)];
+                const time = [2, 3, 4, 5][Math.floor(Math.random() * 4)];
+                const si = (principal * rate * time) / 100;
+                const wrong = [si + 100, si - 100, si + 200, si * 1.2].map(x => Math.round(x));
+                const options = [si, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `What is the simple interest on Rs. ${principal} at ${rate}% per annum for ${time} years?`,
+                    options: options.map(x => `Rs. ${x}`),
+                    correct: options.indexOf(si),
+                    explanation: `SI = (${principal} × ${rate} × ${time}) / 100 = Rs. ${si}`
+                };
+            },
+            
+            ageRatio: () => {
+                const ratioA = [2, 3, 4, 5][Math.floor(Math.random() * 4)];
+                const ratioB = ratioA + [1, 2][Math.floor(Math.random() * 2)];
+                const years = [3, 4, 5, 6, 8, 10][Math.floor(Math.random() * 6)];
+                const x = [3, 4, 5, 6, 8, 10][Math.floor(Math.random() * 6)];
+                const currentAgeA = ratioA * x;
+                const currentAgeB = ratioB * x;
+                const wrong = [currentAgeB + 5, currentAgeB - 5, currentAgeB + 10, currentAgeB - 3];
+                const options = [currentAgeB, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `The ratio of ages of A and B is ${ratioA}:${ratioB}. If B's current age is ${currentAgeB}, what is A's age?`,
+                    options: options.map(x => `${x} years`),
+                    correct: options.indexOf(currentAgeB),
+                    explanation: `Ratio ${ratioA}:${ratioB}, B=${currentAgeB}, so A=${currentAgeA} years`
+                };
+            },
+            
+            averageProblem: () => {
+                const nums = Array.from({length: 5}, () => Math.floor(Math.random() * 50) + 20);
+                const avg = nums.reduce((a, b) => a + b, 0) / nums.length;
+                const wrong = [avg + 2, avg - 2, avg + 5, avg - 3].map(x => Math.round(x));
+                const options = [Math.round(avg), ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `Find the average of: ${nums.join(', ')}`,
+                    options: options.map(x => x.toString()),
+                    correct: options.indexOf(Math.round(avg)),
+                    explanation: `Average = (${nums.join('+')})/5 = ${Math.round(avg)}`
+                };
+            },
+            
+            seriesPattern: () => {
+                const start = Math.floor(Math.random() * 5) + 2;
+                const diff = [2, 3, 4, 5][Math.floor(Math.random() * 4)];
+                const series = [start];
+                for (let i = 1; i < 5; i++) {
+                    series.push(series[i-1] + (diff * i));
+                }
+                const next = series[4] + (diff * 5);
+                const wrong = [next + diff, next - diff, next + 2, next - 2];
+                const options = [next, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `Find the next number: ${series.join(', ')}, ?`,
+                    options: options.map(x => x.toString()),
+                    correct: options.indexOf(next),
+                    explanation: `Pattern: differences are ${diff}, ${diff*2}, ${diff*3}, ${diff*4}, ${diff*5}`
+                };
+            },
+            
+            compoundInterest: () => {
+                const principal = [2000, 3000, 4000, 5000, 6000][Math.floor(Math.random() * 5)];
+                const rate = [8, 10, 12, 15][Math.floor(Math.random() * 4)];
+                const time = 2;
+                const amount = principal * Math.pow(1 + rate/100, time);
+                const ci = Math.round(amount - principal);
+                const wrong = [ci + 50, ci - 50, ci + 100, ci - 100].filter(x => x > 0);
+                const options = [ci, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `What is the compound interest on Rs. ${principal} at ${rate}% per annum for 2 years?`,
+                    options: options.map(x => `Rs. ${x}`),
+                    correct: options.indexOf(ci),
+                    explanation: `CI = ${principal}(1.${rate/10})² - ${principal} = Rs. ${ci}`
+                };
+            },
+            
+            clockAngle: () => {
+                const hour = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11][Math.floor(Math.random() * 11)];
+                const angle = Math.abs(30 * hour - 0); // at o'clock position
+                const wrong = [angle + 15, angle - 15, angle + 30, 180 - angle].filter(x => x >= 0 && x <= 360);
+                const options = [angle, ...wrong.slice(0, 3)].sort(() => Math.random() - 0.5);
+                
+                return {
+                    question: `A clock shows ${hour}:00. What is the angle between hour and minute hands?`,
+                    options: options.map(x => `${x}°`),
+                    correct: options.indexOf(angle),
+                    explanation: `At ${hour}:00, angle = ${hour} × 30° = ${angle}°`
+                };
+            }
+        };
+        
+        // Generate fresh questions each time
+        function generateQuestionBank() {
+            const generators = Object.values(questionGenerators);
+            const questions = [];
+            
+            // Generate 5 random questions from different types
+            const usedTypes = new Set();
+            while (questions.length < 5 && usedTypes.size < generators.length) {
+                const randomIndex = Math.floor(Math.random() * generators.length);
+                if (!usedTypes.has(randomIndex)) {
+                    questions.push(generators[randomIndex]());
+                    usedTypes.add(randomIndex);
+                }
+            }
+            
+            return questions;
+        }
+        
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let score = 0;
+        let timerInterval;
+        let timeRemaining = 300; // 5 minutes
+        let startTime;
+        
+        // Load user data
+        let userData = JSON.parse(localStorage.getItem('dailyQuizData') || '{"currentStreak":0,"bestStreak":0,"totalScore":0,"quizzesTaken":0,"lastQuizDate":null}');
+        
+        function updateStreakDisplay() {
+            document.getElementById('current-streak').textContent = userData.currentStreak;
+            document.getElementById('best-streak').textContent = userData.bestStreak;
+            document.getElementById('total-score').textContent = userData.totalScore;
+            document.getElementById('quizzes-taken').textContent = userData.quizzesTaken;
+        }
+        
+        function checkStreak() {
+            const today = new Date().toDateString();
+            const lastDate = userData.lastQuizDate;
+            
+            if (lastDate === today) {
+                alert('You have already completed today\'s quiz! Come back tomorrow! 🔥');
+                return false;
+            }
+            
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            
+            if (lastDate !== yesterday.toDateString() && lastDate !== null) {
+                userData.currentStreak = 0; // Streak broken
+            }
+            
+            return true;
+        }
+        
+        function startQuiz() {
+            if (!checkStreak()) return;
+            
+            // Generate fresh questions dynamically
+            currentQuestions = generateQuestionBank();
+            
+            currentQuestionIndex = 0;
+            userAnswers = new Array(5).fill(null);
+            score = 0;
+            timeRemaining = 300;
+            startTime = Date.now();
+            
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+            
+            loadQuestion();
+            startTimer();
+        }
+        
+        function loadQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            
+            document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+                btn.onclick = () => selectOption(index);
+                
+                if (userAnswers[currentQuestionIndex] === index) {
+                    btn.classList.add('selected');
+                }
+                
+                optionsContainer.appendChild(btn);
+            });
+            
+            updateNavigationButtons();
+        }
+        
+        function selectOption(index) {
+            userAnswers[currentQuestionIndex] = index;
+            loadQuestion();
+        }
+        
+        function updateNavigationButtons() {
+            document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+            document.getElementById('next-btn').textContent = currentQuestionIndex === 4 ? 'Submit Quiz' : 'Next →';
+        }
+        
+        function nextQuestion() {
+            if (currentQuestionIndex === 4) {
+                submitQuiz();
+            } else {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+        
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+        
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+                timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                
+                if (timeRemaining <= 30) {
+                    timerDisplay.classList.add('warning');
+                }
+                
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+        
+        function submitQuiz() {
+            clearInterval(timerInterval);
+            
+            // Calculate score
+            score = 0;
+            currentQuestions.forEach((q, i) => {
+                if (userAnswers[i] === q.correct) score++;
+            });
+            
+            const timeTaken = 300 - timeRemaining;
+            const accuracy = ((score / 5) * 100).toFixed(0);
+            
+            // Update user data
+            userData.currentStreak++;
+            userData.bestStreak = Math.max(userData.bestStreak, userData.currentStreak);
+            userData.totalScore += score;
+            userData.quizzesTaken++;
+            userData.lastQuizDate = new Date().toDateString();
+            localStorage.setItem('dailyQuizData', JSON.stringify(userData));
+            
+            // Add to leaderboard
+            addToLeaderboard(score, timeTaken);
+            
+            // Show results
+            document.getElementById('quiz-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+            
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('correct-count').textContent = score;
+            document.getElementById('wrong-count').textContent = 5 - score;
+            document.getElementById('time-taken').textContent = `${Math.floor(timeTaken / 60)}:${String(timeTaken % 60).padStart(2, '0')}`;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+            
+            // Generate detailed review
+            generateReview();
+            
+            // Check for rewards
+            showRewards();
+            updateStreakDisplay();
+        }
+        
+        function generateReview() {
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = '';
+            
+            currentQuestions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === question.correct;
+                
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = `review-question ${isCorrect ? 'correct' : 'wrong'}`;
+                
+                let html = `
+                    <div class="review-header">
+                        <span style="color: rgba(255,255,255,0.6); font-weight: 600;">Question ${index + 1}</span>
+                        <span class="review-status ${isCorrect ? 'correct' : 'wrong'}">
+                            ${isCorrect ? '✅ Correct' : '❌ Wrong'}
+                        </span>
+                    </div>
+                    
+                    <div class="review-question-text">
+                        ${question.question}
+                    </div>
+                `;
+                
+                // Show user's answer if they answered
+                if (userAnswer !== null) {
+                    html += `
+                        <div class="review-answer user-answer">
+                            <strong>👤 Your Answer:</strong> ${question.options[userAnswer]}
+                        </div>
+                    `;
+                } else {
+                    html += `
+                        <div class="review-answer user-answer">
+                            <strong>👤 Your Answer:</strong> <em>Not answered</em>
+                        </div>
+                    `;
+                }
+                
+                // Show correct answer if user was wrong or didn't answer
+                if (!isCorrect) {
+                    html += `
+                        <div class="review-answer correct-answer">
+                            <strong>✅ Correct Answer:</strong> ${question.options[question.correct]}
+                        </div>
+                    `;
+                }
+                
+                // Always show explanation
+                html += `
+                    <div class="review-explanation">
+                        <strong>💡 Why?</strong>
+                        <p>${question.explanation}</p>
+                    </div>
+                `;
+                
+                reviewDiv.innerHTML = html;
+                reviewContainer.appendChild(reviewDiv);
+            });
+        }
+        
+        function showRewards() {
+            const rewards = [];
+            
+            if (userData.currentStreak === 5) {
+                rewards.push('🎉 5-Day Streak Unlocked! Pro Tip: Focus on time-speed-distance formulas.');
+            }
+            if (userData.currentStreak === 10) {
+                rewards.push('🏆 10-Day Streak Master! You\'re in the top 10% of learners!');
+            }
+            if (userData.currentStreak === 30) {
+                rewards.push('🌟 30-Day Legend! You\'ve earned the Consistency Champion badge!');
+            }
+            if (score === 5) {
+                rewards.push('🎯 Perfect Score! You\'re unstoppable today!');
+            }
+            
+            if (rewards.length > 0) {
+                const rewardDiv = document.getElementById('reward-message');
+                rewardDiv.innerHTML = `<div class="reward-unlock"><h3 style="color: #a855f7; margin-bottom: 1rem;">🎁 Rewards Unlocked!</h3>${rewards.map(r => `<p style="color: white; margin: 0.5rem 0;">${r}</p>`).join('')}</div>`;
+            }
+        }
+        
+        function addToLeaderboard(score, time) {
+            let leaderboard = JSON.parse(localStorage.getItem('dailyQuizLeaderboard') || '[]');
+            
+            const today = new Date().toDateString();
+            leaderboard = leaderboard.filter(entry => entry.date === today);
+            
+            leaderboard.push({
+                name: `User${Math.floor(Math.random() * 1000)}`,
+                score: score,
+                time: time,
+                date: today
+            });
+            
+            leaderboard.sort((a, b) => b.score - a.score || a.time - b.time);
+            leaderboard = leaderboard.slice(0, 10);
+            
+            localStorage.setItem('dailyQuizLeaderboard', JSON.stringify(leaderboard));
+            renderLeaderboard();
+        }
+        
+        function renderLeaderboard() {
+            const leaderboard = JSON.parse(localStorage.getItem('dailyQuizLeaderboard') || '[]');
+            const today = new Date().toDateString();
+            const todayLeaderboard = leaderboard.filter(entry => entry.date === today);
+            
+            const container = document.getElementById('leaderboard-list');
+            
+            if (todayLeaderboard.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: rgba(255,255,255,0.5); padding: 2rem;">No entries yet. Be the first!</p>';
+                return;
+            }
+            
+            container.innerHTML = todayLeaderboard.map((entry, index) => {
+                const rankClass = index === 0 ? 'gold' : index === 1 ? 'silver' : index === 2 ? 'bronze' : '';
+                const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '';
+                
+                return `
+                    <div class="leaderboard-item">
+                        <div class="rank ${rankClass}">${medal || (index + 1)}</div>
+                        <div class="user-name">${entry.name}</div>
+                        <div class="user-score">${entry.score}/5 (${Math.floor(entry.time / 60)}:${String(entry.time % 60).padStart(2, '0')})</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initialize
+        updateStreakDisplay();
+        renderLeaderboard();
+    </script>
+</body>
+</html>

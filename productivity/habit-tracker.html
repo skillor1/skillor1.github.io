@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/productivity/habit-tracker.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Build consistent habits with visual streak tracking and daily checkboxes. Automatically generate shareable wallpapers after reaching 7-day milestones to celebrate your progress on social media.">
+    <meta name="keywords" content="habit tracker app free online, build 30 day habit streak, daily habit checkbox tracker, streak wallpaper generator, habit tracker with reminders, productivity habit builder 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/productivity/habit-tracker.html">
+    <meta property="og:title" content="Habit Tracker - Build Streaks with Wallpaper Generator">
+    <meta property="og:description" content="Build consistent habits with visual streak tracking and daily checkboxes. Automatically generate shareable wallpapers after reaching 7-day milestones to celebrate your progress on social media.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/productivity/habit-tracker.html">
+    <meta name="twitter:title" content="Habit Tracker - Build Streaks with Wallpaper Generator">
+    <meta name="twitter:description" content="Build consistent habits with visual streak tracking and daily checkboxes. Automatically generate shareable wallpapers after reaching 7-day milestones to celebrate your progress on social media.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Habit Tracker - Build Streaks with Wallpaper Generator</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["WebApplication", "HowTo"],
+      "name": "Build a 30-Day Habit Streak – Free Tracker",
+      "description": "Track daily habits with streak counter and wallpaper generator. Build lasting habits in 30 days.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "step": [
+        {"@type": "HowToStep", "name": "Add Habits", "text": "Create custom habits you want to track daily"},
+        {"@type": "HowToStep", "name": "Check Daily", "text": "Mark habits as complete each day"},
+        {"@type": "HowToStep", "name": "Build Streaks", "text": "Maintain consecutive days to build streaks"},
+        {"@type": "HowToStep", "name": "Generate Wallpaper", "text": "After 7-day streak, create shareable wallpaper badge"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many habits should I track at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Track 3-5 habits maximum for optimal success. Research shows tracking 1-3 habits leads to 80% completion rate while 5+ habits drops success to 35% due to decision fatigue. Ideal allocation: 1-2 health habits (exercise, sleep), 1-2 skill habits (reading, coding practice), and 1 mindfulness habit (meditation, journaling). Start with just 1-2 habits for the first month, then add more once automated. Use habit stacking—attach new habits to existing routines for higher success rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are streaks really important or just gamification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Streaks are powerful motivators backed by loss aversion psychology—once you build a 7+ day streak, you won't want to break it. However, streaks can create harmful all-or-nothing thinking. Better metric: 70-80% weekly completion rate (5-6 out of 7 days). A 97% completion rate with occasional breaks is healthier than 100% streak with burnout. Use streaks for motivation but focus on consistency over perfection. The Never Miss Twice rule from Atomic Habits: missing one day is forgiveness, missing two days is danger zone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if I break a habit streak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Immediate actions: Don't panic or quit entirely. Complete the habit TODAY as soon as possible to prevent Never Miss Twice scenario. Identify root cause—was it genuine emergency, poor planning, lack of motivation, or unrealistic habit? Use three recovery options: Fresh Start (reset streak, celebrate previous attempt), Flexible Streak (allow 1-2 misses per month), or Minimum Viable Habit (reduce difficulty temporarily, e.g., 5 min exercise instead of 30 min). If breaking streaks 3+ times monthly, diagnose: habit too ambitious, wrong time of day, or lacking compelling reason."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it really take to form a habit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NOT 21 days—that's a myth! University College London study found 66 days on average for habit automation, with range from 18 days (simple habits like drinking water) to 254 days (complex habits like daily exercise). Three phases: Initiation (Days 1-21) requires conscious effort and motivation, Reinforcement (Days 22-66) needs consistency through obstacles, Automation (Day 67+) where habit feels natural with minimal willpower. Timeline by complexity: drinking water = 18-30 days, daily reading = 30-45 days, exercise routine = 60-90 days, meditation practice = 90-120 days. Signs of automation: habit feels wrong to skip, requires no decision-making, happens on autopilot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the best time of day to complete habits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Morning habits have 3x higher completion rates due to willpower peak, fewer distractions, and psychological win that boosts entire day. Optimal timing by habit type: Exercise 6-8 AM (testosterone peak, empty stomach), Learning/Reading 8-10 AM (cognitive peak), Creative work 10 AM-12 PM (flow state), Administrative habits 2-4 PM (post-lunch energy dip = perfect for routine tasks), Reflection/Journaling 8-9 PM (evening wind-down). Use habit stacking examples: After morning coffee → 10 min reading, After brushing teeth → 2 min plank, After dinner → 15 min learning. Not a morning person? Phase in gradually: Week 1 = 10 AM start, Week 2 = 9 AM, Week 3 = 8 AM."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --tool-primary: #10b981;
+            --tool-secondary: #34d399;
+            --tool-accent: #059669;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .add-habit {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-field {
+            flex: 1;
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5);
+        }
+        
+        .habit-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .habit-info {
+            flex: 1;
+        }
+        
+        .habit-name {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .habit-streak {
+            color: var(--tool-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-large {
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            accent-color: var(--tool-primary);
+        }
+        
+        .streak-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 20px;
+            color: white;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .wallpaper-canvas {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem auto;
+            display: block;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../productivity.html">Productivity</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../productivity.html" class="back-link">← Back to Productivity</a>
+        
+        <div class="header-section">
+            <h1>✅ Habit Tracker</h1>
+            <p>Build lasting habits with daily streaks</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-habits">0</div>
+                <div class="stat-label">Active Habits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="longest-streak">0</div>
+                <div class="stat-label">Longest Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="today-completed">0</div>
+                <div class="stat-label">Today</div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="add-habit">
+                <input type="text" class="input-field" id="habit-input" placeholder="Enter new habit (e.g., Drink 8 glasses of water)">
+                <button class="btn" onclick="addHabit()">+ Add Habit</button>
+            </div>
+            
+            <div id="habits-container">
+                <div class="empty-state">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <p>No habits yet. Add your first habit to start tracking!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel" id="wallpaper-panel" style="display: none;">
+            <h3 style="color: white; text-align: center; margin-bottom: 1rem;">🎉 Streak Wallpaper Generator</h3>
+            <p style="color: rgba(255,255,255,0.8); text-align: center; margin-bottom: 1.5rem;">You've earned a 7+ day streak! Generate your shareable wallpaper:</p>
+            <canvas id="wallpaper-canvas" class="wallpaper-canvas" width="1080" height="1920"></canvas>
+            <div style="text-align: center;">
+                <button class="btn" onclick="downloadWallpaper()">📥 Download Wallpaper</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Habit Tracker</h2>
+        <p>Build lasting positive habits with visual streak tracking and daily check-ins! This tool makes habit formation fun and sustainable through gamification—watch your streaks grow, earn achievement wallpapers, and use calendar visualization to maintain consistency over time.</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Add Your Habits</h3>
+                <p>Type habit names in the input field and click "Add Habit" (e.g., "Exercise 30 min," "Read 20 pages," "No phone before bed"). Start with 3-5 habits maximum—research shows fewer habits = higher success rate. Each habit gets its own tracking row with checkbox.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Check Off Daily Completions</h3>
+                <p>Every day, check the ✅ checkbox next to completed habits. Your streak counter increases automatically (e.g., "🔥 7 day streak"). Miss a day? Streak resets to 0 (motivating you to maintain consistency). Checkboxes update in real-time with green highlights for today's completions.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Track Progress & Stats</h3>
+                <p>Monitor your dashboard showing "Total Habits" tracked, "Longest Streak" across all habits, and "Today Completed" count. See which habits are strongest (high streaks) vs needing attention (low streaks). Use stats to identify patterns and optimize your routine.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Earn Streak Wallpapers</h3>
+                <p>Achieve 7+ day streak on any habit to unlock the Reward Wallpaper panel! Download a custom motivational phone wallpaper showing your streak number (e.g., "23 DAY STREAK 🔥") with gradient background. Set as lock screen to remind yourself daily why consistency matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How many habits should I track at once for best results?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Recommended: 3-5 habits maximum</strong> (Quality over Quantity!)</p>
+                        <p><strong>Why Not Track 10-20 Habits?</strong></p>
+                        <ul>
+                            <li><strong>Decision Fatigue:</strong> Each habit requires willpower—brain has limited daily self-control capacity</li>
+                            <li><strong>Overwhelming Checklist:</strong> 10+ boxes to check daily = feels like chore, not progress</li>
+                            <li><strong>Success Rate Drops:</strong> Research shows 1-3 habits = 80% success rate | 5+ habits = 35% success rate</li>
+                            <li><strong>Streak Maintenance:</strong> Hard to maintain 10 simultaneous streaks—one missed habit ruins motivation</li>
+                        </ul>
+                        <p><strong>Optimal Habit Allocation (3-5 Total):</strong></p>
+                        <ul>
+                            <li><strong>1-2 Health Habits:</strong> Exercise, healthy eating, sleep routine</li>
+                            <li><strong>1-2 Skill Habits:</strong> Reading, studying, coding practice</li>
+                            <li><strong>1 Mindfulness Habit:</strong> Meditation, journaling, gratitude</li>
+                        </ul>
+                        <p><strong>Progressive Habit Building Strategy:</strong></p>
+                        <ul>
+                            <li><strong>Month 1:</strong> Track 1 habit only (e.g., "Morning exercise") until 30-day streak</li>
+                            <li><strong>Month 2:</strong> Add 2nd habit (e.g., "Read 20 pages") while maintaining first</li>
+                            <li><strong>Month 3:</strong> Add 3rd habit once first two feel automatic</li>
+                            <li><strong>Month 4+:</strong> Maximum 5 habits—if adding 6th, remove an established habit (already automatic)</li>
+                        </ul>
+                        <p><strong>Signs You're Tracking Too Many Habits:</strong></p>
+                        <ul>
+                            <li>⚠️ Completion rate below 60% (checking off fewer than 3/5 habits daily)</li>
+                            <li>⚠️ No habit reaches 7+ day streak in 2 weeks</li>
+                            <li>⚠️ Feel stressed/guilty looking at the tracker instead of motivated</li>
+                            <li>⚠️ Skip days entirely because checklist feels overwhelming</li>
+                        </ul>
+                        <p><strong>Advanced Tip: "Habit Stacking"</strong></p>
+                        <p>Instead of tracking 5 separate habits, stack them into 1-2 routines:</p>
+                        <ul>
+                            <li><strong>Morning Routine Habit:</strong> "Complete AM routine" = wake 6am + exercise + breakfast + review goals (all linked)</li>
+                            <li><strong>Evening Routine Habit:</strong> "Complete PM routine" = journal + plan tomorrow + no phone 9pm+ + read 20 min</li>
+                        </ul>
+                        <p>Result: Track 2 habits, but accomplish 8+ behaviors!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are streaks really important or is consistency without streaks enough?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Streaks are powerful psychological motivators BUT not the only measure of success!</strong></p>
+                        <p><strong>Why Streaks Work (Science-Backed):</strong></p>
+                        <ul>
+                            <li><strong>Loss Aversion:</strong> Humans hate losing progress (20-day streak) more than they love gains → strong motivation to not break it</li>
+                            <li><strong>Visual Progress:</strong> "🔥 45 day streak" = tangible proof of discipline, boosts self-efficacy</li>
+                            <li><strong>Momentum Effect:</strong> Longer streak = higher commitment (invested too much to quit now)</li>
+                            <li><strong>Social Proof:</strong> Sharing 100-day streak = external accountability + recognition</li>
+                        </ul>
+                        <p><strong>When Streaks Can Be Harmful:</strong></p>
+                        <ul>
+                            <li><strong>All-or-Nothing Thinking:</strong> Break 60-day streak → feel like failure → quit habit entirely (instead of just continuing)</li>
+                            <li><strong>Injury Risk:</strong> "Must exercise daily for streak" even when sick → overtraining, burnout</li>
+                            <li><strong>Flexibility Loss:</strong> Life happens (travel, family emergency) but streak pressure causes guilt</li>
+                            <li><strong>Wrong Focus:</strong> Chasing streak number instead of actual habit benefit (e.g., reading 1 page/day for streak vs 20 pages when motivated)</li>
+                        </ul>
+                        <p><strong>Better Metric: "Completion Rate" (Weekly Consistency)</strong></p>
+                        <ul>
+                            <li><strong>Formula:</strong> (Days completed / Days in week) × 100</li>
+                            <li><strong>Target:</strong> 70-80% (5-6 days out of 7) = sustainable long-term</li>
+                            <li><strong>Flexibility:</strong> Miss 1-2 days per week without feeling like failure</li>
+                            <li><strong>Example:</strong> Exercise 5/7 days = 71% (excellent!) vs broken streak = 0 (feels demotivating)</li>
+                        </ul>
+                        <p><strong>Balanced Approach: Use Both Metrics</strong></p>
+                        <ul>
+                            <li><strong>Primary Goal:</strong> 70%+ weekly completion rate (consistency without perfection)</li>
+                            <li><strong>Bonus Goal:</strong> Build streaks when life is stable (motivational boost)</li>
+                            <li><strong>Streak Rules:</strong> Allow 1 "emergency skip" per month without breaking streak</li>
+                        </ul>
+                        <p><strong>What Matters More Than Streaks:</strong></p>
+                        <ol>
+                            <li><strong>Habit Identity:</strong> "I am someone who exercises regularly" > "I have a 50-day exercise streak"</li>
+                            <li><strong>Progress Metrics:</strong> Reading 100 books in a year with some missed days > Reading 1 page daily for streak</li>
+                            <li><strong>Enjoyment:</strong> If habit tracking causes stress, it's counterproductive</li>
+                        </ol>
+                        <p><em>Final Verdict:</em> Use streaks as motivation tool (gamification) but don't let broken streaks destroy your long-term consistency!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What should I do if I miss a day and break my streak?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Breaking a streak is NOT failure—it's an opportunity to build resilience!</strong></p>
+                        <p><strong>Immediate Actions (Within 24 Hours):</strong></p>
+                        <ol>
+                            <li><strong>Don't Panic or Quit:</strong> Missing 1 day out of 30 = 97% completion rate (still excellent!)</li>
+                            <li><strong>Complete Today's Habit ASAP:</strong> Get back on track immediately—momentum matters more than streak number</li>
+                            <li><strong>Identify Root Cause:</strong> Why did you miss? (Busy schedule, forgot, sick, lost motivation?)</li>
+                            <li><strong>Adjust Habit Design:</strong> If forgot → set reminder | If too hard → reduce intensity | If sick → allow flexibility</li>
+                        </ol>
+                        <p><strong>Mindset Reframe:</strong></p>
+                        <ul>
+                            <li><strong>Before:</strong> "I broke my 40-day streak 😞, I'm a failure, why bother continuing?"</li>
+                            <li><strong>After:</strong> "I completed my habit 40/41 days = 97.5% success rate! 🎉 One miss doesn't erase that progress. Starting fresh today."</li>
+                        </ul>
+                        <p><strong>The "Never Miss Twice" Rule (Atomic Habits by James Clear):</strong></p>
+                        <ul>
+                            <li><strong>Miss Day 1:</strong> Life happens, forgive yourself</li>
+                            <li><strong>Miss Day 2 in a row:</strong> Danger zone—habit unraveling begins</li>
+                            <li><strong>Solution:</strong> Make it non-negotiable to resume on Day 2, even if reduced version (e.g., 5-min workout vs 30-min)</li>
+                        </ul>
+                        <p><strong>Recovery Strategy After Broken Streak:</strong></p>
+                        <p><strong>Option 1: "Fresh Start" (Recommended for Long Streaks)</strong></p>
+                        <ul>
+                            <li>Accept the reset, start new streak from Day 1</li>
+                            <li>Mindset: "My previous 40-day streak taught me I CAN do this—now I'll do 60 days!"</li>
+                            <li>Bonus: Reduce pressure, enjoy fresh motivation</li>
+                        </ul>
+                        <p><strong>Option 2: "Flexible Streak" (Custom Rule)</strong></p>
+                        <ul>
+                            <li>Allow 1-2 "skip days" per month without breaking streak</li>
+                            <li>Tool Hack: Manually add "*" to habit name indicating skip day used (e.g., "Exercise *" = 1 skip used this month)</li>
+                            <li>Prevents all-or-nothing thinking while maintaining accountability</li>
+                        </ul>
+                        <p><strong>Option 3: "Minimum Viable Habit" (Bad Day Backup)</strong></p>
+                        <ul>
+                            <li>Create 2 versions of habit: Full version (30-min run) + Minimum version (5-min walk)</li>
+                            <li>On tough days, complete minimum version to maintain streak</li>
+                            <li>Example: "Exercise: 30 min preferred, 5 min minimum" — even 5 min keeps streak alive</li>
+                        </ul>
+                        <p><strong>What To Do If You Break Streak 3+ Times in a Month:</strong></p>
+                        <ul>
+                            <li>⚠️ Signal: Habit design is flawed, not your willpower</li>
+                            <li><strong>Diagnosis:</strong> Is habit too ambitious? Wrong time of day? Conflicting priorities?</li>
+                            <li><strong>Solutions:</strong></li>
+                            <ul>
+                                <li>Reduce intensity: "Run 5km" → "Walk 15 min"</li>
+                                <li>Change timing: "Evening workout" (often skipped) → "Morning workout" (more consistent)</li>
+                                <li>Add accountability: Tell friend, join our Focus Dashboard buddy system</li>
+                                <li>Stack with existing habit: "After morning coffee, immediately do X"</li>
+                            </ul>
+                        </ul>
+                        <p><strong>Celebrate Micro-Wins After Break:</strong></p>
+                        <ul>
+                            <li>Day 3 after break: "I'm back on track! 3 days completed!"</li>
+                            <li>Day 7: "New 7-day streak! Download reward wallpaper!"</li>
+                            <li>Day 30: "30-day streak #2! I've now completed 70/71 days total = 98.5% consistency!"</li>
+                        </ul>
+                        <p><em>Remember:</em> Habit success is measured by total days completed over 3-6 months, not perfect streaks!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does it take to form a habit and when will it feel automatic?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Debunking the Myth: It's NOT 21 days!</strong></p>
+                        <p><strong>Real Science (University College London Study):</strong></p>
+                        <ul>
+                            <li><strong>Average:</strong> 66 days for a habit to become automatic</li>
+                            <li><strong>Range:</strong> 18-254 days depending on habit complexity</li>
+                            <li><strong>18 days:</strong> Simple habits (drinking water after waking)</li>
+                            <li><strong>66 days:</strong> Moderate habits (20-min daily exercise)</li>
+                            <li><strong>254 days:</strong> Complex habits (learning new language 1 hour daily)</li>
+                        </ul>
+                        <p><strong>3 Phases of Habit Formation:</strong></p>
+                        <p><strong>Phase 1: Initiation (Days 1-21) - "Honeymoon Phase"</strong></p>
+                        <ul>
+                            <li><strong>Experience:</strong> High motivation, excited to start, requires deliberate effort</li>
+                            <li><strong>Challenge:</strong> Novelty wears off around Day 10-15, first urge to quit</li>
+                            <li><strong>Goal:</strong> Focus on showing up daily, don't worry about performance (e.g., 5-min workout counts as much as 30-min)</li>
+                            <li><strong>Tracker Role:</strong> Check boxes daily, watch streak grow (gamification keeps you going)</li>
+                        </ul>
+                        <p><strong>Phase 2: Reinforcement (Days 22-66) - "The Struggle"</strong></p>
+                        <ul>
+                            <li><strong>Experience:</strong> Motivation fades, habit still requires willpower, temptation to skip</li>
+                            <li><strong>Challenge:</strong> Most people quit in this phase (Days 30-40 are critical)</li>
+                            <li><strong>Goal:</strong> Build automaticity—link habit to consistent trigger (e.g., "After morning coffee, I exercise")</li>
+                            <li><strong>Tracker Role:</strong> Longest streak stat motivates you ("40 days! Don't break it now!")</li>
+                        </ul>
+                        <p><strong>Phase 3: Automation (Days 67+) - "Second Nature"</strong></p>
+                        <ul>
+                            <li><strong>Experience:</strong> Habit feels weird to skip, requires minimal willpower</li>
+                            <li><strong>Example:</strong> Brushing teeth—you don't debate "Should I?" you just do it</li>
+                            <li><strong>Goal:</strong> Maintain habit identity ("I am someone who exercises daily")</li>
+                            <li><strong>Tracker Role:</strong> Can reduce tracking (habit is automatic) or continue for accountability</li>
+                        </ul>
+                        <p><strong>Habit Complexity Timeline:</strong></p>
+                        <ul>
+                            <li><strong>Simple Habits (18-30 days):</strong></li>
+                            <ul>
+                                <li>Drink water upon waking</li>
+                                <li>Make bed every morning</li>
+                                <li>Take vitamins after breakfast</li>
+                            </ul>
+                            <li><strong>Moderate Habits (60-90 days):</strong></li>
+                            <ul>
+                                <li>Exercise 20-30 minutes daily</li>
+                                <li>Read 20 pages every night</li>
+                                <li>Journal 5 minutes before bed</li>
+                            </ul>
+                            <li><strong>Complex Habits (120-250 days):</strong></li>
+                            <ul>
+                                <li>Learn coding 1 hour daily</li>
+                                <li>Meal prep every Sunday</li>
+                                <li>Full morning routine (meditation + exercise + planning = 90 min)</li>
+                            </ul>
+                        </ul>
+                        <p><strong>Signs Your Habit is Becoming Automatic:</strong></p>
+                        <ul>
+                            <li>✅ You do it without checking tracker first</li>
+                            <li>✅ Skipping feels uncomfortable ("something's off today")</li>
+                            <li>✅ You do it even when tired/busy</li>
+                            <li>✅ Takes zero mental debate ("Should I?" → just do it)</li>
+                            <li>✅ Others notice: "Wow, you never miss your morning run!"</li>
+                        </ul>
+                        <p><strong>How to Speed Up Habit Formation:</strong></p>
+                        <ol>
+                            <li><strong>Start Small:</strong> "Exercise 5 min" easier to automate than "Exercise 60 min"</li>
+                            <li><strong>Consistent Trigger:</strong> "After [existing habit], I will [new habit]"</li>
+                            <li><strong>Environment Design:</strong> Lay out workout clothes night before</li>
+                            <li><strong>Track Visually:</strong> Use this tool's streak counter + calendar view</li>
+                            <li><strong>Accountability:</strong> Tell 1-2 friends, post on social media</li>
+                        </ol>
+                        <p><em>Realistic Expectation:</em> Track for 90 days to truly lock in a moderate habit—worth the investment for lifelong change!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the best time of day to complete habits for maximum consistency?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Golden Rule: Morning habits have 3x higher completion rate than evening habits!</strong></p>
+                        <p><strong>Why Morning Habits Stick Better:</strong></p>
+                        <ul>
+                            <li><strong>Willpower Peak:</strong> Self-control highest in morning, depletes throughout day</li>
+                            <li><strong>Fewer Distractions:</strong> No meetings, urgent emails, social plans yet</li>
+                            <li><strong>Psychological Win:</strong> Complete habit first = "Today is already productive" mindset</li>
+                            <li><strong>Consistency:</strong> Morning routine is predictable | Evening = unpredictable (late work, social events)</li>
+                        </ul>
+                        <p><strong>Optimal Timing by Habit Type:</strong></p>
+                        <p><strong>Morning (6 AM - 10 AM) - Best for Priority Habits:</strong></p>
+                        <ul>
+                            <li><strong>Exercise/Workout:</strong> 80% completion if done before 10 AM vs 40% if planned after work</li>
+                            <li><strong>Journaling/Planning:</strong> Set intentions for day</li>
+                            <li><strong>Learning/Study:</strong> Brain retention highest in morning</li>
+                            <li><strong>Healthy Breakfast:</strong> Eating well early prevents bad food choices later</li>
+                        </ul>
+                        <p><strong>Afternoon (12 PM - 3 PM) - Good for Social/Collaborative Habits:</strong></p>
+                        <ul>
+                            <li><strong>Language Practice:</strong> Chat with language exchange partners</li>
+                            <li><strong>Networking Calls:</strong> Connect with mentors, colleagues</li>
+                            <li><strong>Creative Work:</strong> Some people hit creative peak post-lunch</li>
+                        </ul>
+                        <p><strong>Evening (6 PM - 9 PM) - Works for Relaxation Habits:</strong></p>
+                        <ul>
+                            <li><strong>Reading:</strong> Wind-down activity before bed</li>
+                            <li><strong>Reflection Journaling:</strong> Review day's events</li>
+                            <li><strong>Stretching/Yoga:</strong> Release tension from day</li>
+                            <li><strong>Family Time:</strong> Dinner together, no phones</li>
+                        </ul>
+                        <p><strong>Avoid Late Night (After 9 PM) - Lowest Success Rate:</strong></p>
+                        <ul>
+                            <li>Willpower depleted, easy to rationalize "I'll do it tomorrow"</li>
+                            <li>Exception: Bedtime routine habits (brush teeth, skincare) work because they're simple + necessary</li>
+                        </ul>
+                        <p><strong>Strategy: "Habit Stacking" by Time Block</strong></p>
+                        <p><strong>Morning Stack (6:00-7:30 AM):</strong></p>
+                        <ol>
+                            <li>6:00 - Wake up, drink water</li>
+                            <li>6:15 - Exercise 20 min</li>
+                            <li>6:40 - Shower</li>
+                            <li>7:00 - Healthy breakfast</li>
+                            <li>7:20 - Journal + plan day</li>
+                        </ol>
+                        <p>Result: 5 habits completed before work starts!</p>
+                        <p><strong>Evening Stack (8:30-9:30 PM):</strong></p>
+                        <ol>
+                            <li>8:30 - No phone/screens</li>
+                            <li>8:45 - Read 20 pages</li>
+                            <li>9:10 - Reflect in journal</li>
+                            <li>9:20 - Skincare + brush teeth</li>
+                            <li>9:30 - Sleep</li>
+                        </ol>
+                        <p><strong>What If You're Not a Morning Person?</strong></p>
+                        <ul>
+                            <li><strong>Phase 1 (Week 1-2):</strong> Start with just 1 simple morning habit (make bed after waking)</li>
+                            <li><strong>Phase 2 (Week 3-4):</strong> Add light exercise (5-min stretching)</li>
+                            <li><strong>Phase 3 (Month 2):</strong> Gradually shift to full morning routine</li>
+                            <li><strong>Alternative:</strong> Use lunch break for priority habits if morning truly impossible (but track completion rate—if below 60%, morning IS better)</li>
+                        </ul>
+                        <p><strong>Timing Experiments to Try:</strong></p>
+                        <ul>
+                            <li><strong>Week 1:</strong> Track habit at morning time → measure completion rate</li>
+                            <li><strong>Week 2:</strong> Track same habit at evening time → measure completion rate</li>
+                            <li><strong>Compare:</strong> Whichever timing has higher completion = optimal time for you</li>
+                        </ul>
+                        <p><em>Bottom Line:</em> When scheduling habits, ask "Is this time I can consistently protect?" Morning = usually yes | Evening = often no.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="pomodoro-timer.html" class="related-tool-card">
+                <h3><span class="tool-icon">🍅</span> Pomodoro Timer</h3>
+                <p>Build the habit of daily deep work sessions! Use Pomodoro Timer (25-min focus blocks) as one of your tracked habits. Aim for 6-8 Pomodoros daily with automatic task progression.</p>
+            </a>
+            
+            <a href="focus-dashboard.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Focus Dashboard</h3>
+                <p>Track your "Complete 6 Focus Sessions" habit with comprehensive productivity analytics. Dashboard shows total sessions, focus time, and completion rates to feed into Habit Tracker data.</p>
+            </a>
+            
+            <a href="../aptitude/daily-quiz.html" class="related-tool-card">
+                <h3><span class="tool-icon">🧠</span> Daily Quiz</h3>
+                <p>Create "Complete Daily Aptitude Quiz" as a learning habit! Daily quiz offers 5 questions with streak tracking, perfect for students building consistent study habits for exam prep.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © <span id="year"></span> Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        let habits = JSON.parse(localStorage.getItem('habits') || '[]');
+        
+        function addHabit() {
+            const input = document.getElementById('habit-input');
+            const name = input.value.trim();
+            if (!name) return alert('Please enter a habit name!');
+            
+            habits.push({
+                id: Date.now(),
+                name: name,
+                streak: 0,
+                lastCompleted: null,
+                history: []
+            });
+            
+            input.value = '';
+            saveAndRender();
+        }
+        
+        function toggleHabit(id) {
+            const habit = habits.find(h => h.id === id);
+            const today = new Date().toDateString();
+            
+            if (habit.lastCompleted === today) {
+                habit.lastCompleted = null;
+                habit.streak = Math.max(0, habit.streak - 1);
+                habit.history = habit.history.filter(d => d !== today);
+            } else {
+                const yesterday = new Date(Date.now() - 86400000).toDateString();
+                if (habit.lastCompleted === yesterday || habit.streak === 0) {
+                    habit.streak++;
+                } else {
+                    habit.streak = 1;
+                }
+                habit.lastCompleted = today;
+                habit.history.push(today);
+            }
+            
+            saveAndRender();
+        }
+        
+        function deleteHabit(id) {
+            if (confirm('Delete this habit?')) {
+                habits = habits.filter(h => h.id !== id);
+                saveAndRender();
+            }
+        }
+        
+        function saveAndRender() {
+            localStorage.setItem('habits', JSON.stringify(habits));
+            renderHabits();
+            updateStats();
+            checkWallpaperEligibility();
+        }
+        
+        function renderHabits() {
+            const container = document.getElementById('habits-container');
+            const today = new Date().toDateString();
+            
+            if (habits.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div><p>No habits yet. Add your first habit to start tracking!</p></div>';
+                return;
+            }
+            
+            container.innerHTML = habits.map(h => `
+                <div class="habit-item">
+                    <div class="habit-info">
+                        <div class="habit-name">${h.name}</div>
+                        <div class="habit-streak">
+                            ${h.streak > 0 ? `🔥 ${h.streak} day streak` : 'Start your streak!'}
+                            ${h.streak >= 7 ? '<span class="streak-badge">⭐ 7+ Days!</span>' : ''}
+                        </div>
+                    </div>
+                    <input type="checkbox" class="checkbox-large" ${h.lastCompleted === today ? 'checked' : ''} onchange="toggleHabit(${h.id})">
+                    <button class="btn" style="padding: 0.5rem 1rem; margin-left: 1rem;" onclick="deleteHabit(${h.id})">🗑️</button>
+                </div>
+            `).join('');
+        }
+        
+        function updateStats() {
+            const today = new Date().toDateString();
+            document.getElementById('total-habits').textContent = habits.length;
+            document.getElementById('longest-streak').textContent = Math.max(0, ...habits.map(h => h.streak));
+            document.getElementById('today-completed').textContent = habits.filter(h => h.lastCompleted === today).length;
+        }
+        
+        function checkWallpaperEligibility() {
+            const hasLongStreak = habits.some(h => h.streak >= 7);
+            document.getElementById('wallpaper-panel').style.display = hasLongStreak ? 'block' : 'none';
+            if (hasLongStreak) generateWallpaper();
+        }
+        
+        function generateWallpaper() {
+            const canvas = document.getElementById('wallpaper-canvas');
+            const ctx = canvas.getContext('2d');
+            const maxStreak = Math.max(...habits.map(h => h.streak));
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#10b981');
+            gradient.addColorStop(1, '#059669');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = 'rgba(255,255,255,0.1)';
+            for(let i = 0; i < 50; i++) {
+                ctx.beginPath();
+                ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 4, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 120px Poppins';
+            ctx.fillText(maxStreak, canvas.width / 2, 800);
+            ctx.font = 'bold 80px Poppins';
+            ctx.fillText('DAY STREAK', canvas.width / 2, 920);
+            ctx.font = '50px Poppins';
+            ctx.fillText('🔥 Keep Going! 🔥', canvas.width / 2, 1050);
+            ctx.font = '40px Poppins';
+            ctx.fillStyle = 'rgba(255,255,255,0.8)';
+            ctx.fillText('Skillor Habit Tracker', canvas.width / 2, 1700);
+        }
+        
+        function downloadWallpaper() {
+            const canvas = document.getElementById('wallpaper-canvas');
+            const link = document.createElement('a');
+            link.download = `streak-${Math.max(...habits.map(h => h.streak))}-days.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        renderHabits();
+        updateStats();
+        checkWallpaperEligibility();
+    </script>
+</body>
+</html>

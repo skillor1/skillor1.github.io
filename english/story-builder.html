@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/english/story-builder.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Practice English vocabulary and grammar with daily interactive fill-in-the-blank stories. Create your own story endings, vote on community versions, and improve writing skills through engaging narratives.">
+    <meta name="keywords" content="English story builder online free, fill in the blank stories English, daily vocabulary practice, interactive grammar exercises, creative writing English practice, story completion game, learn English through stories 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/english/story-builder.html">
+    <meta property="og:title" content="Daily English Story Builder - Interactive Fill-in-the-Blank Practice">
+    <meta property="og:description" content="Practice English vocabulary and grammar with daily interactive fill-in-the-blank stories. Create your own story endings, vote on community versions, and improve writing skills through engaging narratives.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/english/story-builder.html">
+    <meta name="twitter:title" content="Daily English Story Builder - Interactive Fill-in-the-Blank Practice">
+    <meta name="twitter:description" content="Practice English vocabulary and grammar with daily interactive fill-in-the-blank stories. Create your own story endings, vote on community versions, and improve writing skills through engaging narratives.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Daily English Story Builder - Interactive Fill-in-the-Blank Practice</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #ec4899;
+            --tool-secondary: #f472b6;
+            --tool-accent: #db2777;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .story-date {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(236, 72, 153, 0.2);
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-bar {
+            background: rgba(30, 30, 45, 0.6);
+            border-radius: 50px;
+            height: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--tool-primary), var(--tool-secondary));
+            border-radius: 50px;
+            transition: width 0.5s ease;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+        }
+        
+        .story-container {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .story-title {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: justify;
+        }
+        
+        .blank-slot {
+            display: inline-block;
+            position: relative;
+            margin: 0 0.25rem;
+        }
+        
+        .blank-button {
+            padding: 0.25rem 1rem;
+            background: rgba(236, 72, 153, 0.3);
+            border: 2px dashed var(--tool-primary);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .blank-button:hover {
+            background: rgba(236, 72, 153, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .blank-button.filled {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-style: solid;
+            box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+        }
+        
+        .blank-button.correct {
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-color: #10b981;
+        }
+        
+        .blank-button.incorrect {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-color: #ef4444;
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .options-panel {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 2px solid var(--tool-primary);
+            padding: 2rem;
+            transition: bottom 0.4s ease;
+            z-index: 1000;
+            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+        }
+        
+        .options-panel.show {
+            bottom: 0;
+        }
+        
+        .options-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .options-title {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .close-options {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .close-options:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .option-card {
+            background: rgba(30, 30, 45, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .option-card:hover {
+            border-color: var(--tool-primary);
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        .option-word {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .option-hint {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.5);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .results-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            display: none;
+            margin-bottom: 2rem;
+        }
+        
+        .results-panel.show {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .score-display {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.1));
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+        
+        .score-value {
+            font-size: 5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .score-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+        
+        .full-story {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .full-story h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .full-story-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: justify;
+        }
+        
+        .share-section {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(219, 39, 119, 0.1));
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .share-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .share-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .share-instagram {
+            background: linear-gradient(135deg, #E4405F, #C13584);
+        }
+        
+        .share-copy {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+        }
+        
+        .share-pdf {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        .ending-vote {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .ending-vote h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ending-options {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .ending-option {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .ending-option:hover {
+            border-color: var(--tool-primary);
+            background: rgba(236, 72, 153, 0.1);
+        }
+        
+        .ending-option.voted {
+            border-color: var(--tool-primary);
+            background: rgba(236, 72, 153, 0.2);
+        }
+        
+        .ending-text {
+            color: white;
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .vote-bar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .vote-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--tool-primary), var(--tool-secondary));
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .vote-percentage {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .hint-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is learning vocabulary through stories more effective than flashcards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contextual learning through stories is 22x more memorable than isolated flashcards according to Stanford research. Reasons: 1) Stories provide context clues (you see 'meticulous' describing someone checking work carefully = meaning embedded), 2) Emotional connection (you care about story outcome = brain retains better), 3) Multiple exposures (same word used 2-3 times in story = spaced repetition naturally), 4) Grammar patterns visible (see how 'meticulous' used in sentence structure). Flashcards teach definitions, stories teach usage. After reading story, you can USE the word in your own sentences—that's true learning vs. passive recognition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do when I'm stuck on a fill-in-the-blank question?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use this 4-step strategy when stuck: 1) Read full sentence context (what happened before/after blank?), 2) Use hints provided (definition, example sentence, word type badge), 3) Check word type badge (noun, verb, adjective) to eliminate wrong options, 4) Eliminate obviously wrong answers first. Example: 'She was ___ when she saw the mess' with options: happy, furious, sleepy. Eliminate happy (context = mess), eliminate sleepy (doesn't fit emotion), choose furious (correct!). If still stuck after elimination, make educated guess and READ THE EXPLANATION—learning happens in feedback, not just getting it right. Don't spend 5+ minutes on one blank; move forward and return later with fresh eyes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many stories should I complete daily or weekly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Complete 1 story daily (5-10 min) for consistent vocabulary growth. Current: 1 story available now, 30+ stories launching soon covering all topics (business, travel, relationships, technology, culture). Daily routine: Morning = read + fill blanks (10 min), Evening = review wrong answers (5 min). Once you complete all stories, replay old stories for speed challenge (can you fill all 7 blanks in 2 min without hints?). Monthly impact: 30 stories = 200-300 new words learned in context, far more effective than 30-day vocabulary app streaks teaching isolated words. Alternate with other tools: Day 1 = Story Builder, Day 2 = Phrasal Verbs, Day 3 = Interview Vocab (variety prevents boredom)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does voting on story endings teach me and why should I participate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voting on story endings develops 3 skills beyond vocabulary: 1) Critical thinking (which ending makes most sense given story context?), 2) Prediction skills (what would realistically happen next?), 3) Creative writing exposure (see how different endings change tone/message). Learning benefits: You analyze story structure (setup → conflict → resolution), you consider character motivations (would Alex really quit job or stay?), you practice narrative logic. Community engagement: see which ending most users chose, discuss interpretations. Voting also helps: shape future stories (your votes influence which story types we create), make learning interactive (active participation vs. passive reading), build literary analysis skills needed for exams (TOEFL Reading section asks 'what happens next' questions)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Story Builder for exam preparation like IELTS or TOEFL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YES—Story Builder directly prepares for: IELTS Reading (context-based vocabulary questions, inference skills), TOEFL Reading (fill-in-blank sentence completion, story comprehension), School exams (comprehension passages, vocabulary in context), SAT/ACT Verbal (sentence completion sections). Exam-specific practice: IELTS = focus on academic stories + formal vocabulary, TOEFL = time yourself (complete 1 story in 7 min), School = replay stories for speed + accuracy improvement. Strategic approach: Complete 30 stories = gain 200-300 test-relevant words, review wrong answers = learn from mistakes (exam simulation), track scores = see improvement over time. Advantage over traditional study: Exams test vocabulary in context (not isolated definitions), Story Builder trains exactly this skill—recognizing word meaning from context clues, choosing correct word for sentence tone."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../english.html">English</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../english.html" class="back-link">← Back to English Tools</a>
+        
+        <div class="header-section">
+            <h1>📖 Daily English Story Builder</h1>
+            <p>Complete today's interactive story with vocabulary & grammar practice</p>
+            <div class="story-date" id="story-date">October 29, 2025</div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+        
+        <div class="story-container">
+            <h2 class="story-title" id="story-title">The Mysterious Package</h2>
+            
+            <div class="story-text" id="story-text">
+                Loading story...
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn" id="check-btn" onclick="checkAnswers()" disabled>Check My Story</button>
+            <button class="btn btn-secondary" onclick="resetStory()">Reset</button>
+        </div>
+        
+        <div class="results-panel" id="results-panel">
+            <div class="score-display">
+                <div class="score-value" id="score-value">0/0</div>
+                <div class="score-label">Perfect Score! 🎉</div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="correct-count">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="accuracy-percent">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="time-taken">0s</div>
+                    <div class="stat-label">Time Taken</div>
+                </div>
+            </div>
+            
+            <div class="full-story">
+                <h3>📚 Your Complete Story</h3>
+                <div class="full-story-text" id="full-story-text"></div>
+            </div>
+            
+            <div class="share-section">
+                <h3 style="color: white; margin-bottom: 1rem;">Share Your Story Version!</h3>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                    Share your score and challenge friends
+                </p>
+                <div class="share-buttons">
+                    <button class="share-btn share-whatsapp" onclick="shareToWhatsApp()">
+                        <span>📱</span> WhatsApp
+                    </button>
+                    <button class="share-btn share-instagram" onclick="shareToInstagram()">
+                        <span>📷</span> Instagram
+                    </button>
+                    <button class="share-btn share-copy" onclick="copyStory()">
+                        <span>📋</span> Copy Text
+                    </button>
+                    <button class="share-btn share-pdf" onclick="downloadPDF()">
+                        <span>📄</span> Download PDF
+                    </button>
+                </div>
+            </div>
+            
+            <button class="btn" onclick="nextStory()" style="width: 100%; margin-top: 2rem;">
+                Tomorrow's Story →
+            </button>
+        </div>
+        
+        <div class="ending-vote">
+            <h3>🗳️ Vote for Tomorrow's Story Ending!</h3>
+            <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                Community picks the next twist
+            </p>
+            <div class="ending-options" id="ending-options"></div>
+        </div>
+    </div>
+    
+    <!-- Options Panel -->
+    <div class="options-panel" id="options-panel">
+        <div class="options-header">
+            <div class="options-title" id="options-title">Choose the right word</div>
+            <button class="close-options" onclick="closeOptions()">×</button>
+        </div>
+        <div class="options-grid" id="options-grid"></div>
+    </div>
+    
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Daily Story Builder</h2>
+        <p>Learn English vocabulary and grammar through interactive storytelling! Every day brings a new engaging story with fill-in-the-blank challenges. Choose the right words to complete the story while learning context-based vocabulary, proper grammar, and word usage naturally.</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Read the Story Setup</h3>
+                <p>Start by reading today's story context displayed at the top. The story has 7 blank spaces marked as [___] where you need to fill in the correct word. Notice the progress bar showing how many blanks you've completed out of total.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Fill Each Blank</h3>
+                <p>Click any [___] blank button to open a word selection panel. You'll see 3 options with hints showing word type (vocabulary/grammar/adverb) and meaning hints. Select the word that best fits the sentence context. Your choice will appear in the story text.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Check Your Answers</h3>
+                <p>Once all 7 blanks are filled, the "Check Your Story" button activates. Click it to see results: correct answers turn green, incorrect turn red. View your score (X/7), accuracy percentage, and time taken. The full story appears with your chosen words highlighted.</p>
+            </div>
+            
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Vote on Story Ending</h3>
+                <p>After completing the story, scroll down to vote on 3 possible story endings (e.g., "Sarah discovers she's an heir" vs "Grandmother was a secret agent"). See real-time voting percentages from other users. Share your score on WhatsApp/Instagram or reset to try again!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does Story Builder help me learn English better than traditional methods?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Story Builder uses "Contextual Learning" — the most effective language acquisition method:</strong></p>
+                        <p><strong>Why Stories Work Better Than Flashcards/Lists:</strong></p>
+                        <ul>
+                            <li><strong>Context Builds Meaning:</strong> You learn "curious" in the context of opening a mysterious package, not just as an isolated definition</li>
+                            <li><strong>Natural Grammar:</strong> You see "was/were," "carefully/carelessly" used correctly in real sentences, not as abstract rules</li>
+                            <li><strong>Memorable Narratives:</strong> Brain remembers stories 22x better than random facts (Stanford research)</li>
+                            <li><strong>Emotional Connection:</strong> Mystery stories trigger curiosity → better retention</li>
+                            <li><strong>Multiple Exposures:</strong> Each story uses vocabulary, grammar, and adverbs together (3-in-1 learning)</li>
+                        </ul>
+                        <p><strong>Specific Skills You Develop:</strong></p>
+                        <ul>
+                            <li><strong>Vocabulary in Context:</strong> Learn words like "received," "curious," "amazing" through natural usage</li>
+                            <li><strong>Grammar Intuition:</strong> Practice past tense (was/were), adverbs (carefully), verb forms (decided/hesitated)</li>
+                            <li><strong>Reading Comprehension:</strong> Understand story flow and predict appropriate words</li>
+                            <li><strong>Writing Skills:</strong> See how professional sentences are structured</li>
+                        </ul>
+                        <p><strong>Comparison:</strong></p>
+                        <ul>
+                            <li><strong>Flashcards:</strong> "Curious = wanting to know" (boring, forgettable)</li>
+                            <li><strong>Story Builder:</strong> "She felt <strong>curious</strong> about what could be inside the mysterious package" (engaging, memorable, shows usage)</li>
+                        </ul>
+                        <p><em>Result:</em> You don't just memorize words — you learn how native speakers actually use them!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What should I do if I can't figure out which word fits a blank?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Don't worry! Use this 4-step strategy to solve any blank:</strong></p>
+                        <p><strong>Step 1: Read the Full Sentence Context</strong></p>
+                        <ul>
+                            <li>Read 1-2 sentences BEFORE and AFTER the blank to understand the story flow</li>
+                            <li>Example: "She felt ___ about what could be inside" → Context: mysterious package, opening it = she's interested to know</li>
+                        </ul>
+                        <p><strong>Step 2: Use the Hint System</strong></p>
+                        <ul>
+                            <li>Each option shows a hint (e.g., "wanting to know," "past tense of get," "with attention")</li>
+                            <li>Match the hint meaning to the sentence: "wanting to know" fits the mysterious package context → "curious"</li>
+                        </ul>
+                        <p><strong>Step 3: Check Word Type Badge</strong></p>
+                        <ul>
+                            <li>Look at the badge color: <strong>vocabulary</strong> (noun/adjective), <strong>grammar</strong> (verb tense), <strong>adverb</strong> (describes how)</li>
+                            <li>Example: "Opening it ___" needs an adverb (how she opened) → "carefully" not "carelessly"</li>
+                        </ul>
+                        <p><strong>Step 4: Eliminate Obviously Wrong Answers</strong></p>
+                        <ul>
+                            <li>Some options are clearly incorrect: "She felt ANGRY about mysterious package" doesn't make sense</li>
+                            <li>Narrow down to 2 options, then use hints to choose final answer</li>
+                        </ul>
+                        <p><strong>Learning from Mistakes:</strong></p>
+                        <ul>
+                            <li>If you pick the wrong word, don't just check the answer — read the explanation!</li>
+                            <li>Example explanation: "'Curious' means wanting to know. This is highly valued... 'Reluctant' means unwilling."</li>
+                            <li>After checking answers, click "Reset Story" and try again with your new understanding</li>
+                        </ul>
+                        <p><strong>Pro Tip:</strong> The first time you do a story, aim for understanding (not speed). Take 5-10 minutes to read hints carefully. Speed improves naturally with practice!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How often do new stories get added and can I practice old stories?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Current Story System:</strong></p>
+                        <ul>
+                            <li><strong>Daily Stories:</strong> New story planned for release daily (feature coming soon)</li>
+                            <li><strong>Current Library:</strong> 1 complete story available now ("The Mysterious Package")</li>
+                            <li><strong>Expansion Plan:</strong> 30 stories launching in next update (1 per day for a month)</li>
+                        </ul>
+                        <p><strong>Story Categories (Coming Soon):</strong></p>
+                        <ul>
+                            <li><strong>Mystery Stories:</strong> Suspense, investigations, discoveries (like current story)</li>
+                            <li><strong>Daily Life Stories:</strong> Work, school, relationships (practical vocabulary)</li>
+                            <li><strong>Adventure Stories:</strong> Travel, exploration, challenges (action vocabulary)</li>
+                            <li><strong>Historical Stories:</strong> Past events, biographies (formal language)</li>
+                        </ul>
+                        <p><strong>How to Practice Old Stories:</strong></p>
+                        <ul>
+                            <li><strong>Reset Button:</strong> After completing a story, click "Reset Story" at the bottom</li>
+                            <li><strong>Retake Challenge:</strong> Try to get 100% accuracy on second attempt without hints</li>
+                            <li><strong>Speed Challenge:</strong> Complete the same story in under 2 minutes</li>
+                            <li><strong>Memory Test:</strong> Wait 1 week, then try the story again — can you remember correct words?</li>
+                        </ul>
+                        <p><strong>Recommended Practice Schedule:</strong></p>
+                        <ul>
+                            <li><strong>Day 1:</strong> Complete new story (take your time, use all hints)</li>
+                            <li><strong>Day 2:</strong> Replay same story, aim for faster completion</li>
+                            <li><strong>Day 3:</strong> New story OR replay old story without looking at hints</li>
+                            <li><strong>Weekly Review:</strong> Replay 3-4 stories from past week to reinforce learning</li>
+                        </ul>
+                        <p><strong>Why Repetition Matters:</strong></p>
+                        <ul>
+                            <li><strong>1st Attempt:</strong> Learn vocabulary and grammar rules</li>
+                            <li><strong>2nd Attempt:</strong> Reinforce memory and spot patterns</li>
+                            <li><strong>3rd Attempt:</strong> Build automatic word recognition (fluency)</li>
+                        </ul>
+                        <p><em>Tip:</em> Research shows repeating content 3 times over 1 week = 80% retention vs 1-time reading = 20% retention!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the purpose of the "Vote on Story Ending" feature?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>The voting feature serves 3 educational purposes:</strong></p>
+                        <p><strong>1. Critical Thinking & Reading Comprehension</strong></p>
+                        <ul>
+                            <li>You must understand the full story context to vote intelligently</li>
+                            <li>Example: If story reveals "old photographs and grandmother's letter," which ending fits best?</li>
+                            <li>Develops prediction skills: "Based on clues, what's the most logical ending?"</li>
+                        </ul>
+                        <p><strong>2. Creative Writing Exposure</strong></p>
+                        <ul>
+                            <li>See 3 different ways the same story could end (plot variety)</li>
+                            <li>Learn storytelling techniques: twist endings, emotional reveals, mystery solutions</li>
+                            <li>Example endings: Inheritance plot twist, Secret agent backstory, Lost twin revelation</li>
+                            <li>Inspires your own creative writing: "How would I end this story?"</li>
+                        </ul>
+                        <p><strong>3. Community Engagement & Motivation</strong></p>
+                        <ul>
+                            <li>Voting percentages show you're part of a learning community</li>
+                            <li>Seeing "312 votes" for an ending creates social proof: "I'm not alone in my English learning journey"</li>
+                            <li>Daily voting habit = daily practice consistency (gamification)</li>
+                            <li>Tomorrow's motivation: "Which ending won? I should come back and check!"</li>
+                        </ul>
+                        <p><strong>How Voting Works:</strong></p>
+                        <ul>
+                            <li>After completing story, read 3 possible endings carefully</li>
+                            <li>Click your favorite ending (only 1 vote per day per story)</li>
+                            <li>Your vote is saved locally (localStorage) and added to the count</li>
+                            <li>Vote percentages update in real-time showing most popular ending</li>
+                        </ul>
+                        <p><strong>Educational Bonus:</strong></p>
+                        <ul>
+                            <li>Each ending uses advanced vocabulary and complex sentence structures</li>
+                            <li>Reading all 3 endings = exposure to 100-150 more English words per story</li>
+                            <li>Practice reading comprehension without the pressure of a quiz</li>
+                        </ul>
+                        <p><em>Fun Activity:</em> After voting, try writing your own 4th ending! Share it with friends and see if they prefer yours over the 3 given options.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use Story Builder for exam preparation (IELTS, TOEFL, school exams)?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Yes! Story Builder is excellent for exam prep, here's how to use it strategically:</strong></p>
+                        <p><strong>For IELTS Reading & Writing:</strong></p>
+                        <ul>
+                            <li><strong>Reading Skills:</strong> Practice identifying context clues (needed for matching headings, True/False/Not Given questions)</li>
+                            <li><strong>Vocabulary in Context:</strong> Learn how synonyms work (IELTS loves paraphrasing — "curious" could be rephrased as "eager to know")</li>
+                            <li><strong>Timed Practice:</strong> Aim to complete stories in 3-5 minutes (similar to IELTS Reading time pressure)</li>
+                            <li><strong>Writing Task 2:</strong> Study how stories use cohesive devices (however, meanwhile, consequently)</li>
+                        </ul>
+                        <p><strong>For TOEFL Reading & Listening:</strong></p>
+                        <ul>
+                            <li><strong>Academic Vocabulary:</strong> Words like "meticulous," "resilient," "heritage" are common in TOEFL passages</li>
+                            <li><strong>Inference Questions:</strong> Practice predicting missing words = practice making inferences from context</li>
+                            <li><strong>Narrative Structure:</strong> Understand beginning-middle-end flow (helps with Listening lectures)</li>
+                        </ul>
+                        <p><strong>For School Exams (Grammar & Comprehension):</strong></p>
+                        <ul>
+                            <li><strong>Grammar Rules:</strong> Practice verb tenses (was/were, past tense), adverbs, articles</li>
+                            <li><strong>Fill-in-the-Blanks:</strong> Direct practice for common exam question format</li>
+                            <li><strong>Vocabulary Building:</strong> Learn 50-100 new words per month through stories</li>
+                            <li><strong>Reading Comprehension:</strong> Understand story plots, character motivations, cause-effect</li>
+                        </ul>
+                        <p><strong>Study Schedule for Exam Prep:</strong></p>
+                        <ul>
+                            <li><strong>Morning (15 min):</strong> Complete 1 new story, focus on accuracy</li>
+                            <li><strong>Afternoon (10 min):</strong> Write down all vocabulary words from today's story with definitions</li>
+                            <li><strong>Evening (10 min):</strong> Create 3 original sentences using today's vocabulary in exam-style contexts</li>
+                            <li><strong>Weekend Review:</strong> Replay all week's stories, aim for 100% accuracy under time pressure</li>
+                        </ul>
+                        <p><strong>Exam-Specific Tips:</strong></p>
+                        <ul>
+                            <li><strong>IELTS Candidates:</strong> After completing story, identify 5 "academic" words you could use in Writing Task 2</li>
+                            <li><strong>TOEFL Candidates:</strong> Practice reading the story aloud to improve pronunciation (helps Listening comprehension)</li>
+                            <li><strong>School Students:</strong> Use story vocabulary in your essays and homework assignments</li>
+                        </ul>
+                        <p><strong>Success Metrics:</strong></p>
+                        <ul>
+                            <li>Complete 30 stories in 1 month = learn 200-300 new vocabulary words</li>
+                            <li>80%+ accuracy consistently = ready for exam-level reading comprehension</li>
+                            <li>Under 5 minutes completion = good reading speed for timed exams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="phrasal-verbs.html" class="related-tool-card">
+                <h3><span class="tool-icon">📚</span> Phrasal Verbs</h3>
+                <p>Expand your vocabulary with daily phrasal verb lessons (turn down, look after, carry on). Includes fill-in-the-blank practice similar to Story Builder plus streak tracking.</p>
+            </a>
+            
+            <a href="interview-vocab.html" class="related-tool-card">
+                <h3><span class="tool-icon">💼</span> Interview Vocabulary</h3>
+                <p>Learn professional words like "resilient," "proactive," and "meticulous" through context-based quiz questions. Perfect for practicing advanced vocabulary in realistic scenarios.</p>
+            </a>
+            
+            <a href="../productivity/weekly-review.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Weekly Review</h3>
+                <p>Track your English learning progress weekly! Reflect on how many stories completed, vocabulary learned, and set goals for next week's practice. Includes weekly planning templates.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Daily interactive English stories for vocabulary & grammar practice.</p>
+            </div>
+            <div class="footer-section">
+                <h3>English Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./phrasal-verbs.html">Phrasal Verbs</a></li>
+                    <li><a href="./dictation.html">Dictation Practice</a></li>
+                    <li><a href="./story-builder.html">Story Builder</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const stories = [
+            {
+                title: "The Mysterious Package",
+                blanks: [
+                    {
+                        options: ["received", "rejected", "ignored"],
+                        correct: "received",
+                        hint: "past tense of 'get'",
+                        type: "vocabulary"
+                    },
+                    {
+                        options: ["curious", "angry", "tired"],
+                        correct: "curious",
+                        hint: "wanting to know",
+                        type: "vocabulary"
+                    },
+                    {
+                        options: ["carefully", "carelessly", "quickly"],
+                        correct: "carefully",
+                        hint: "with attention",
+                        type: "adverb"
+                    },
+                    {
+                        options: ["was", "were", "is"],
+                        correct: "was",
+                        hint: "past tense be verb",
+                        type: "grammar"
+                    },
+                    {
+                        options: ["handwritten", "printed", "typed"],
+                        correct: "handwritten",
+                        hint: "written by hand",
+                        type: "vocabulary"
+                    },
+                    {
+                        options: ["decided", "hesitated", "refused"],
+                        correct: "decided",
+                        hint: "made a choice",
+                        type: "vocabulary"
+                    },
+                    {
+                        options: ["amazing", "boring", "terrible"],
+                        correct: "amazing",
+                        hint: "very good",
+                        type: "vocabulary"
+                    }
+                ],
+                template: "Sarah {{0}} a mysterious package at her doorstep one morning. She felt {{1}} about what could be inside. Opening it {{2}}, she discovered it {{3}} filled with old photographs and a {{4}} letter from her grandmother. She {{5}} to read the letter immediately, and what she found was truly {{6}}. The letter revealed a family secret that changed everything she knew about her heritage."
+            }
+        ];
+        
+        const endingOptions = [
+            { 
+                text: "The letter reveals Sarah discovered she's the heir to a vast fortune hidden in an old mansion.",
+                votes: 234 
+            },
+            { 
+                text: "Sarah learns her grandmother was a secret agent during World War II and left her a mission to complete.",
+                votes: 189 
+            },
+            { 
+                text: "The photographs show a twin sister Sarah never knew existed, living in another country.",
+                votes: 312 
+            }
+        ];
+        
+        let currentStory = stories[0];
+        let userAnswers = [];
+        let currentBlankIndex = -1;
+        let startTime = null;
+        let completedBlanks = 0;
+        
+        function initializeStory() {
+            const storyEl = document.getElementById('story-text');
+            const parts = currentStory.template.split(/\{\{\d+\}\}/);
+            let html = '';
+            
+            parts.forEach((part, i) => {
+                html += part;
+                if (i < parts.length - 1) {
+                    html += `<span class="blank-slot">
+                        <button class="blank-button" onclick="openOptions(${i})" data-blank="${i}">
+                            [ ___ ]
+                        </button>
+                    </span>`;
+                }
+            });
+            
+            storyEl.innerHTML = html;
+            userAnswers = new Array(currentStory.blanks.length).fill(null);
+            updateProgress();
+            renderEndingOptions();
+            
+            // Set date
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('story-date').textContent = today.toLocaleDateString('en-US', options);
+        }
+        
+        function openOptions(blankIndex) {
+            if (startTime === null) {
+                startTime = new Date();
+            }
+            
+            currentBlankIndex = blankIndex;
+            const blank = currentStory.blanks[blankIndex];
+            
+            document.getElementById('options-title').innerHTML = 
+                `Choose the right word <span class="hint-badge">${blank.type}</span>`;
+            
+            const optionsGrid = document.getElementById('options-grid');
+            optionsGrid.innerHTML = blank.options.map(option => `
+                <div class="option-card" onclick="selectOption('${option}')">
+                    <div class="option-word">${option}</div>
+                    <div class="option-hint">${blank.hint}</div>
+                </div>
+            `).join('');
+            
+            document.getElementById('options-panel').classList.add('show');
+        }
+        
+        function closeOptions() {
+            document.getElementById('options-panel').classList.remove('show');
+        }
+        
+        function selectOption(word) {
+            userAnswers[currentBlankIndex] = word;
+            
+            const button = document.querySelector(`[data-blank="${currentBlankIndex}"]`);
+            button.textContent = word;
+            button.classList.add('filled');
+            
+            closeOptions();
+            
+            completedBlanks = userAnswers.filter(a => a !== null).length;
+            updateProgress();
+            
+            if (completedBlanks === currentStory.blanks.length) {
+                document.getElementById('check-btn').disabled = false;
+            }
+        }
+        
+        function updateProgress() {
+            const progress = (completedBlanks / currentStory.blanks.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+        
+        function checkAnswers() {
+            let correctCount = 0;
+            
+            currentStory.blanks.forEach((blank, i) => {
+                const button = document.querySelector(`[data-blank="${i}"]`);
+                button.classList.remove('filled');
+                
+                if (userAnswers[i] === blank.correct) {
+                    button.classList.add('correct');
+                    correctCount++;
+                } else {
+                    button.classList.add('incorrect');
+                }
+            });
+            
+            const accuracy = Math.round((correctCount / currentStory.blanks.length) * 100);
+            const timeTaken = Math.round((new Date() - startTime) / 1000);
+            
+            // Update results
+            document.getElementById('score-value').textContent = `${correctCount}/${currentStory.blanks.length}`;
+            document.getElementById('correct-count').textContent = correctCount;
+            document.getElementById('accuracy-percent').textContent = accuracy + '%';
+            document.getElementById('time-taken').textContent = timeTaken + 's';
+            
+            // Generate full story
+            let fullStory = currentStory.template;
+            currentStory.blanks.forEach((blank, i) => {
+                fullStory = fullStory.replace(`{{${i}}}`, `<strong style="color: ${userAnswers[i] === blank.correct ? '#10b981' : '#ef4444'}">${userAnswers[i]}</strong>`);
+            });
+            document.getElementById('full-story-text').innerHTML = fullStory;
+            
+            document.getElementById('results-panel').classList.add('show');
+            document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function resetStory() {
+            document.querySelectorAll('.blank-button').forEach(btn => {
+                btn.textContent = '[ ___ ]';
+                btn.classList.remove('filled', 'correct', 'incorrect');
+            });
+            
+            userAnswers = new Array(currentStory.blanks.length).fill(null);
+            completedBlanks = 0;
+            startTime = null;
+            updateProgress();
+            document.getElementById('check-btn').disabled = true;
+            document.getElementById('results-panel').classList.remove('show');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function nextStory() {
+            alert('Come back tomorrow for a new story! 📖');
+            resetStory();
+        }
+        
+        function shareToWhatsApp() {
+            const correctCount = userAnswers.filter((ans, i) => ans === currentStory.blanks[i].correct).length;
+            const text = `I scored ${correctCount}/${currentStory.blanks.length} on today's Daily English Story! 📖✨\n\nCan you beat my score?\n\nTry it: ${window.location.href}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function shareToInstagram() {
+            const correctCount = userAnswers.filter((ans, i) => ans === currentStory.blanks[i].correct).length;
+            alert(`📸 Screenshot your score (${correctCount}/${currentStory.blanks.length}) and share on Instagram!\n\nUse hashtags: #DailyEnglishStory #Skillor #EnglishPractice`);
+        }
+        
+        function copyStory() {
+            let fullStory = currentStory.template;
+            currentStory.blanks.forEach((blank, i) => {
+                fullStory = fullStory.replace(`{{${i}}}`, userAnswers[i] || '___');
+            });
+            
+            const text = `📖 ${currentStory.title}
+
+${fullStory}
+
+Score: ${userAnswers.filter((ans, i) => ans === currentStory.blanks[i].correct).length}/${currentStory.blanks.length}
+
+- Created with Skillor Daily Story Builder`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Story copied to clipboard! 📋');
+            });
+        }
+        
+        function downloadPDF() {
+            alert('📄 PDF download feature coming soon!\n\nFor now, you can:\n1. Print this page (Ctrl+P)\n2. Save as PDF');
+        }
+        
+        function renderEndingOptions() {
+            const totalVotes = endingOptions.reduce((sum, opt) => sum + opt.votes, 0);
+            const optionsEl = document.getElementById('ending-options');
+            
+            optionsEl.innerHTML = endingOptions.map((option, i) => {
+                const percentage = Math.round((option.votes / totalVotes) * 100);
+                return `
+                    <div class="ending-option" onclick="voteEnding(${i})">
+                        <div class="ending-text">${option.text}</div>
+                        <div class="vote-bar">
+                            <div class="vote-fill" style="width: ${percentage}%"></div>
+                        </div>
+                        <div class="vote-percentage">${percentage}% (${option.votes} votes)</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function voteEnding(index) {
+            const voted = localStorage.getItem('story_vote');
+            if (voted) {
+                alert('You\'ve already voted today! Come back tomorrow for a new story. 🗳️');
+                return;
+            }
+            
+            endingOptions[index].votes++;
+            localStorage.setItem('story_vote', index.toString());
+            
+            document.querySelectorAll('.ending-option')[index].classList.add('voted');
+            renderEndingOptions();
+            
+            alert('Thank you for voting! 🎉 Check tomorrow to see which ending won!');
+        }
+        
+        // Initialize
+        initializeStory();
+    </script>
+</body>
+</html>

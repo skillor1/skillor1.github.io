@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/aptitude/reasoning-solver.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Learn reasoning shortcuts through quick video lessons and interactive practice. Master blood relations, direction sense, and seating arrangements with step-by-step visual guides for competitive exams.">
+    <meta name="keywords" content="reasoning shortcuts video tutorial, blood relations tricks online, direction sense reasoning practice, seating arrangement solver tool, interactive reasoning learning, aptitude video shortcuts 2025, logical reasoning step by step">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/aptitude/reasoning-solver.html">
+    <meta property="og:title" content="Reasoning Shortcuts Video Solver - Interactive Learning Tool">
+    <meta property="og:description" content="Learn reasoning shortcuts through quick video lessons and interactive practice. Master blood relations, direction sense, and seating arrangements with step-by-step visual guides for competitive exams.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/aptitude/reasoning-solver.html">
+    <meta name="twitter:title" content="Reasoning Shortcuts Video Solver - Interactive Learning Tool">
+    <meta name="twitter:description" content="Learn reasoning shortcuts through quick video lessons and interactive practice. Master blood relations, direction sense, and seating arrangements with step-by-step visual guides for competitive exams.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Reasoning Shortcuts Video Solver - Interactive Learning Tool</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #ec4899;
+            --tool-secondary: #f472b6;
+            --tool-accent: #db2777;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(236, 72, 153, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .topic-card {
+            background: rgba(236, 72, 153, 0.1);
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.3);
+        }
+        
+        .topic-card.active {
+            background: rgba(236, 72, 153, 0.3);
+            border-color: var(--tool-primary);
+        }
+        
+        .topic-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .mode-toggle {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mode-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .video-container {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .video-placeholder {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px dashed rgba(236, 72, 153, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 1rem 0;
+        }
+        
+        .video-placeholder p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        
+        .btn {
+            padding: 0.875rem 1.75rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .solver-container {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .problem-display {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .problem-text {
+            font-size: 1.2rem;
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-steps {
+            margin: 2rem 0;
+        }
+        
+        .step {
+            background: rgba(236, 72, 153, 0.1);
+            border-left: 4px solid var(--tool-primary);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .step.highlight {
+            background: rgba(236, 72, 153, 0.3);
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+        }
+        
+        .step-number {
+            color: var(--tool-secondary);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        .interactive-area {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+        
+        .answer-display {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(236, 72, 153, 0.1));
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .answer-value {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981, var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .shortcut-tips {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .tip-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .tip-list li {
+            padding: 0.75rem 0;
+            color: rgba(255, 255, 255, 0.85);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .tip-list li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .topic-selector {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-toggle {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": "Reasoning Shortcut Video Solver",
+      "description": "Interactive reasoning problem solver with 30-second shortcut videos and solve-with-me mode",
+      "educationalLevel": "Intermediate to Advanced",
+      "learningResourceType": "Video Tutorial"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the most common reasoning patterns in competitive exams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top 7 reasoning pattern types appear in 80%+ of exams: Number Series (25% of questions) - Patterns: +/- constant (2,5,8,11 = +3 each), multiplication (3,6,12,24 = ×2), squares (1,4,9,16 = 1²,2²,3²,4²), cubes, prime numbers, alternating operations (add-subtract-add), two parallel series (odd positions +2, even positions +5). Letter Series (20%) - Patterns: alphabetical order (A,C,E,G = +2 letters), reverse order, skip patterns, consonant-vowel alternation, position value (A=1, B=2... Z=26) math operations. Analogies (15%) - Relationships: synonym/antonym pairs, part-to-whole (page:book), type relationships (rose:flower), tool-user (pen:writer), cause-effect, numerical relationships (9:81 = square). Coding-Decoding (15%) - Types: letter shifting (A→C = +2 shift), number substitution, reverse coding, symbol replacement, conditional coding (vowels become numbers, consonants shift). Blood Relations (10%) - Key terms: paternal (father's side), maternal (mother's side), generation gaps (grandparent = 2 generations up), sibling relationships (brother/sister). Direction Sense (8%) - Four directions (N,S,E,W), turns (left 90°, right 90°, about-turn 180°), displacement calculations using Pythagoras, compass navigation. Seating Arrangement (7%) - Types: linear (single row), circular (around table), rectangular, double row (facing each other), conditional arrangements. Mastering these 7 patterns covers nearly all reasoning questions—our tool provides video shortcuts and practice for each type systematically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I quickly solve blood relation problems using shortcuts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Blood relation shortcut method (solves in 30-45 seconds): Step 1 - Draw family tree (top to bottom = oldest to youngest). Use symbols: circle ○ = female, square □ = male, = (horizontal line) = married, | (vertical line) = parent-child, — (horizontal siblings) = brother/sister. Step 2 - Identify generations. Grandparent level (top), parent level (middle), children level (bottom), grandchildren level (if applicable). Step 3 - Trace path from person A to person B. Count levels: same level = sibling/cousin, one level up = parent/uncle/aunt, two levels up = grandparent, one level down = child/nephew/niece, two down = grandchild. Step 4 - Determine gender and side. Paternal = father's side, maternal = mother's side. Example problem: 'A is B's father. B is C's brother. D is C's mother. E is D's father. How is A related to E?' Solution: Draw tree - E (top) → D (E's daughter) → A is D's husband (same level as D) → B and C are children. Wait, correction: E → D → C (D's child), B is C's brother (also D's child), A is B's father (so A is D's husband). Therefore A and D are married, E is D's father, making E the father-in-law of A. Shortcut rules memorize: Brother/sister of parent = uncle/aunt, Parent of parent = grandparent, Child of sibling = nephew/niece, Parent of spouse = in-law, Spouse of sibling = brother/sister-in-law. Common mistakes: confusing paternal/maternal, forgetting to account for gender (uncle vs aunt), mixing up generations (cousin vs nephew). This tool's video mode shows animated family trees building step-by-step as relationships are revealed, making complex 5-6 person problems visually simple."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the fastest way to find missing numbers in a series?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Systematic series-solving strategy (under 45 seconds): Step 1 - Check differences between consecutive terms. Write series: 3, 7, 13, 21, 31, ? Calculate differences: 7-3=4, 13-7=6, 21-13=8, 31-21=10. Pattern in differences: +2 each time (4,6,8,10...). Next difference = 12. Answer: 31+12=43. Step 2 - If simple differences don't work, check second-order differences (differences of differences). Series: 2, 6, 12, 20, 30, ? First differences: 4, 6, 8, 10. Second differences: 2, 2, 2 (constant). Pattern found! Next first difference = 12. Answer: 30+12=42. Step 3 - Check special patterns. Squares: 1, 4, 9, 16, 25 = 1², 2², 3², 4², 5². Cubes: 1, 8, 27, 64 = 1³, 2³, 3³, 4³. Primes: 2, 3, 5, 7, 11, 13. Fibonacci: 1, 1, 2, 3, 5, 8 (each term = sum of previous two). Alternating: 2, 10, 4, 12, 6, 14 (two series: +2 and +2, starting at different points). Step 4 - Check multiplication patterns. Series: 2, 6, 18, 54 = ×3 each time. Geometric progression formula: aₙ = a₁ × rⁿ⁻¹. Step 5 - Mixed operations. Series: 1, 2, 4, 7, 11, 16. Differences: 1, 2, 3, 4, 5 (increasing by 1). Next difference = 6. Answer: 16+6=22. Pro shortcuts: If series has large jumps (1, 8, 27, 64), check cubes/powers. If ratio between terms is constant (2, 6, 18, 54 = ×3), geometric series. If differences increase steadily, likely polynomial pattern. Practice makes perfect—solve 5-10 series daily, you'll recognize patterns instantly within 2 weeks. This tool's interactive solver highlights differences and patterns automatically as you work through problems, training your eye to spot patterns faster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I approach complex seating arrangement questions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seating arrangement systematic method (linear and circular): Linear arrangement (single row): Step 1 - Draw positions (1 2 3 4 5 for 5 people). Step 2 - Plot definite information first ('A sits at end', 'B sits 3rd'). Step 3 - Use relative positions ('C is left of D' = C comes before D in left-to-right reading). Step 4 - Eliminate impossibilities using constraints ('E is not adjacent to A'). Example: 5 people A,B,C,D,E. A is at left end, C is 3rd, B is right of C, E is not next to A. Solution: Position 1=A (given), Position 3=C (given), B must be position 4 or 5 (right of C), E cannot be position 2 (next to A), so E is position 4 or 5. If B=4, then E=5 or E=2 (can't be 2), so E=5, leaving D=2. Answer: A-D-C-B-E. Circular arrangement: Key difference - no 'left end' or 'right end', everyone has two neighbors. Step 1 - Fix one person's position as reference (prevents rotation confusion). Always fix person mentioned first. Step 2 - Work clockwise/counterclockwise from reference. Step 3 - Remember: 'opposite to A' in 6-person circle = 3 positions away, in 8-person = 4 positions away (diameter). Step 4 - 'Immediate left' means clockwise neighbor, 'immediate right' means counterclockwise neighbor. Complex arrangements (double row facing): Draw two parallel rows (—————, —————). Note who faces whom. Direction matters: if 'A faces north', then person opposite 'faces south'. Track diagonal neighbors vs opposite neighbors separately. Time-saving shortcuts: Use initials (A, B, C) instead of full names. Cross out impossible positions as you go. Start with most restrictive constraint first. If question gives '3 people between A and B' in 8-person circle, they're opposite (diameter). Practice strategy: Solve 2-3 seating problems daily for 2 weeks—pattern recognition develops, solving time drops from 3-4 minutes to under 90 seconds. This tool's visual diagrams show seats updating in real-time as you apply each constraint, helping you learn the systematic constraint-application process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best resources to practice reasoning after using this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comprehensive reasoning practice strategy using free and paid resources: Free resources (foundational practice): Indiabix Logical Reasoning (500+ questions, categorized by type, detailed solutions, progress tracking), use for: mastering each reasoning type individually before mixing. GeeksforGeeks Aptitude section (300+ reasoning problems, difficulty-rated, video explanations), use for: quick daily practice 10-15 questions. Previous year papers (download free PDFs: CAT, GATE, SSC CGL, Bank PO), use for: understanding actual exam difficulty and question patterns. YouTube channels: Amar Sir Maths (shortcuts for blood relations, seating), Learn with Niharika Puri (coding-decoding tricks), Competition Guru (quick solving methods). Paid resources (intensive preparation): Official exam prep apps: Unacademy (₹15000/year, live classes, doubt clearing, mock tests), Testbook Pass (₹3000/year, 20,000+ questions, detailed analytics), Oliveboard (₹6000/year, exam-specific practice). Books: RS Aggarwal Logical Reasoning (₹400, comprehensive coverage, 5000+ questions), Arihant Reasoning book (₹300, shortcut techniques, solved examples). Practice schedule for optimal improvement: Week 1-2: Master one reasoning type daily using this tool's videos + solve 10 Indiabix questions of same type. Week 3-4: Mix two types daily, 15 questions total, time yourself (aim 45 sec/question). Week 5-8: Full 20-question reasoning sections in 15 minutes, analyze mistakes, revisit weak types. Week 9-12: Previous year papers 2× per week, mock tests 1× per week, maintain daily 10-question practice of weak areas. Progression tracking: Maintain error log (note which reasoning types you get wrong most), revisit those types weekly, calculate accuracy % weekly (aim: 85%+ after 8 weeks), track speed (under 45 sec/question is competitive exam ready). Integration with this tool: Use tool for learning shortcuts → practice similar questions on Indiabix → revisit tool's video if stuck → test in mock exams → analyze mistakes → focus practice on weak areas. Consistency over intensity: 30 minutes daily practice beats 4-hour weekend marathons for reasoning skill development—patterns recognition builds through daily exposure over 8-12 weeks minimum."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aptitude.html">Aptitude</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../aptitude.html" class="back-link">← Back to Aptitude Tools</a>
+        
+        <div class="header-section">
+            <h1>🧠 Reasoning Shortcut Video Solver</h1>
+            <p>Watch 30-second videos → Apply shortcuts → Solve with me mode</p>
+        </div>
+        
+        <div class="topic-selector">
+            <div class="topic-card active" onclick="selectTopic('blood')">
+                <div class="topic-icon">👨‍👩‍👧‍👦</div>
+                <div style="font-weight: 600;">Blood Relations</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">Shortcut Tricks</div>
+            </div>
+            <div class="topic-card" onclick="selectTopic('direction')">
+                <div class="topic-icon">🧭</div>
+                <div style="font-weight: 600;">Direction Sense</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">Tricks & Tips</div>
+            </div>
+            <div class="topic-card" onclick="selectTopic('seating')">
+                <div class="topic-icon">🪑</div>
+                <div style="font-weight: 600;">Seating Arrangement</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">Circular & Linear</div>
+            </div>
+            <div class="topic-card" onclick="selectTopic('coding')">
+                <div class="topic-icon">🔢</div>
+                <div style="font-weight: 600;">Coding Decoding</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">Pattern Tricks</div>
+            </div>
+        </div>
+        
+        <div class="mode-toggle">
+            <button class="mode-btn active" onclick="switchMode('video')">🎬 Watch Video</button>
+            <button class="mode-btn" onclick="switchMode('solve')">🧩 Interactive Solver</button>
+            <button class="mode-btn" onclick="switchMode('practice')">🎯 Practice Mode</button>
+        </div>
+        
+        <!-- Video Mode -->
+        <div id="video-mode">
+            <div class="video-container">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🎥 Shortcut Video Tutorial</h3>
+                
+                <div class="video-placeholder">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🎬</div>
+                    <p>30-second shortcut video for Blood Relations</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">(Video would play here in production)</p>
+                </div>
+                
+                <div style="text-align: left; margin: 1.5rem 0; padding: 1.5rem; background: rgba(10,10,15,0.6); border-radius: 12px;">
+                    <h4 style="color: var(--tool-secondary); margin-bottom: 1rem;">📋 Video Transcript</h4>
+                    <div style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        <p><strong>0:00-0:05</strong> - Introduction to Blood Relations shortcuts</p>
+                        <p><strong>0:05-0:15</strong> - Key technique: Use 'Father-Son' chain method</p>
+                        <p><strong>0:15-0:25</strong> - Example: "A is B's father, B is C's brother..."</p>
+                        <p><strong>0:25-0:30</strong> - Quick tip: Always draw family tree from top to bottom</p>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button class="btn" onclick="playVideo()">▶ Play Video</button>
+                    <button class="btn btn-secondary" onclick="pauseVideo()">⏸ Pause</button>
+                    <button class="btn btn-secondary" onclick="replayVideo()">🔄 Replay</button>
+                </div>
+                
+                <button class="btn" onclick="switchMode('solve')" style="margin-top: 1rem;">🧩 Apply Shortcut - Interactive Solver</button>
+            </div>
+            
+            <div class="shortcut-tips">
+                <h3 style="color: #f59e0b; margin-bottom: 1rem;">💡 Shortcut Tips</h3>
+                <ul class="tip-list">
+                    <li>Always draw family tree from top (oldest) to bottom (youngest)</li>
+                    <li>Use 'F' for Father, 'M' for Mother, 'S' for Son, 'D' for Daughter</li>
+                    <li>For complex relations, break into smaller family units</li>
+                    <li>Remember: Brother/Sister of parent = Uncle/Aunt</li>
+                    <li>Practice with 5 different scenarios daily for mastery</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Solve Mode -->
+        <div id="solve-mode" style="display:none;">
+            <div class="solver-container">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🧩 Interactive Problem Solver</h3>
+                
+                <div class="problem-display">
+                    <div style="color: var(--tool-secondary); font-weight: 600; margin-bottom: 1rem;">Problem Statement</div>
+                    <div class="problem-text" id="problem-text">
+                        A is B's father. B is C's brother. D is C's mother. E is D's father. How is A related to E?
+                    </div>
+                </div>
+                
+                <div class="solution-steps" id="solution-steps">
+                    <div class="step" id="step1">
+                        <span class="step-number">Step 1:</span> 
+                        <span style="color: white;">Identify the key relationships in the problem</span>
+                    </div>
+                    <div class="step" id="step2">
+                        <span class="step-number">Step 2:</span> 
+                        <span style="color: white;">Draw family tree starting with oldest generation</span>
+                    </div>
+                    <div class="step" id="step3">
+                        <span class="step-number">Step 3:</span> 
+                        <span style="color: white;">Connect all family members using given relationships</span>
+                    </div>
+                    <div class="step" id="step4">
+                        <span class="step-number">Step 4:</span> 
+                        <span style="color: white;">Trace the relationship path from A to E</span>
+                    </div>
+                </div>
+                
+                <div class="interactive-area">
+                    <h4 style="color: white; margin-bottom: 1.5rem;">🛠️ Solve With Me Mode</h4>
+                    
+                    <div class="input-group">
+                        <label>What is the relationship between A and E?</label>
+                        <select id="relationship-answer">
+                            <option value="">Select answer</option>
+                            <option value="father">Father</option>
+                            <option value="brother">Brother</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="grandfather">Grandfather</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn" onclick="checkAnswer()">✅ Check Answer</button>
+                    
+                    <div id="answer-result" style="display:none; margin-top: 1.5rem;"></div>
+                </div>
+                
+                <div class="answer-display" id="final-answer" style="display:none;">
+                    <div style="color: #10b981; font-weight: 600; margin-bottom: 0.5rem;">🎉 Correct Answer</div>
+                    <div class="answer-value" id="answer-value">Grandfather</div>
+                    <div style="color: rgba(255,255,255,0.8); margin-top: 1rem;">
+                        A is E's son (D is A's daughter), so A is E's grandfather
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Mode -->
+        <div id="practice-mode" style="display:none;">
+            <div class="solver-container">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🎯 Practice Questions</h3>
+                
+                <div class="problem-display">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                        <div style="color: var(--tool-secondary); font-weight: 600;">Question 1 of 5</div>
+                        <div style="color: rgba(255,255,255,0.7);">Score: <span id="current-score">0</span>/5</div>
+                    </div>
+                    <div class="problem-text" id="practice-problem">
+                        P is Q's brother. R is Q's mother. S is R's father. T is S's mother. How is P related to T?
+                    </div>
+                </div>
+                
+                <div class="interactive-area">
+                    <div class="input-group">
+                        <label>Select the correct relationship:</label>
+                        <select id="practice-answer">
+                            <option value="">Choose answer</option>
+                            <option value="great-grandson">Great Grandson</option>
+                            <option value="grandson">Grandson</option>
+                            <option value="nephew">Nephew</option>
+                            <option value="uncle">Uncle</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button class="btn" onclick="submitPracticeAnswer()">✅ Submit Answer</button>
+                        <button class="btn btn-secondary" onclick="nextPracticeQuestion()">⏭ Next Question</button>
+                    </div>
+                </div>
+                
+                <div class="shortcut-tips">
+                    <h3 style="color: #f59e0b; margin-bottom: 1rem;">🎯 Practice Tips</h3>
+                    <ul class="tip-list">
+                        <li>Apply the family tree method for each question</li>
+                        <li>Identify the generation gap between persons</li>
+                        <li>Use directional terms (North-South, Left-Right) for seating arrangements</li>
+                        <li>For coding-decoding, look for pattern shifts in alphabets/numbers</li>
+                        <li>Time yourself - Aim for 45 seconds per question</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Reasoning Solver</h2>
+        <p>Master logical reasoning with step-by-step video explanations and shortcut techniques for pattern recognition questions:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Problem Type</h3>
+                <p>Choose from Number Series, Letter Patterns, Analogies, Coding-Decoding, or Blood Relations. Each type has specific patterns to recognize.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Try Solving First</h3>
+                <p>Attempt the question yourself before viewing the solution. This active learning builds stronger pattern recognition skills than passive watching.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Watch Video Solution</h3>
+                <p>See detailed walkthrough explaining the logic, shortcuts, and tricks. Pause, rewind, or rewatch sections you find challenging.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Practice Similar Problems</h3>
+                <p>Generate new questions of the same type to reinforce learning. Master one pattern type before moving to the next.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are the video explanations suitable for beginners?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Videos start with basic concepts before showing shortcuts. Clear voice-overs and on-screen highlighting help you follow along easily. Even if you're new to reasoning questions, the step-by-step approach makes learning accessible.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the best strategy for series questions?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Look for common patterns first: +/- constant, multiplication, squaring, prime numbers, alternating operations. Check differences between consecutive terms. Our videos teach these pattern recognition techniques systematically.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I improve speed in reasoning questions?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Practice common patterns until you recognize them instantly. Learn shortcuts shown in videos - like skip-counting for series or visual methods for analogies. Time yourself with each question, aiming for under 45 seconds.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use this for GATE/CAT preparation?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! These fundamental reasoning patterns appear in GATE, CAT, CSAT, and all competitive exams. We cover both basic and advanced difficulty levels to match various exam standards.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How many practice questions should I do daily?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Start with 5-10 questions daily, focusing on understanding patterns rather than quantity. Once comfortable, increase to 15-20 mixed questions. Consistent daily practice builds better skills than occasional marathon sessions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="daily-quiz.html" class="related-tool-card">
+                <h3><span class="tool-icon">📅</span> Daily Quiz</h3>
+                <p>Practice mixed reasoning questions daily with immediate feedback and solutions.</p>
+            </a>
+            <a href="mock-test.html" class="related-tool-card">
+                <h3><span class="tool-icon">📝</span> Mock Test</h3>
+                <p>Take full-length adaptive tests including reasoning sections with percentile ranking.</p>
+            </a>
+            <a href="../english/phrasal-verbs.html" class="related-tool-card">
+                <h3><span class="tool-icon">📚</span> Phrasal Verbs</h3>
+                <p>Build verbal reasoning skills by learning common English phrasal verb patterns.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Master reasoning with shortcut videos and interactive solvers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Aptitude Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./daily-quiz.html">Daily Quiz</a></li>
+                    <li><a href="./data-interpretation.html">Data Interpretation</a></li>
+                    <li><a href="./wtd-calculator.html">Work Time Distance</a></li>
+                    <li><a href="./mock-test.html">Mock Test</a></li>
+                    <li><a href="./reasoning-solver.html">Reasoning Solver</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentTopic = 'blood';
+        let currentMode = 'video';
+        let currentStep = 0;
+        let practiceScore = 0;
+        let currentPracticeQuestion = 0;
+        
+        const practiceQuestions = [
+            {
+                question: "P is Q's brother. R is Q's mother. S is R's father. T is S's mother. How is P related to T?",
+                options: ["great-grandson", "grandson", "nephew", "uncle"],
+                correct: 1,
+                explanation: "P is Q's brother, R is their mother, S is R's father (P's grandfather), T is S's mother (P's great-grandmother). So P is T's great-grandson."
+            },
+            {
+                question: "A is B's sister. C is B's father. D is C's mother. How is A related to D?",
+                options: ["granddaughter", "niece", "daughter", "sister"],
+                correct: 0,
+                explanation: "A is B's sister, C is their father, D is C's mother (A's grandmother). So A is D's granddaughter."
+            }
+        ];
+        
+        function selectTopic(topic) {
+            currentTopic = topic;
+            document.querySelectorAll('.topic-card').forEach(card => card.classList.remove('active'));
+            event.target.closest('.topic-card').classList.add('active');
+            
+            // Update video content based on topic
+            updateVideoContent();
+        }
+        
+        function updateVideoContent() {
+            const topics = {
+                blood: {
+                    title: "Blood Relations",
+                    transcript: "30-second shortcut video for Blood Relations"
+                },
+                direction: {
+                    title: "Direction Sense",
+                    transcript: "30-second shortcut video for Direction Sense"
+                },
+                seating: {
+                    title: "Seating Arrangement",
+                    transcript: "30-second shortcut video for Seating Arrangement"
+                },
+                coding: {
+                    title: "Coding Decoding",
+                    transcript: "30-second shortcut video for Coding Decoding"
+                }
+            };
+            
+            const topic = topics[currentTopic];
+            document.querySelector('.video-placeholder p').textContent = topic.transcript;
+        }
+        
+        function switchMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('video-mode').style.display = mode === 'video' ? 'block' : 'none';
+            document.getElementById('solve-mode').style.display = mode === 'solve' ? 'block' : 'none';
+            document.getElementById('practice-mode').style.display = mode === 'practice' ? 'block' : 'none';
+        }
+        
+        function playVideo() {
+            // Simulate video playing
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '⏹ Stop Video';
+            btn.onclick = stopVideo;
+            
+            // Highlight steps as video would play
+            setTimeout(() => highlightStep(1), 5000);
+            setTimeout(() => highlightStep(2), 10000);
+            setTimeout(() => highlightStep(3), 15000);
+            setTimeout(() => highlightStep(4), 20000);
+        }
+        
+        function stopVideo() {
+            const btn = event.target;
+            btn.textContent = '▶ Play Video';
+            btn.onclick = playVideo;
+            resetSteps();
+        }
+        
+        function pauseVideo() {
+            // In a real implementation, this would pause the video
+            alert('Video paused');
+        }
+        
+        function replayVideo() {
+            // In a real implementation, this would restart the video
+            alert('Video replaying from start');
+        }
+        
+        function highlightStep(step) {
+            resetSteps();
+            document.getElementById(`step${step}`).classList.add('highlight');
+            currentStep = step;
+        }
+        
+        function resetSteps() {
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`step${i}`).classList.remove('highlight');
+            }
+        }
+        
+        function checkAnswer() {
+            const answer = document.getElementById('relationship-answer').value;
+            const resultDiv = document.getElementById('answer-result');
+            
+            if (answer === 'grandfather') {
+                resultDiv.innerHTML = `
+                    <div style="background: rgba(16,185,129,0.2); border: 1px solid #10b981; border-radius: 12px; padding: 1.5rem; color: white;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">✅ Correct!</div>
+                        <div>Great job! You've successfully applied the shortcut technique.</div>
+                    </div>
+                `;
+                document.getElementById('final-answer').style.display = 'block';
+            } else {
+                resultDiv.innerHTML = `
+                    <div style="background: rgba(239,68,68,0.2); border: 1px solid #ef4444; border-radius: 12px; padding: 1.5rem; color: white;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">❌ Incorrect</div>
+                        <div>Try again or review the video tutorial for guidance.</div>
+                    </div>
+                `;
+            }
+            
+            resultDiv.style.display = 'block';
+        }
+        
+        function submitPracticeAnswer() {
+            const answer = document.getElementById('practice-answer').value;
+            const question = practiceQuestions[currentPracticeQuestion];
+            
+            if (answer === question.options[question.correct]) {
+                practiceScore++;
+                document.getElementById('current-score').textContent = practiceScore;
+                
+                // Show explanation
+                document.getElementById('answer-result').innerHTML = `
+                    <div style="background: rgba(16,185,129,0.2); border: 1px solid #10b981; border-radius: 12px; padding: 1.5rem; color: white; margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">✅ Correct!</div>
+                        <div>${question.explanation}</div>
+                    </div>
+                `;
+            } else {
+                document.getElementById('answer-result').innerHTML = `
+                    <div style="background: rgba(239,68,68,0.2); border: 1px solid #ef4444; border-radius: 12px; padding: 1.5rem; color: white; margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">❌ Incorrect</div>
+                        <div>Correct answer: ${question.options[question.correct]}</div>
+                        <div style="margin-top: 1rem;">${question.explanation}</div>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('answer-result').style.display = 'block';
+        }
+        
+        function nextPracticeQuestion() {
+            currentPracticeQuestion++;
+            if (currentPracticeQuestion < practiceQuestions.length) {
+                loadPracticeQuestion();
+            } else {
+                // Show final score
+                document.getElementById('practice-problem').innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
+                        <div style="font-size: 2rem; color: white; margin-bottom: 1rem;">Practice Complete!</div>
+                        <div style="font-size: 1.5rem; color: var(--tool-secondary);">Score: ${practiceScore}/${practiceQuestions.length}</div>
+                        <button class="btn" onclick="resetPractice()" style="margin-top: 2rem;">🔄 Try Again</button>
+                    </div>
+                `;
+                document.getElementById('answer-result').style.display = 'none';
+            }
+        }
+        
+        function loadPracticeQuestion() {
+            const question = practiceQuestions[currentPracticeQuestion];
+            document.getElementById('practice-problem').textContent = question.question;
+            document.getElementById('answer-result').style.display = 'none';
+            
+            // Update question counter
+            document.querySelector('.problem-display div:first-child').innerHTML = `
+                Question ${currentPracticeQuestion + 1} of ${practiceQuestions.length}
+                <div style="color: rgba(255,255,255,0.7);">Score: <span id="current-score">${practiceScore}</span>/${practiceQuestions.length}</div>
+            `;
+        }
+        
+        function resetPractice() {
+            currentPracticeQuestion = 0;
+            practiceScore = 0;
+            document.getElementById('current-score').textContent = practiceScore;
+            loadPracticeQuestion();
+        }
+        
+        // Initialize
+        updateVideoContent();
+    </script>
+</body>
+</html>

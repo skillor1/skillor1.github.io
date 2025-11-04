@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/english/dictation.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Practice English dictation with multiple AI accents including American, British, and Indian. Adjust playback speed and improve listening skills for IELTS, TOEFL, and real-world conversations.">
+    <meta name="keywords" content="English dictation practice online free, AI accent switcher tool, IELTS listening practice, American British accent dictation, speed control dictation, English listening test, improve listening skills 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/english/dictation.html">
+    <meta property="og:title" content="English Dictation Practice - Multiple AI Accents & Speed Control">
+    <meta property="og:description" content="Practice English dictation with multiple AI accents including American, British, and Indian. Adjust playback speed and improve listening skills for IELTS, TOEFL, and real-world conversations.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/english/dictation.html">
+    <meta name="twitter:title" content="English Dictation Practice - Multiple AI Accents & Speed Control">
+    <meta name="twitter:description" content="Practice English dictation with multiple AI accents including American, British, and Indian. Adjust playback speed and improve listening skills for IELTS, TOEFL, and real-world conversations.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>English Dictation Practice - Multiple AI Accents & Speed Control</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #8b5cf6;
+            --tool-secondary: #a78bfa;
+            --tool-accent: #7c3aed;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .controls-panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .control-group {
+            margin-bottom: 2rem;
+        }
+        
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .control-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .accent-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+        
+        .accent-btn {
+            padding: 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        .accent-btn:hover {
+            border-color: var(--tool-primary);
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .accent-btn.active {
+            border-color: var(--tool-primary);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(124, 58, 237, 0.2));
+            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+        }
+        
+        .accent-flag {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .speed-slider {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            outline: none;
+        }
+        
+        .speed-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.5);
+        }
+        
+        .speed-value {
+            min-width: 80px;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .audio-player {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.1));
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .play-btn {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+            margin-bottom: 1.5rem;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+        }
+        
+        .audio-text {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .dictation-area {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .dictation-input {
+            width: 100%;
+            min-height: 150px;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: white;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            resize: vertical;
+        }
+        
+        .dictation-input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            margin-left: 1rem;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .results-panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            display: none;
+        }
+        
+        .results-panel.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .accuracy-score {
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.1));
+            border-radius: 16px;
+        }
+        
+        .score-value {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .comparison-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            min-width: 100px;
+        }
+        
+        .comparison-text {
+            color: white;
+            line-height: 1.8;
+        }
+        
+        .correct {
+            color: #10b981;
+        }
+        
+        .incorrect {
+            color: #ef4444;
+            text-decoration: line-through;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .sentence-bank {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .sentence-list {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .sentence-item {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .sentence-item:hover {
+            border-color: var(--tool-primary);
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .sentence-item.selected {
+            border-color: var(--tool-primary);
+            background: rgba(139, 92, 246, 0.2);
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .difficulty-easy {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        
+        .difficulty-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+        
+        .difficulty-hard {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does dictation practice improve my English listening skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dictation trains 4 critical listening sub-skills simultaneously: 1) Phoneme recognition (hearing individual sounds like 'th' vs 's'), 2) Word boundaries (where does one word end, next begin in fast speech), 3) Connected speech patterns (how natives link words: 'going to' → 'gonna'), 4) Active memory (hold sentence in mind while writing). Unlike passive listening (watching Netflix), dictation forces active engagement—you MUST process every word accurately. Research shows 15-20 min daily dictation improves listening comprehension 40% faster than passive listening alone. The immediate feedback (comparing your text to correct answer) creates learning loops that passive listening lacks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I start with Easy, Medium, or Hard difficulty level?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with Easy if: you're beginner English (A2-B1 level), you struggle to understand native speakers, you haven't done dictation before. Easy = slow clear speech, simple vocabulary, short sentences. Start with Medium if: you're intermediate (B2 level), you understand 60-70% of English movies, you want IELTS/TOEFL prep. Medium = natural speed, common words, standard sentence length. Start with Hard if: you're advanced (C1+), you understand 80%+ native content, you want business/academic English. Hard = fast native speed, idioms, complex sentences. Test yourself: try Easy first, if you score 80%+ accuracy, jump to Medium. Optimal challenge = 60-75% accuracy (difficult enough to learn, not so hard you're frustrated). Stuck at one level? Stay there for 2 weeks before advancing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I focus on: typing speed or accuracy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prioritize ACCURACY over speed initially—90%+ accuracy matters more than fast incomplete dictation. Why: Your brain learns incorrect patterns if you type wrong words quickly, accurate slow typing builds correct listening habits, exams like IELTS penalize errors heavily. Progression: Week 1-2 = accuracy only (pause audio unlimited times, score 90%+), Week 3-4 = moderate speed (pause 3-5 times max, maintain 85%+ accuracy), Week 5+ = real-time speed (pause 0-2 times, aim for 80%+ accuracy). Real exam conditions: IELTS Listening plays audio ONCE with no pause. Practice accordingly: Easy = unlimited pauses for learning, Medium = 3 pauses max for training, Hard = 1 pause max for exam simulation. Track both metrics: accuracy % and pauses used."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I improve if I keep missing the same words repeatedly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Analyze your error patterns to target weak areas: 1) Phoneme confusion (hearing 'p' as 'b', 'l' as 'r') = practice minimal pair listening drills, 2) Fast speech linking (can't catch 'want to' → 'wanna') = study connected speech rules, 3) Unfamiliar vocabulary (don't know word exists) = build vocabulary through reading, 4) Working memory overload (forget sentence start by the end) = practice holding longer phrases. Action steps: Keep error log (which words missed repeatedly?), use slow-down feature (listen at 0.75x speed for problem sentences), shadow practice (listen + speak simultaneously to train ear-mouth connection), focus dictation (practice ONLY your weak sound patterns for 1 week). If missing 'th' sounds consistently, dedicate 3 days to 'th' focused practice before returning to full dictation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is dictation practice useful for IELTS, TOEFL, or other English exams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YES—dictation directly trains exam listening sections: IELTS Listening (form-filling, sentence completion require exact word dictation), TOEFL Listening (note-taking while listening = dictation skill), TOEIC (short answer questions need accurate word capture), School exams (listening comprehension with written answers). Exam-specific practice: IELTS = use Medium/Hard difficulty, practice spelling accuracy (exam marks spelling), TOEFL = focus on academic vocabulary dictation, practice abbreviating while listening (can't write full sentences in exam), School = match difficulty to your level, practice with timer (exam conditions). Strategic approach: 3-4 weeks before exam = daily 20 min dictation at exam difficulty level, 1 week before = practice full-length exam listening papers, Day before = light review only (don't cram). Advantage: Dictation trains faster than passive listening practice because feedback is immediate and specific."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../english.html">English</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../english.html" class="back-link">← Back to English Tools</a>
+        
+        <div class="header-section">
+            <h1>🎧 Listening & Dictation Practice</h1>
+            <p>Master listening skills with AI accents & speed control</p>
+        </div>
+        
+        <div class="controls-panel">
+            <div class="control-group">
+                <div class="control-label">
+                    <span>🌍</span>
+                    <span>Select Accent</span>
+                </div>
+                <div class="accent-selector">
+                    <button class="accent-btn active" onclick="selectAccent('us')" data-accent="us">
+                        <div class="accent-flag">🇺🇸</div>
+                        <div>American</div>
+                    </button>
+                    <button class="accent-btn" onclick="selectAccent('uk')" data-accent="uk">
+                        <div class="accent-flag">🇬🇧</div>
+                        <div>British</div>
+                    </button>
+                    <button class="accent-btn" onclick="selectAccent('au')" data-accent="au">
+                        <div class="accent-flag">🇦🇺</div>
+                        <div>Australian</div>
+                    </button>
+                    <button class="accent-btn" onclick="selectAccent('in')" data-accent="in">
+                        <div class="accent-flag">🇮🇳</div>
+                        <div>Indian</div>
+                    </button>
+                    <button class="accent-btn" onclick="selectAccent('ca')" data-accent="ca">
+                        <div class="accent-flag">🇨🇦</div>
+                        <div>Canadian</div>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <span>⚡</span>
+                    <span>Playback Speed</span>
+                </div>
+                <div class="speed-control">
+                    <span class="speed-label">0.5x</span>
+                    <input type="range" class="speed-slider" id="speed-slider" min="0.5" max="2" step="0.1" value="1" title="Playback speed control" oninput="updateSpeed(this.value)">
+                    <span class="speed-label">2.0x</span>
+                    <div class="speed-value" id="speed-display">1.0x</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-player">
+            <button class="play-btn" id="play-btn" onclick="playAudio()">▶</button>
+            <div class="audio-text" id="current-sentence">
+                "The quick brown fox jumps over the lazy dog near the riverbank."
+            </div>
+            <p class="audio-hint">
+                Click play to hear the sentence in your selected accent
+            </p>
+        </div>
+        
+        <div class="dictation-area">
+            <h3 class="dictation-title">✍️ Type what you hear</h3>
+            <textarea class="dictation-input" id="user-input" placeholder="Start typing what you hear..."></textarea>
+            <div class="dictation-actions mt-3">
+                <button class="btn" onclick="checkDictation()">Check Answer</button>
+                <button class="btn btn-secondary" onclick="resetExercise()">Reset</button>
+            </div>
+        </div>
+        
+        <div class="results-panel" id="results-panel">
+            <div class="accuracy-score">
+                <div class="score-value" id="accuracy-value">0%</div>
+                <div class="score-label">Accuracy Score</div>
+            </div>
+            
+            <div class="comparison-section">
+                <h4 class="comparison-title">📝 Comparison</h4>
+                <div class="comparison-row">
+                    <div class="comparison-label">Original:</div>
+                    <div class="comparison-text" id="original-text"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Your Answer:</div>
+                    <div class="comparison-text" id="user-text"></div>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="words-correct">0</div>
+                    <div class="stat-label">Words Correct</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="words-total">0</div>
+                    <div class="stat-label">Total Words</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="wpm">0</div>
+                    <div class="stat-label">Words/Min</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-full mt-4" onclick="nextSentence()">
+                Next Sentence →
+            </button>
+        </div>
+        
+        <div class="sentence-bank">
+            <h3 class="bank-title">📚 Practice Sentences</h3>
+            <div class="sentence-list" id="sentence-list"></div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use English Dictation Practice</h2>
+        <p>Improve listening comprehension and spelling with accent-specific audio playback, speed control, and instant accuracy feedback:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Accent and Speed</h3>
+                <p>Choose from US, UK, Australian, Indian, or Canadian accent. Adjust playback speed (0.5x to 2x) - start slow for learning, increase as you improve.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Listen and Type</h3>
+                <p>Click Play button to hear sentence. Type what you hear in the text box. Replay unlimited times. Use Pause feature to break down difficult sentences.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Check Your Accuracy</h3>
+                <p>Click "Check Dictation" to see results: accuracy percentage, correct vs incorrect words highlighted, and typing speed (WPM). Learn from mistakes instantly.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Practice Sentence Bank</h3>
+                <p>Select sentences from bank by difficulty (Easy, Medium, Hard). Click Next for new sentence. Focus on challenging ones to target weak areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which accent should I practice with?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Practice with the accent you'll encounter most. IELTS/TOEFL test-takers: start with UK/US. Indian English exam aspirants: try Indian accent. For global communication, practice multiple accents to build versatility.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What playback speed is best for beginners?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Start at 0.75x speed to catch individual words clearly. Once you hit 80%+ accuracy consistently, increase to 1x. Advanced learners should practice at 1.25-1.5x to prepare for fast natural speech.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I improve my dictation accuracy?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Practice daily 15-20 minutes. Focus on commonly confused words (there/their, your/you're). Replay sentences multiple times - first for gist, then for detail. Check incorrect words to learn proper spelling patterns.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do punctuation mistakes affect my score?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our tool ignores punctuation for scoring - focus is on word accuracy and spelling. In real exams (IELTS Listening), punctuation matters, so practice adding it naturally as you improve.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's a good WPM target for dictation?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Average handwriting is 15-20 WPM, typing 40-60 WPM. For dictation exams, aim for 30-40 WPM with 90%+ accuracy. Speed matters less than accuracy - better to type slowly and correctly than fast with errors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="pronunciation-heatmap.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎤</span> Pronunciation Heatmap</h3>
+                <p>Practice speaking the same sentences you've mastered in dictation.</p>
+            </a>
+            <a href="interview-vocab.html" class="related-tool-card">
+                <h3><span class="tool-icon">📚</span> Interview Vocabulary</h3>
+                <p>Learn professional vocabulary to use in dictation practice sentences.</p>
+            </a>
+            <a href="../typing/speed-test.html" class="related-tool-card">
+                <h3><span class="tool-icon">⌨️</span> Typing Speed Test</h3>
+                <p>Improve typing speed to keep up with fast dictation audio playback.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const sentences = [
+            { text: "The quick brown fox jumps over the lazy dog near the riverbank.", difficulty: "easy" },
+            { text: "Artificial intelligence is revolutionizing the way we approach complex problems.", difficulty: "medium" },
+            { text: "Despite numerous obstacles, she persevered and achieved remarkable success.", difficulty: "medium" },
+            { text: "The unprecedented technological advancements have fundamentally transformed society.", difficulty: "hard" },
+            { text: "Climate change mitigation requires comprehensive international cooperation.", difficulty: "hard" },
+            { text: "I enjoy reading books and listening to music in my free time.", difficulty: "easy" },
+            { text: "The conference will be held next month in San Francisco.", difficulty: "easy" },
+            { text: "Sustainable development goals aim to address global challenges effectively.", difficulty: "medium" },
+            { text: "The entrepreneurial ecosystem has evolved dramatically over the past decade.", difficulty: "hard" },
+            { text: "She demonstrated exceptional leadership during the crisis management process.", difficulty: "medium" }
+        ];
+        
+        let currentSentence = sentences[0];
+        let selectedAccent = 'us';
+        let playbackSpeed = 1.0;
+        let startTime = null;
+        let synth = window.speechSynthesis;
+        let currentUtterance = null;
+        
+        function selectAccent(accent) {
+            selectedAccent = accent;
+            document.querySelectorAll('.accent-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.accent === accent);
+            });
+        }
+        
+        function updateSpeed(value) {
+            playbackSpeed = parseFloat(value);
+            document.getElementById('speed-display').textContent = value + 'x';
+        }
+        
+        function playAudio() {
+            if (synth.speaking) {
+                synth.cancel();
+                document.getElementById('play-btn').textContent = '▶';
+                return;
+            }
+            
+            const utterance = new SpeechSynthesisUtterance(currentSentence.text);
+            utterance.rate = playbackSpeed;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+            
+            // Voice selection based on accent
+            const voices = synth.getVoices();
+            let selectedVoice = null;
+            
+            switch(selectedAccent) {
+                case 'us':
+                    selectedVoice = voices.find(v => v.lang === 'en-US');
+                    break;
+                case 'uk':
+                    selectedVoice = voices.find(v => v.lang === 'en-GB');
+                    break;
+                case 'au':
+                    selectedVoice = voices.find(v => v.lang === 'en-AU');
+                    break;
+                case 'in':
+                    selectedVoice = voices.find(v => v.lang === 'en-IN');
+                    break;
+                case 'ca':
+                    selectedVoice = voices.find(v => v.lang === 'en-CA') || voices.find(v => v.lang === 'en-US');
+                    break;
+            }
+            
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            }
+            
+            utterance.onstart = () => {
+                document.getElementById('play-btn').textContent = '⏸';
+                if (!startTime) startTime = new Date();
+            };
+            
+            utterance.onend = () => {
+                document.getElementById('play-btn').textContent = '▶';
+            };
+            
+            currentUtterance = utterance;
+            synth.speak(utterance);
+        }
+        
+        function checkDictation() {
+            const userInput = document.getElementById('user-input').value.trim();
+            if (!userInput) {
+                alert('Please type something first!');
+                return;
+            }
+            
+            const originalWords = currentSentence.text.toLowerCase().replace(/[.,!?;:]/g, '').split(/\s+/);
+            const userWords = userInput.toLowerCase().replace(/[.,!?;:]/g, '').split(/\s+/);
+            
+            let correctCount = 0;
+            const maxLength = Math.max(originalWords.length, userWords.length);
+            
+            // Simple word matching
+            for (let i = 0; i < originalWords.length; i++) {
+                if (originalWords[i] === userWords[i]) {
+                    correctCount++;
+                }
+            }
+            
+            const accuracy = Math.round((correctCount / originalWords.length) * 100);
+            
+            // Calculate WPM
+            let wpm = 0;
+            if (startTime) {
+                const timeElapsed = (new Date() - startTime) / 1000 / 60; // minutes
+                wpm = Math.round(userWords.length / timeElapsed);
+            }
+            
+            // Display results
+            document.getElementById('accuracy-value').textContent = accuracy + '%';
+            document.getElementById('original-text').textContent = currentSentence.text;
+            document.getElementById('user-text').innerHTML = highlightDifferences(originalWords, userWords);
+            document.getElementById('words-correct').textContent = correctCount;
+            document.getElementById('words-total').textContent = originalWords.length;
+            document.getElementById('wpm').textContent = wpm;
+            
+            document.getElementById('results-panel').classList.add('show');
+            
+            // Scroll to results
+            document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function highlightDifferences(original, user) {
+            return user.map((word, i) => {
+                if (original[i] === word) {
+                    return `<span class="correct">${word}</span>`;
+                } else {
+                    return `<span class="incorrect">${word}</span>`;
+                }
+            }).join(' ');
+        }
+        
+        function resetExercise() {
+            document.getElementById('user-input').value = '';
+            document.getElementById('results-panel').classList.remove('show');
+            startTime = null;
+            if (synth.speaking) {
+                synth.cancel();
+                document.getElementById('play-btn').textContent = '▶';
+            }
+        }
+        
+        function nextSentence() {
+            const currentIndex = sentences.indexOf(currentSentence);
+            currentSentence = sentences[(currentIndex + 1) % sentences.length];
+            document.getElementById('current-sentence').textContent = `"${currentSentence.text}"`;
+            resetExercise();
+            
+            // Update selected sentence in list
+            renderSentenceBank();
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function renderSentenceBank() {
+            const list = document.getElementById('sentence-list');
+            list.innerHTML = sentences.map((s, i) => `
+                <div class="sentence-item ${s === currentSentence ? 'selected' : ''}" onclick="selectSentence(${i})">
+                    <span>${s.text}</span>
+                    <span class="difficulty-badge difficulty-${s.difficulty}">${s.difficulty.toUpperCase()}</span>
+                </div>
+            `).join('');
+        }
+        
+        function selectSentence(index) {
+            currentSentence = sentences[index];
+            document.getElementById('current-sentence').textContent = `"${currentSentence.text}"`;
+            resetExercise();
+            renderSentenceBank();
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+        
+        // Load voices when available
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = () => {
+                synth.getVoices();
+            };
+        }
+        
+        // Initialize
+        renderSentenceBank();
+    </script>
+</body>
+</html>

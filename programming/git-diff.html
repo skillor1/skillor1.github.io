@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/programming/git-diff.html">
+    <meta name="description" content="Free Git Diff Highlighter online. Visualize git diffs with side-by-side view, syntax highlighting for JS/Python/HTML/CSS, and conflict resolution tips.">
+    <meta name="keywords" content="git diff viewer, diff highlighter, git diff online, code diff tool, merge conflict resolver, free git diff 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/programming/git-diff.html">
+    <meta property="og:title" content="Git Diff Highlighter - Visual Code Comparison Tool">
+    <meta property="og:description" content="Visualize and compare code changes with syntax highlighting, side-by-side diff view, and merge conflict tips.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Git Diff Highlighter - Visual Code Comparison | Skillor</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #6366f1;
+            --tool-secondary: #818cf8;
+            --tool-success: #10b981;
+            --tool-error: #ef4444;
+            --tool-warning: #f59e0b;
+            --code-bg: #1e1e2e;
+            --code-border: rgba(99, 102, 241, 0.2);
+            --diff-added-bg: rgba(16, 185, 129, 0.15);
+            --diff-removed-bg: rgba(239, 68, 68, 0.15);
+            --diff-added-line: #10b981;
+            --diff-removed-line: #ef4444;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        
+        .tool-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .tool-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .controls-bar {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(10, 10, 15, 0.6);
+            padding: 0.25rem;
+            border-radius: 8px;
+        }
+        
+        .view-btn {
+            padding: 0.625rem 1.25rem;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn.active {
+            background: var(--tool-primary);
+            color: white;
+        }
+        
+        .btn-action {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--tool-primary), #4f46e5);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .language-select {
+            background: rgba(10, 10, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 0.625rem 1rem;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .input-panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-panel h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .input-panel textarea {
+            width: 100%;
+            min-height: 200px;
+            background: var(--code-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            color: white;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            resize: vertical;
+        }
+        
+        .input-panel textarea:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .diff-container {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .diff-header {
+            padding: 1rem 1.5rem;
+            background: rgba(10, 10, 15, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .diff-stats {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-added { color: var(--diff-added-line); }
+        .stat-removed { color: var(--diff-removed-line); }
+        
+        .diff-view {
+            overflow-x: auto;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .diff-side-by-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .diff-column {
+            background: var(--code-bg);
+        }
+        
+        .diff-column-header {
+            padding: 0.75rem 1rem;
+            background: rgba(10, 10, 15, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+        }
+        
+        .diff-line {
+            display: flex;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .diff-line-num {
+            padding: 0.25rem 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+            min-width: 50px;
+            text-align: right;
+            -webkit-user-select: none;
+            user-select: none;
+            background: rgba(0, 0, 0, 0.2);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .diff-line-content {
+            padding: 0.25rem 1rem;
+            flex: 1;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        
+        .diff-line.added {
+            background: var(--diff-added-bg);
+        }
+        
+        .diff-line.added .diff-line-num {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--diff-added-line);
+        }
+        
+        .diff-line.added .diff-line-content::before {
+            content: '+';
+            color: var(--diff-added-line);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .diff-line.removed {
+            background: var(--diff-removed-bg);
+        }
+        
+        .diff-line.removed .diff-line-num {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--diff-removed-line);
+        }
+        
+        .diff-line.removed .diff-line-content::before {
+            content: '-';
+            color: var(--diff-removed-line);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .diff-line.context {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .diff-line.context .diff-line-content::before {
+            content: ' ';
+            margin-right: 0.5rem;
+        }
+        
+        .diff-unified {
+            background: var(--code-bg);
+        }
+        
+        .conflict-tips {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .conflict-tips h3 {
+            color: var(--tool-warning);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .tip-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tip-list li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .tip-list li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+        }
+        
+        .code-highlight {
+            background: var(--code-bg);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+            color: var(--tool-success);
+        }
+        
+        /* utility classes to replace inline styles */
+        .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        .hidden { display: none; }
+        .diff-header h3 { margin: 0; color: white; font-size: 1.1rem; }
+        .stat-muted { color: rgba(255,255,255,0.7); }
+        .placeholder-line { opacity: 0.3; }
+        
+        @media (max-width: 968px) {
+            .diff-side-by-side {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn-action, .view-toggle {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Git Diff Highlighter - Skillor",
+      "description": "Visualize git diffs with syntax highlighting, side-by-side view, and merge conflict resolution tips",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "Programming", "item": "https://skillor.me/programming.html"},
+        {"@type": "ListItem", "position": 3, "name": "Git Diff Highlighter", "item": "https://skillor.me/programming/git-diff.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I read Git diff colors and symbols?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Git diff uses color-coding and symbols to show changes: Green lines with + = additions (new code added), Red lines with - = deletions (code removed), White/gray lines = unchanged context (surrounding code for reference), Blue @ symbols = hunk headers showing line numbers (@@ -10,5 +12,7 @@ means old file lines 10-15, new file lines 12-19). File indicators: --- a/file.js = old version, +++ b/file.js = new version. Understanding hunks: each colored block = one hunk (contiguous change area), white lines between hunks = unchanged code skipped for brevity. Reading strategy: scan red lines first (what was removed?), then green lines (what replaced it?), compare side-by-side to understand intent. Pro tip: if diff shows entire file changed, likely line ending issues (CRLF vs LF) or formatting changes (spaces/tabs)—use git diff --ignore-all-space to filter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between git diff, git diff --staged, and git diff HEAD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three commands show different comparison points: git diff (no args) = compares working directory vs staging area (shows unstaged changes you haven't git added yet), useful before git add to review what you're about to stage. git diff --staged (or --cached) = compares staging area vs last commit (shows staged changes ready to commit), useful before git commit to review what will be committed. git diff HEAD = compares working directory vs last commit (shows all changes both staged and unstaged), useful for complete picture of all modifications since last commit. Workflow: 1) Make changes, 2) git diff (review before staging), 3) git add files, 4) git diff --staged (review before committing), 5) git commit. Comparing branches: git diff main..feature shows differences between branches, git diff HEAD~3 shows changes from 3 commits ago."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I use Git diff for code review?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Git diff is essential for effective code reviews: Pre-review preparation: git diff main...feature-branch (three dots show changes introduced by feature, not main's progress), git diff --stat (summary showing which files changed + line counts), git diff -w (ignore whitespace to focus on logic changes). Review workflow: 1) Start with git diff --stat to identify high-risk files (500+ line changes need careful review), 2) Review critical files first (authentication, payment, security-related), 3) For each file: understand change context, check for logic errors, verify tests updated, look for code smells. Efficient reviewing: git diff --word-diff highlights word-level changes (better than line-level for small edits), git diff --color-words for even finer granularity. Red flags in diff: massive deletions without additions (functionality removed?), many files changed (scope creep?), mixing refactoring with feature adds (should be separate commits)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my Git diff show changes I didn't make?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common causes of unexpected diffs: Line ending differences (CRLF on Windows vs LF on Mac/Linux) = entire file shows changed, fix with git config core.autocrlf true (Windows) or input (Mac/Linux). Whitespace changes (spaces vs tabs, trailing spaces) = lines identical except formatting, filter with git diff -w or --ignore-all-space. File mode changes (chmod permissions) = diff shows mode change 100644 → 100755 but no content change, disable with git config core.fileMode false. IDE auto-formatting (Prettier, ESLint fix) = formatting changes obscure real changes, commit formatting separately. Encoding changes (UTF-8 vs UTF-16) = file appears completely changed, check with file -I filename. Merged code from other branches = changes from base branch appear in your diff, use three-dot diff: git diff main...your-branch to see only your changes. Prevention: configure .gitattributes for line endings, use .editorconfig for consistent formatting, enable pre-commit hooks to catch formatting issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate diffs between non-Git files or specific file versions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Git diff works beyond Git-tracked files: Compare any two files: git diff --no-index file1.txt file2.txt (compares any files even outside Git repos), useful for comparing config files, API responses, or data files. Compare specific commit versions: git diff commit1:file.js commit2:file.js (compare same file across commits), git diff HEAD:file.js working-tree-file.js (compare committed version vs current). Compare directories: git diff --no-index dir1/ dir2/ (shows all file differences between directories). Output formats: git diff --stat (summary with file names and line counts), git diff --name-only (just file names), git diff --name-status (files + change type: A=added, M=modified, D=deleted), git diff > changes.patch (save diff to file for later application). Advanced: diff --patience for better algorithm on complex changes, diff --histogram for faster performance, diff --color-moved to track code movements. Integration: pipe git diff to tools like diff-so-fancy or delta for enhanced visual diffs with better syntax highlighting."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../programming.html">Programming</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../programming.html" class="back-link">← Back to Programming Tools</a>
+        
+        <div class="tool-header">
+            <h1>🔀 Git Diff Highlighter</h1>
+            <p>Visualize code changes with syntax highlighting and side-by-side comparison</p>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls-bar">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="side-by-side" onclick="switchView('side-by-side')">Side-by-Side</button>
+                <button class="view-btn" data-view="unified" onclick="switchView('unified')">Unified</button>
+            </div>
+            
+            <select class="language-select" id="language-select" aria-label="Select language" title="Select language">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="java">Java</option>
+                <option value="plaintext">Plain Text</option>
+            </select>
+            
+            <button class="btn-action" onclick="generateDiff()">🔍 Generate Diff</button>
+            <button class="btn-action btn-secondary" onclick="loadExample()">📝 Load Example</button>
+            <button class="btn-action btn-secondary" onclick="clearAll()">🗑️ Clear</button>
+        </div>
+        
+        <!-- Input Areas -->
+        <div class="two-col-grid">
+            <div class="input-panel">
+                <h3>Original Code</h3>
+                <textarea id="original-code" placeholder="Paste original code here..."></textarea>
+            </div>
+            
+            <div class="input-panel">
+                <h3>Modified Code</h3>
+                <textarea id="modified-code" placeholder="Paste modified code here..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Diff View -->
+        <div class="diff-container hidden" id="diff-container">
+            <div class="diff-header">
+                <h3>Diff View</h3>
+                <div class="diff-stats">
+                    <div class="stat-item stat-added">
+                        <span>+<span id="lines-added">0</span></span>
+                    </div>
+                    <div class="stat-item stat-removed">
+                        <span>-<span id="lines-removed">0</span></span>
+                    </div>
+                    <div class="stat-item stat-muted">
+                        <span><span id="total-changes">0</span> changes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="diff-view" id="diff-view"></div>
+        </div>
+        
+        <!-- Conflict Resolution Tips -->
+        <div class="conflict-tips">
+            <h3>💡 Merge Conflict Resolution Tips</h3>
+            <ul class="tip-list">
+                <li>Review <span class="code-highlight"><<<<<<< HEAD</span>, <span class="code-highlight">=======</span>, and <span class="code-highlight">>>>>>>> branch</span> markers to identify conflicts</li>
+                <li>Use <span class="code-highlight">git status</span> to see all files with conflicts</li>
+                <li>Test your code after resolving conflicts to ensure functionality</li>
+                <li>Consider using <span class="code-highlight">git merge --abort</span> if conflicts are too complex</li>
+                <li>Communicate with your team about significant merge changes</li>
+                <li>Use <span class="code-highlight">git diff --staged</span> to review changes before committing</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Git Diff Viewer</h2>
+        <p>Compare code changes visually with syntax highlighting. Perfect for reviewing commits, resolving merge conflicts, or understanding code evolution:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Paste Your Code</h3>
+                <p>Enter the original code in the "Before" panel and modified code in the "After" panel. Supports any programming language with auto-detected syntax highlighting.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Choose View Mode</h3>
+                <p>Select Unified Diff for compact line-by-line comparison or Side-by-Side for parallel viewing. Toggle inline change detection for character-level differences.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Review Changes</h3>
+                <p>Red highlights show deletions, green shows additions, yellow marks modifications. Line numbers help locate changes quickly in your actual files.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Resolve Conflicts</h3>
+                <p>Use the Merge Conflict mode to paste conflicts with markers (<<<, ===, >>>). Tool helps identify and resolve conflicts with clear visualization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I paste Git diff output directly?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Run `git diff` or `git show [commit]` in your terminal, copy the output, and paste into either panel. Our tool parses Git diff format automatically and displays it with proper highlighting and structure.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the difference between unified and side-by-side view?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Unified view shows all changes in a single column with +/- symbols, saving screen space. Side-by-side displays before/after code in parallel columns for easier comparison. Choose based on your screen size and preference.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I resolve merge conflicts with this tool?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Paste code containing conflict markers (<<<<<<< HEAD, =======, >>>>>>> branch). The tool highlights conflicting sections clearly. Review both versions, decide which to keep, and manually resolve in your editor. Our visualization helps you understand what changed.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I compare files between different commits?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Use `git show commit1:path/to/file` to get old version and `git show commit2:path/to/file` for new version. Paste each into respective panels. Or use `git diff commit1 commit2 -- filename` and paste the output.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Does this work with languages other than JavaScript?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! Our syntax highlighter supports Python, Java, C++, PHP, Ruby, Go, Rust, and many more languages. Highlighting is auto-detected based on code syntax patterns.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="regex-tester.html" class="related-tool-card">
+                <h3><span class="tool-icon">.*</span> Regex Tester</h3>
+                <p>Test regex patterns to find and replace code across your changes.</p>
+            </a>
+            <a href="json-formatter.html" class="related-tool-card">
+                <h3><span class="tool-icon">{ }</span> JSON Formatter</h3>
+                <p>Compare JSON config file changes with proper formatting.</p>
+            </a>
+            <a href="../productivity/weekly-review.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Weekly Review</h3>
+                <p>Track your code review and development progress over time.</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Professional-grade tools for developers. Test regex patterns, format JSON, visualize algorithms, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Programming Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./regex-tester.html">Regex Tester</a></li>
+                    <li><a href="./json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="./sorting-visualizer.html">Sorting Visualizer</a></li>
+                    <li><a href="./api-mock.html">API Mock Generator</a></li>
+                    <li><a href="./git-diff.html">Git Diff Highlighter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentView = 'side-by-side';
+        
+        function switchView(view) {
+            currentView = view;
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === view);
+            });
+            
+            if (!document.getElementById('diff-container').classList.contains('hidden')) {
+                generateDiff();
+            }
+        }
+        
+        function generateDiff() {
+            const original = document.getElementById('original-code').value;
+            const modified = document.getElementById('modified-code').value;
+            
+            if (!original && !modified) {
+                alert('Please enter code in both text areas');
+                return;
+            }
+            
+            const originalLines = original.split('\n');
+            const modifiedLines = modified.split('\n');
+            
+            const diff = computeDiff(originalLines, modifiedLines);
+            
+            document.getElementById('diff-container').classList.remove('hidden');
+            
+            if (currentView === 'side-by-side') {
+                renderSideBySide(diff, originalLines, modifiedLines);
+            } else {
+                renderUnified(diff, originalLines, modifiedLines);
+            }
+            
+            updateStats(diff);
+        }
+        
+        function computeDiff(original, modified) {
+            // Simple LCS-based diff algorithm
+            const m = original.length;
+            const n = modified.length;
+            const dp = Array(m + 1).fill(null).map(() => Array(n + 1).fill(0));
+            
+            for (let i = 1; i <= m; i++) {
+                for (let j = 1; j <= n; j++) {
+                    if (original[i - 1] === modified[j - 1]) {
+                        dp[i][j] = dp[i - 1][j - 1] + 1;
+                    } else {
+                        dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                    }
+                }
+            }
+            
+            const diff = [];
+            let i = m, j = n;
+            
+            while (i > 0 || j > 0) {
+                if (i > 0 && j > 0 && original[i - 1] === modified[j - 1]) {
+                    diff.unshift({ type: 'context', originalLine: i - 1, modifiedLine: j - 1, content: original[i - 1] });
+                    i--;
+                    j--;
+                } else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
+                    diff.unshift({ type: 'added', modifiedLine: j - 1, content: modified[j - 1] });
+                    j--;
+                } else if (i > 0) {
+                    diff.unshift({ type: 'removed', originalLine: i - 1, content: original[i - 1] });
+                    i--;
+                }
+            }
+            
+            return diff;
+        }
+        
+        function renderSideBySide(diff, originalLines, modifiedLines) {
+            let html = '<div class="diff-side-by-side">';
+            
+            html += '<div class="diff-column">';
+            html += '<div class="diff-column-header">Original</div>';
+            
+            let originalLineNum = 0;
+            diff.forEach(change => {
+                if (change.type === 'context' || change.type === 'removed') {
+                    originalLineNum++;
+                    const lineClass = change.type === 'removed' ? 'removed' : 'context';
+                    html += `<div class="diff-line ${lineClass}">`;
+                    html += `<div class="diff-line-num">${originalLineNum}</div>`;
+                    html += `<div class="diff-line-content">${escapeHtml(change.content)}</div>`;
+                    html += `</div>`;
+                } else if (change.type === 'added') {
+                    html += `<div class="diff-line placeholder-line">`;
+                    html += `<div class="diff-line-num"></div>`;
+                    html += `<div class="diff-line-content"></div>`;
+                    html += `</div>`;
+                }
+            });
+            
+            html += '</div>';
+            
+            html += '<div class="diff-column">';
+            html += '<div class="diff-column-header">Modified</div>';
+            
+            let modifiedLineNum = 0;
+            diff.forEach(change => {
+                if (change.type === 'context' || change.type === 'added') {
+                    modifiedLineNum++;
+                    const lineClass = change.type === 'added' ? 'added' : 'context';
+                    html += `<div class="diff-line ${lineClass}">`;
+                    html += `<div class="diff-line-num">${modifiedLineNum}</div>`;
+                    html += `<div class="diff-line-content">${escapeHtml(change.content)}</div>`;
+                    html += `</div>`;
+                } else if (change.type === 'removed') {
+                    html += `<div class="diff-line placeholder-line">`;
+                    html += `<div class="diff-line-num"></div>`;
+                    html += `<div class="diff-line-content"></div>`;
+                    html += `</div>`;
+                }
+            });
+            
+            html += '</div>';
+            html += '</div>';
+            
+            document.getElementById('diff-view').innerHTML = html;
+        }
+        
+        function renderUnified(diff, originalLines, modifiedLines) {
+            let html = '<div class="diff-unified">';
+            
+            let originalLineNum = 0;
+            let modifiedLineNum = 0;
+            
+            diff.forEach(change => {
+                if (change.type === 'context') {
+                    originalLineNum++;
+                    modifiedLineNum++;
+                    html += `<div class="diff-line context">`;
+                    html += `<div class="diff-line-num">${originalLineNum},${modifiedLineNum}</div>`;
+                    html += `<div class="diff-line-content">${escapeHtml(change.content)}</div>`;
+                    html += `</div>`;
+                } else if (change.type === 'removed') {
+                    originalLineNum++;
+                    html += `<div class="diff-line removed">`;
+                    html += `<div class="diff-line-num">${originalLineNum}</div>`;
+                    html += `<div class="diff-line-content">${escapeHtml(change.content)}</div>`;
+                    html += `</div>`;
+                } else if (change.type === 'added') {
+                    modifiedLineNum++;
+                    html += `<div class="diff-line added">`;
+                    html += `<div class="diff-line-num">${modifiedLineNum}</div>`;
+                    html += `<div class="diff-line-content">${escapeHtml(change.content)}</div>`;
+                    html += `</div>`;
+                }
+            });
+            
+            html += '</div>';
+            
+            document.getElementById('diff-view').innerHTML = html;
+        }
+        
+        function updateStats(diff) {
+            const added = diff.filter(d => d.type === 'added').length;
+            const removed = diff.filter(d => d.type === 'removed').length;
+            
+            document.getElementById('lines-added').textContent = added;
+            document.getElementById('lines-removed').textContent = removed;
+            document.getElementById('total-changes').textContent = added + removed;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function loadExample() {
+            const examples = {
+                javascript: {
+                    original: `function calculateTotal(items) {
+    let total = 0;
+    for (let i = 0; i < items.length; i++) {
+        total += items[i].price;
+    }
+    return total;
+}
+
+const cart = [
+    { name: 'Book', price: 20 },
+    { name: 'Pen', price: 5 }
+];
+
+console.log(calculateTotal(cart));`,
+                    modified: `function calculateTotal(items, taxRate = 0.1) {
+    const subtotal = items.reduce((sum, item) => sum + item.price, 0);
+    const tax = subtotal * taxRate;
+    return subtotal + tax;
+}
+
+const cart = [
+    { name: 'Book', price: 20 },
+    { name: 'Pen', price: 5 },
+    { name: 'Notebook', price: 15 }
+];
+
+const total = calculateTotal(cart);
+console.log(\`Total with tax: $\${total.toFixed(2)}\`);`
+                }
+            };
+            
+            const lang = document.getElementById('language-select').value;
+            const example = examples[lang] || examples.javascript;
+            
+            document.getElementById('original-code').value = example.original;
+            document.getElementById('modified-code').value = example.modified;
+            
+            generateDiff();
+        }
+        
+        function clearAll() {
+            document.getElementById('original-code').value = '';
+            document.getElementById('modified-code').value = '';
+            document.getElementById('diff-container').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

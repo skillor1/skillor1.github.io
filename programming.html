@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free programming tools including Regex Tester, JSON Formatter, Sorting Visualizer, API Mock Generator & Git Diff Highlighter. Master coding skills with interactive challenges.">
+    <meta name="keywords" content="regex tester online, JSON formatter, sorting algorithm visualizer, API mock generator, git diff viewer, programming tools, free developer tools 2025">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/programming.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/programming.html">
+    <meta property="og:title" content="Programming Tools – Regex Tester, JSON Formatter & More | Skillor">
+    <meta property="og:description" content="Test regex, format JSON, visualize sorting, mock APIs, and analyze git diffs. Free, fast, and mobile-friendly developer tools.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Programming Tools – Regex Tester, JSON Formatter & More | Skillor">
+    <meta name="twitter:description" content="Regex tester, JSON formatter, sorting visualizer, API mock, and git diff tools—free and fast.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Programming Tools – Regex Tester, JSON Formatter & More | Skillor</title>
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Skillor Programming Tools",
+      "description": "Interactive programming tools including Regex Tester, JSON Formatter, Sorting Visualizer, API Mock Generator, and Git Diff Highlighter",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+        <!-- Structured Data: Breadcrumbs -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+                {"@type": "ListItem", "position": 2, "name": "Programming", "item": "https://skillor.me/programming.html"}
+            ]
+        }
+        </script>
+    
+        <!-- Structured Data: CollectionPage -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Programming Tools",
+            "url": "https://skillor.me/programming.html",
+            "about": "Developer utilities for regex testing, JSON formatting, algorithm visualization, API mocking, and git diffs.",
+            "hasPart": [
+                {"@type": "SoftwareApplication", "name": "Regex Tester", "url": "https://skillor.me/programming/regex-tester.html", "applicationCategory": "DeveloperApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "JSON Formatter", "url": "https://skillor.me/programming/json-formatter.html", "applicationCategory": "DeveloperApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Sorting Visualizer", "url": "https://skillor.me/programming/sorting-visualizer.html", "applicationCategory": "DeveloperApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "API Mock Generator", "url": "https://skillor.me/programming/api-mock.html", "applicationCategory": "DeveloperApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Git Diff Viewer", "url": "https://skillor.me/programming/git-diff.html", "applicationCategory": "DeveloperApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
+            ]
+        }
+        </script>
+    
+    <style>
+        :root {
+            --category-primary: #6366f1;
+            --category-secondary: #818cf8;
+            --category-gradient: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+        
+        .category-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 6% 4rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(79, 70, 229, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 2;
+        }
+        
+        .category-icon-large {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .category-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--category-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .category-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--category-secondary);
+        }
+        
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 6%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--category-primary);
+        }
+        
+        .topic-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .topic-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .topic-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .topic-meta span {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .btn-start {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--category-gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='./index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#learn">Learn</a></li>
+            <li><a href="./index.html#practice">Practice</a></li>
+            <li><a href="./index.html#categories">Categories</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='./index.html'">Start Learning</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a>
+                <span>›</span>
+                <a href="./index.html#categories">Categories</a>
+                <span>›</span>
+                <span style="color: #fff;">Programming</span>
+            </div>
+            <span class="category-icon-large">💻</span>
+            <h1>Programming</h1>
+            <p>Master coding skills with interactive challenges and real projects</p>
+        </div>
+    </section>
+    
+    <!-- Interactive Tools Section -->
+    <section>
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🚀 Interactive Programming Tools</h2>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 1.1rem; margin-bottom: 3rem;">Professional-grade tools to supercharge your development workflow</p>
+            
+            <div class="topics-grid">
+                <div class="topic-card" onclick="window.location.href='./programming/regex-tester.html'" id="regex-tool">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                    <h3>Regex Tester</h3>
+                    <p>Test regular expressions across JS, PHP/PCRE, and Python flavors with real-time highlighting and pattern library.</p>
+                    <a href="./programming/regex-tester.html" class="btn-start" onclick="event.stopPropagation();">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🔥 Trending</span>
+                        <span>💼 For Devs</span>
+                        <span>⚡ Instant</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./programming/json-formatter.html'" id="json-tool">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+                    <h3>JSON Formatter & Validator</h3>
+                    <p>Format, validate, and convert JSON with syntax highlighting, tree-view, and schema generation.</p>
+                    <a href="./programming/json-formatter.html" class="btn-start" onclick="event.stopPropagation();">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🌟 Popular</span>
+                        <span>🔧 API Tools</span>
+                        <span>⚡ Instant</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./programming/sorting-visualizer.html'" id="sorting-tool">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <h3>Sorting Algorithm Visualizer</h3>
+                    <p>Visualize 6+ sorting algorithms with animations, complexity analysis, and code export features.</p>
+                    <a href="./programming/sorting-visualizer.html" class="btn-start" onclick="event.stopPropagation();">Try Now</a>
+                    <div class="topic-meta">
+                        <span>📚 Educational</span>
+                        <span>🎓 CS Students</span>
+                        <span>🎨 Visual</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./programming/api-mock.html'" id="api-tool">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                    <h3>API Mock Generator</h3>
+                    <p>Generate mock API responses with customizable delays, error simulation, and scenario testing.</p>
+                    <a href="./programming/api-mock.html" class="btn-start" onclick="event.stopPropagation();">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🚀 QA Essential</span>
+                        <span>🧪 Testing</span>
+                        <span>💾 Save Mocks</span>
+                    </div>
+                </div>
+                
+                <div class="topic-card" onclick="window.location.href='./programming/git-diff.html'" id="diff-tool">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔀</div>
+                    <h3>Git Diff Highlighter</h3>
+                    <p>Visualize git diffs with side-by-side view, syntax highlighting, and conflict resolution tips.</p>
+                    <a href="./programming/git-diff.html" class="btn-start" onclick="event.stopPropagation();">Try Now</a>
+                    <div class="topic-meta">
+                        <span>🎯 Version Control</span>
+                        <span>👥 Code Review</span>
+                        <span>🎨 Visual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact US</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./disclaimer.html">Disclaimer</a></li>
+                    <li><a href="./terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="./programming.html">Programming</a></li>
+                    <li><a href="./aptitude.html">Aptitude</a></li>
+                    <li><a href="./typing.html">Typing</a></li>
+                    <li><a href="./english.html">English</a></li>
+                    <li><a href="./ai-tools.html">AI Tools</a></li>
+                    <li><a href="./productivity.html">Productivity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Popular Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./programming/json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="./programming/regex-tester.html">Regex Tester</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p style="margin-top: 1.5rem;">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Tool Modals Container -->
+    <div id="tool-modals"></div>
+    
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/programming-tools.js"></script>
+</body>
+</html>

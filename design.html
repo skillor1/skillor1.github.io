@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design tools: color palette generator, gradient generator, mockup generator, design system, and social media kit. Free and fast.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/design.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/design.html">
+    <meta property="og:title" content="Design Tools – Colors, Gradients, Mockups & UI Kits | Skillor">
+    <meta property="og:description" content="Generate color palettes, gradients, device mockups, design systems, and social media kits—free and mobile-friendly.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Design Tools – Colors, Gradients, Mockups & UI Kits | Skillor">
+    <meta name="twitter:description" content="Color palettes, gradients, mockups, UI kits, and social media templates—free.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Design Tools – Color, Gradient, Mockup & UI Kits | Skillor</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+        <!-- Structured Data: Breadcrumbs -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+                {"@type": "ListItem", "position": 2, "name": "Design", "item": "https://skillor.me/design.html"}
+            ]
+        }
+        </script>
+    
+        <!-- Structured Data: CollectionPage -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Design Tools",
+            "url": "https://skillor.me/design.html",
+            "about": "Free design tools for colors, gradients, mockups, and templates.",
+            "hasPart": [
+                {"@type": "SoftwareApplication", "name": "Color Palette", "url": "https://skillor.me/design/color-palette.html", "applicationCategory": "DesignApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Gradient Generator", "url": "https://skillor.me/design/gradient-generator.html", "applicationCategory": "DesignApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Mockup Generator", "url": "https://skillor.me/design/mockup-generator.html", "applicationCategory": "DesignApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Design System", "url": "https://skillor.me/design/design-system.html", "applicationCategory": "DesignApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}},
+                {"@type": "SoftwareApplication", "name": "Social Media Kit", "url": "https://skillor.me/design/social-media-kit.html", "applicationCategory": "DesignApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
+            ]
+        }
+        </script>
+    
+    <style>
+        :root {
+            --category-primary: #ef4444;
+            --category-secondary: #f87171;
+            --category-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+        
+        .category-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 6% 4rem;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(239, 68, 68, 0.2) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 2;
+        }
+        
+        .category-icon-large {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .category-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--category-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .category-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--category-secondary);
+        }
+        
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 6%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(239, 68, 68, 0.3);
+            border-color: var(--category-primary);
+        }
+        
+        .topic-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .topic-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .topic-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .topic-meta span {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .btn-start {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--category-gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='./index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#learn">Learn</a></li>
+            <li><a href="./index.html#practice">Practice</a></li>
+            <li><a href="./index.html#categories">Categories</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='./index.html'">Start Learning</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a>
+                <span>›</span>
+                <a href="./index.html#categories">Categories</a>
+                <span>›</span>
+                <span style="color: #fff;">Design</span>
+            </div>
+            <span class="category-icon-large">🎨</span>
+            <h1>Design</h1>
+            <p>Create stunning visuals and user experiences</p>
+        </div>
+    </section>
+    
+    <!-- Carousel -->
+    <section style="padding: 2rem 6%; max-width: 1400px; margin: 0 auto;">
+        <div style="background: rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Featured Design Tools</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(239, 68, 68, 0.1); border-radius: 16px; padding: 1.5rem; text-align: center; border: 1px solid rgba(239, 68, 68, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Color Palette Generator</h3>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">AI-powered color generation with real-time preview</p>
+                    <a href="./design/color-palette.html" style="display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 8px; color: white; text-decoration: none; font-weight: 500;">Try Now</a>
+                </div>
+                <div style="background: rgba(239, 68, 68, 0.1); border-radius: 16px; padding: 1.5rem; text-align: center; border: 1px solid rgba(239, 68, 68, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌈</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Gradient Generator</h3>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">Create beautiful gradients with live preview</p>
+                    <a href="./design/gradient-generator.html" style="display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 8px; color: white; text-decoration: none; font-weight: 500;">Try Now</a>
+                </div>
+                <div style="background: rgba(239, 68, 68, 0.1); border-radius: 16px; padding: 1.5rem; text-align: center; border: 1px solid rgba(239, 68, 68, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Mockup Generator</h3>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">Create device mockups instantly</p>
+                    <a href="./design/mockup-generator.html" style="display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 8px; color: white; text-decoration: none; font-weight: 500;">Try Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Topics Grid -->
+    <section>
+        <div class="topics-grid">
+            <div class="topic-card" onclick="window.location.href='./design/color-palette.html'">
+                <h3>🎨 Color Palette Generator</h3>
+                <p>Generate beautiful color palettes with AI-powered mood detection. Export as HEX, RGB, CSS with real-time preview.</p>
+                <a href="./design/color-palette.html" class="btn-start">Generate Colors</a>
+                <div class="topic-meta">
+                    <span>✨ Mood-to-Palette AI</span>
+                    <span>📋 Copy Codes</span>
+                    <span>🎯 Instant</span>
+                </div>
+            </div>
+            
+            <div class="topic-card" onclick="window.location.href='./design/gradient-generator.html'">
+                <h3>🌈 Gradient Generator</h3>
+                <p>Create stunning CSS gradients with live full-screen preview. Multi-stop gradients, export as CSS, Tailwind, or SVG.</p>
+                <a href="./design/gradient-generator.html" class="btn-start">Create Gradients</a>
+                <div class="topic-meta">
+                    <span>🖼️ Live Preview</span>
+                    <span>🎚️ Drag Sliders</span>
+                    <span>📦 3 Formats</span>
+                </div>
+            </div>
+            
+            <div class="topic-card" onclick="window.location.href='./design/mockup-generator.html'">
+                <h3>📱 Device Mockup Generator</h3>
+                <p>Upload screenshots and create professional device mockups. Auto-resize with realistic shadows for phone, laptop, tablet.</p>
+                <a href="./design/mockup-generator.html" class="btn-start">Create Mockups</a>
+                <div class="topic-meta">
+                    <span>🖱️ Drag & Drop</span>
+                    <span>✨ Auto-Resize</span>
+                    <span>📥 Download PNG</span>
+                </div>
+            </div>
+            
+            <div class="topic-card" onclick="window.location.href='./design/design-system.html'">
+                <h3>🎨 Design System Generator</h3>
+                <p>Generate complete UI kits from a name. Get color palettes, font pairs, component styles with HTML and Tailwind code.</p>
+                <a href="./design/design-system.html" class="btn-start">Generate System</a>
+                <div class="topic-meta">
+                    <span>🌙 Dark Mode Toggle</span>
+                    <span>📦 Full Code Export</span>
+                    <span>🧩 Components</span>
+                </div>
+            </div>
+            
+            <div class="topic-card" onclick="window.location.href='./design/social-media-kit.html'">
+                <h3>📱 Social Media Kit Builder</h3>
+                <p>Create platform-ready templates for Instagram, LinkedIn. Auto-sized with trending colors from Dribbble. Export as PNG.</p>
+                <a href="./design/social-media-kit.html" class="btn-start">Build Templates</a>
+                <div class="topic-meta">
+                    <span>✨ Trend Auto-Detect</span>
+                    <span>📐 Auto-Sizing</span>
+                    <span>🎨 Quick Templates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for interactive learning and skill development. We believe in learning by doing, providing tools that make practice engaging and effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact US</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./disclaimer.html">Disclaimer</a></li>
+                    <li><a href="./terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="./programming.html">Programming</a></li>
+                    <li><a href="./aptitude.html">Aptitude</a></li>
+                    <li><a href="./typing.html">Typing</a></li>
+                    <li><a href="./english.html">English</a></li>
+                    <li><a href="./ai-tools.html">AI Tools</a></li>
+                    <li><a href="./productivity.html">Productivity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">�</a>
+                </div>
+                <p style="margin-top: 1.5rem;">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

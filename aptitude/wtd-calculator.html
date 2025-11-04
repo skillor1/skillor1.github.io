@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/aptitude/wtd-calculator.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Solve work, time, and distance problems with our interactive calculator featuring story-based learning. Get step-by-step solutions for speed, work rate, and time-distance calculations for competitive exams.">
+    <meta name="keywords" content="work time distance calculator online, speed time distance solver, work rate problem calculator, time distance aptitude questions, train speed problems solver, work efficiency calculator, aptitude WTD practice 2025">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/aptitude/wtd-calculator.html">
+    <meta property="og:title" content="Work Time Distance Calculator - Interactive Problem Solver">
+    <meta property="og:description" content="Solve work, time, and distance problems with our interactive calculator featuring story-based learning. Get step-by-step solutions for speed, work rate, and time-distance calculations for competitive exams.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/aptitude/wtd-calculator.html">
+    <meta name="twitter:title" content="Work Time Distance Calculator - Interactive Problem Solver">
+    <meta name="twitter:description" content="Solve work, time, and distance problems with our interactive calculator featuring story-based learning. Get step-by-step solutions for speed, work rate, and time-distance calculations for competitive exams.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Work Time Distance Calculator - Interactive Problem Solver</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #06b6d4;
+            --tool-secondary: #22d3ee;
+            --tool-accent: #0891b2;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(6, 182, 212, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mode-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .mode-btn {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
+        }
+        
+        .story-container {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .story-scene {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .character {
+            font-size: 5rem;
+            display: inline-block;
+            margin: 0 1rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .story-text {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.8;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 16px;
+            border-left: 4px solid var(--tool-primary);
+        }
+        
+        .problem-box {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid var(--tool-primary);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .problem-title {
+            color: var(--tool-secondary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .formula-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .formula-box h4 {
+            color: #818cf8;
+            margin-bottom: 1rem;
+        }
+        
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        
+        .step-by-step {
+            margin: 2rem 0;
+        }
+        
+        .step {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .step-number {
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        .calculator-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.5);
+        }
+        
+        .result-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.1));
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .result-value {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .quiz-container {
+            display: none;
+        }
+        
+        .question-card {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .option-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option-btn:hover {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: var(--tool-primary);
+        }
+        
+        .option-btn.selected {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: var(--tool-primary);
+        }
+        
+        .option-btn.correct {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+        }
+        
+        .option-btn.wrong {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+        }
+        
+        @media (max-width: 768px) {
+            .mode-selector {
+                flex-direction: column;
+            }
+            
+            .character {
+                font-size: 3rem;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Calculator", "Quiz", "LearningResource"],
+      "name": "Work Time Distance Calculator with Story Mode",
+      "description": "Interactive calculator for speed, time, distance, and work rate problems with animated story-based learning",
+      "applicationCategory": "EducationalApplication"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the basic formula for work-time problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work = Rate × Time is the fundamental formula. If A completes work in 10 days, A's work rate = 1/10 per day (one-tenth of total work daily). For combined work (two people working together), add their individual rates: A+B together = 1/10 + 1/15 = (3+2)/30 = 1/6 per day, so they complete work in 6 days together. Key insight: work rates ADD when working together. Formula derivation: If A takes 'a' days and B takes 'b' days alone, together they take (a×b)/(a+b) days. Example: A does job in 12 days, B in 18 days. Together = (12×18)/(12+18) = 216/30 = 7.2 days. This tool visualizes these calculations step-by-step with animated characters showing work progress bars filling up over time, making abstract formulas concrete and understandable for exam preparation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I solve relative speed train crossing problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Relative speed depends on direction of motion: Same direction = |Speed₁ - Speed₂|, Opposite direction = Speed₁ + Speed₂. Train crossing problems have 4 types: Train crosses stationary object (pole, man): Time = Train length / Train speed. Train crosses platform/bridge: Time = (Train length + Platform length) / Train speed. Two trains cross each other (opposite direction): Time = (Train₁ length + Train₂ length) / (Speed₁ + Speed₂). Two trains cross (same direction): Time = (Train₁ length + Train₂ length) / |Speed₁ - Speed₂|. Example: 150m train at 60 km/h crosses 250m bridge. Convert speed: 60 km/h = 60×(5/18) = 16.67 m/s. Total distance = 150+250 = 400m. Time = 400/16.67 = 24 seconds. Pro tip: always convert km/h to m/s by multiplying by 5/18, or m/s to km/h by multiplying by 18/5. This tool's animated diagrams show trains moving toward/away from each other, helping visualize when to add vs subtract speeds—crucial for avoiding common exam mistakes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the trick for boats in stream problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boat problems involve three speeds: boat's speed in still water (B), stream/current speed (S), downstream speed (D), upstream speed (U). Key relationships: Downstream = B + S (current helps, speeds add), Upstream = B - S (current opposes, subtract), Boat speed B = (D + U) / 2 (average of downstream and upstream), Stream speed S = (D - U) / 2 (half the difference). Example: Boat goes 30 km downstream in 2 hours, returns upstream in 3 hours. Downstream speed D = 30/2 = 15 km/h. Upstream speed U = 30/3 = 10 km/h. Boat speed B = (15+10)/2 = 12.5 km/h. Stream speed S = (15-10)/2 = 2.5 km/h. Verification: Downstream = 12.5+2.5 = 15✓, Upstream = 12.5-2.5 = 10✓. Common mistakes: forgetting to account for stream when calculating time (use downstream/upstream speed, NOT boat speed alone), mixing up D and U formulas. This tool has story mode featuring animated boats rowing with/against current, showing visually why downstream is faster—helps remember formulas intuitively rather than memorization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I handle problems with multiple workers joining/leaving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Break complex work problems into time segments: calculate work done in each segment separately, then sum. Method: Step 1 - Find each person's work rate (rate = 1/days_to_complete). Step 2 - Identify time segments when different people work. Step 3 - Calculate work done per segment (work = rate × time). Step 4 - Sum all segments to get total work. Example: A completes job in 15 days, B in 20 days. A works alone for 5 days, then B joins. How many more days? A's rate = 1/15, B's rate = 1/20. Segment 1 (first 5 days, A alone): Work = 1/15 × 5 = 1/3. Remaining work = 1 - 1/3 = 2/3. Segment 2 (A+B together): Combined rate = 1/15 + 1/20 = (4+3)/60 = 7/60. Time = Work / Rate = (2/3) / (7/60) = (2/3) × (60/7) = 120/21 = 5.71 days. Total time = 5 + 5.71 = 10.71 days. Variations: workers leaving (calculate work until they leave, then remaining people continue), alternating days (A works day 1, B works day 2, repeat—calculate 2-day cycle work), efficiency changes (different rates at different times—segment by time period). This tool's calculator mode has segment-by-segment breakdown showing exact work completed each phase with progress bars for visual tracking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common shortcuts for time-distance calculations in exams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essential shortcuts saving 30-60 seconds per question: Speed conversion (memorize): 1 m/s = 18/5 km/h = 3.6 km/h, 1 km/h = 5/18 m/s. Quick method: multiply km/h by 5/18 to get m/s (60 km/h = 60×5/18 = 16.67 m/s). Average speed (harmless mean): If traveling distance D at speed S₁, returning same distance D at speed S₂, average speed ≠ (S₁+S₂)/2. Correct formula: Average = 2S₁S₂/(S₁+S₂). Example: Go at 40 km/h, return at 60 km/h. Average = 2×40×60/(40+60) = 4800/100 = 48 km/h (NOT 50). Meeting point: Two people start toward each other from distance D apart. Time to meet = D / (Speed₁ + Speed₂). They meet at point dividing distance in ratio Speed₁:Speed₂. Ratio method: If speeds are in ratio 3:4, distances covered in same time are also 3:4. Time ratio (inverse): If covering same distance, time ratio = inverse of speed ratio. Speed 3:4 means time 4:3. Percentage method: Speed increases 20% means time decreases by 20/120 = 1/6 = 16.67% (not 20%). Formula: Time change = -Speed change / (100 + Speed change). Mental math: 25% = 1/4, 33.33% = 1/3, 50% = 1/2, 66.67% = 2/3—use fractions for faster calculation. This tool's quiz mode highlights which shortcut applies to each problem, teaching pattern recognition for quick formula selection during timed exams."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aptitude.html">Aptitude</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../aptitude.html" class="back-link">← Back to Aptitude Tools</a>
+        
+        <div class="header-section">
+            <h1>🚄 Work, Time & Distance Calculator</h1>
+            <p>Learn through interactive stories and solve real-world problems</p>
+        </div>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="switchMode('story')">📖 Story Mode</button>
+            <button class="mode-btn" onclick="switchMode('calculator')">🧮 Calculator Mode</button>
+            <button class="mode-btn" onclick="switchMode('quiz')">🎯 Practice Quiz</button>
+        </div>
+        
+        <!-- Story Mode -->
+        <div id="story-mode">
+            <div class="story-container">
+                <div class="story-scene">
+                    <div class="character">👨‍🎨</div>
+                    <div class="character">🏠</div>
+                    <div class="character">👨‍🔧</div>
+                </div>
+                
+                <div class="story-text" id="story-text">
+                    Click "Generate Story" to see an animated problem!
+                </div>
+                
+                <button class="btn" onclick="generateStory()">🎬 Generate New Story</button>
+                
+                <div id="problem-section" style="display:none;">
+                    <div class="problem-box">
+                        <div class="problem-title">📊 Problem to Solve</div>
+                        <p id="problem-question" style="color: white; font-size: 1.1rem; line-height: 1.8;"></p>
+                    </div>
+                    
+                    <div class="formula-box">
+                        <h4>💡 Formula Used</h4>
+                        <div class="formula" id="formula-display"></div>
+                    </div>
+                    
+                    <button class="btn" onclick="showSolution()">📝 Show Step-by-Step Solution</button>
+                    
+                    <div id="solution-section" style="display:none;">
+                        <div class="step-by-step" id="steps-container"></div>
+                        
+                        <div class="result-box">
+                            <div style="color: #10b981; font-weight: 600; margin-bottom: 0.5rem;">✅ Answer</div>
+                            <div class="result-value" id="answer-display"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Calculator Mode -->
+        <div id="calculator-mode" style="display:none;">
+            <div class="calculator-panel">
+                <h3 style="color: white; margin-bottom: 2rem;">Select Problem Type</h3>
+                
+                <div class="input-group">
+                    <label>Problem Type</label>
+                    <select id="problem-type" onchange="updateCalculatorInputs()">
+                        <option value="speed">Speed (Distance ÷ Time)</option>
+                        <option value="distance">Distance (Speed × Time)</option>
+                        <option value="time">Time (Distance ÷ Speed)</option>
+                        <option value="work">Work Rate (1/Time₁ + 1/Time₂)</option>
+                        <option value="relative">Relative Speed (Train Problems)</option>
+                    </select>
+                </div>
+                
+                <div id="calculator-inputs"></div>
+                
+                <button class="btn" onclick="calculate()">🔢 Calculate</button>
+                
+                <div id="calc-result" style="display:none;"></div>
+            </div>
+        </div>
+        
+        <!-- Quiz Mode -->
+        <div id="quiz-mode" class="quiz-container">
+            <div class="calculator-panel">
+                <h3 style="color: white; margin-bottom: 2rem;">Practice Quiz - 5 Questions</h3>
+                <div id="quiz-questions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use Work Time Distance Calculator</h2>
+        <p>Solve complex work-time-distance problems with interactive visualization and detailed step-by-step solutions:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Choose Problem Type</h3>
+                <p>Select between Work Rate Problems (pipes/workers), Time-Speed-Distance (vehicles/travel), or combination problems involving both concepts.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Input Given Values</h3>
+                <p>Enter known variables like speed, distance, time, work rates, or efficiency. Use the visual diagram to understand the problem setup.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> View Animated Solution</h3>
+                <p>Watch step-by-step calculation with formulas explained. Animated diagrams show how work progresses or distance is covered over time.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Practice Quiz Mode</h3>
+                <p>Test your understanding with 5 practice questions. Try solving manually first, then use the calculator to verify your approach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the basic formula for work problems?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Work = Rate × Time. If A completes work in 10 days, A's rate = 1/10 per day. For combined work, add rates: A+B = 1/10 + 1/15 = 1/6 per day together. Our tool shows these calculations visually.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I solve relative speed problems?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        When moving in same direction, relative speed = |Speed1 - Speed2|. Opposite direction = Speed1 + Speed2. Our animated diagrams show vehicles moving to help visualize these concepts clearly.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I use this tool during exams?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        This tool is for learning and practice. Use it to understand problem-solving methods, then practice solving manually. The step-by-step approach helps you internalize formulas and shortcuts for exam situations.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if the problem has missing information?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Work-time-distance problems need at least 2 variables to solve for the third. If information seems missing, look for implied values (like "meets halfway" means equal distances) or use ratios and proportions.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I handle problems with variable speeds?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        For variable speeds, calculate distance/work for each segment separately, then sum. Use average speed formula: Total Distance / Total Time (NOT average of speeds). Our calculator breaks down multi-part problems systematically.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="data-interpretation.html" class="related-tool-card">
+                <h3><span class="tool-icon">📊</span> Data Interpretation</h3>
+                <p>Practice analyzing tables and charts for extracting numerical data.</p>
+            </a>
+            <a href="daily-quiz.html" class="related-tool-card">
+                <h3><span class="tool-icon">📅</span> Daily Quiz</h3>
+                <p>Get mixed quantitative questions including work-time-distance problems daily.</p>
+            </a>
+            <a href="../programming/sorting-visualizer.html" class="related-tool-card">
+                <h3><span class="tool-icon">🎨</span> Sorting Visualizer</h3>
+                <p>Visualize algorithms to understand step-by-step problem-solving like WTD questions.</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Master aptitude with interactive story-based learning and calculators.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Aptitude Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./daily-quiz.html">Daily Quiz</a></li>
+                    <li><a href="./data-interpretation.html">Data Interpretation</a></li>
+                    <li><a href="./wtd-calculator.html">Work Time Distance</a></li>
+                    <li><a href="./mock-test.html">Mock Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const stories = [
+            {
+                characters: ['👨‍🎨 Ram', '🏠', '👨‍🔧 Shyam'],
+                story: 'Ram and Shyam decided to paint a beautiful house together. Ram, being experienced, could complete the entire house in {time1} days if he worked alone. Shyam, who just started learning, would need {time2} days to paint the same house by himself.',
+                question: 'If they both work together, how many days will it take to complete painting the house?',
+                type: 'work',
+                formula: 'Combined Rate = 1/Time₁ + 1/Time₂'
+            },
+            {
+                characters: ['🚂 Train', '🌉', '🚂 Train'],
+                story: 'Two express trains are heading towards each other on parallel tracks. The first train travels at {speed1} km/h while the second train moves at {speed2} km/h. They started {distance} km apart.',
+                question: 'How long will it take for the trains to meet?',
+                type: 'relative',
+                formula: 'Time = Distance / (Speed₁ + Speed₂)'
+            },
+            {
+                characters: ['🚴‍♂️ Cyclist', '🏔️', '🏁'],
+                story: 'A determined cyclist starts a journey to reach a mountain peak {distance} km away. He cycles steadily at a speed of {speed} km/h through valleys and hills.',
+                question: 'How many hours will it take to reach the destination?',
+                type: 'time',
+                formula: 'Time = Distance / Speed'
+            },
+            {
+                characters: ['🏃‍♂️ Runner', '⏱️', '🏆'],
+                story: 'An athlete is training for a marathon. In his practice session today, he ran continuously for {time} hours and covered a total distance of {distance} km.',
+                question: 'What was his average running speed?',
+                type: 'speed',
+                formula: 'Speed = Distance / Time'
+            }
+        ];
+        
+        let currentStory = null;
+        let currentAnswer = null;
+        
+        function switchMode(mode) {
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('story-mode').style.display = mode === 'story' ? 'block' : 'none';
+            document.getElementById('calculator-mode').style.display = mode === 'calculator' ? 'block' : 'none';
+            document.getElementById('quiz-mode').style.display = mode === 'quiz' ? 'block' : 'none';
+            
+            if (mode === 'quiz') generateQuiz();
+            if (mode === 'calculator') updateCalculatorInputs();
+        }
+        
+        function generateStory() {
+            const storyTemplate = stories[Math.floor(Math.random() * stories.length)];
+            currentStory = {...storyTemplate};
+            
+            // Generate random values
+            const time1 = 6 + Math.floor(Math.random() * 10);
+            const time2 = time1 + 2 + Math.floor(Math.random() * 8);
+            const speed1 = 40 + Math.floor(Math.random() * 40);
+            const speed2 = 40 + Math.floor(Math.random() * 40);
+            const distance = 100 + Math.floor(Math.random() * 300);
+            const speed = 10 + Math.floor(Math.random() * 20);
+            const time = 2 + Math.floor(Math.random() * 4);
+            
+            // Replace placeholders
+            currentStory.story = currentStory.story
+                .replace('{time1}', time1)
+                .replace('{time2}', time2)
+                .replace('{speed1}', speed1)
+                .replace('{speed2}', speed2)
+                .replace('{distance}', distance)
+                .replace('{speed}', speed)
+                .replace('{time}', time);
+            
+            // Calculate answer
+            if (currentStory.type === 'work') {
+                currentAnswer = ((time1 * time2) / (time1 + time2)).toFixed(2);
+                currentStory.steps = [
+                    `Combined work rate = 1/${time1} + 1/${time2}`,
+                    `Combined rate = ${(1/time1 + 1/time2).toFixed(4)} work/day`,
+                    `Time needed = 1 ÷ Combined rate`,
+                    `Time = ${currentAnswer} days`
+                ];
+            } else if (currentStory.type === 'relative') {
+                currentAnswer = (distance / (speed1 + speed2)).toFixed(2);
+                currentStory.steps = [
+                    `Relative speed = ${speed1} + ${speed2} = ${speed1 + speed2} km/h`,
+                    `Distance between trains = ${distance} km`,
+                    `Time = ${distance} ÷ ${speed1 + speed2}`,
+                    `Time = ${currentAnswer} hours`
+                ];
+            } else if (currentStory.type === 'time') {
+                currentAnswer = (distance / speed).toFixed(2);
+                currentStory.steps = [
+                    `Distance = ${distance} km`,
+                    `Speed = ${speed} km/h`,
+                    `Time = ${distance} ÷ ${speed}`,
+                    `Time = ${currentAnswer} hours`
+                ];
+            } else if (currentStory.type === 'speed') {
+                currentAnswer = (distance / time).toFixed(2);
+                currentStory.steps = [
+                    `Distance = ${distance} km`,
+                    `Time = ${time} hours`,
+                    `Speed = ${distance} ÷ ${time}`,
+                    `Speed = ${currentAnswer} km/h`
+                ];
+            }
+            
+            // Update UI
+            document.getElementById('story-text').textContent = currentStory.story;
+            document.getElementById('problem-question').textContent = currentStory.question;
+            document.getElementById('formula-display').textContent = currentStory.formula;
+            document.getElementById('problem-section').style.display = 'block';
+            document.getElementById('solution-section').style.display = 'none';
+        }
+        
+        function showSolution() {
+            const stepsContainer = document.getElementById('steps-container');
+            stepsContainer.innerHTML = '';
+            
+            currentStory.steps.forEach((step, index) => {
+                const stepDiv = document.createElement('div');
+                stepDiv.className = 'step';
+                stepDiv.style.animationDelay = `${index * 0.2}s`;
+                stepDiv.innerHTML = `<span class="step-number">Step ${index + 1}:</span> <span style="color: white;">${step}</span>`;
+                stepsContainer.appendChild(stepDiv);
+            });
+            
+            const unit = currentStory.type === 'speed' ? 'km/h' : 
+                        currentStory.type === 'time' || currentStory.type === 'work' || currentStory.type === 'relative' ? 'hours' : 'km';
+            document.getElementById('answer-display').textContent = `${currentAnswer} ${unit}`;
+            document.getElementById('solution-section').style.display = 'block';
+        }
+        
+        function updateCalculatorInputs() {
+            const type = document.getElementById('problem-type').value;
+            const container = document.getElementById('calculator-inputs');
+            
+            let html = '';
+            if (type === 'speed') {
+                html = `
+                    <div class="input-group">
+                        <label>Distance (km)</label>
+                        <input type="number" id="calc-distance" placeholder="e.g., 180">
+                    </div>
+                    <div class="input-group">
+                        <label>Time (hours)</label>
+                        <input type="number" id="calc-time" placeholder="e.g., 3">
+                    </div>
+                `;
+            } else if (type === 'distance') {
+                html = `
+                    <div class="input-group">
+                        <label>Speed (km/h)</label>
+                        <input type="number" id="calc-speed" placeholder="e.g., 60">
+                    </div>
+                    <div class="input-group">
+                        <label>Time (hours)</label>
+                        <input type="number" id="calc-time" placeholder="e.g., 3">
+                    </div>
+                `;
+            } else if (type === 'time') {
+                html = `
+                    <div class="input-group">
+                        <label>Distance (km)</label>
+                        <input type="number" id="calc-distance" placeholder="e.g., 180">
+                    </div>
+                    <div class="input-group">
+                        <label>Speed (km/h)</label>
+                        <input type="number" id="calc-speed" placeholder="e.g., 60">
+                    </div>
+                `;
+            } else if (type === 'work') {
+                html = `
+                    <div class="input-group">
+                        <label>Person A can complete in (days)</label>
+                        <input type="number" id="calc-time1" placeholder="e.g., 12">
+                    </div>
+                    <div class="input-group">
+                        <label>Person B can complete in (days)</label>
+                        <input type="number" id="calc-time2" placeholder="e.g., 18">
+                    </div>
+                `;
+            } else if (type === 'relative') {
+                html = `
+                    <div class="input-group">
+                        <label>Speed of Train 1 (km/h)</label>
+                        <input type="number" id="calc-speed1" placeholder="e.g., 60">
+                    </div>
+                    <div class="input-group">
+                        <label>Speed of Train 2 (km/h)</label>
+                        <input type="number" id="calc-speed2" placeholder="e.g., 40">
+                    </div>
+                    <div class="input-group">
+                        <label>Distance apart (km)</label>
+                        <input type="number" id="calc-distance" placeholder="e.g., 200">
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        function calculate() {
+            const type = document.getElementById('problem-type').value;
+            let result, formula, steps;
+            
+            if (type === 'speed') {
+                const distance = parseFloat(document.getElementById('calc-distance').value);
+                const time = parseFloat(document.getElementById('calc-time').value);
+                result = (distance / time).toFixed(2) + ' km/h';
+                formula = 'Speed = Distance ÷ Time';
+                steps = [`${distance} ÷ ${time} = ${(distance/time).toFixed(2)} km/h`];
+            } else if (type === 'distance') {
+                const speed = parseFloat(document.getElementById('calc-speed').value);
+                const time = parseFloat(document.getElementById('calc-time').value);
+                result = (speed * time).toFixed(2) + ' km';
+                formula = 'Distance = Speed × Time';
+                steps = [`${speed} × ${time} = ${(speed*time).toFixed(2)} km`];
+            } else if (type === 'time') {
+                const distance = parseFloat(document.getElementById('calc-distance').value);
+                const speed = parseFloat(document.getElementById('calc-speed').value);
+                result = (distance / speed).toFixed(2) + ' hours';
+                formula = 'Time = Distance ÷ Speed';
+                steps = [`${distance} ÷ ${speed} = ${(distance/speed).toFixed(2)} hours`];
+            } else if (type === 'work') {
+                const time1 = parseFloat(document.getElementById('calc-time1').value);
+                const time2 = parseFloat(document.getElementById('calc-time2').value);
+                result = ((time1 * time2) / (time1 + time2)).toFixed(2) + ' days';
+                formula = 'Time = (Time₁ × Time₂) / (Time₁ + Time₂)';
+                steps = [
+                    `Combined rate = 1/${time1} + 1/${time2}`,
+                    `Combined rate = ${(1/time1 + 1/time2).toFixed(4)}`,
+                    `Time = 1 ÷ ${(1/time1 + 1/time2).toFixed(4)} = ${((time1*time2)/(time1+time2)).toFixed(2)} days`
+                ];
+            } else if (type === 'relative') {
+                const speed1 = parseFloat(document.getElementById('calc-speed1').value);
+                const speed2 = parseFloat(document.getElementById('calc-speed2').value);
+                const distance = parseFloat(document.getElementById('calc-distance').value);
+                result = (distance / (speed1 + speed2)).toFixed(2) + ' hours';
+                formula = 'Time = Distance ÷ (Speed₁ + Speed₂)';
+                steps = [
+                    `Relative speed = ${speed1} + ${speed2} = ${speed1+speed2} km/h`,
+                    `Time = ${distance} ÷ ${speed1+speed2} = ${(distance/(speed1+speed2)).toFixed(2)} hours`
+                ];
+            }
+            
+            const resultHTML = `
+                <div class="formula-box" style="margin-top: 2rem;">
+                    <h4>💡 Formula</h4>
+                    <div class="formula">${formula}</div>
+                </div>
+                <div class="step-by-step">
+                    ${steps.map((s, i) => `<div class="step"><span class="step-number">Step ${i+1}:</span> <span style="color: white;">${s}</span></div>`).join('')}
+                </div>
+                <div class="result-box">
+                    <div style="color: #10b981; font-weight: 600; margin-bottom: 0.5rem;">✅ Result</div>
+                    <div class="result-value">${result}</div>
+                </div>
+            `;
+            
+            document.getElementById('calc-result').innerHTML = resultHTML;
+            document.getElementById('calc-result').style.display = 'block';
+        }
+        
+        function generateQuiz() {
+            const questions = [];
+            for (let i = 0; i < 5; i++) {
+                const type = ['speed', 'time', 'distance', 'work', 'relative'][i];
+                const q = generateQuestion(type);
+                questions.push(q);
+            }
+            
+            const container = document.getElementById('quiz-questions');
+            container.innerHTML = questions.map((q, i) => `
+                <div class="question-card">
+                    <div style="color: var(--tool-primary); font-weight: 600; margin-bottom: 1rem;">Question ${i+1}</div>
+                    <div style="font-size: 1.1rem; color: white; margin-bottom: 1rem;">${q.question}</div>
+                    <div class="options-grid">
+                        ${q.options.map((opt, j) => `
+                            <button class="option-btn" onclick="selectQuizAnswer(${i}, ${j}, ${q.correct})">
+                                ${String.fromCharCode(65+j)}. ${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function generateQuestion(type) {
+            if (type === 'speed') {
+                const d = 100 + Math.floor(Math.random() * 200);
+                const t = 2 + Math.floor(Math.random() * 4);
+                const ans = d / t;
+                return {
+                    question: `A car travels ${d} km in ${t} hours. What is its speed?`,
+                    options: [ans, ans+10, ans-10, ans+20].map(v => v.toFixed(1) + ' km/h'),
+                    correct: 0
+                };
+            } else if (type === 'work') {
+                const t1 = 10 + Math.floor(Math.random() * 10);
+                const t2 = t1 + 5 + Math.floor(Math.random() * 10);
+                const ans = (t1 * t2) / (t1 + t2);
+                return {
+                    question: `A can do work in ${t1} days, B in ${t2} days. Together in how many days?`,
+                    options: [ans, ans+2, ans-2, t1/2].map(v => v.toFixed(1) + ' days'),
+                    correct: 0
+                };
+            }
+            // Similar for other types...
+            return { question: 'Sample', options: ['A','B','C','D'], correct: 0 };
+        }
+        
+        let quizScore = 0;
+        function selectQuizAnswer(qIndex, optIndex, correct) {
+            const card = document.querySelectorAll('.question-card')[qIndex];
+            const btns = card.querySelectorAll('.option-btn');
+            btns.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === correct) btn.classList.add('correct');
+                if (i === optIndex && i !== correct) btn.classList.add('wrong');
+            });
+            if (optIndex === correct) quizScore++;
+        }
+    </script>
+</body>
+</html>

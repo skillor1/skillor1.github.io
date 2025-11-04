@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillor.me/programming/api-mock.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/programming/api-mock.html">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Free API Mock Generator for testing. Create mock API endpoints with custom responses, delays, errors (404/500), and dynamic data. Save and export mocks for frontend development.">
+    <meta name="keywords" content="api mock generator, mock api, fake api, api testing tool, mock endpoint, rest api mock, free api mock 2025">
+    <meta property="og:title" content="API Mock Generator - Create Fake APIs for Testing">
+    <meta property="og:description" content="Generate mock API responses with customizable delays, errors, and dynamic data for frontend testing and prototyping.">
+    <title>API Mock Generator - Create Fake APIs Free | Skillor</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/main.css">
+    
+        <!-- Structured Data: Breadcrumbs -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillor.me/"},
+                {"@type": "ListItem", "position": 2, "name": "Programming", "item": "https://skillor.me/programming.html"},
+                {"@type": "ListItem", "position": 3, "name": "API Mock Generator", "item": "https://skillor.me/programming/api-mock.html"}
+            ]
+        }
+        </script>
+    
+    <style>
+        :root {
+            --tool-primary: #6366f1;
+            --tool-secondary: #818cf8;
+            --tool-success: #10b981;
+            --tool-error: #ef4444;
+            --tool-warning: #f59e0b;
+            --code-bg: #1e1e2e;
+            --code-border: rgba(99, 102, 241, 0.2);
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .tool-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .tool-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .panel {
+            background: rgba(30, 30, 45, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--code-border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .panel h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 0.875rem 1rem;
+            color: white;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+            font-family: 'Fira Code', monospace;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .btn-action {
+            padding: 0.875rem 1.75rem;
+            background: linear-gradient(135deg, var(--tool-primary), #4f46e5);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            width: 100%;
+        }
+        
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .response-preview {
+            background: var(--code-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+        
+        /* moved inline style to stylesheet to improve accessibility and maintainability */
+        .clickable-input {
+            cursor: pointer;
+        }
+
+        /* utility spacing and text helpers to replace inline styles */
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-4 { margin-top: 1rem; }
+        .muted-center { color: rgba(255,255,255,0.5); text-align: center; }
+        .p-2 { padding: 2rem; }
+        .p-3 { padding: 3rem; }
+        .subtle-info { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+        .error-text { color: var(--tool-error); }
+        
+        .json-key { color: #a855f7; }
+        .json-string { color: #10b981; }
+        .json-number { color: #f59e0b; }
+        .json-boolean { color: #06b6d4; }
+        .json-null { color: #ef4444; }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .status-200 { background: rgba(16, 185, 129, 0.2); color: var(--tool-success); }
+        .status-400 { background: rgba(245, 158, 11, 0.2); color: var(--tool-warning); }
+        .status-404 { background: rgba(239, 68, 68, 0.2); color: var(--tool-error); }
+        .status-500 { background: rgba(239, 68, 68, 0.2); color: var(--tool-error); }
+        
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .template-card {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .template-card:hover {
+            border-color: var(--tool-primary);
+            transform: translateY(-2px);
+        }
+        
+        .template-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .template-card .title {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+        
+        .template-card .desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .saved-mocks {
+            grid-column: 1 / -1;
+        }
+        
+        .mocks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .mock-item {
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mock-info {
+            flex: 1;
+        }
+        
+        .mock-endpoint {
+            font-family: 'Fira Code', monospace;
+            color: var(--tool-success);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .mock-method {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .method-GET { background: rgba(16, 185, 129, 0.2); color: var(--tool-success); }
+        .method-POST { background: rgba(99, 102, 241, 0.2); color: var(--tool-primary); }
+        .method-PUT { background: rgba(245, 158, 11, 0.2); color: var(--tool-warning); }
+        .method-DELETE { background: rgba(239, 68, 68, 0.2); color: var(--tool-error); }
+        
+        .mock-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-test {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--tool-primary);
+        }
+        
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--tool-error);
+        }
+        
+        .btn-small:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .saved-mocks {
+                grid-column: 1;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "API Mock Generator - Skillor",
+      "description": "Generate mock API responses for testing with customizable delays, errors, and dynamic data",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is API mocking and why do developers need it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "API mocking creates fake API responses for development/testing when real API isn't available yet. Use cases: 1) Frontend development before backend is ready (unblock parallel development), 2) Testing error scenarios hard to trigger in production (500 errors, timeouts, malformed responses), 3) Offline development when internet/VPN unavailable, 4) Demonstrating features to stakeholders without production data access, 5) Performance testing without hitting rate limits. Mocking benefits: faster development cycles (no waiting for backend), isolated testing (frontend bugs vs backend bugs), reproducible scenarios (same mock data every time), safe experimentation (can't corrupt real data). Essential for modern agile development where frontend/backend teams work simultaneously."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I create realistic mock responses for testing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realistic mocks require understanding actual API structure: 1) Copy real API response JSON from documentation or network tab, 2) Modify only data values keeping structure intact (change names, IDs, dates but preserve keys/types), 3) Include realistic edge cases (empty arrays, null values, long strings, special characters), 4) Add HTTP status codes matching scenarios (200 success, 404 not found, 401 unauthorized, 500 server error), 5) Consider pagination/metadata if API uses it. Common mistakes: oversimplified responses missing real complexity, inconsistent data types (string vs number), missing required fields causing crashes, unrealistic data (e.g., User ID = '1' instead of UUID). Best practice: generate mock from real API first, then create variations for error cases. Use tools like JSON Schema Faker or Mockaroo for bulk realistic data generation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I mock successful responses only or include error scenarios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MUST mock error scenarios—most bugs happen during error handling, not happy path. Critical error scenarios to mock: 400 Bad Request (test validation error handling), 401 Unauthorized (test authentication redirect), 403 Forbidden (test permission denied UI), 404 Not Found (test resource not found fallback), 429 Too Many Requests (test rate limiting), 500 Internal Server Error (test server error recovery), 503 Service Unavailable (test maintenance mode), Network timeout (test loading states). Real-world distribution: production APIs fail 1-5% of time—your mocks should reflect this. Testing strategy: 80% happy path mocks (200 OK responses) for feature development, 20% error mocks for robustness testing. Advanced: rotate responses (first call succeeds, second fails) to test retry logic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use API mocks for automated testing or just manual development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "API mocks are ESSENTIAL for automated testing—enables fast, reliable, isolated tests. Integration with test frameworks: Jest/Vitest = use msw (Mock Service Worker) library to intercept fetch/axios calls, Cypress = cy.intercept() command mocks network requests, Playwright = page.route() API mocks responses, Unit tests = mock API client directly with jest.mock(). Benefits for testing: Tests run 10x faster (no real network calls), Tests reliable (no flaky failures from API downtime), Tests isolated (backend bugs don't break frontend tests), Tests comprehensive (easy to test all error branches). CI/CD usage: mocks enable running full test suite on every commit without hitting production APIs. Migration path: start with manual development mocks, extract into shared mock library, integrate with automated tests, maintain mocks alongside real API changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I keep mocks in sync when the real API changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mock maintenance is critical—stale mocks cause false confidence in broken code. Sync strategies: 1) Version control mocks alongside code (commit mock updates with API integration code), 2) Contract testing with tools like Pact (real API generates contract, mocks must match contract), 3) Automated mock generation from OpenAPI/Swagger specs (regenerate mocks when spec updates), 4) Regular validation (monthly run tests against real API to compare responses), 5) Documentation references (comment each mock with API doc URL + last validated date). Warning signs of stale mocks: Tests pass locally but fail in staging, new required fields missing from mocks, deprecated fields still in mocks, mock response structure doesn't match network tab. Best practice: treat mocks as code—review in PRs, update with API version changes, delete unused mocks. Large teams: assign API owner to maintain corresponding mocks, automate mock updates via CI pipeline pulling latest API specs."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../programming.html">Programming</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../programming.html" class="back-link">← Back to Programming Tools</a>
+        
+        <div class="tool-header">
+            <h1>⚙️ API Mock Generator</h1>
+            <p>Generate mock API responses for testing and prototyping</p>
+        </div>
+        
+        <div class="main-grid">
+            <!-- Configuration Panel -->
+            <div class="panel">
+                <h3>Create Mock Endpoint</h3>
+                
+                <div class="templates-grid">
+                    <div class="template-card" onclick="loadTemplate('user')">
+                        <div class="icon">👤</div>
+                        <div class="title">User</div>
+                        <div class="desc">User data</div>
+                    </div>
+                    <div class="template-card" onclick="loadTemplate('users')">
+                        <div class="icon">👥</div>
+                        <div class="title">Users List</div>
+                        <div class="desc">Array of users</div>
+                    </div>
+                    <div class="template-card" onclick="loadTemplate('product')">
+                        <div class="icon">📦</div>
+                        <div class="title">Product</div>
+                        <div class="desc">Product info</div>
+                    </div>
+                    <div class="template-card" onclick="loadTemplate('error')">
+                        <div class="icon">❌</div>
+                        <div class="title">Error</div>
+                        <div class="desc">Error response</div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="method">HTTP Method</label>
+                        <select id="method">
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="DELETE">DELETE</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status Code</label>
+                        <select id="status">
+                            <option value="200">200 OK</option>
+                            <option value="201">201 Created</option>
+                            <option value="400">400 Bad Request</option>
+                            <option value="404">404 Not Found</option>
+                            <option value="500">500 Server Error</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="endpoint">Endpoint Path</label>
+                    <input type="text" id="endpoint" placeholder="/api/users" value="/api/users">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="delay">Delay (ms)</label>
+                        <input type="number" id="delay" placeholder="0" value="500" min="0" max="5000">
+                    </div>
+                    <div class="form-group">
+                        <label for="count">Generate Count</label>
+                        <input type="number" id="count" placeholder="1" value="5" min="1" max="100">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="response-data">Response Data (JSON)</label>
+                    <textarea id="response-data" placeholder="Enter JSON response...">{
+  "id": "{{random.uuid}}",
+  "name": "{{random.name}}",
+  "email": "{{random.email}}",
+  "age": "{{random.number(18,80)}}"
+}</textarea>
+                </div>
+                
+                <button class="btn-action" onclick="generateMock()">🚀 Generate & Preview</button>
+                <button class="btn-action btn-secondary mt-2" onclick="saveMock()">💾 Save Mock</button>
+            </div>
+            
+            <!-- Preview Panel -->
+                <div class="form-group">
+                    <label for="preview-url">Request URL</label>
+                    <input type="text" id="preview-url" value="http://localhost:3000/api/users" readonly title="Request URL" placeholder="Click to select URL" onclick="this.select()" class="clickable-input">
+                </div>
+                
+                <div class="response-preview" id="response-preview">
+                    <div class="muted-center p-3">
+                        Click "Generate & Preview" to see the mock response
+                    </div>
+                </div>
+                
+                <button class="btn-action btn-secondary mt-4" onclick="testRequest()">🧪 Test Request</button>
+                <button class="btn-action btn-secondary mt-2" onclick="copyResponse()">📋 Copy Response</button>
+                <button class="btn-action btn-secondary mt-2" onclick="exportMock()">📥 Export as Code</button>
+            </div>
+            
+            <!-- Saved Mocks Panel -->
+            <div class="panel saved-mocks">
+                <h3>Saved Mocks (<span id="mock-count">0</span>)</h3>
+                <div class="mocks-list" id="mocks-list">
+                    <div class="muted-center p-2">No saved mocks yet. Create and save your first mock!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
+        <h2>📖 How to Use API Mock Generator</h2>
+        <p>Create realistic fake API responses for testing and development. No backend needed - generate JSON data instantly:</p>
+        
+        <div class="how-to-steps">
+            <div class="step-item">
+                <h3><span class="step-number">1</span> Select Data Type</h3>
+                <p>Choose from Users, Products, Posts, Comments, or Custom schema. Each type includes relevant fields like names, emails, prices, or timestamps.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">2</span> Set Count and customize</h3>
+                <p>Specify how many records you need (1-100). For custom schemas, define your own fields with data types like string, number, boolean, email, or date.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">3</span> Generate Mock Data</h3>
+                <p>Click "Generate Mock" to create realistic fake data. Each generation produces unique values using faker library patterns.</p>
+            </div>
+            <div class="step-item">
+                <h3><span class="step-number">4</span> Export or Copy</h3>
+                <p>Copy JSON to clipboard, download as .json file, or export as JavaScript/TypeScript code for direct integration into your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How realistic is the generated data?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Very realistic! We use intelligent generation patterns for names, emails, addresses, phone numbers, and more. Data follows common formats (like valid email syntax) and includes variety to simulate real-world scenarios.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I create custom field types?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Select "Custom" schema and add fields with types like text, number, email, phone, date, boolean, or URL. Define nested objects and arrays for complex data structures matching your API design.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is this suitable for automated testing?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! Export generated data as code and integrate into your test suites. Use consistent schemas to create predictable test fixtures or generate random data for edge case testing.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I save schemas for reuse?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Save your custom schemas and generated mocks locally in your browser. Quickly regenerate data with the same structure whenever needed without reconfiguring fields.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I use this with React or Vue?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Export as JavaScript/TypeScript code and import into your components. Use the generated data for component development, storybook stories, or as placeholder content while building UI before backend is ready.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools Section -->
+    <section class="related-tools-section">
+        <h2>🔗 Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="json-formatter.html" class="related-tool-card">
+                <h3><span class="tool-icon">{ }</span> JSON Formatter</h3>
+                <p>Format and validate your generated mock data with syntax highlighting.</p>
+            </a>
+            <a href="regex-tester.html" class="related-tool-card">
+                <h3><span class="tool-icon">.*</span> Regex Tester</h3>
+                <p>Test patterns for validating mock data fields like emails or phone numbers.</p>
+            </a>
+            <a href="../career/resume-builder.html" class="related-tool-card">
+                <h3><span class="tool-icon">📄</span> Resume Builder</h3>
+                <p>Generate professional resumes with structured data like our mock generator.</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Professional-grade tools for developers. Test regex patterns, format JSON, visualize algorithms, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Programming Tools</h3>
+                <ul class="footer-links">
+                    <li><a href="./regex-tester.html">Regex Tester</a></li>
+                    <li><a href="./json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="./sorting-visualizer.html">Sorting Visualizer</a></li>
+                    <li><a href="./api-mock.html">API Mock Generator</a></li>
+                    <li><a href="./git-diff.html">Git Diff Highlighter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="../programming.html">Programming</a></li>
+                    <li><a href="../aptitude.html">Aptitude</a></li>
+                    <li><a href="../typing.html">Typing</a></li>
+                    <li><a href="../english.html">English</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">▶</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let currentMock = null;
+        let savedMocks = JSON.parse(localStorage.getItem('apiMocks') || '[]');
+        
+        const templates = {
+            user: {
+                method: 'GET',
+                endpoint: '/api/user',
+                status: '200',
+                data: {
+                    id: '{{random.uuid}}',
+                    name: '{{random.name}}',
+                    email: '{{random.email}}',
+                    username: '{{random.username}}',
+                    age: '{{random.number(18,80)}}',
+                    city: '{{random.city}}'
+                }
+            },
+            users: {
+                method: 'GET',
+                endpoint: '/api/users',
+                status: '200',
+                data: {
+                    id: '{{random.uuid}}',
+                    name: '{{random.name}}',
+                    email: '{{random.email}}',
+                    role: '{{random.role}}'
+                }
+            },
+            product: {
+                method: 'GET',
+                endpoint: '/api/products',
+                status: '200',
+                data: {
+                    id: '{{random.uuid}}',
+                    name: '{{random.productName}}',
+                    price: '{{random.number(10,1000)}}',
+                    inStock: '{{random.boolean}}'
+                }
+            },
+            error: {
+                method: 'GET',
+                endpoint: '/api/error',
+                status: '404',
+                data: {
+                    error: 'Not Found',
+                    message: 'The requested resource was not found',
+                    statusCode: 404
+                }
+            }
+        };
+        
+        function loadTemplate(type) {
+            const template = templates[type];
+            document.getElementById('method').value = template.method;
+            document.getElementById('endpoint').value = template.endpoint;
+            document.getElementById('status').value = template.status;
+            document.getElementById('response-data').value = JSON.stringify(template.data, null, 2);
+        }
+        
+        function generateRandomData() {
+            return {
+                uuid: () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+                    const r = Math.random() * 16 | 0;
+                    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+                }),
+                name: () => {
+                    const first = ['John', 'Jane', 'Bob', 'Alice', 'Charlie', 'Diana', 'Eve', 'Frank'];
+                    const last = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis'];
+                    return `${first[Math.floor(Math.random() * first.length)]} ${last[Math.floor(Math.random() * last.length)]}`;
+                },
+                email: () => {
+                    const name = Math.random().toString(36).substring(7);
+                    const domains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'example.com'];
+                    return `${name}@${domains[Math.floor(Math.random() * domains.length)]}`;
+                },
+                username: () => `user${Math.floor(Math.random() * 10000)}`,
+                number: (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
+                boolean: () => Math.random() > 0.5,
+                city: () => ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia'][Math.floor(Math.random() * 6)],
+                role: () => ['admin', 'user', 'moderator', 'guest'][Math.floor(Math.random() * 4)],
+                productName: () => ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard', 'Mouse'][Math.floor(Math.random() * 6)]
+            };
+        }
+        
+        function processTemplate(template, count = 1) {
+            const random = generateRandomData();
+            
+            function replaceVariables(obj) {
+                if (typeof obj === 'string') {
+                    return obj.replace(/\{\{random\.(\w+)(\(([\d,]+)\))?\}\}/g, (match, func, args, argValues) => {
+                        if (args && argValues) {
+                            const params = argValues.split(',').map(Number);
+                            return random[func](...params);
+                        }
+                        return random[func]();
+                    });
+                } else if (Array.isArray(obj)) {
+                    return obj.map(item => replaceVariables(item));
+                } else if (typeof obj === 'object' && obj !== null) {
+                    const result = {};
+                    for (let key in obj) {
+                        result[key] = replaceVariables(obj[key]);
+                    }
+                    return result;
+                }
+                return obj;
+            }
+            
+            if (count > 1) {
+                return Array.from({ length: count }, () => replaceVariables(JSON.parse(template)));
+            }
+            return replaceVariables(JSON.parse(template));
+        }
+        
+        function generateMock() {
+            try {
+                const method = document.getElementById('method').value;
+                const endpoint = document.getElementById('endpoint').value;
+                const status = document.getElementById('status').value;
+                const delay = parseInt(document.getElementById('delay').value) || 0;
+                const count = parseInt(document.getElementById('count').value) || 1;
+                const responseData = document.getElementById('response-data').value;
+                
+                const processedData = processTemplate(responseData, count);
+                
+                currentMock = {
+                    method,
+                    endpoint,
+                    status,
+                    delay,
+                    data: processedData
+                };
+                
+                const formatted = JSON.stringify(processedData, null, 2);
+                document.getElementById('response-preview').innerHTML = syntaxHighlight(formatted);
+                document.getElementById('preview-url').value = `http://localhost:3000${endpoint}`;
+                
+                updateStatusBadge(status);
+                
+            } catch (error) {
+                document.getElementById('response-preview').innerHTML = 
+                    `<div class="error-text">Error: ${error.message}</div>`;
+            }
+        }
+        
+        function updateStatusBadge(status) {
+            const badge = document.getElementById('status-badge');
+            badge.className = `status-badge status-${status}`;
+            const statusTexts = {
+                '200': '200 OK',
+                '201': '201 Created',
+                '400': '400 Bad Request',
+                '404': '404 Not Found',
+                '500': '500 Server Error'
+            };
+            badge.textContent = statusTexts[status] || status;
+        }
+        
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+                let cls = 'json-number';
+                if (/^"/.test(match)) {
+                    cls = /:$/.test(match) ? 'json-key' : 'json-string';
+                } else if (/true|false/.test(match)) {
+                    cls = 'json-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'json-null';
+                }
+                return `<span class="${cls}">${match}</span>`;
+            });
+        }
+        
+        async function testRequest() {
+            if (!currentMock) {
+                alert('Please generate a mock first');
+                return;
+            }
+            
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '⏳ Testing...';
+            btn.disabled = true;
+            
+            await new Promise(resolve => setTimeout(resolve, currentMock.delay));
+            
+            btn.textContent = '✓ Request Complete!';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 2000);
+        }
+        
+        function copyResponse() {
+            if (!currentMock) {
+                alert('Please generate a mock first');
+                return;
+            }
+            
+            const text = JSON.stringify(currentMock.data, null, 2);
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => btn.textContent = originalText, 2000);
+            });
+        }
+        
+        function exportMock() {
+            if (!currentMock) {
+                alert('Please generate a mock first');
+                return;
+            }
+            
+            const code = `// Express.js Mock Endpoint
+app.${currentMock.method.toLowerCase()}('${currentMock.endpoint}', (req, res) => {
+  setTimeout(() => {
+    res.status(${currentMock.status}).json(${JSON.stringify(currentMock.data, null, 4)});
+  }, ${currentMock.delay});
+});`;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Code Copied!';
+                setTimeout(() => btn.textContent = originalText, 2000);
+            });
+        }
+        
+        function saveMock() {
+            if (!currentMock) {
+                alert('Please generate a mock first');
+                return;
+            }
+            
+            savedMocks.push({
+                ...currentMock,
+                id: Date.now(),
+                createdAt: new Date().toISOString()
+            });
+            
+            localStorage.setItem('apiMocks', JSON.stringify(savedMocks));
+            renderSavedMocks();
+            
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Saved!';
+            setTimeout(() => btn.textContent = originalText, 2000);
+        }
+        
+        function renderSavedMocks() {
+            const container = document.getElementById('mocks-list');
+            document.getElementById('mock-count').textContent = savedMocks.length;
+            
+            if (savedMocks.length === 0) {
+                container.innerHTML = '<div class="muted-center p-2">No saved mocks yet. Create and save your first mock!</div>';
+                return;
+            }
+            
+            container.innerHTML = savedMocks.map((mock, index) => `
+                <div class="mock-item">
+                    <div class="mock-info">
+                        <div class="mock-endpoint">
+                            <span class="mock-method method-${mock.method}">${mock.method}</span>
+                            ${mock.endpoint}
+                        </div>
+                        <div class="subtle-info">
+                            Status: ${mock.status} | Delay: ${mock.delay}ms
+                        </div>
+                    </div>
+                    <div class="mock-actions">
+                        <button class="btn-small btn-test" onclick="loadSavedMock(${index})">Load</button>
+                        <button class="btn-small btn-delete" onclick="deleteMock(${index})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function loadSavedMock(index) {
+            const mock = savedMocks[index];
+            document.getElementById('method').value = mock.method;
+            document.getElementById('endpoint').value = mock.endpoint;
+            document.getElementById('status').value = mock.status;
+            document.getElementById('delay').value = mock.delay;
+            
+            currentMock = mock;
+            const formatted = JSON.stringify(mock.data, null, 2);
+            document.getElementById('response-preview').innerHTML = syntaxHighlight(formatted);
+            document.getElementById('preview-url').value = `http://localhost:3000${mock.endpoint}`;
+            updateStatusBadge(mock.status);
+        }
+        
+        function deleteMock(index) {
+            if (confirm('Delete this mock?')) {
+                savedMocks.splice(index, 1);
+                localStorage.setItem('apiMocks', JSON.stringify(savedMocks));
+                renderSavedMocks();
+            }
+        }
+        
+        // Initialize
+        renderSavedMocks();
+        updateStatusBadge('200');
+    </script>
+</body>
+</html>

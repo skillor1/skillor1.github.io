@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skillor.me/typing/custom-text.html">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Practice typing with your own text by pasting resumes, code snippets, essays, or lyrics. Automatically generates focused drills from your 100 hardest words for targeted improvement.">
+    <meta name="keywords" content="type my own text online free, custom typing test paste, typing practice with resume, code typing practice, essay typing drill generator 2025, paste text typing test">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillor.me/typing/custom-text.html">
+    <meta property="og:title" content="Custom Text Typing Test - Paste Any Text and Practice">
+    <meta property="og:description" content="Practice typing with your own text by pasting resumes, code snippets, essays, or lyrics. Automatically generates focused drills from your 100 hardest words for targeted improvement.">
+    <meta property="og:image" content="https://skillor.me/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skillor">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skillor.me/typing/custom-text.html">
+    <meta name="twitter:title" content="Custom Text Typing Test - Paste Any Text and Practice">
+    <meta name="twitter:description" content="Practice typing with your own text by pasting resumes, code snippets, essays, or lyrics. Automatically generates focused drills from your 100 hardest words for targeted improvement.">
+    <meta name="twitter:image" content="https://skillor.me/assets/img/og-cover.png">
+    <title>Custom Text Typing Test - Paste Any Text and Practice</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../android-chrome-512x512.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        :root {
+            --tool-primary: #f59e0b;
+            --tool-secondary: #fbbf24;
+            --tool-accent: #d97706;
+        }
+        
+        .tool-container {
+            min-height: 100vh;
+            padding: 6rem 4% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tool-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header-section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--tool-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mode-toggle {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mode-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border-color: var(--tool-primary);
+        }
+        
+        .input-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .text-input {
+            width: 100%;
+            min-height: 200px;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+        }
+        
+        .text-input:focus {
+            outline: none;
+            border-color: var(--tool-primary);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+        
+        .quick-samples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .sample-btn {
+            padding: 1rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        
+        .sample-btn:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .practice-panel {
+            background: rgba(30, 30, 45, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat-box {
+            background: rgba(10, 10, 15, 0.6);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        
+        .text-display {
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .text-display .char {
+            transition: color 0.1s;
+        }
+        
+        .text-display .char.correct {
+            color: #10b981;
+        }
+        
+        .text-display .char.incorrect {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.2);
+        }
+        
+        .text-display .char.current {
+            border-bottom: 3px solid var(--tool-primary);
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: var(--tool-primary); }
+            51%, 100% { border-color: transparent; }
+        }
+        
+        .typing-input {
+            width: 100%;
+            background: rgba(10, 10, 15, 0.6);
+            border: 2px solid var(--tool-primary);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+        }
+        
+        .typing-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--tool-primary), var(--tool-accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .drill-panel {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .drill-word {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        .difficulty-hard {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .difficulty-medium {
+            background: #f59e0b;
+            color: white;
+        }
+        
+        .difficulty-easy {
+            background: #10b981;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .mode-toggle {
+                flex-direction: column;
+            }
+            
+            .quick-samples {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Custom Typing Test - Paste Your Text",
+      "description": "Practice typing with your own text. Auto-generate drills from hardest words. Perfect for resumes, code, essays.",
+      "applicationCategory": "EducationalApplication"
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="window.location.href='../index.html'">Skillor</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../typing.html">Typing</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+        </ul>
+        <button class="nav-cta" onclick="window.location.href='../index.html'">Explore Tools</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <a href="../typing.html" class="back-link">← Back to Typing Tools</a>
+        
+        <div class="header-section">
+            <h1>📝 Custom Text Typing Test</h1>
+            <p>Paste your own text • Auto-generate focused drills • Practice what matters</p>
+        </div>
+        
+        <div class="mode-toggle">
+            <button class="mode-btn active" onclick="switchMode('input')">📋 Paste Text</button>
+            <button class="mode-btn" onclick="switchMode('practice')">⌨️ Practice</button>
+            <button class="mode-btn" onclick="switchMode('drill')">🎯 Focused Drill</button>
+        </div>
+        
+        <!-- Input Mode -->
+        <div id="input-mode">
+            <div class="input-panel">
+                <h3 style="color: white; margin-bottom: 1.5rem;">Paste Your Text</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+                    Paste any text you want to practice: resume, code, essay, lyrics, article, or anything else!
+                </p>
+                
+                <textarea class="text-input" id="custom-text" placeholder="Paste your text here...
+
+Examples:
+- Your resume or cover letter
+- Programming code
+- Essay or article
+- Song lyrics
+- Email template
+- Technical documentation"></textarea>
+                
+                <div style="margin-top: 1rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                    💡 Tip: The tool will analyze your text and extract the hardest 100 words for focused practice
+                </div>
+                
+                <button class="btn" onclick="analyzeText()">🔍 Analyze & Start Practice</button>
+                
+                <h4 style="color: white; margin: 2rem 0 1rem;">Quick Samples</h4>
+                <div class="quick-samples">
+                    <button class="sample-btn" onclick="loadSample('resume')">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📄</div>
+                        <div style="font-weight: 600;">Resume</div>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">Professional resume</div>
+                    </button>
+                    <button class="sample-btn" onclick="loadSample('code')">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💻</div>
+                        <div style="font-weight: 600;">Code</div>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">JavaScript code</div>
+                    </button>
+                    <button class="sample-btn" onclick="loadSample('essay')">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📖</div>
+                        <div style="font-weight: 600;">Essay</div>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">Academic writing</div>
+                    </button>
+                    <button class="sample-btn" onclick="loadSample('email')">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">✉️</div>
+                        <div style="font-weight: 600;">Email</div>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">Business email</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Mode -->
+        <div id="practice-mode" style="display:none;">
+            <div class="practice-panel">
+                <h3 style="color: white; margin-bottom: 1.5rem;">⌨️ Type Your Custom Text</h3>
+                
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-value" id="practice-wpm">0</div>
+                        <div class="stat-label">WPM</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="practice-accuracy">100%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="practice-progress">0%</div>
+                        <div class="stat-label">Progress</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="practice-time">0:00</div>
+                        <div class="stat-label">Time</div>
+                    </div>
+                </div>
+                
+                <div class="text-display" id="practice-display">
+                    Paste text to begin
+                </div>
+                
+                <input type="text" class="typing-input" id="practice-input" placeholder="Start typing..." disabled>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <button class="btn btn-secondary" onclick="switchMode('input')">← Back to Input</button>
+                    <button class="btn btn-secondary" onclick="restartPractice()">🔄 Restart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Drill Mode -->
+        <div id="drill-mode" style="display:none;">
+            <div class="practice-panel">
+                <h3 style="color: white; margin-bottom: 1.5rem;">🎯 Focused Word Drill</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                    Practice the hardest words from your text for maximum improvement!
+                </p>
+                
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-value" id="drill-wpm">0</div>
+                        <div class="stat-label">WPM</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="drill-accuracy">100%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="drill-completed">0/20</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                </div>
+                
+                <div class="text-display" id="drill-display">
+                    Analyzing text...
+                </div>
+                
+                <input type="text" class="typing-input" id="drill-input" placeholder="Type the word..." disabled>
+                
+                <div class="drill-panel" id="hard-words-panel" style="display:none;">
+                    <h4 style="color: white; margin-bottom: 1rem;">📊 Hardest Words Extracted</h4>
+                    <div id="hard-words-list"></div>
+                </div>
+                
+                <button class="btn btn-secondary" onclick="switchMode('input')" style="margin-top: 1rem;">← Back to Input</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skillor</h3>
+                <p>Skillor is your ultimate destination for productivity tools and work efficiency. We believe in practical solutions, providing tools that make your daily tasks faster and more effective.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact US</a></li>
+                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@skillorai" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.instagram.com/skillor_web/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+                </div>
+                <p class="footer-social-text">Stay updated with the latest tools and productivity resources.</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Skillor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const samples = {
+            resume: `John Smith
+Senior Software Engineer
+
+PROFESSIONAL SUMMARY
+Experienced software engineer with 8+ years of expertise in full-stack development, cloud architecture, and team leadership. Proven track record of delivering scalable solutions that drive business growth and improve user experience.
+
+TECHNICAL SKILLS
+Languages: JavaScript, Python, Java, TypeScript, SQL
+Frameworks: React, Node.js, Django, Spring Boot
+Cloud: AWS, Azure, Google Cloud Platform
+Tools: Docker, Kubernetes, Jenkins, Git`,
+            
+            code: `function calculateFibonacci(n) {
+    if (n <= 1) return n;
+    
+    const fibonacci = [0, 1];
+    
+    for (let i = 2; i <= n; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+    
+    return fibonacci[n];
+}
+
+const result = calculateFibonacci(10);
+console.log('Fibonacci result:', result);`,
+            
+            essay: `The Impact of Technology on Modern Education
+
+In the twenty-first century, technology has fundamentally transformed the landscape of education. Digital tools and platforms have revolutionized how students learn, how teachers instruct, and how knowledge is shared across the globe. This transformation has brought both unprecedented opportunities and significant challenges that educators must navigate carefully.`,
+            
+            email: `Dear Hiring Manager,
+
+I am writing to express my strong interest in the Senior Software Engineer position at your company. With over eight years of experience in full-stack development and a proven track record of delivering scalable solutions, I am confident in my ability to contribute significantly to your team.
+
+Best regards,
+John Smith`
+        };
+        
+        let customText = '';
+        let hardWords = [];
+        let practiceActive = false;
+        let drillActive = false;
+        let currentIndex = 0;
+        let startTime = 0;
+        let correctChars = 0;
+        let totalChars = 0;
+        let drillWords = [];
+        let drillIndex = 0;
+        
+        function switchMode(mode) {
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('input-mode').style.display = mode === 'input' ? 'block' : 'none';
+            document.getElementById('practice-mode').style.display = mode === 'practice' ? 'block' : 'none';
+            document.getElementById('drill-mode').style.display = mode === 'drill' ? 'block' : 'none';
+        }
+        
+        function loadSample(type) {
+            document.getElementById('custom-text').value = samples[type];
+        }
+        
+        function analyzeText() {
+            customText = document.getElementById('custom-text').value.trim();
+            
+            if (!customText) {
+                alert('Please paste some text first!');
+                return;
+            }
+            
+            // Extract hard words (longer, complex words)
+            const words = customText.match(/\b[a-zA-Z]+\b/g) || [];
+            const uniqueWords = [...new Set(words)];
+            
+            hardWords = uniqueWords
+                .filter(w => w.length >= 6)
+                .sort((a, b) => b.length - a.length)
+                .slice(0, 100);
+            
+            // Display in drill mode
+            const hardWordsList = document.getElementById('hard-words-list');
+            hardWordsList.innerHTML = hardWords.slice(0, 20).map((word, i) => {
+                let diffClass = 'difficulty-medium';
+                if (word.length >= 10) diffClass = 'difficulty-hard';
+                else if (word.length <= 7) diffClass = 'difficulty-easy';
+                
+                return `<span class="drill-word">${word} <span class="difficulty-badge ${diffClass}">${word.length} chars</span></span>`;
+            }).join('');
+            
+            document.getElementById('hard-words-panel').style.display = 'block';
+            
+            // Setup practice mode
+            setupPractice();
+        }
+        
+        function setupPractice() {
+            const display = document.getElementById('practice-display');
+            display.innerHTML = '';
+            
+            customText.split('').forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char;
+                if (i === 0) span.classList.add('current');
+                display.appendChild(span);
+            });
+            
+            const input = document.getElementById('practice-input');
+            input.disabled = false;
+            input.value = '';
+            
+            currentIndex = 0;
+            correctChars = 0;
+            totalChars = 0;
+            practiceActive = true;
+            startTime = Date.now();
+            
+            // Auto switch to practice mode
+            const practiceBtn = document.querySelectorAll('.mode-btn')[1];
+            practiceBtn.click();
+            
+            input.focus();
+            updatePracticeTimer();
+        }
+        
+        function updatePracticeTimer() {
+            if (!practiceActive) return;
+            
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            document.getElementById('practice-time').textContent = `${minutes}:${String(seconds).padStart(2, '0')}`;
+            
+            setTimeout(updatePracticeTimer, 1000);
+        }
+        
+        document.getElementById('practice-input').addEventListener('input', function(e) {
+            if (!practiceActive) return;
+            
+            const input = e.target.value;
+            const chars = document.querySelectorAll('#practice-display .char');
+            
+            chars.forEach((char, i) => {
+                char.classList.remove('correct', 'incorrect', 'current');
+                
+                if (i < input.length) {
+                    if (input[i] === customText[i]) {
+                        char.classList.add('correct');
+                    } else {
+                        char.classList.add('incorrect');
+                    }
+                } else if (i === input.length) {
+                    char.classList.add('current');
+                }
+            });
+            
+            correctChars = 0;
+            totalChars = input.length;
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] === customText[i]) correctChars++;
+            }
+            
+            const elapsed = (Date.now() - startTime) / 1000;
+            const wpm = Math.round((correctChars / 5) / (elapsed / 60));
+            const accuracy = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 100;
+            const progress = Math.round((input.length / customText.length) * 100);
+            
+            document.getElementById('practice-wpm').textContent = isNaN(wpm) || !isFinite(wpm) ? 0 : wpm;
+            document.getElementById('practice-accuracy').textContent = accuracy + '%';
+            document.getElementById('practice-progress').textContent = progress + '%';
+            
+            if (input.length >= customText.length) {
+                endPractice();
+            }
+        });
+        
+        function endPractice() {
+            practiceActive = false;
+            document.getElementById('practice-input').disabled = true;
+            alert('Practice complete! Great job! 🎉');
+        }
+        
+        function restartPractice() {
+            setupPractice();
+        }
+        
+        // Drill mode setup
+        function setupDrill() {
+            if (hardWords.length === 0) {
+                alert('Please analyze text first!');
+                return;
+            }
+            
+            drillWords = hardWords.slice(0, 20);
+            drillIndex = 0;
+            loadDrillWord();
+        }
+        
+        function loadDrillWord() {
+            if (drillIndex >= drillWords.length) {
+                alert('Drill complete! 🎉');
+                return;
+            }
+            
+            const word = drillWords[drillIndex];
+            const display = document.getElementById('drill-display');
+            display.innerHTML = '';
+            
+            word.split('').forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char;
+                if (i === 0) span.classList.add('current');
+                display.appendChild(span);
+            });
+            
+            const input = document.getElementById('drill-input');
+            input.disabled = false;
+            input.value = '';
+            input.focus();
+            
+            document.getElementById('drill-completed').textContent = `${drillIndex}/${drillWords.length}`;
+        }
+        
+        document.getElementById('drill-input').addEventListener('input', function(e) {
+            const input = e.target.value;
+            const word = drillWords[drillIndex];
+            const chars = document.querySelectorAll('#drill-display .char');
+            
+            chars.forEach((char, i) => {
+                char.classList.remove('correct', 'incorrect', 'current');
+                
+                if (i < input.length) {
+                    if (input[i] === word[i]) {
+                        char.classList.add('correct');
+                    } else {
+                        char.classList.add('incorrect');
+                    }
+                } else if (i === input.length) {
+                    char.classList.add('current');
+                }
+            });
+            
+            if (input === word) {
+                drillIndex++;
+                setTimeout(loadDrillWord, 500);
+            }
+        });
+        
+        // Auto-setup drill when switching to drill mode
+        document.querySelectorAll('.mode-btn')[2].addEventListener('click', setupDrill);
+    </script>
+</body>
+</html>
